@@ -81,16 +81,13 @@ obtain an API key, please follow the instructions below.
 Once you obtain your API you can use the following snippet. It will allow you to authenticate into API, create folder, get activity logs and log out user from the API.
 
 ```javscript
-<?php
 var ExaVaultApi = require('exa_vault_api');
-
-#authenticateUser
 
 var authenticationApi = new ExaVaultApi.AuthenticationApi();
 
-var apiKey = 'your_api_key_goe_here'; 
-var username = 'existing_username_goes_here';
-var password = 'user_password_goes_here'; 
+var apiKey = 'ftptest-0KM31a1OLrR2N42OrC9l9'; 
+var username = 'ftptest';
+var password = 'quaker17'; 
 
 var opts = { 
   'username': username,
@@ -108,14 +105,17 @@ var callback = function(error, data, response) {
       var accessToken = data.results.accessToken;
     } else {
       // something went wrong check data.error for more details
+      console.error(data.error);
+      return;
     }
 
     var filesFoldersApi = new ExaVaultApi.FilesAndFoldersApi();
 
-    var folderName = 'desire_folder_name_goes_here';
+    var folderName = 'api_test_folder' + Math.floor(Math.random() * 10000);
     var path = '/';
 
     var opts = { 
+      'access_token': accessToken,
       'folderName': folderName,
       'path': path
     };
@@ -130,6 +130,7 @@ var callback = function(error, data, response) {
 
         if (createSuccess) {
           // Folder created successfully
+          console.log('Folder created successfully');
 
           var activityApi = new ExaVaultApi.ActivityApi();
 
@@ -151,8 +152,11 @@ var callback = function(error, data, response) {
             if(getActivitySuccess) {
               // Geat array with log entries
               var activityLogs = data.results;
+              console.log(activityLogs);
              } else {
               // something went wrong check data.error for more details
+              console.error(data.error);
+              return;
             }
             
           }
@@ -162,6 +166,8 @@ var callback = function(error, data, response) {
 
         } else {
           // something went wrong check data.error for more details
+          console.error(data.error);
+          return;
         }
 
       }
@@ -173,7 +179,6 @@ var callback = function(error, data, response) {
 };
 
 authenticationApi.authenticateUser(apiKey, opts, callback);
-
 ```
 
 You can find list of all API requets here - [ExaVault API Docs](https://www.exavault.com/developer/api-docs/)
