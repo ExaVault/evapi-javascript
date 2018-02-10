@@ -85,9 +85,9 @@ var ExaVaultApi = require('exa_vault_api');
 
 var authenticationApi = new ExaVaultApi.AuthenticationApi();
 
-var apiKey = 'ftptest-0KM31a1OLrR2N42OrC9l9'; 
-var username = 'ftptest';
-var password = 'quaker17'; 
+var apiKey = 'your_api_key_goe_here'; 
+var username = 'existing_username_goes_here';
+var password = 'user_password_goes_here'; 
 
 var opts = { 
   'username': username,
