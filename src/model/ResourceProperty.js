@@ -199,7 +199,12 @@
      * value: "folder"
      * @const
      */
-    "folder": "folder"  };
+    "folder": "folder", 
+    /**
+     * value: "dir"
+     * @const
+     */
+    "dir": "dir"  };
 
 
   return exports;
