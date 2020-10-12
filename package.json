@@ -1,8 +1,8 @@
 {
-  "name": "exavault_api",
+  "name": "@exavault/exavault-api",
   "version": "2.0.0",
   "description": "ExaVault API Javascript library",
-  "license": "Unlicense",
+  "license": "MIT",
   "main": "src/index.js",
   "scripts": {
     "test": "mocha --compilers js:babel-core/register --recursive"
@@ -26,5 +26,18 @@
     "expect.js": "~0.3.1",
     "mocha": "~2.3.4",
     "sinon": "1.17.3"
-  }
+  },
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExaVault/evapi-javascript.git"
+  },
+  "author": "support@exavault.com",
+  "bugs": {
+    "url": "https://github.com/ExaVault/evapi-javascript/issues"
+  },
+  "homepage": "https://github.com/ExaVault/evapi-javascript#readme"
 }
