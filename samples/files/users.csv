@@ -1,0 +1,25 @@
+#
+# ExaVault - User Import CSV File
+#
+#
+# You can only create (and not update) users with this file. If you need to make changes to existing users please do so through the web interface or programmatically with the ExaVault API.
+# If our import tool encounters any errors (e.g. user already exists) it will skip the user in question and try to create the remaining users.
+#
+# Three sample users are provided below. Please remove this comment and the sample users before uploading your CSV file. For full documentation on the file format see https://www.exavault.com/docs/detailed-manuals/swft/users/30-import-users
+#
+#
+# User samples:
+#
+# Basic user with required fields
+# sample_user_1,email@sample.com,user_password
+#
+# User with role and without permission to download or delete files. Make sure to leave the fields you don't use blank.
+# sample_user_2,email2@sample.com,user_password,,,,,user,true,false,false
+#
+# User with all fields specified
+# sample_user_3,example_user@email.com,examplepassword,samplenickname,"/",true,false,user,true,true,true,true,true,true,true,true,true,false,2015-07-25
+#
+# Fields. The FIRST THREE FIELDS ARE REQUIRED. All other fields are optional.
+# username,email,password,nickname,home_folder,send_welcome_email,enable_onboarding,role,upload,download,delete,modify,list,share,send_notifications,change_password,view_form_data,locked,expiration_date_yyyy-mm-dd
+sample_user_1,email@sample.com,user_password
+sample_user_3,example_user@email.com,examplepassword,samplenickname,"/",true,false,user,true,true,true,true,true,true,true,true,true,false,2015-07-25

@@ -1,312 +1,774 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.UsersApi = exports.SharesApi = exports.ResourcesApi = exports.RecipientsApi = exports.NotificationsApi = exports.FormApi = exports.EmailListsApi = exports.EmailApi = exports.ActivityApi = exports.AccountApi = exports.WebhooksActivityResponse = exports.WebhooksActivityEntryAttributes = exports.WebhooksActivityEntry = exports.UserResponse = exports.UserRelationshipsOwnerAccountData = exports.UserRelationshipsOwnerAccount = exports.UserRelationshipsHomeResourceData = exports.UserRelationshipsHomeResource = exports.UserRelationships = exports.UserPermissions = exports.UserCollectionResponse = exports.UserAttributes = exports.User = exports.UpdateAccountBody = exports.SharesRecipients = exports.ShareResponse = exports.ShareRelationshipsResources = exports.ShareRelationshipsOwnerData = exports.ShareRelationshipsOwner = exports.ShareRelationshipsNotifications = exports.ShareRelationshipsMessages = exports.ShareRelationshipsData2 = exports.ShareRelationshipsData1 = exports.ShareRelationshipsData = exports.ShareRelationships = exports.ShareRelationship = exports.ShareRecipientsResponse = exports.ShareRecipient1 = exports.ShareRecipient = exports.ShareMessageAttributes = exports.ShareMessage = exports.ShareCollectionResponse = exports.ShareAttributes = exports.Share = undefined;
+exports.SessionActivityResponse = exports.SessionActivityEntryAttributes = exports.SessionActivityEntry = exports.ResourceResponse = exports.ResourceRelationshipsShareData = exports.ResourceRelationshipsShare = exports.ResourceRelationshipsParentResourceData = exports.ResourceRelationshipsParentResource = exports.ResourceRelationshipsNotifications = exports.ResourceRelationshipsDirectFileData = exports.ResourceRelationshipsDirectFile = exports.ResourceRelationshipsData = exports.ResourceRelationships = exports.ResourceMultiResponse = exports.ResourceDelete = exports.ResourceCopyMove = exports.ResourceCollectionResponse = exports.ResourceAttributes = exports.Resource = exports.RelationshipData = exports.Quota = exports.PreviewFileResponse = exports.PreviewFileAttributes = exports.PreviewFile = exports.NotificationResponse = exports.NotificationRelationshipsShareData = exports.NotificationRelationshipsShare = exports.NotificationRelationshipsResourceData = exports.NotificationRelationshipsResource = exports.NotificationRelationshipsOwnerUserData = exports.NotificationRelationshipsOwnerUser = exports.NotificationRelationships = exports.NotificationRecipient = exports.NotificationCollectionResponse = exports.NotificationAttributes = exports.Notification = exports.MasterUserMasterUserData = exports.MasterUserMasterUser = exports.MasterUser = exports.FormsidSettings = exports.FormsidElements = exports.FormResponse = exports.FormRelationshipsShareData = exports.FormRelationshipsShare = exports.FormRelationships = exports.FormFieldUploadAreaSettings = exports.FormFieldUploadArea = exports.FormFieldSettings = exports.FormField = exports.FormEntryResponse = exports.FormEntryField = exports.FormEntryAttributes = exports.FormEntry = exports.FormAttributes = exports.Form = exports.Error403Errors = exports.Error403 = exports.Error401Errors = exports.Error401 = exports.Error = exports.EmptyResponse = exports.EmailListResponse = exports.EmailListRelationships = exports.EmailListOwnerUser = exports.EmailListCollectionResponse = exports.EmailListAttributes = exports.EmailList = exports.DownloadPollingResponse = exports.DownloadPolling = exports.CallbackSettingsTriggers = exports.CallbackSettings1Triggers = exports.CallbackSettings1 = exports.CallbackSettings = exports.BrandingSettings1 = exports.BrandingSettings = exports.Body9 = exports.Body8 = exports.Body7 = exports.Body6 = exports.Body5 = exports.Body4 = exports.Body3 = exports.Body2 = exports.Body18 = exports.Body17 = exports.Body16 = exports.Body15 = exports.Body14 = exports.Body13 = exports.Body12 = exports.Body11 = exports.Body10 = exports.Body1 = exports.Body = exports.AccountResponse = exports.AccountAttributesAllowedIp = exports.AccountAttributes = exports.AccountAllowedIpRanges = exports.Account = exports.ApiClient = undefined;
+
+var _ApiClient = require('./ApiClient');
+
+var _ApiClient2 = _interopRequireDefault(_ApiClient);
+
+var _Account = require('./model/Account');
+
+var _Account2 = _interopRequireDefault(_Account);
+
+var _AccountAllowedIpRanges = require('./model/AccountAllowedIpRanges');
+
+var _AccountAllowedIpRanges2 = _interopRequireDefault(_AccountAllowedIpRanges);
+
+var _AccountAttributes = require('./model/AccountAttributes');
+
+var _AccountAttributes2 = _interopRequireDefault(_AccountAttributes);
+
+var _AccountAttributesAllowedIp = require('./model/AccountAttributesAllowedIp');
+
+var _AccountAttributesAllowedIp2 = _interopRequireDefault(_AccountAttributesAllowedIp);
+
+var _AccountResponse = require('./model/AccountResponse');
+
+var _AccountResponse2 = _interopRequireDefault(_AccountResponse);
+
+var _Body = require('./model/Body');
+
+var _Body2 = _interopRequireDefault(_Body);
+
+var _Body3 = require('./model/Body1');
+
+var _Body4 = _interopRequireDefault(_Body3);
+
+var _Body5 = require('./model/Body10');
+
+var _Body6 = _interopRequireDefault(_Body5);
+
+var _Body7 = require('./model/Body11');
+
+var _Body8 = _interopRequireDefault(_Body7);
+
+var _Body9 = require('./model/Body12');
+
+var _Body10 = _interopRequireDefault(_Body9);
+
+var _Body11 = require('./model/Body13');
+
+var _Body12 = _interopRequireDefault(_Body11);
+
+var _Body13 = require('./model/Body14');
+
+var _Body14 = _interopRequireDefault(_Body13);
+
+var _Body15 = require('./model/Body15');
+
+var _Body16 = _interopRequireDefault(_Body15);
+
+var _Body17 = require('./model/Body16');
+
+var _Body18 = _interopRequireDefault(_Body17);
+
+var _Body19 = require('./model/Body17');
+
+var _Body20 = _interopRequireDefault(_Body19);
+
+var _Body21 = require('./model/Body18');
+
+var _Body22 = _interopRequireDefault(_Body21);
+
+var _Body23 = require('./model/Body2');
+
+var _Body24 = _interopRequireDefault(_Body23);
+
+var _Body25 = require('./model/Body3');
+
+var _Body26 = _interopRequireDefault(_Body25);
+
+var _Body27 = require('./model/Body4');
+
+var _Body28 = _interopRequireDefault(_Body27);
+
+var _Body29 = require('./model/Body5');
+
+var _Body30 = _interopRequireDefault(_Body29);
+
+var _Body31 = require('./model/Body6');
+
+var _Body32 = _interopRequireDefault(_Body31);
+
+var _Body33 = require('./model/Body7');
+
+var _Body34 = _interopRequireDefault(_Body33);
+
+var _Body35 = require('./model/Body8');
+
+var _Body36 = _interopRequireDefault(_Body35);
+
+var _Body37 = require('./model/Body9');
+
+var _Body38 = _interopRequireDefault(_Body37);
+
+var _BrandingSettings = require('./model/BrandingSettings');
+
+var _BrandingSettings2 = _interopRequireDefault(_BrandingSettings);
+
+var _BrandingSettings3 = require('./model/BrandingSettings1');
+
+var _BrandingSettings4 = _interopRequireDefault(_BrandingSettings3);
+
+var _CallbackSettings = require('./model/CallbackSettings');
+
+var _CallbackSettings2 = _interopRequireDefault(_CallbackSettings);
+
+var _CallbackSettings3 = require('./model/CallbackSettings1');
+
+var _CallbackSettings4 = _interopRequireDefault(_CallbackSettings3);
+
+var _CallbackSettings1Triggers = require('./model/CallbackSettings1Triggers');
+
+var _CallbackSettings1Triggers2 = _interopRequireDefault(_CallbackSettings1Triggers);
+
+var _CallbackSettingsTriggers = require('./model/CallbackSettingsTriggers');
+
+var _CallbackSettingsTriggers2 = _interopRequireDefault(_CallbackSettingsTriggers);
+
+var _DownloadPolling = require('./model/DownloadPolling');
+
+var _DownloadPolling2 = _interopRequireDefault(_DownloadPolling);
+
+var _DownloadPollingResponse = require('./model/DownloadPollingResponse');
+
+var _DownloadPollingResponse2 = _interopRequireDefault(_DownloadPollingResponse);
+
+var _EmailList = require('./model/EmailList');
+
+var _EmailList2 = _interopRequireDefault(_EmailList);
+
+var _EmailListAttributes = require('./model/EmailListAttributes');
+
+var _EmailListAttributes2 = _interopRequireDefault(_EmailListAttributes);
+
+var _EmailListCollectionResponse = require('./model/EmailListCollectionResponse');
+
+var _EmailListCollectionResponse2 = _interopRequireDefault(_EmailListCollectionResponse);
+
+var _EmailListOwnerUser = require('./model/EmailListOwnerUser');
+
+var _EmailListOwnerUser2 = _interopRequireDefault(_EmailListOwnerUser);
+
+var _EmailListRelationships = require('./model/EmailListRelationships');
+
+var _EmailListRelationships2 = _interopRequireDefault(_EmailListRelationships);
+
+var _EmailListResponse = require('./model/EmailListResponse');
+
+var _EmailListResponse2 = _interopRequireDefault(_EmailListResponse);
+
+var _EmptyResponse = require('./model/EmptyResponse');
+
+var _EmptyResponse2 = _interopRequireDefault(_EmptyResponse);
+
+var _Error = require('./model/Error');
+
+var _Error2 = _interopRequireDefault(_Error);
+
+var _Error3 = require('./model/Error401');
+
+var _Error4 = _interopRequireDefault(_Error3);
+
+var _Error401Errors = require('./model/Error401Errors');
+
+var _Error401Errors2 = _interopRequireDefault(_Error401Errors);
+
+var _Error5 = require('./model/Error403');
+
+var _Error6 = _interopRequireDefault(_Error5);
+
+var _Error403Errors = require('./model/Error403Errors');
+
+var _Error403Errors2 = _interopRequireDefault(_Error403Errors);
+
+var _Form = require('./model/Form');
+
+var _Form2 = _interopRequireDefault(_Form);
+
+var _FormAttributes = require('./model/FormAttributes');
+
+var _FormAttributes2 = _interopRequireDefault(_FormAttributes);
+
+var _FormEntry = require('./model/FormEntry');
+
+var _FormEntry2 = _interopRequireDefault(_FormEntry);
+
+var _FormEntryAttributes = require('./model/FormEntryAttributes');
+
+var _FormEntryAttributes2 = _interopRequireDefault(_FormEntryAttributes);
+
+var _FormEntryField = require('./model/FormEntryField');
+
+var _FormEntryField2 = _interopRequireDefault(_FormEntryField);
+
+var _FormEntryResponse = require('./model/FormEntryResponse');
+
+var _FormEntryResponse2 = _interopRequireDefault(_FormEntryResponse);
+
+var _FormField = require('./model/FormField');
+
+var _FormField2 = _interopRequireDefault(_FormField);
+
+var _FormFieldSettings = require('./model/FormFieldSettings');
+
+var _FormFieldSettings2 = _interopRequireDefault(_FormFieldSettings);
+
+var _FormFieldUploadArea = require('./model/FormFieldUploadArea');
+
+var _FormFieldUploadArea2 = _interopRequireDefault(_FormFieldUploadArea);
+
+var _FormFieldUploadAreaSettings = require('./model/FormFieldUploadAreaSettings');
+
+var _FormFieldUploadAreaSettings2 = _interopRequireDefault(_FormFieldUploadAreaSettings);
+
+var _FormRelationships = require('./model/FormRelationships');
+
+var _FormRelationships2 = _interopRequireDefault(_FormRelationships);
+
+var _FormRelationshipsShare = require('./model/FormRelationshipsShare');
+
+var _FormRelationshipsShare2 = _interopRequireDefault(_FormRelationshipsShare);
+
+var _FormRelationshipsShareData = require('./model/FormRelationshipsShareData');
+
+var _FormRelationshipsShareData2 = _interopRequireDefault(_FormRelationshipsShareData);
+
+var _FormResponse = require('./model/FormResponse');
+
+var _FormResponse2 = _interopRequireDefault(_FormResponse);
+
+var _FormsidElements = require('./model/FormsidElements');
+
+var _FormsidElements2 = _interopRequireDefault(_FormsidElements);
+
+var _FormsidSettings = require('./model/FormsidSettings');
+
+var _FormsidSettings2 = _interopRequireDefault(_FormsidSettings);
+
+var _MasterUser = require('./model/MasterUser');
+
+var _MasterUser2 = _interopRequireDefault(_MasterUser);
+
+var _MasterUserMasterUser = require('./model/MasterUserMasterUser');
+
+var _MasterUserMasterUser2 = _interopRequireDefault(_MasterUserMasterUser);
+
+var _MasterUserMasterUserData = require('./model/MasterUserMasterUserData');
+
+var _MasterUserMasterUserData2 = _interopRequireDefault(_MasterUserMasterUserData);
+
+var _Notification = require('./model/Notification');
+
+var _Notification2 = _interopRequireDefault(_Notification);
+
+var _NotificationAttributes = require('./model/NotificationAttributes');
+
+var _NotificationAttributes2 = _interopRequireDefault(_NotificationAttributes);
+
+var _NotificationCollectionResponse = require('./model/NotificationCollectionResponse');
+
+var _NotificationCollectionResponse2 = _interopRequireDefault(_NotificationCollectionResponse);
+
+var _NotificationRecipient = require('./model/NotificationRecipient');
+
+var _NotificationRecipient2 = _interopRequireDefault(_NotificationRecipient);
+
+var _NotificationRelationships = require('./model/NotificationRelationships');
+
+var _NotificationRelationships2 = _interopRequireDefault(_NotificationRelationships);
+
+var _NotificationRelationshipsOwnerUser = require('./model/NotificationRelationshipsOwnerUser');
+
+var _NotificationRelationshipsOwnerUser2 = _interopRequireDefault(_NotificationRelationshipsOwnerUser);
+
+var _NotificationRelationshipsOwnerUserData = require('./model/NotificationRelationshipsOwnerUserData');
+
+var _NotificationRelationshipsOwnerUserData2 = _interopRequireDefault(_NotificationRelationshipsOwnerUserData);
+
+var _NotificationRelationshipsResource = require('./model/NotificationRelationshipsResource');
+
+var _NotificationRelationshipsResource2 = _interopRequireDefault(_NotificationRelationshipsResource);
+
+var _NotificationRelationshipsResourceData = require('./model/NotificationRelationshipsResourceData');
+
+var _NotificationRelationshipsResourceData2 = _interopRequireDefault(_NotificationRelationshipsResourceData);
+
+var _NotificationRelationshipsShare = require('./model/NotificationRelationshipsShare');
+
+var _NotificationRelationshipsShare2 = _interopRequireDefault(_NotificationRelationshipsShare);
+
+var _NotificationRelationshipsShareData = require('./model/NotificationRelationshipsShareData');
+
+var _NotificationRelationshipsShareData2 = _interopRequireDefault(_NotificationRelationshipsShareData);
+
+var _NotificationResponse = require('./model/NotificationResponse');
+
+var _NotificationResponse2 = _interopRequireDefault(_NotificationResponse);
+
+var _PreviewFile = require('./model/PreviewFile');
+
+var _PreviewFile2 = _interopRequireDefault(_PreviewFile);
+
+var _PreviewFileAttributes = require('./model/PreviewFileAttributes');
+
+var _PreviewFileAttributes2 = _interopRequireDefault(_PreviewFileAttributes);
+
+var _PreviewFileResponse = require('./model/PreviewFileResponse');
+
+var _PreviewFileResponse2 = _interopRequireDefault(_PreviewFileResponse);
+
+var _Quota = require('./model/Quota');
+
+var _Quota2 = _interopRequireDefault(_Quota);
+
+var _RelationshipData = require('./model/RelationshipData');
+
+var _RelationshipData2 = _interopRequireDefault(_RelationshipData);
+
+var _Resource = require('./model/Resource');
+
+var _Resource2 = _interopRequireDefault(_Resource);
+
+var _ResourceAttributes = require('./model/ResourceAttributes');
+
+var _ResourceAttributes2 = _interopRequireDefault(_ResourceAttributes);
+
+var _ResourceCollectionResponse = require('./model/ResourceCollectionResponse');
+
+var _ResourceCollectionResponse2 = _interopRequireDefault(_ResourceCollectionResponse);
+
+var _ResourceCopyMove = require('./model/ResourceCopyMove');
+
+var _ResourceCopyMove2 = _interopRequireDefault(_ResourceCopyMove);
+
+var _ResourceDelete = require('./model/ResourceDelete');
+
+var _ResourceDelete2 = _interopRequireDefault(_ResourceDelete);
+
+var _ResourceMultiResponse = require('./model/ResourceMultiResponse');
+
+var _ResourceMultiResponse2 = _interopRequireDefault(_ResourceMultiResponse);
+
+var _ResourceRelationships = require('./model/ResourceRelationships');
+
+var _ResourceRelationships2 = _interopRequireDefault(_ResourceRelationships);
+
+var _ResourceRelationshipsData = require('./model/ResourceRelationshipsData');
+
+var _ResourceRelationshipsData2 = _interopRequireDefault(_ResourceRelationshipsData);
+
+var _ResourceRelationshipsDirectFile = require('./model/ResourceRelationshipsDirectFile');
+
+var _ResourceRelationshipsDirectFile2 = _interopRequireDefault(_ResourceRelationshipsDirectFile);
+
+var _ResourceRelationshipsDirectFileData = require('./model/ResourceRelationshipsDirectFileData');
+
+var _ResourceRelationshipsDirectFileData2 = _interopRequireDefault(_ResourceRelationshipsDirectFileData);
+
+var _ResourceRelationshipsNotifications = require('./model/ResourceRelationshipsNotifications');
+
+var _ResourceRelationshipsNotifications2 = _interopRequireDefault(_ResourceRelationshipsNotifications);
+
+var _ResourceRelationshipsParentResource = require('./model/ResourceRelationshipsParentResource');
+
+var _ResourceRelationshipsParentResource2 = _interopRequireDefault(_ResourceRelationshipsParentResource);
+
+var _ResourceRelationshipsParentResourceData = require('./model/ResourceRelationshipsParentResourceData');
+
+var _ResourceRelationshipsParentResourceData2 = _interopRequireDefault(_ResourceRelationshipsParentResourceData);
+
+var _ResourceRelationshipsShare = require('./model/ResourceRelationshipsShare');
+
+var _ResourceRelationshipsShare2 = _interopRequireDefault(_ResourceRelationshipsShare);
+
+var _ResourceRelationshipsShareData = require('./model/ResourceRelationshipsShareData');
+
+var _ResourceRelationshipsShareData2 = _interopRequireDefault(_ResourceRelationshipsShareData);
+
+var _ResourceResponse = require('./model/ResourceResponse');
+
+var _ResourceResponse2 = _interopRequireDefault(_ResourceResponse);
+
+var _SessionActivityEntry = require('./model/SessionActivityEntry');
+
+var _SessionActivityEntry2 = _interopRequireDefault(_SessionActivityEntry);
+
+var _SessionActivityEntryAttributes = require('./model/SessionActivityEntryAttributes');
+
+var _SessionActivityEntryAttributes2 = _interopRequireDefault(_SessionActivityEntryAttributes);
+
+var _SessionActivityResponse = require('./model/SessionActivityResponse');
+
+var _SessionActivityResponse2 = _interopRequireDefault(_SessionActivityResponse);
+
+var _Share = require('./model/Share');
+
+var _Share2 = _interopRequireDefault(_Share);
+
+var _ShareAttributes = require('./model/ShareAttributes');
+
+var _ShareAttributes2 = _interopRequireDefault(_ShareAttributes);
+
+var _ShareCollectionResponse = require('./model/ShareCollectionResponse');
+
+var _ShareCollectionResponse2 = _interopRequireDefault(_ShareCollectionResponse);
+
+var _ShareMessage = require('./model/ShareMessage');
+
+var _ShareMessage2 = _interopRequireDefault(_ShareMessage);
+
+var _ShareMessageAttributes = require('./model/ShareMessageAttributes');
+
+var _ShareMessageAttributes2 = _interopRequireDefault(_ShareMessageAttributes);
+
+var _ShareRecipient = require('./model/ShareRecipient');
+
+var _ShareRecipient2 = _interopRequireDefault(_ShareRecipient);
+
+var _ShareRecipient3 = require('./model/ShareRecipient1');
+
+var _ShareRecipient4 = _interopRequireDefault(_ShareRecipient3);
+
+var _ShareRecipientsResponse = require('./model/ShareRecipientsResponse');
+
+var _ShareRecipientsResponse2 = _interopRequireDefault(_ShareRecipientsResponse);
+
+var _ShareRelationship = require('./model/ShareRelationship');
+
+var _ShareRelationship2 = _interopRequireDefault(_ShareRelationship);
+
+var _ShareRelationships = require('./model/ShareRelationships');
+
+var _ShareRelationships2 = _interopRequireDefault(_ShareRelationships);
+
+var _ShareRelationshipsData = require('./model/ShareRelationshipsData');
+
+var _ShareRelationshipsData2 = _interopRequireDefault(_ShareRelationshipsData);
+
+var _ShareRelationshipsData3 = require('./model/ShareRelationshipsData1');
+
+var _ShareRelationshipsData4 = _interopRequireDefault(_ShareRelationshipsData3);
+
+var _ShareRelationshipsData5 = require('./model/ShareRelationshipsData2');
+
+var _ShareRelationshipsData6 = _interopRequireDefault(_ShareRelationshipsData5);
+
+var _ShareRelationshipsMessages = require('./model/ShareRelationshipsMessages');
+
+var _ShareRelationshipsMessages2 = _interopRequireDefault(_ShareRelationshipsMessages);
+
+var _ShareRelationshipsNotifications = require('./model/ShareRelationshipsNotifications');
+
+var _ShareRelationshipsNotifications2 = _interopRequireDefault(_ShareRelationshipsNotifications);
+
+var _ShareRelationshipsOwner = require('./model/ShareRelationshipsOwner');
+
+var _ShareRelationshipsOwner2 = _interopRequireDefault(_ShareRelationshipsOwner);
+
+var _ShareRelationshipsOwnerData = require('./model/ShareRelationshipsOwnerData');
+
+var _ShareRelationshipsOwnerData2 = _interopRequireDefault(_ShareRelationshipsOwnerData);
+
+var _ShareRelationshipsResources = require('./model/ShareRelationshipsResources');
+
+var _ShareRelationshipsResources2 = _interopRequireDefault(_ShareRelationshipsResources);
+
+var _ShareResponse = require('./model/ShareResponse');
+
+var _ShareResponse2 = _interopRequireDefault(_ShareResponse);
+
+var _SharesRecipients = require('./model/SharesRecipients');
+
+var _SharesRecipients2 = _interopRequireDefault(_SharesRecipients);
+
+var _UpdateAccountBody = require('./model/UpdateAccountBody');
+
+var _UpdateAccountBody2 = _interopRequireDefault(_UpdateAccountBody);
+
+var _User = require('./model/User');
+
+var _User2 = _interopRequireDefault(_User);
+
+var _UserAttributes = require('./model/UserAttributes');
+
+var _UserAttributes2 = _interopRequireDefault(_UserAttributes);
+
+var _UserCollectionResponse = require('./model/UserCollectionResponse');
+
+var _UserCollectionResponse2 = _interopRequireDefault(_UserCollectionResponse);
+
+var _UserPermissions = require('./model/UserPermissions');
+
+var _UserPermissions2 = _interopRequireDefault(_UserPermissions);
+
+var _UserRelationships = require('./model/UserRelationships');
+
+var _UserRelationships2 = _interopRequireDefault(_UserRelationships);
+
+var _UserRelationshipsHomeResource = require('./model/UserRelationshipsHomeResource');
+
+var _UserRelationshipsHomeResource2 = _interopRequireDefault(_UserRelationshipsHomeResource);
+
+var _UserRelationshipsHomeResourceData = require('./model/UserRelationshipsHomeResourceData');
+
+var _UserRelationshipsHomeResourceData2 = _interopRequireDefault(_UserRelationshipsHomeResourceData);
+
+var _UserRelationshipsOwnerAccount = require('./model/UserRelationshipsOwnerAccount');
+
+var _UserRelationshipsOwnerAccount2 = _interopRequireDefault(_UserRelationshipsOwnerAccount);
+
+var _UserRelationshipsOwnerAccountData = require('./model/UserRelationshipsOwnerAccountData');
+
+var _UserRelationshipsOwnerAccountData2 = _interopRequireDefault(_UserRelationshipsOwnerAccountData);
+
+var _UserResponse = require('./model/UserResponse');
+
+var _UserResponse2 = _interopRequireDefault(_UserResponse);
+
+var _WebhooksActivityEntry = require('./model/WebhooksActivityEntry');
+
+var _WebhooksActivityEntry2 = _interopRequireDefault(_WebhooksActivityEntry);
+
+var _WebhooksActivityEntryAttributes = require('./model/WebhooksActivityEntryAttributes');
+
+var _WebhooksActivityEntryAttributes2 = _interopRequireDefault(_WebhooksActivityEntryAttributes);
+
+var _WebhooksActivityResponse = require('./model/WebhooksActivityResponse');
+
+var _WebhooksActivityResponse2 = _interopRequireDefault(_WebhooksActivityResponse);
+
+var _AccountApi = require('./api/AccountApi');
+
+var _AccountApi2 = _interopRequireDefault(_AccountApi);
+
+var _ActivityApi = require('./api/ActivityApi');
+
+var _ActivityApi2 = _interopRequireDefault(_ActivityApi);
+
+var _EmailApi = require('./api/EmailApi');
+
+var _EmailApi2 = _interopRequireDefault(_EmailApi);
+
+var _EmailListsApi = require('./api/EmailListsApi');
+
+var _EmailListsApi2 = _interopRequireDefault(_EmailListsApi);
+
+var _FormApi = require('./api/FormApi');
+
+var _FormApi2 = _interopRequireDefault(_FormApi);
+
+var _NotificationsApi = require('./api/NotificationsApi');
+
+var _NotificationsApi2 = _interopRequireDefault(_NotificationsApi);
+
+var _RecipientsApi = require('./api/RecipientsApi');
+
+var _RecipientsApi2 = _interopRequireDefault(_RecipientsApi);
+
+var _ResourcesApi = require('./api/ResourcesApi');
+
+var _ResourcesApi2 = _interopRequireDefault(_ResourcesApi);
+
+var _SharesApi = require('./api/SharesApi');
+
+var _SharesApi2 = _interopRequireDefault(_SharesApi);
+
+var _UsersApi = require('./api/UsersApi');
+
+var _UsersApi2 = _interopRequireDefault(_UsersApi);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/**
+* See_our_API_reference_documentation_at_httpswww_exavault_comdeveloperapi_docs.<br>
+* The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
+* <p>
+* An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
+* <pre>
+* var ExaVaultApi = require('index'); // See note below*.
+* var xxxSvc = new ExaVaultApi.XxxApi(); // Allocate the API class we're going to use.
+* var yyyModel = new ExaVaultApi.Yyy(); // Construct a model instance.
+* yyyModel.someProperty = 'someValue';
+* ...
+* var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
+* ...
+* </pre>
+* <em>*NOTE: For a top-level AMD script, use require(['index'], function(){...})
+* and put the application logic within the callback function.</em>
+* </p>
+* <p>
+* A non-AMD browser application (discouraged) might do something like this:
+* <pre>
+* var xxxSvc = new ExaVaultApi.XxxApi(); // Allocate the API class we're going to use.
+* var yyy = new ExaVaultApi.Yyy(); // Construct a model instance.
+* yyyModel.someProperty = 'someValue';
+* ...
+* var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
+* ...
+* </pre>
+* </p>
+* @module index
+* @version 2.0
+*/
 /**
  * ExaVault API
- * # Introduction  Welcome to the ExaVault API documentation. Our API lets you control nearly all aspects of your ExaVault account programatically, from uploading and downloading files to creating and managing shares and notifications. Our API supports both GET and POST operations.  Capabilities of the API include:  - Uploading and downloading files. - Managing files and folders; including standard operations like move, copy and delete. - Getting information about activity occuring in your account. - Creating, updating and deleting users. - Creating and managing shares, including download-only shares and recieve folders.  - Setting up and managing notifications.  ## The API Endpoint  The ExaVault API is located at: https://api.exavault.com/v1.2/  # Testing w/ Postman  We've made it easy for you to test our API before you start full-scale development. Download [Postman](https://www.getpostman.com/) or the [Postman Chrome Extension](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en), and then download our Postman collection, below. [Obtain your API key](#section/Code-Libraries-and-Sample-PHP-Code/Obtain-your-API-key) and you'll be able to interact with your ExaVault account immediately, so you can better understand what the capabilities of the API are.  <div class=\"postman-run-button\" data-postman-action=\"collection/import\" data-postman-var-1=\"e13395afc6278ce1555f\"></div>  ![ExaVault API Postman Colletion Usage](/images/postman.png)  If you'd prefer to skip Postman and start working with code directly, take a look at the sample code below.    # Code Libraries & Sample PHP Code  Once you're ready for full-scale development, we recommend looking at our code libraries available on [GitHub](https://github.com/ExaVault). We offer code libraries for [Python](https://github.com/ExaVault/evapi-python), [PHP](https://github.com/ExaVault/evapi-php) and [JavaScript](https://github.com/ExaVault/evapi-javascript).  While we recommend using our libraries, you're welcome to interact directly with our API via HTTP GET and POST requests -- a great option particularly if you're developing in a language for which we don't yet have sample code.     - [Download Python Library &amp; Sample Code &raquo;](https://github.com/ExaVault/evapi-python) - [Download PHP Library &amp; Sample Code &raquo;](https://github.com/ExaVault/evapi-php) - [Download JavaScript Library &amp; Sample Code &raquo;](https://github.com/ExaVault/evapi-javascript)  *Note: You can generate client libraries for any language using [Swagger Editor](http://editor2.swagger.io/). Just download our documentation file, past it into editor and use 'Generate Client' dropdown.*  ## Obtain Your API Key  You will need to obtain an API key for your application from the [Client Area](https://clients.exavault.com/clientarea.php?action=products) of your account.  To obtain an API key, please follow the instructions below.   + Login to the [Accounts](https://clients.exavault.com/clientarea.php?action=products) section of the Client Area.  + Use the drop down next to your desired account, and select *Manage API Keys*.  + You will be brought to the API Key management screen. Fill out the form and save to generate a new key for your app.  *NOTE: As of Oct 2017, we are in the progress of migrating customers to our next generation platform. If your account is already on our new platform, you should log into your File Manager and create your API key under Account->Developer->Manage API Keys*.  # Status Codes  The ExaVault API returns only two HTTP status codes for its responses: 200 and 500.  When the request could be successfully processed by the endpoint, the response status code will be 200, regardless of whether the requested action could be taken.  For example, the response to a getUser request for a username that does not exist in your account would have the status of 200,  indicating that the response was received and processed, but the error member of the returned response object would contain object with `message` and `code` properties.  **Result Format:**  |Success   | Error     | Results   | | ---      | :---:       |  :---:      | | 0        |  `Object` |   Empty   | | 1        |   Empty       |    `Object` or `Array`        |     When a malformed request is received, a 500 HTTP status code will be returned, indicating that the request could not be processed.  ExaVault's API does not currently support traditional REST response codes such as '201 Created' or '405 Method Not Allowed', although we intend to support such codes a future version of the API.   # File Paths  Many API calls require you to provide one or more file paths. For example, the <a href=\"#operation/moveResources\">moveResources</a> call requires both an array of source paths, **filePaths**, and a destination path, **destinationPath**. Here's a few tips for working with paths:   - File paths should always be specified as a string, using the standard Unix format: e.g. `/path/to/a/file.txt`  - File paths are always absolute _from the home directory of the logged in user_. For example, if the user **bob** had a home directory restriction of `/bob_home`, then an API call made using his login would specify a file as `/myfile.txt`, whereas an API call made using the master user ( no home directory restriction ) would specify the same file as `/bob_home/myfile.txt`.  # API Rate Limits  We rate limit the number of API calls you can make to help prevent abuse and protect system stablity. Each API key will support 500 requests per rolling five minutes. If you make more than 500 requests in a five minute period, you will receive a response with an error object for fifteen minutes.  # Webhooks  A webhook is an HTTP callback: a simple event-notification via HTTP POST. If you define webhooks for Exavault, ExaVault will POST a  message to a URL when certain things happen.     Webhooks can be used to receive a JSON object to your endpoint URL. You choose what events will trigger webhook messages to your endpoint URL.     Webhooks will attempt to send a message up to 8 times with increasing timeouts between each attempt. All webhook requests are tracked in the webhooks log.  ## Getting Started  1. Go to the Account tab inside SWFT.  2. Choose the Developer tab.  3. Configure your endpoint URL and select the events you want to trigger webhook messages.  4. Save settings.    You are all set to receive webhook callbacks on the events you selected.  ## Verification Signature  ExaVault includes a custom HTTP header, X-Exavault-Signature, with webhooks POST requests which will contain the signature for the request.  You can use the signature to verify the request for an additional level of security.  ## Generating the Signature  1. Go to Account tab inside SWFT.  2. Choose the Developer tab.  3. Obtain the verification token. This field will only be shown if you've configured your endpoint URL.  4. In your code that receives or processes the webhooks, you should concatenate the verification token with the JSON object that we sent in our      POST request and hash it with md5.     ```     md5($verificationToken.$webhooksObject);     ```  5. Compare signature that you generated to the signature provided in the X-Exavault-Signature HTTP header  ## Example JSON Response Object  ```json   {     \"accountname\": \"mycompanyname\",     \"username\": \"john\"     \"operation\": \"Upload\",     \"protocol\": \"https\",     \"path\": \"/testfolder/filename.jpg\"     \"attempt\": 1   } ```  ## Webhooks Logs  Keep track of all your webhooks requests in the Activity section of your account. You can find the following info for each request:    1. date and time - timestamp of the request.    2. endpoint url - where the webhook was sent.    3. event - what triggered the webhook.    4. status - HTTP status or curl error code.    5. attempt - how many times we tried to send this request.    6. response size - size of the response from your server.    7. details - you can check the response body if it was sent. 
+ * See our API reference documentation at https://www.exavault.com/developer/api-docs/
  *
- * OpenAPI spec version: 1.0.1
+ * OpenAPI spec version: 2.0
+ * Contact: support@exavault.com
  *
  * NOTE: This class is auto generated by the swagger code generator program.
  * https://github.com/swagger-api/swagger-codegen.git
- *
- * Swagger Codegen version: 2.2.3
- *
  * Do not edit the class manually.
  *
  */
 
-(function(factory) {
-  if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/Account', 'model/AccountResponse', 'model/Auth', 'model/AuthResponse', 'model/AvailableUser', 'model/AvailableUserResponse', 'model/CallbackSettings', 'model/DeletedResource', 'model/DeletedResourcesResponse', 'model/DirectFile', 'model/Error', 'model/ExistingResource', 'model/ExistingResourcesResponse', 'model/LogEntry', 'model/LogResponse', 'model/Message', 'model/ModifiedResource', 'model/ModifiedResourcesResponse', 'model/Notification', 'model/NotificationActivityResponse', 'model/NotificationMessage', 'model/NotificationRecipient', 'model/NotificationResponse', 'model/NotificationsResponse', 'model/PreviewFile', 'model/PreviewFileResponse', 'model/Resource', 'model/ResourcePropertiesResponse', 'model/ResourceProperty', 'model/ResourceResponse', 'model/Response', 'model/Share', 'model/ShareActivityResponse', 'model/ShareLogEntry', 'model/ShareRecipient', 'model/ShareResponse', 'model/SharesResponse', 'model/UpdateNotification', 'model/Url', 'model/UrlResponse', 'model/User', 'model/UserResponse', 'model/UsersResponse', 'api/ActivityApi', 'api/AuthenticationApi', 'api/FilesAndFoldersApi', 'api/NotificationApi', 'api/ShareApi', 'api/UserApi'], factory);
-  } else if (typeof module === 'object' && module.exports) {
-    // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./ApiClient'), require('./model/Account'), require('./model/AccountResponse'), require('./model/Auth'), require('./model/AuthResponse'), require('./model/AvailableUser'), require('./model/AvailableUserResponse'), require('./model/CallbackSettings'), require('./model/DeletedResource'), require('./model/DeletedResourcesResponse'), require('./model/DirectFile'), require('./model/Error'), require('./model/ExistingResource'), require('./model/ExistingResourcesResponse'), require('./model/LogEntry'), require('./model/LogResponse'), require('./model/Message'), require('./model/ModifiedResource'), require('./model/ModifiedResourcesResponse'), require('./model/Notification'), require('./model/NotificationActivityResponse'), require('./model/NotificationMessage'), require('./model/NotificationRecipient'), require('./model/NotificationResponse'), require('./model/NotificationsResponse'), require('./model/PreviewFile'), require('./model/PreviewFileResponse'), require('./model/Resource'), require('./model/ResourcePropertiesResponse'), require('./model/ResourceProperty'), require('./model/ResourceResponse'), require('./model/Response'), require('./model/Share'), require('./model/ShareActivityResponse'), require('./model/ShareLogEntry'), require('./model/ShareRecipient'), require('./model/ShareResponse'), require('./model/SharesResponse'), require('./model/UpdateNotification'), require('./model/Url'), require('./model/UrlResponse'), require('./model/User'), require('./model/UserResponse'), require('./model/UsersResponse'), require('./api/ActivityApi'), require('./api/AuthenticationApi'), require('./api/FilesAndFoldersApi'), require('./api/NotificationApi'), require('./api/ShareApi'), require('./api/UserApi'));
-  }
-}(function(ApiClient, Account, AccountResponse, Auth, AuthResponse, AvailableUser, AvailableUserResponse, CallbackSettings, DeletedResource, DeletedResourcesResponse, DirectFile, Error, ExistingResource, ExistingResourcesResponse, LogEntry, LogResponse, Message, ModifiedResource, ModifiedResourcesResponse, Notification, NotificationActivityResponse, NotificationMessage, NotificationRecipient, NotificationResponse, NotificationsResponse, PreviewFile, PreviewFileResponse, Resource, ResourcePropertiesResponse, ResourceProperty, ResourceResponse, Response, Share, ShareActivityResponse, ShareLogEntry, ShareRecipient, ShareResponse, SharesResponse, UpdateNotification, Url, UrlResponse, User, UserResponse, UsersResponse, ActivityApi, AuthenticationApi, FilesAndFoldersApi, NotificationApi, ShareApi, UserApi) {
-  'use strict';
-
-  /**
-   * _IntroductionWelcome_to_the_ExaVault_API_documentation__Our_API_lets_you_control_nearly_all_aspects_of_your_ExaVault_account_programatically_from_uploading_and_downloading_files_to_creating_and_managing_shares_and_notifications__Our_API_supports_both_GET_and_POST_operations_Capabilities_of_the_API_include__Uploading_and_downloading_files___Managing_files_and_folders_including_standard_operations_like_move_copy_and_delete___Getting_information_about_activity_occuring_in_your_account___Creating_updating_and_deleting_users___Creating_and_managing_shares_including_download_only_shares_and_recieve_folders____Setting_up_and_managing_notifications__The_API_EndpointThe_ExaVault_API_is_located_at_httpsapi_exavault_comv1_Testing_w_PostmanWeve_made_it_easy_for_you_to_test_our_API_before_you_start_full_scale_development__Download__Postman_httpswww_getpostman_com_or_the__Postman_Chrome_Extension_httpschrome_google_comwebstoredetailpostmanfhbjgbiflinjbdggehcddcbncdddomophlen_and_then_download_our_Postman_collection_below___Obtain_your_API_key_sectionCode_Libraries_and_Sample_PHP_CodeObtain_your_API_key_and_youll_be_able_to_interact_with_your_ExaVault_account_immediately_so_you_can_better_understand_what_the_capabilities_of_the_API_are_div_classpostman_run_buttondata_postman_actioncollectionimportdata_postman_var_1e13395afc6278ce1555fdiv_ExaVault_API_Postman_Colletion_Usage_imagespostman_pngIf_youd_prefer_to_skip_Postman_and_start_working_with_code_directly_take_a_look_at_the_sample_code_below___Code_Libraries__Sample_PHP_CodeOnce_youre_ready_for_full_scale_development_we_recommend_looking_at_our_code_libraries_available_on__GitHub_httpsgithub_comExaVault__We_offer_code_libraries_for__Python_httpsgithub_comExaVaultevapi_python__PHP_httpsgithub_comExaVaultevapi_php_and__JavaScript_httpsgithub_comExaVaultevapi_javascript_While_we_recommend_using_our_libraries_youre_welcome_to_interact_directly_with_our_API_via_HTTP_GET_and_POST_requests____a_great_option_particularly_if_youre_developing_in_a_language_for_which_we_dont_yet_have_sample_code_______Download_Python_Library_amp_Sample_Code_raquo_httpsgithub_comExaVaultevapi_python___Download_PHP_Library_amp_Sample_Code_raquo_httpsgithub_comExaVaultevapi_php___Download_JavaScript_Library_amp_Sample_Code_raquo_httpsgithub_comExaVaultevapi_javascriptNote_You_can_generate_client_libraries_for_any_language_using__Swagger_Editor_httpeditor2_swagger_io__Just_download_our_documentation_file_past_it_into_editor_and_use_Generate_Client_dropdown__Obtain_Your_API_KeyYou_will_need_to_obtain_an_API_key_for_your_application_from_the__Client_Area_httpsclients_exavault_comclientarea_phpactionproducts_of_your_account___Toobtain_an_API_key_please_follow_the_instructions_below___Login_to_the__Accounts_httpsclients_exavault_comclientarea_phpactionproducts_section_of_the_Client_Area___Use_the_drop_down_next_to_your_desired_account_and_select_Manage_API_Keys___You_will_be_brought_to_the_API_Key_management_screen__Fill_out_the_form_and_save_to_generate_a_new_key_for_your_app_NOTE_As_of_Oct_2017_we_are_in_the_progress_of_migrating_customers_to_our_next_generation_platform__If_your_account_is_already_on_our_new_platform_you_should_log_into_your_File_Manager_and_create_your_API_key_under_Account_Developer_Manage_API_Keys__Status_CodesThe_ExaVault_API_returns_only_two_HTTP_status_codes_for_its_responses_200_and_500__When_the_request_could_be_successfully_processed_by_the_endpoint_the_response_status_code_will_be_200_regardless_of_whether_the_requested_action_could_be_taken_For_example_the_response_to_a_getUser_request_for_a_username_that_does_not_exist_in_your_account_would_have_the_status_of_200_indicating_that_the_response_was_received_and_processed_but_the_error_member_of_the_returned_response_object_would_contain_object_with_message_and_code_properties_Result_FormatSuccess____Error______Results____________________________________0__________Object____Empty____1___________Empty___________Object_or_Array___________When_a_malformed_request_is_received_a_500_HTTP_status_code_will_be_returned_indicating_that_the_request_could_not_be_processed_ExaVaults_API_does_not_currently_support_traditional_REST_response_codes_such_as_201_Created_or_405_Method_Not_Allowed_although_we_intend_to_support_such_codes_a_future_version_of_the_API___File_PathsMany_API_calls_require_you_to_provide_one_or_more_file_paths__For_example_the_a_hrefoperationmoveResourcesmoveResourcesa_call_requires_both_an_array_of_source_paths_filePaths_and_a_destination_path_destinationPath__Heres_a_few_tips_for_working_with_paths___File_paths_should_always_be_specified_as_a_string_using_the_standard_Unix_format_e_g__pathtoafile_txt___File_paths_are_always_absolute__from_the_home_directory_of_the_logged_in_user___For_example_if_the_user_bob_had_a_home_directory_restriction_of_bob_home_then_an_API_call_made_using_his_login_would_specify_a_file_as_myfile_txt_whereas_an_API_call_made_using_the_master_user___no_home_directory_restriction__would_specify_the_same_file_as_bob_homemyfile_txt__API_Rate_LimitsWe_rate_limit_the_number_of_API_calls_you_can_make_to_help_prevent_abuse_and_protect_system_stablity__Each_API_key_will_support_500_requests_per_rolling_five_minutes__If_you_make_more_than_500_requests_in_a_five_minute_period_you_will_receive_a_response_with_an_error_object_for_fifteen_minutes__WebhooksA_webhook_is_an_HTTP_callback_a_simple_event_notification_via_HTTP_POST__If_you_define_webhooks_for_Exavault_ExaVault_will_POST_a_message_to_a_URL_when_certain_things_happen_Webhooks_can_be_used_to_receive_a_JSON_object_to_your_endpoint_URL__You_choose_what_events_will_trigger_webhook_messages_to_your_endpoint_URL_Webhooks_will_attempt_to_send_a_message_up_to_8_times_with_increasing_timeouts_between_each_attempt__All_webhook_requests_are_tracked_in_the_webhooks_log__Getting_Started1__Go_to_the_Account_tab_inside_SWFT_2__Choose_the_Developer_tab_3__Configure_your_endpoint_URL_and_select_the_events_you_want_to_trigger_webhook_messages_4__Save_settings_You_are_all_set_to_receive_webhook_callbacks_on_the_events_you_selected__Verification_SignatureExaVault_includes_a_custom_HTTP_header_X_Exavault_Signature_with_webhooks_POST_requests_which_will_contain_the_signature_for_the_request__You_can_use_the_signature_to_verify_the_request_for_an_additional_level_of_security__Generating_the_Signature1__Go_to_Account_tab_inside_SWFT_2__Choose_the_Developer_tab_3__Obtain_the_verification_token__This_field_will_only_be_shown_if_youve_configured_your_endpoint_URL_4__In_your_code_that_receives_or_processes_the_webhooks_you_should_concatenate_the_verification_token_with_the_JSON_object_that_we_sent_in_our_____POST_request_and_hash_it_with_md5_________md5_verificationToken_webhooksObject____5__Compare_signature_that_you_generated_to_the_signature_provided_in_the_X_Exavault_Signature_HTTP_header_Example_JSON_Response_Objectjson______accountname_mycompanyname____username_john____operation_Upload____protocol_https____path_testfolderfilename_jpg____attempt_1___Webhooks_LogsKeep_track_of_all_your_webhooks_requests_in_the_Activity_section_of_your_account_You_can_find_the_following_info_for_each_request__1__date_and_time___timestamp_of_the_request___2__endpoint_url___where_the_webhook_was_sent___3__event___what_triggered_the_webhook___4__status___HTTP_status_or_curl_error_code___5__attempt___how_many_times_we_tried_to_send_this_request___6__response_size___size_of_the_response_from_your_server___7__details___you_can_check_the_response_body_if_it_was_sent_.<br>
-   * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
-   * <p>
-   * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
-   * <pre>
-   * var ExaVaultApi = require('index'); // See note below*.
-   * var xxxSvc = new ExaVaultApi.XxxApi(); // Allocate the API class we're going to use.
-   * var yyyModel = new ExaVaultApi.Yyy(); // Construct a model instance.
-   * yyyModel.someProperty = 'someValue';
-   * ...
-   * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
-   * ...
-   * </pre>
-   * <em>*NOTE: For a top-level AMD script, use require(['index'], function(){...})
-   * and put the application logic within the callback function.</em>
-   * </p>
-   * <p>
-   * A non-AMD browser application (discouraged) might do something like this:
-   * <pre>
-   * var xxxSvc = new ExaVaultApi.XxxApi(); // Allocate the API class we're going to use.
-   * var yyy = new ExaVaultApi.Yyy(); // Construct a model instance.
-   * yyyModel.someProperty = 'someValue';
-   * ...
-   * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
-   * ...
-   * </pre>
-   * </p>
-   * @module index
-   * @version 1.0.1
-   */
-  var exports = {
-    /**
-     * The ApiClient constructor.
-     * @property {module:ApiClient}
-     */
-    ApiClient: ApiClient,
-    /**
-     * The Account model constructor.
-     * @property {module:model/Account}
-     */
-    Account: Account,
-    /**
-     * The AccountResponse model constructor.
-     * @property {module:model/AccountResponse}
-     */
-    AccountResponse: AccountResponse,
-    /**
-     * The Auth model constructor.
-     * @property {module:model/Auth}
-     */
-    Auth: Auth,
-    /**
-     * The AuthResponse model constructor.
-     * @property {module:model/AuthResponse}
-     */
-    AuthResponse: AuthResponse,
-    /**
-     * The AvailableUser model constructor.
-     * @property {module:model/AvailableUser}
-     */
-    AvailableUser: AvailableUser,
-    /**
-     * The AvailableUserResponse model constructor.
-     * @property {module:model/AvailableUserResponse}
-     */
-    AvailableUserResponse: AvailableUserResponse,
-    /**
-     * The CallbackSettings model constructor.
-     * @property {module:model/CallbackSettings}
-     */
-    CallbackSettings: CallbackSettings,
-    /**
-     * The DeletedResource model constructor.
-     * @property {module:model/DeletedResource}
-     */
-    DeletedResource: DeletedResource,
-    /**
-     * The DeletedResourcesResponse model constructor.
-     * @property {module:model/DeletedResourcesResponse}
-     */
-    DeletedResourcesResponse: DeletedResourcesResponse,
-    /**
-     * The DirectFile model constructor.
-     * @property {module:model/DirectFile}
-     */
-    DirectFile: DirectFile,
-    /**
-     * The Error model constructor.
-     * @property {module:model/Error}
-     */
-    Error: Error,
-    /**
-     * The ExistingResource model constructor.
-     * @property {module:model/ExistingResource}
-     */
-    ExistingResource: ExistingResource,
-    /**
-     * The ExistingResourcesResponse model constructor.
-     * @property {module:model/ExistingResourcesResponse}
-     */
-    ExistingResourcesResponse: ExistingResourcesResponse,
-    /**
-     * The LogEntry model constructor.
-     * @property {module:model/LogEntry}
-     */
-    LogEntry: LogEntry,
-    /**
-     * The LogResponse model constructor.
-     * @property {module:model/LogResponse}
-     */
-    LogResponse: LogResponse,
-    /**
-     * The Message model constructor.
-     * @property {module:model/Message}
-     */
-    Message: Message,
-    /**
-     * The ModifiedResource model constructor.
-     * @property {module:model/ModifiedResource}
-     */
-    ModifiedResource: ModifiedResource,
-    /**
-     * The ModifiedResourcesResponse model constructor.
-     * @property {module:model/ModifiedResourcesResponse}
-     */
-    ModifiedResourcesResponse: ModifiedResourcesResponse,
-    /**
-     * The Notification model constructor.
-     * @property {module:model/Notification}
-     */
-    Notification: Notification,
-    /**
-     * The NotificationActivityResponse model constructor.
-     * @property {module:model/NotificationActivityResponse}
-     */
-    NotificationActivityResponse: NotificationActivityResponse,
-    /**
-     * The NotificationMessage model constructor.
-     * @property {module:model/NotificationMessage}
-     */
-    NotificationMessage: NotificationMessage,
-    /**
-     * The NotificationRecipient model constructor.
-     * @property {module:model/NotificationRecipient}
-     */
-    NotificationRecipient: NotificationRecipient,
-    /**
-     * The NotificationResponse model constructor.
-     * @property {module:model/NotificationResponse}
-     */
-    NotificationResponse: NotificationResponse,
-    /**
-     * The NotificationsResponse model constructor.
-     * @property {module:model/NotificationsResponse}
-     */
-    NotificationsResponse: NotificationsResponse,
-    /**
-     * The PreviewFile model constructor.
-     * @property {module:model/PreviewFile}
-     */
-    PreviewFile: PreviewFile,
-    /**
-     * The PreviewFileResponse model constructor.
-     * @property {module:model/PreviewFileResponse}
-     */
-    PreviewFileResponse: PreviewFileResponse,
-    /**
-     * The Resource model constructor.
-     * @property {module:model/Resource}
-     */
-    Resource: Resource,
-    /**
-     * The ResourcePropertiesResponse model constructor.
-     * @property {module:model/ResourcePropertiesResponse}
-     */
-    ResourcePropertiesResponse: ResourcePropertiesResponse,
-    /**
-     * The ResourceProperty model constructor.
-     * @property {module:model/ResourceProperty}
-     */
-    ResourceProperty: ResourceProperty,
-    /**
-     * The ResourceResponse model constructor.
-     * @property {module:model/ResourceResponse}
-     */
-    ResourceResponse: ResourceResponse,
-    /**
-     * The Response model constructor.
-     * @property {module:model/Response}
-     */
-    Response: Response,
-    /**
-     * The Share model constructor.
-     * @property {module:model/Share}
-     */
-    Share: Share,
-    /**
-     * The ShareActivityResponse model constructor.
-     * @property {module:model/ShareActivityResponse}
-     */
-    ShareActivityResponse: ShareActivityResponse,
-    /**
-     * The ShareLogEntry model constructor.
-     * @property {module:model/ShareLogEntry}
-     */
-    ShareLogEntry: ShareLogEntry,
-    /**
-     * The ShareRecipient model constructor.
-     * @property {module:model/ShareRecipient}
-     */
-    ShareRecipient: ShareRecipient,
-    /**
-     * The ShareResponse model constructor.
-     * @property {module:model/ShareResponse}
-     */
-    ShareResponse: ShareResponse,
-    /**
-     * The SharesResponse model constructor.
-     * @property {module:model/SharesResponse}
-     */
-    SharesResponse: SharesResponse,
-    /**
-     * The UpdateNotification model constructor.
-     * @property {module:model/UpdateNotification}
-     */
-    UpdateNotification: UpdateNotification,
-    /**
-     * The Url model constructor.
-     * @property {module:model/Url}
-     */
-    Url: Url,
-    /**
-     * The UrlResponse model constructor.
-     * @property {module:model/UrlResponse}
-     */
-    UrlResponse: UrlResponse,
-    /**
-     * The User model constructor.
-     * @property {module:model/User}
-     */
-    User: User,
-    /**
-     * The UserResponse model constructor.
-     * @property {module:model/UserResponse}
-     */
-    UserResponse: UserResponse,
-    /**
-     * The UsersResponse model constructor.
-     * @property {module:model/UsersResponse}
-     */
-    UsersResponse: UsersResponse,
-    /**
-     * The ActivityApi service constructor.
-     * @property {module:api/ActivityApi}
-     */
-    ActivityApi: ActivityApi,
-    /**
-     * The AuthenticationApi service constructor.
-     * @property {module:api/AuthenticationApi}
-     */
-    AuthenticationApi: AuthenticationApi,
-    /**
-     * The FilesAndFoldersApi service constructor.
-     * @property {module:api/FilesAndFoldersApi}
-     */
-    FilesAndFoldersApi: FilesAndFoldersApi,
-    /**
-     * The NotificationApi service constructor.
-     * @property {module:api/NotificationApi}
-     */
-    NotificationApi: NotificationApi,
-    /**
-     * The ShareApi service constructor.
-     * @property {module:api/ShareApi}
-     */
-    ShareApi: ShareApi,
-    /**
-     * The UserApi service constructor.
-     * @property {module:api/UserApi}
-     */
-    UserApi: UserApi
-  };
-
-  return exports;
-}));
+exports.ApiClient = _ApiClient2.default;
+exports.Account = _Account2.default;
+exports.AccountAllowedIpRanges = _AccountAllowedIpRanges2.default;
+exports.AccountAttributes = _AccountAttributes2.default;
+exports.AccountAttributesAllowedIp = _AccountAttributesAllowedIp2.default;
+exports.AccountResponse = _AccountResponse2.default;
+exports.Body = _Body2.default;
+exports.Body1 = _Body4.default;
+exports.Body10 = _Body6.default;
+exports.Body11 = _Body8.default;
+exports.Body12 = _Body10.default;
+exports.Body13 = _Body12.default;
+exports.Body14 = _Body14.default;
+exports.Body15 = _Body16.default;
+exports.Body16 = _Body18.default;
+exports.Body17 = _Body20.default;
+exports.Body18 = _Body22.default;
+exports.Body2 = _Body24.default;
+exports.Body3 = _Body26.default;
+exports.Body4 = _Body28.default;
+exports.Body5 = _Body30.default;
+exports.Body6 = _Body32.default;
+exports.Body7 = _Body34.default;
+exports.Body8 = _Body36.default;
+exports.Body9 = _Body38.default;
+exports.BrandingSettings = _BrandingSettings2.default;
+exports.BrandingSettings1 = _BrandingSettings4.default;
+exports.CallbackSettings = _CallbackSettings2.default;
+exports.CallbackSettings1 = _CallbackSettings4.default;
+exports.CallbackSettings1Triggers = _CallbackSettings1Triggers2.default;
+exports.CallbackSettingsTriggers = _CallbackSettingsTriggers2.default;
+exports.DownloadPolling = _DownloadPolling2.default;
+exports.DownloadPollingResponse = _DownloadPollingResponse2.default;
+exports.EmailList = _EmailList2.default;
+exports.EmailListAttributes = _EmailListAttributes2.default;
+exports.EmailListCollectionResponse = _EmailListCollectionResponse2.default;
+exports.EmailListOwnerUser = _EmailListOwnerUser2.default;
+exports.EmailListRelationships = _EmailListRelationships2.default;
+exports.EmailListResponse = _EmailListResponse2.default;
+exports.EmptyResponse = _EmptyResponse2.default;
+exports.Error = _Error2.default;
+exports.Error401 = _Error4.default;
+exports.Error401Errors = _Error401Errors2.default;
+exports.Error403 = _Error6.default;
+exports.Error403Errors = _Error403Errors2.default;
+exports.Form = _Form2.default;
+exports.FormAttributes = _FormAttributes2.default;
+exports.FormEntry = _FormEntry2.default;
+exports.FormEntryAttributes = _FormEntryAttributes2.default;
+exports.FormEntryField = _FormEntryField2.default;
+exports.FormEntryResponse = _FormEntryResponse2.default;
+exports.FormField = _FormField2.default;
+exports.FormFieldSettings = _FormFieldSettings2.default;
+exports.FormFieldUploadArea = _FormFieldUploadArea2.default;
+exports.FormFieldUploadAreaSettings = _FormFieldUploadAreaSettings2.default;
+exports.FormRelationships = _FormRelationships2.default;
+exports.FormRelationshipsShare = _FormRelationshipsShare2.default;
+exports.FormRelationshipsShareData = _FormRelationshipsShareData2.default;
+exports.FormResponse = _FormResponse2.default;
+exports.FormsidElements = _FormsidElements2.default;
+exports.FormsidSettings = _FormsidSettings2.default;
+exports.MasterUser = _MasterUser2.default;
+exports.MasterUserMasterUser = _MasterUserMasterUser2.default;
+exports.MasterUserMasterUserData = _MasterUserMasterUserData2.default;
+exports.Notification = _Notification2.default;
+exports.NotificationAttributes = _NotificationAttributes2.default;
+exports.NotificationCollectionResponse = _NotificationCollectionResponse2.default;
+exports.NotificationRecipient = _NotificationRecipient2.default;
+exports.NotificationRelationships = _NotificationRelationships2.default;
+exports.NotificationRelationshipsOwnerUser = _NotificationRelationshipsOwnerUser2.default;
+exports.NotificationRelationshipsOwnerUserData = _NotificationRelationshipsOwnerUserData2.default;
+exports.NotificationRelationshipsResource = _NotificationRelationshipsResource2.default;
+exports.NotificationRelationshipsResourceData = _NotificationRelationshipsResourceData2.default;
+exports.NotificationRelationshipsShare = _NotificationRelationshipsShare2.default;
+exports.NotificationRelationshipsShareData = _NotificationRelationshipsShareData2.default;
+exports.NotificationResponse = _NotificationResponse2.default;
+exports.PreviewFile = _PreviewFile2.default;
+exports.PreviewFileAttributes = _PreviewFileAttributes2.default;
+exports.PreviewFileResponse = _PreviewFileResponse2.default;
+exports.Quota = _Quota2.default;
+exports.RelationshipData = _RelationshipData2.default;
+exports.Resource = _Resource2.default;
+exports.ResourceAttributes = _ResourceAttributes2.default;
+exports.ResourceCollectionResponse = _ResourceCollectionResponse2.default;
+exports.ResourceCopyMove = _ResourceCopyMove2.default;
+exports.ResourceDelete = _ResourceDelete2.default;
+exports.ResourceMultiResponse = _ResourceMultiResponse2.default;
+exports.ResourceRelationships = _ResourceRelationships2.default;
+exports.ResourceRelationshipsData = _ResourceRelationshipsData2.default;
+exports.ResourceRelationshipsDirectFile = _ResourceRelationshipsDirectFile2.default;
+exports.ResourceRelationshipsDirectFileData = _ResourceRelationshipsDirectFileData2.default;
+exports.ResourceRelationshipsNotifications = _ResourceRelationshipsNotifications2.default;
+exports.ResourceRelationshipsParentResource = _ResourceRelationshipsParentResource2.default;
+exports.ResourceRelationshipsParentResourceData = _ResourceRelationshipsParentResourceData2.default;
+exports.ResourceRelationshipsShare = _ResourceRelationshipsShare2.default;
+exports.ResourceRelationshipsShareData = _ResourceRelationshipsShareData2.default;
+exports.ResourceResponse = _ResourceResponse2.default;
+exports.SessionActivityEntry = _SessionActivityEntry2.default;
+exports.SessionActivityEntryAttributes = _SessionActivityEntryAttributes2.default;
+exports.SessionActivityResponse = _SessionActivityResponse2.default;
+exports.Share = _Share2.default;
+exports.ShareAttributes = _ShareAttributes2.default;
+exports.ShareCollectionResponse = _ShareCollectionResponse2.default;
+exports.ShareMessage = _ShareMessage2.default;
+exports.ShareMessageAttributes = _ShareMessageAttributes2.default;
+exports.ShareRecipient = _ShareRecipient2.default;
+exports.ShareRecipient1 = _ShareRecipient4.default;
+exports.ShareRecipientsResponse = _ShareRecipientsResponse2.default;
+exports.ShareRelationship = _ShareRelationship2.default;
+exports.ShareRelationships = _ShareRelationships2.default;
+exports.ShareRelationshipsData = _ShareRelationshipsData2.default;
+exports.ShareRelationshipsData1 = _ShareRelationshipsData4.default;
+exports.ShareRelationshipsData2 = _ShareRelationshipsData6.default;
+exports.ShareRelationshipsMessages = _ShareRelationshipsMessages2.default;
+exports.ShareRelationshipsNotifications = _ShareRelationshipsNotifications2.default;
+exports.ShareRelationshipsOwner = _ShareRelationshipsOwner2.default;
+exports.ShareRelationshipsOwnerData = _ShareRelationshipsOwnerData2.default;
+exports.ShareRelationshipsResources = _ShareRelationshipsResources2.default;
+exports.ShareResponse = _ShareResponse2.default;
+exports.SharesRecipients = _SharesRecipients2.default;
+exports.UpdateAccountBody = _UpdateAccountBody2.default;
+exports.User = _User2.default;
+exports.UserAttributes = _UserAttributes2.default;
+exports.UserCollectionResponse = _UserCollectionResponse2.default;
+exports.UserPermissions = _UserPermissions2.default;
+exports.UserRelationships = _UserRelationships2.default;
+exports.UserRelationshipsHomeResource = _UserRelationshipsHomeResource2.default;
+exports.UserRelationshipsHomeResourceData = _UserRelationshipsHomeResourceData2.default;
+exports.UserRelationshipsOwnerAccount = _UserRelationshipsOwnerAccount2.default;
+exports.UserRelationshipsOwnerAccountData = _UserRelationshipsOwnerAccountData2.default;
+exports.UserResponse = _UserResponse2.default;
+exports.WebhooksActivityEntry = _WebhooksActivityEntry2.default;
+exports.WebhooksActivityEntryAttributes = _WebhooksActivityEntryAttributes2.default;
+exports.WebhooksActivityResponse = _WebhooksActivityResponse2.default;
+exports.AccountApi = _AccountApi2.default;
+exports.ActivityApi = _ActivityApi2.default;
+exports.EmailApi = _EmailApi2.default;
+exports.EmailListsApi = _EmailListsApi2.default;
+exports.FormApi = _FormApi2.default;
+exports.NotificationsApi = _NotificationsApi2.default;
+exports.RecipientsApi = _RecipientsApi2.default;
+exports.ResourcesApi = _ResourcesApi2.default;
+exports.SharesApi = _SharesApi2.default;
+exports.UsersApi = _UsersApi2.default;

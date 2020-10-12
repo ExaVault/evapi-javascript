@@ -1,0 +1,30 @@
+# ExaVaultApi.CallbackSettings1Triggers
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**download** | **Boolean** |  | [optional] 
+**upload** | **Boolean** |  | [optional] 
+**_delete** | **Boolean** |  | [optional] 
+**createFolder** | **Boolean** |  | [optional] 
+**rename** | **Boolean** |  | [optional] 
+**move** | **Boolean** |  | [optional] 
+**copy** | **Boolean** |  | [optional] 
+**compress** | **Boolean** |  | [optional] 
+**extract** | **Boolean** |  | [optional] 
+**shareFolder** | **Boolean** |  | [optional] 
+**sendFiles** | **Boolean** |  | [optional] 
+**receiveFiles** | **Boolean** |  | [optional] 
+**updateShare** | **Boolean** |  | [optional] 
+**updateReceive** | **Boolean** |  | [optional] 
+**deleteSend** | **Boolean** |  | [optional] 
+**deleteReceive** | **Boolean** |  | [optional] 
+**deleteShare** | **Boolean** |  | [optional] 
+**createNotification** | **Boolean** |  | [optional] 
+**updateNotification** | **Boolean** |  | [optional] 
+**deleteNotification** | **Boolean** |  | [optional] 
+**createUser** | **Boolean** |  | [optional] 
+**updateUser** | **Boolean** |  | [optional] 
+**deleteUser** | **Boolean** |  | [optional] 
+**userConnect** | **Boolean** |  | [optional] 
+**userDisconnect** | **Boolean** |  | [optional] 

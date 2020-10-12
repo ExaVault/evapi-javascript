@@ -1,0 +1,30 @@
+# ExaVaultApi.CallbackSettingsTriggers
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**upload** | **Boolean** | Trigger callback on upload. | [optional] 
+**download** | **Boolean** | Trigger callback on download. | [optional] 
+**_delete** | **Boolean** | Trigger callback on delete. | [optional] 
+**createFolder** | **Boolean** | Trigger callback on fodler create. | [optional] 
+**rename** | **Boolean** | Trigger callback on rename. | [optional] 
+**move** | **Boolean** | Trigger callback on move. | [optional] 
+**copy** | **Boolean** | Trigger callback on copy. | [optional] 
+**compress** | **Boolean** | Trigger callback on compress. | [optional] 
+**extract** | **Boolean** | Trigger callback on extract. | [optional] 
+**shareFolder** | **Boolean** | Trigger callback on share folder create. | [optional] 
+**sendFiles** | **Boolean** | Trigger callback on send files. | [optional] 
+**receiveFiles** | **Boolean** | Trigger callback on receive folder create. | [optional] 
+**updateShare** | **Boolean** | Trigger callback on share folder update. | [optional] 
+**updateReceive** | **Boolean** | Trigger callback on receive folder update. | [optional] 
+**deleteSend** | **Boolean** | Trigger callback on send files delete. | [optional] 
+**deleteReceive** | **Boolean** | Trigger callback on receive folder delete. | [optional] 
+**deleteShare** | **Boolean** | Trigger callback on share folder delete. | [optional] 
+**createNotification** | **Boolean** | Trigger callback on notification create. | [optional] 
+**updateNotification** | **Boolean** | Trigger callback on notification update. | [optional] 
+**deleteNotification** | **Boolean** | Trigger callback on notification delete. | [optional] 
+**createUser** | **Boolean** | Trigger callback on user create. | [optional] 
+**updateUser** | **Boolean** | Trigger callback on user update. | [optional] 
+**deleteUser** | **Boolean** | Trigger callback on user delete. | [optional] 
+**userConnect** | **Boolean** | Trigger callback on user connect. | [optional] 
+**userDisconnect** | **Boolean** | Trigger callback on user disconnect. | [optional] 
