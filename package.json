@@ -1,6 +1,6 @@
 {
   "name": "@exavault/exavault-api",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "ExaVault API Javascript library",
   "license": "MIT",
   "main": "src/index.js",
