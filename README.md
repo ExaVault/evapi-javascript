@@ -11,19 +11,39 @@ You will also need an [ExaVault](https://www.exavault.com) account, as well as a
 
 ## Installation
 
-#### Install from npm registry
+There are two installation options:
+
+#### 1. Install from npm registry
 #
 
 ```shell
 npm install @exavault/exavault-api --save
 ```
 
-#### Install from Github
+#### 2. Install from Github
 #
 
 ```shell
 npm install ExaVault/evapi-javascript --save
 ```
+
+Sucessful installation will output info about installed packages:
+
+```bash
+added 380 packages from 566 contributors and audited 380 packages in 11.617s
+```
+
+There can be additional output about packages vulnerabilities:
+
+```
+17 packages are looking for funding
+  run `npm fund` for details
+
+found 5 vulnerabilities (3 low, 1 high, 1 critical)
+  run `npm audit fix` to fix them, or `npm audit` for details
+```
+
+Usually you'd see this when some dependent packages have known security issues. They don't break code, but you can try fixing this by running `npm audit fix`. However, some vulnerabilities require manual fixing. Please, let us know if you'll find something that needs our attention. You can post an issue here https://github.com/ExaVault/evapi-javascript/issues or write us to support@exavault.com.
 
 ## Sample Code
 
