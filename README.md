@@ -13,14 +13,14 @@ You will also need an [ExaVault](https://www.exavault.com) account, as well as a
 
 There are two installation options:
 
-#### 1. Install from npm registry
+#### 1. Install from npm registry (recommended)
 #
 
 ```shell
 npm install @exavault/exavault-api --save
 ```
 
-#### 2. Install from Github
+#### 2. Install from Github (use this when you unabled to install from npm registry)
 #
 
 ```shell
