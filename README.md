@@ -5,7 +5,7 @@ Welcome to ExaVault's JavaScript code library for our v2 API. Our v2 API will al
 
 ## Requirements
 
-To use this library [Node.js](https://nodejs.org/) should be installed in the system. We recommend using 10 version or higher.
+To use this library [Node.js](https://nodejs.org/) should be installed in the system. We recommend using version 10 or higher.
 
 You will also need an [ExaVault](https://www.exavault.com) account, as well as an API key and access token.
 
@@ -20,7 +20,7 @@ There are two installation options:
 npm install @exavault/exavault-api --save
 ```
 
-#### 2. Install from Github (use this when you unabled to install from npm registry)
+#### 2. Install from Github (use this when you cannot install from npm registry)
 #
 
 ```shell
@@ -51,7 +51,7 @@ For a gentle introduction to using JavaScript code with ExaVault's API, check ou
 
 ## Writing Your Own Code
 
-After you completed installation instructions, you're good to write your own code.
+After you have completed the installation steps above, you're all set to write your own code.
 Here is an example of how to get your account information from the API.
 
 ```javascript
@@ -61,6 +61,7 @@ const evApiKey = "evApiKey_example";
 const evAccessToken = "evAccessToken_example";
 
 // Create api object instance with account name configuration
+// Note that we must provide an accountname to the API
 const api = new ExaVaultApi.AccountApi(
   new ExaVaultApi.ApiClient({
     "accountname": "accountname-example"
@@ -79,6 +80,8 @@ const callback = function(error, data, response) {
 // Make a call to ExaVault API to get account data
 api.getAccount(evApiKey, evAccessToken, callback);
 ```
+
+If you'd like to see this done in sample code, please take a look at [our code samples](https://github.com/ExaVault/evapi-javascript-samples)
 
 ## Author
 
