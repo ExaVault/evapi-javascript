@@ -78,7 +78,10 @@ const callback = function(error, data, response) {
 };
 
 // Make a call to ExaVault API to get account data
-api.getAccount(evApiKey, evAccessToken, callback);
+api.getAccount(evApiKey, evAccessToken, {}, function(error, data) {
+    // Use `data` argument to access response data
+    // Use `error` argument to access any errors
+});
 ```
 
 If you'd like to see this done in sample code, please take a look at [our code samples](https://github.com/ExaVault/evapi-javascript-samples)
