@@ -27,7 +27,24 @@ npm install @exavault/exavault-api --save
 npm install ExaVault/evapi-javascript --save
 ```
 
-Sucessful installation will output info about installed packages:
+#### 3. Download zip archive with code
+#
+
+- Go to ExaVault JavaScript API library [homepage](https://github.com/ExaVault/evapi-javascript).
+
+- Click on *Code -> Download* and you will get an archive with code, which you need to unarchive to your destination folder.
+
+- Then go to the folder with library and run the following command to install all dependencies:
+
+```
+npm install
+```
+
+Now you're ready to include the library to your code and start making calls to the ExaVault API.
+
+**Installation notes:**
+
+Sucessful dependencies installation with `npm install` will output info about installed packages:
 
 ```bash
 added 380 packages from 566 contributors and audited 380 packages in 11.617s
