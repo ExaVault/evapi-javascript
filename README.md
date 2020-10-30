@@ -76,14 +76,14 @@ const ExaVaultApi = require('@exavault/exavault-api');
 
 const evApiKey = "evApiKey_example";
 const evAccessToken = "evAccessToken_example";
+const evAccountUrl = "https://your_account_name.exavault.com/api/v2";
 
-// Create api object instance with account name configuration
+// Create api object instance with account url configuration
 // Note that we must provide an accountname to the API
-const api = new ExaVaultApi.AccountApi(
-  new ExaVaultApi.ApiClient({
-    "accountname": "accountname-example"
-  })
-);
+const apiClient =   new ExaVaultApi.ApiClient();
+apiClient.baseUrl = evAccountUrl;
+
+const api = new ExaVaultApi.AccountApi(apiClient);
 
 // Process response data from the API
 const callback = function(error, data, response) {
