@@ -21,13 +21,9 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _Body = require('../model/Body16');
+var _AddShareRequestBody = require('../model/AddShareRequestBody');
 
-var _Body2 = _interopRequireDefault(_Body);
-
-var _Body3 = require('../model/Body17');
-
-var _Body4 = _interopRequireDefault(_Body3);
+var _AddShareRequestBody2 = _interopRequireDefault(_AddShareRequestBody);
 
 var _EmptyResponse = require('../model/EmptyResponse');
 
@@ -41,6 +37,10 @@ var _ShareResponse = require('../model/ShareResponse');
 
 var _ShareResponse2 = _interopRequireDefault(_ShareResponse);
 
+var _UpdateShareRequestBody = require('../model/UpdateShareRequestBody');
+
+var _UpdateShareRequestBody2 = _interopRequireDefault(_UpdateShareRequestBody);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -48,7 +48,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * Shares service.
 * @module api/SharesApi
-* @version 2.2.1
+* @version 2.2.2
 */
 var SharesApi = function () {
 

@@ -32,7 +32,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The NotificationRelationshipsOwnerUser model module.
 * @module model/NotificationRelationshipsOwnerUser
-* @version 2.2.1
+* @version 2.2.2
 */
 var NotificationRelationshipsOwnerUser = function () {
     /**

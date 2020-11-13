@@ -36,7 +36,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The Form model module.
 * @module model/Form
-* @version 2.2.1
+* @version 2.2.2
 */
 var Form = function () {
     /**

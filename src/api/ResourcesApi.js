@@ -21,33 +21,21 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _Body = require('../model/Body10');
+var _AddFolderRequestBody = require('../model/AddFolderRequestBody');
 
-var _Body2 = _interopRequireDefault(_Body);
+var _AddFolderRequestBody2 = _interopRequireDefault(_AddFolderRequestBody);
 
-var _Body3 = require('../model/Body11');
+var _CompressFilesRequestBody = require('../model/CompressFilesRequestBody');
 
-var _Body4 = _interopRequireDefault(_Body3);
+var _CompressFilesRequestBody2 = _interopRequireDefault(_CompressFilesRequestBody);
 
-var _Body5 = require('../model/Body12');
+var _CopyResourcesRequestBody = require('../model/CopyResourcesRequestBody');
 
-var _Body6 = _interopRequireDefault(_Body5);
+var _CopyResourcesRequestBody2 = _interopRequireDefault(_CopyResourcesRequestBody);
 
-var _Body7 = require('../model/Body13');
+var _DeleteResourcesRequestBody = require('../model/DeleteResourcesRequestBody');
 
-var _Body8 = _interopRequireDefault(_Body7);
-
-var _Body9 = require('../model/Body7');
-
-var _Body10 = _interopRequireDefault(_Body9);
-
-var _Body11 = require('../model/Body8');
-
-var _Body12 = _interopRequireDefault(_Body11);
-
-var _Body13 = require('../model/Body9');
-
-var _Body14 = _interopRequireDefault(_Body13);
+var _DeleteResourcesRequestBody2 = _interopRequireDefault(_DeleteResourcesRequestBody);
 
 var _DownloadPollingResponse = require('../model/DownloadPollingResponse');
 
@@ -56,6 +44,14 @@ var _DownloadPollingResponse2 = _interopRequireDefault(_DownloadPollingResponse)
 var _EmptyResponse = require('../model/EmptyResponse');
 
 var _EmptyResponse2 = _interopRequireDefault(_EmptyResponse);
+
+var _ExtractFilesRequestBody = require('../model/ExtractFilesRequestBody');
+
+var _ExtractFilesRequestBody2 = _interopRequireDefault(_ExtractFilesRequestBody);
+
+var _MoveResourcesRequestBody = require('../model/MoveResourcesRequestBody');
+
+var _MoveResourcesRequestBody2 = _interopRequireDefault(_MoveResourcesRequestBody);
 
 var _PreviewFileResponse = require('../model/PreviewFileResponse');
 
@@ -77,6 +73,10 @@ var _ResourceResponse = require('../model/ResourceResponse');
 
 var _ResourceResponse2 = _interopRequireDefault(_ResourceResponse);
 
+var _UpdateReourceByIdRequestBody = require('../model/UpdateReourceByIdRequestBody');
+
+var _UpdateReourceByIdRequestBody2 = _interopRequireDefault(_UpdateReourceByIdRequestBody);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -84,7 +84,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * Resources service.
 * @module api/ResourcesApi
-* @version 2.2.1
+* @version 2.2.2
 */
 var ResourcesApi = function () {
 
@@ -297,7 +297,7 @@ var ResourcesApi = function () {
 
     /**
      * Download a file
-     * Downloads a file. If more than one path is supplied, the files will be zipped before downloading with the downloadName parameter if supplied. 
+     * Downloads a file. If more than one path is supplied, the files will be zipped before downloading with the downloadArchiveName parameter if supplied. 
      * @param {Object} opts Optional parameters
      * @param {module:api/ResourcesApi~downloadCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link File}
@@ -312,9 +312,9 @@ var ResourcesApi = function () {
       var pathParams = {};
       var queryParams = {
         'resources[]': this.apiClient.buildCollectionParam(resources, 'multi'),
-        'downloadName': opts['downloadName'],
+        'downloadArchiveName': opts['downloadArchiveName'],
         'polling': opts['polling'],
-        'pollingZipName': opts['pollingZipName']
+        'pollingArchiveName': opts['pollingArchiveName']
       };
       var headerParams = {
         'ev-api-key': evApiKey,

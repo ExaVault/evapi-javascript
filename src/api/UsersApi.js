@@ -21,17 +21,17 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _Body = require('../model/Body5');
+var _AddUserRequestBody = require('../model/AddUserRequestBody');
 
-var _Body2 = _interopRequireDefault(_Body);
-
-var _Body3 = require('../model/Body6');
-
-var _Body4 = _interopRequireDefault(_Body3);
+var _AddUserRequestBody2 = _interopRequireDefault(_AddUserRequestBody);
 
 var _EmptyResponse = require('../model/EmptyResponse');
 
 var _EmptyResponse2 = _interopRequireDefault(_EmptyResponse);
+
+var _UpdateUserRequestBody = require('../model/UpdateUserRequestBody');
+
+var _UpdateUserRequestBody2 = _interopRequireDefault(_UpdateUserRequestBody);
 
 var _UserCollectionResponse = require('../model/UserCollectionResponse');
 
@@ -48,7 +48,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * Users service.
 * @module api/UsersApi
-* @version 2.2.1
+* @version 2.2.2
 */
 var UsersApi = function () {
 

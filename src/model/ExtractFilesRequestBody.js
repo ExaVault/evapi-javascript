@@ -26,47 +26,47 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The Body13 model module.
-* @module model/Body13
-* @version 2.2.1
+* The ExtractFilesRequestBody model module.
+* @module model/ExtractFilesRequestBody
+* @version 2.2.2
 */
-var Body13 = function () {
+var ExtractFilesRequestBody = function () {
     /**
-    * Constructs a new <code>Body13</code>.
-    * @alias module:model/Body13
+    * Constructs a new <code>ExtractFilesRequestBody</code>.
+    * @alias module:model/ExtractFilesRequestBody
     * @class
-    * @param resources {Array.<String>} Array containing file/folder paths to move.
-    * @param parentResource {String} Remote destination path to move files/folders to.
+    * @param resource {String} Resource identifier of zip archive to be extracted.
+    * @param parentResource {String} Resource identifier for folder files should be extracted to.
     */
 
-    function Body13(resources, parentResource) {
-        _classCallCheck(this, Body13);
+    function ExtractFilesRequestBody(resource, parentResource) {
+        _classCallCheck(this, ExtractFilesRequestBody);
 
-        this['resources'] = undefined;
+        this['resource'] = undefined;
         this['parentResource'] = undefined;
 
 
-        this['resources'] = resources;
+        this['resource'] = resource;
         this['parentResource'] = parentResource;
     }
 
     /**
-    * Constructs a <code>Body13</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>ExtractFilesRequestBody</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/Body13} obj Optional instance to populate.
-    * @return {module:model/Body13} The populated <code>Body13</code> instance.
+    * @param {module:model/ExtractFilesRequestBody} obj Optional instance to populate.
+    * @return {module:model/ExtractFilesRequestBody} The populated <code>ExtractFilesRequestBody</code> instance.
     */
 
 
-    _createClass(Body13, null, [{
+    _createClass(ExtractFilesRequestBody, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new Body13();
+                obj = obj || new ExtractFilesRequestBody();
 
-                if (data.hasOwnProperty('resources')) {
-                    obj['resources'] = _ApiClient2.default.convertToType(data['resources'], ['String']);
+                if (data.hasOwnProperty('resource')) {
+                    obj['resource'] = _ApiClient2.default.convertToType(data['resource'], 'String');
                 }
                 if (data.hasOwnProperty('parentResource')) {
                     obj['parentResource'] = _ApiClient2.default.convertToType(data['parentResource'], 'String');
@@ -76,18 +76,18 @@ var Body13 = function () {
         }
 
         /**
-        * Array containing file/folder paths to move.
-        * @member {Array.<String>} resources
+        * Resource identifier of zip archive to be extracted.
+        * @member {String} resource
         */
 
         /**
-        * Remote destination path to move files/folders to.
+        * Resource identifier for folder files should be extracted to.
         * @member {String} parentResource
         */
 
     }]);
 
-    return Body13;
+    return ExtractFilesRequestBody;
 }();
 
-exports.default = Body13;
+exports.default = ExtractFilesRequestBody;

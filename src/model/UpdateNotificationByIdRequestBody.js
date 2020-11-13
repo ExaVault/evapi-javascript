@@ -26,62 +26,117 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The Body1 model module.
-* @module model/Body1
-* @version 2.2.1
+* The UpdateNotificationByIdRequestBody model module.
+* @module model/UpdateNotificationByIdRequestBody
+* @version 2.2.2
 */
-var Body1 = function () {
+var UpdateNotificationByIdRequestBody = function () {
     /**
-    * Constructs a new <code>Body1</code>.
-    * @alias module:model/Body1
+    * Constructs a new <code>UpdateNotificationByIdRequestBody</code>.
+    * @alias module:model/UpdateNotificationByIdRequestBody
     * @class
     */
 
-    function Body1() {
-        _classCallCheck(this, Body1);
+    function UpdateNotificationByIdRequestBody() {
+        _classCallCheck(this, UpdateNotificationByIdRequestBody);
 
-        this['name'] = undefined;
-        this['emails'] = undefined;
+        this['action'] = undefined;
+        this['usernames'] = undefined;
+        this['sendEmail'] = undefined;
+        this['recipients'] = undefined;
+        this['message'] = undefined;
     }
 
     /**
-    * Constructs a <code>Body1</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>UpdateNotificationByIdRequestBody</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/Body1} obj Optional instance to populate.
-    * @return {module:model/Body1} The populated <code>Body1</code> instance.
+    * @param {module:model/UpdateNotificationByIdRequestBody} obj Optional instance to populate.
+    * @return {module:model/UpdateNotificationByIdRequestBody} The populated <code>UpdateNotificationByIdRequestBody</code> instance.
     */
 
 
-    _createClass(Body1, null, [{
+    _createClass(UpdateNotificationByIdRequestBody, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new Body1();
+                obj = obj || new UpdateNotificationByIdRequestBody();
 
-                if (data.hasOwnProperty('name')) {
-                    obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
+                if (data.hasOwnProperty('action')) {
+                    obj['action'] = _ApiClient2.default.convertToType(data['action'], 'String');
                 }
-                if (data.hasOwnProperty('emails')) {
-                    obj['emails'] = _ApiClient2.default.convertToType(data['emails'], ['String']);
+                if (data.hasOwnProperty('usernames')) {
+                    obj['usernames'] = _ApiClient2.default.convertToType(data['usernames'], ['String']);
+                }
+                if (data.hasOwnProperty('sendEmail')) {
+                    obj['sendEmail'] = _ApiClient2.default.convertToType(data['sendEmail'], 'Boolean');
+                }
+                if (data.hasOwnProperty('recipients')) {
+                    obj['recipients'] = _ApiClient2.default.convertToType(data['recipients'], ['String']);
+                }
+                if (data.hasOwnProperty('message')) {
+                    obj['message'] = _ApiClient2.default.convertToType(data['message'], 'String');
                 }
             }
             return obj;
         }
 
         /**
-        * Name of the email list.
-        * @member {String} name
+        * Type of action be notified about. Notifications will only be sent for the given type of action. Valid choices are **upload**, **download**, **delete** or **all** (upload/download/delete)
+        * @member {module:model/UpdateNotificationByIdRequestBody.ActionEnum} action
         */
 
         /**
-        * Array of email addresses to add to the email list.
-        * @member {Array.<String>} emails
+        * Determines which users' actions should trigger the notification.   Rather than listing  individual users, you can also use 3 special options:  - **notice\\_user\\_all** for activity by any user or share recipient - **notice\\_user\\_all\\_users** for activity only by user accounts - **notice\\_user\\_all\\_recipient** for activity only by share recipients
+        * @member {Array.<String>} usernames
+        */
+
+        /**
+        * Whether an email should be sent to the recipients when matching activity happens.
+        * @member {Boolean} sendEmail
+        */
+
+        /**
+        * Email addresses to send notification emails to. If empty, sends to the current user's email address.
+        * @member {Array.<String>} recipients
+        */
+
+        /**
+        * Custom message to insert into the notification emails, along with the matching activity.
+        * @member {String} message
+        */
+
+
+        /**
+        * Allowed values for the <code>action</code> property.
+        * @enum {String}
+        * @readonly
         */
 
     }]);
 
-    return Body1;
+    return UpdateNotificationByIdRequestBody;
 }();
 
-exports.default = Body1;
+UpdateNotificationByIdRequestBody.ActionEnum = {
+    /**
+     * value: "upload"
+     * @const
+     */
+    "upload": "upload",
+    /**
+     * value: "download"
+     * @const
+     */
+    "download": "download",
+    /**
+     * value: "delete"
+     * @const
+     */
+    "delete": "delete",
+    /**
+     * value: "all"
+     * @const
+     */
+    "all": "all" };
+exports.default = UpdateNotificationByIdRequestBody;

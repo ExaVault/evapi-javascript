@@ -26,117 +26,75 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The Body3 model module.
-* @module model/Body3
-* @version 2.2.1
+* The ShareResourceData model module.
+* @module model/ShareResourceData
+* @version 2.2.2
 */
-var Body3 = function () {
+var ShareResourceData = function () {
     /**
-    * Constructs a new <code>Body3</code>.
-    * @alias module:model/Body3
+    * Constructs a new <code>ShareResourceData</code>.
+    * @alias module:model/ShareResourceData
     * @class
     */
 
-    function Body3() {
-        _classCallCheck(this, Body3);
+    function ShareResourceData() {
+        _classCallCheck(this, ShareResourceData);
 
-        this['action'] = undefined;
-        this['usernames'] = undefined;
-        this['sendEmail'] = undefined;
-        this['recipients'] = undefined;
-        this['message'] = undefined;
+        this['type'] = undefined;
+        this['id'] = undefined;
     }
 
     /**
-    * Constructs a <code>Body3</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>ShareResourceData</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/Body3} obj Optional instance to populate.
-    * @return {module:model/Body3} The populated <code>Body3</code> instance.
+    * @param {module:model/ShareResourceData} obj Optional instance to populate.
+    * @return {module:model/ShareResourceData} The populated <code>ShareResourceData</code> instance.
     */
 
 
-    _createClass(Body3, null, [{
+    _createClass(ShareResourceData, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new Body3();
+                obj = obj || new ShareResourceData();
 
-                if (data.hasOwnProperty('action')) {
-                    obj['action'] = _ApiClient2.default.convertToType(data['action'], 'String');
+                if (data.hasOwnProperty('type')) {
+                    obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
                 }
-                if (data.hasOwnProperty('usernames')) {
-                    obj['usernames'] = _ApiClient2.default.convertToType(data['usernames'], ['String']);
-                }
-                if (data.hasOwnProperty('sendEmail')) {
-                    obj['sendEmail'] = _ApiClient2.default.convertToType(data['sendEmail'], 'Boolean');
-                }
-                if (data.hasOwnProperty('recipients')) {
-                    obj['recipients'] = _ApiClient2.default.convertToType(data['recipients'], ['String']);
-                }
-                if (data.hasOwnProperty('message')) {
-                    obj['message'] = _ApiClient2.default.convertToType(data['message'], 'String');
+                if (data.hasOwnProperty('id')) {
+                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'Number');
                 }
             }
             return obj;
         }
 
         /**
-        * Type of action be notified about. Notifications will only be sent for the given type of action. Valid choices are **upload**, **download**, **delete** or **all** (upload/download/delete)
-        * @member {module:model/Body3.ActionEnum} action
+        * Type is resource. 
+        * @member {module:model/ShareResourceData.TypeEnum} type
         */
 
         /**
-        * Determines which users' actions should trigger the notification.   Rather than listing  individual users, you can also use 3 special options:  - **notice\\_user\\_all** for activity by any user or share recipient - **notice\\_user\\_all\\_users** for activity only by user accounts - **notice\\_user\\_all\\_recipient** for activity only by share recipients
-        * @member {Array.<String>} usernames
-        */
-
-        /**
-        * Whether an email should be sent to the recipients when matching activity happens.
-        * @member {Boolean} sendEmail
-        */
-
-        /**
-        * Email addresses to send notification emails to. If empty, sends to the current user's email address.
-        * @member {Array.<String>} recipients
-        */
-
-        /**
-        * Custom message to insert into the notification emails, along with the matching activity.
-        * @member {String} message
+        * ID of the shared resource.
+        * @member {Number} id
         */
 
 
         /**
-        * Allowed values for the <code>action</code> property.
+        * Allowed values for the <code>type</code> property.
         * @enum {String}
         * @readonly
         */
 
     }]);
 
-    return Body3;
+    return ShareResourceData;
 }();
 
-Body3.ActionEnum = {
+ShareResourceData.TypeEnum = {
     /**
-     * value: "upload"
+     * value: "resource"
      * @const
      */
-    "upload": "upload",
-    /**
-     * value: "download"
-     * @const
-     */
-    "download": "download",
-    /**
-     * value: "delete"
-     * @const
-     */
-    "delete": "delete",
-    /**
-     * value: "all"
-     * @const
-     */
-    "all": "all" };
-exports.default = Body3;
+    "resource": "resource" };
+exports.default = ShareResourceData;

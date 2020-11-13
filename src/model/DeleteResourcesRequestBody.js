@@ -26,66 +26,57 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The Body15 model module.
-* @module model/Body15
-* @version 2.2.1
+* The DeleteResourcesRequestBody model module.
+* @module model/DeleteResourcesRequestBody
+* @version 2.2.2
 */
-var Body15 = function () {
+var DeleteResourcesRequestBody = function () {
     /**
-    * Constructs a new <code>Body15</code>.
-    * @alias module:model/Body15
+    * Constructs a new <code>DeleteResourcesRequestBody</code>.
+    * @alias module:model/DeleteResourcesRequestBody
     * @class
-    * @param emails {Array.<String>} 
-    * @param message {String} 
+    * @param resources {Array.<String>} Resource identifiers of items to delete.
     */
 
-    function Body15(emails, message) {
-        _classCallCheck(this, Body15);
+    function DeleteResourcesRequestBody(resources) {
+        _classCallCheck(this, DeleteResourcesRequestBody);
 
-        this['emails'] = undefined;
-        this['message'] = undefined;
+        this['resources'] = undefined;
 
 
-        this['emails'] = emails;
-        this['message'] = message;
+        this['resources'] = resources;
     }
 
     /**
-    * Constructs a <code>Body15</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>DeleteResourcesRequestBody</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/Body15} obj Optional instance to populate.
-    * @return {module:model/Body15} The populated <code>Body15</code> instance.
+    * @param {module:model/DeleteResourcesRequestBody} obj Optional instance to populate.
+    * @return {module:model/DeleteResourcesRequestBody} The populated <code>DeleteResourcesRequestBody</code> instance.
     */
 
 
-    _createClass(Body15, null, [{
+    _createClass(DeleteResourcesRequestBody, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new Body15();
+                obj = obj || new DeleteResourcesRequestBody();
 
-                if (data.hasOwnProperty('emails')) {
-                    obj['emails'] = _ApiClient2.default.convertToType(data['emails'], ['String']);
-                }
-                if (data.hasOwnProperty('message')) {
-                    obj['message'] = _ApiClient2.default.convertToType(data['message'], 'String');
+                if (data.hasOwnProperty('resources')) {
+                    obj['resources'] = _ApiClient2.default.convertToType(data['resources'], ['String']);
                 }
             }
             return obj;
         }
 
         /**
-        * @member {Array.<String>} emails
-        */
-
-        /**
-        * @member {String} message
+        * Resource identifiers of items to delete.
+        * @member {Array.<String>} resources
         */
 
     }]);
 
-    return Body15;
+    return DeleteResourcesRequestBody;
 }();
 
-exports.default = Body15;
+exports.default = DeleteResourcesRequestBody;

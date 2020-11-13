@@ -21,78 +21,73 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _UserRelationshipsHomeResource = require('./UserRelationshipsHomeResource');
-
-var _UserRelationshipsHomeResource2 = _interopRequireDefault(_UserRelationshipsHomeResource);
-
-var _UserRelationshipsOwnerAccount = require('./UserRelationshipsOwnerAccount');
-
-var _UserRelationshipsOwnerAccount2 = _interopRequireDefault(_UserRelationshipsOwnerAccount);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The UserRelationships model module.
-* @module model/UserRelationships
+* The AddEmailListRequestBody model module.
+* @module model/AddEmailListRequestBody
 * @version 2.2.2
 */
-var UserRelationships = function () {
+var AddEmailListRequestBody = function () {
     /**
-    * Constructs a new <code>UserRelationships</code>.
-    * Home resource and owner account relationship data for the user. 
-    * @alias module:model/UserRelationships
+    * Constructs a new <code>AddEmailListRequestBody</code>.
+    * @alias module:model/AddEmailListRequestBody
     * @class
-    * @param ownerAccount {module:model/UserRelationshipsOwnerAccount} 
+    * @param name {String} Name of the email list. 
+    * @param emails {Array.<String>} Array of email addresses to include in the email list. 
     */
 
-    function UserRelationships(ownerAccount) {
-        _classCallCheck(this, UserRelationships);
+    function AddEmailListRequestBody(name, emails) {
+        _classCallCheck(this, AddEmailListRequestBody);
 
-        this['homeResource'] = undefined;
-        this['ownerAccount'] = undefined;
+        this['name'] = undefined;
+        this['emails'] = undefined;
 
 
-        this['ownerAccount'] = ownerAccount;
+        this['name'] = name;
+        this['emails'] = emails;
     }
 
     /**
-    * Constructs a <code>UserRelationships</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>AddEmailListRequestBody</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/UserRelationships} obj Optional instance to populate.
-    * @return {module:model/UserRelationships} The populated <code>UserRelationships</code> instance.
+    * @param {module:model/AddEmailListRequestBody} obj Optional instance to populate.
+    * @return {module:model/AddEmailListRequestBody} The populated <code>AddEmailListRequestBody</code> instance.
     */
 
 
-    _createClass(UserRelationships, null, [{
+    _createClass(AddEmailListRequestBody, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new UserRelationships();
+                obj = obj || new AddEmailListRequestBody();
 
-                if (data.hasOwnProperty('homeResource')) {
-                    obj['homeResource'] = _UserRelationshipsHomeResource2.default.constructFromObject(data['homeResource']);
+                if (data.hasOwnProperty('name')) {
+                    obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
                 }
-                if (data.hasOwnProperty('ownerAccount')) {
-                    obj['ownerAccount'] = _UserRelationshipsOwnerAccount2.default.constructFromObject(data['ownerAccount']);
+                if (data.hasOwnProperty('emails')) {
+                    obj['emails'] = _ApiClient2.default.convertToType(data['emails'], ['String']);
                 }
             }
             return obj;
         }
 
         /**
-        * @member {module:model/UserRelationshipsHomeResource} homeResource
+        * Name of the email list. 
+        * @member {String} name
         */
 
         /**
-        * @member {module:model/UserRelationshipsOwnerAccount} ownerAccount
+        * Array of email addresses to include in the email list. 
+        * @member {Array.<String>} emails
         */
 
     }]);
 
-    return UserRelationships;
+    return AddEmailListRequestBody;
 }();
 
-exports.default = UserRelationships;
+exports.default = AddEmailListRequestBody;

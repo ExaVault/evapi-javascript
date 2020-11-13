@@ -21,13 +21,9 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _Body = require('../model/Body3');
+var _AddNotificationRequestBody = require('../model/AddNotificationRequestBody');
 
-var _Body2 = _interopRequireDefault(_Body);
-
-var _Body3 = require('../model/Body4');
-
-var _Body4 = _interopRequireDefault(_Body3);
+var _AddNotificationRequestBody2 = _interopRequireDefault(_AddNotificationRequestBody);
 
 var _EmptyResponse = require('../model/EmptyResponse');
 
@@ -41,6 +37,10 @@ var _NotificationResponse = require('../model/NotificationResponse');
 
 var _NotificationResponse2 = _interopRequireDefault(_NotificationResponse);
 
+var _UpdateNotificationByIdRequestBody = require('../model/UpdateNotificationByIdRequestBody');
+
+var _UpdateNotificationByIdRequestBody2 = _interopRequireDefault(_UpdateNotificationByIdRequestBody);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -48,7 +48,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * Notifications service.
 * @module api/NotificationsApi
-* @version 2.2.1
+* @version 2.2.2
 */
 var NotificationsApi = function () {
 

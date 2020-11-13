@@ -21,10 +21,6 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _Body = require('../model/Body2');
-
-var _Body2 = _interopRequireDefault(_Body);
-
 var _EmptyResponse = require('../model/EmptyResponse');
 
 var _EmptyResponse2 = _interopRequireDefault(_EmptyResponse);
@@ -37,6 +33,10 @@ var _FormResponse = require('../model/FormResponse');
 
 var _FormResponse2 = _interopRequireDefault(_FormResponse);
 
+var _UpdateFormByIdRequestBody = require('../model/UpdateFormByIdRequestBody');
+
+var _UpdateFormByIdRequestBody2 = _interopRequireDefault(_UpdateFormByIdRequestBody);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -44,7 +44,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * Form service.
 * @module api/FormApi
-* @version 2.2.1
+* @version 2.2.2
 */
 var FormApi = function () {
 

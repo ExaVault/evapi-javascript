@@ -21,78 +21,130 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _UserRelationshipsHomeResource = require('./UserRelationshipsHomeResource');
-
-var _UserRelationshipsHomeResource2 = _interopRequireDefault(_UserRelationshipsHomeResource);
-
-var _UserRelationshipsOwnerAccount = require('./UserRelationshipsOwnerAccount');
-
-var _UserRelationshipsOwnerAccount2 = _interopRequireDefault(_UserRelationshipsOwnerAccount);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The UserRelationships model module.
-* @module model/UserRelationships
+* The UsersPermissions model module.
+* @module model/UsersPermissions
 * @version 2.2.2
 */
-var UserRelationships = function () {
+var UsersPermissions = function () {
     /**
-    * Constructs a new <code>UserRelationships</code>.
-    * Home resource and owner account relationship data for the user. 
-    * @alias module:model/UserRelationships
+    * Constructs a new <code>UsersPermissions</code>.
+    * An object containing name/value pairs for each permission. Any permission that is not passed will be set to &#x60;false&#x60; by default. Note that users will be unable to see any files in the account unless you include &#x60;list&#x60; permission.
+    * @alias module:model/UsersPermissions
     * @class
-    * @param ownerAccount {module:model/UserRelationshipsOwnerAccount} 
     */
 
-    function UserRelationships(ownerAccount) {
-        _classCallCheck(this, UserRelationships);
+    function UsersPermissions() {
+        _classCallCheck(this, UsersPermissions);
 
-        this['homeResource'] = undefined;
-        this['ownerAccount'] = undefined;
-
-
-        this['ownerAccount'] = ownerAccount;
+        this['list'] = undefined;
+        this['download'] = undefined;
+        this['upload'] = undefined;
+        this['modify'] = undefined;
+        this['delete'] = undefined;
+        this['changePassword'] = undefined;
+        this['share'] = undefined;
+        this['notification'] = undefined;
+        this['viewFormData'] = undefined;
+        this['deleteFormData'] = undefined;
     }
 
     /**
-    * Constructs a <code>UserRelationships</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>UsersPermissions</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/UserRelationships} obj Optional instance to populate.
-    * @return {module:model/UserRelationships} The populated <code>UserRelationships</code> instance.
+    * @param {module:model/UsersPermissions} obj Optional instance to populate.
+    * @return {module:model/UsersPermissions} The populated <code>UsersPermissions</code> instance.
     */
 
 
-    _createClass(UserRelationships, null, [{
+    _createClass(UsersPermissions, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new UserRelationships();
+                obj = obj || new UsersPermissions();
 
-                if (data.hasOwnProperty('homeResource')) {
-                    obj['homeResource'] = _UserRelationshipsHomeResource2.default.constructFromObject(data['homeResource']);
+                if (data.hasOwnProperty('list')) {
+                    obj['list'] = _ApiClient2.default.convertToType(data['list'], 'Boolean');
                 }
-                if (data.hasOwnProperty('ownerAccount')) {
-                    obj['ownerAccount'] = _UserRelationshipsOwnerAccount2.default.constructFromObject(data['ownerAccount']);
+                if (data.hasOwnProperty('download')) {
+                    obj['download'] = _ApiClient2.default.convertToType(data['download'], 'Boolean');
+                }
+                if (data.hasOwnProperty('upload')) {
+                    obj['upload'] = _ApiClient2.default.convertToType(data['upload'], 'Boolean');
+                }
+                if (data.hasOwnProperty('modify')) {
+                    obj['modify'] = _ApiClient2.default.convertToType(data['modify'], 'Boolean');
+                }
+                if (data.hasOwnProperty('delete')) {
+                    obj['delete'] = _ApiClient2.default.convertToType(data['delete'], 'Boolean');
+                }
+                if (data.hasOwnProperty('changePassword')) {
+                    obj['changePassword'] = _ApiClient2.default.convertToType(data['changePassword'], 'Boolean');
+                }
+                if (data.hasOwnProperty('share')) {
+                    obj['share'] = _ApiClient2.default.convertToType(data['share'], 'Boolean');
+                }
+                if (data.hasOwnProperty('notification')) {
+                    obj['notification'] = _ApiClient2.default.convertToType(data['notification'], 'Boolean');
+                }
+                if (data.hasOwnProperty('viewFormData')) {
+                    obj['viewFormData'] = _ApiClient2.default.convertToType(data['viewFormData'], 'Boolean');
+                }
+                if (data.hasOwnProperty('deleteFormData')) {
+                    obj['deleteFormData'] = _ApiClient2.default.convertToType(data['deleteFormData'], 'Boolean');
                 }
             }
             return obj;
         }
 
         /**
-        * @member {module:model/UserRelationshipsHomeResource} homeResource
+        * @member {Boolean} list
         */
 
         /**
-        * @member {module:model/UserRelationshipsOwnerAccount} ownerAccount
+        * @member {Boolean} download
+        */
+
+        /**
+        * @member {Boolean} upload
+        */
+
+        /**
+        * @member {Boolean} modify
+        */
+
+        /**
+        * @member {Boolean} delete
+        */
+
+        /**
+        * @member {Boolean} changePassword
+        */
+
+        /**
+        * @member {Boolean} share
+        */
+
+        /**
+        * @member {Boolean} notification
+        */
+
+        /**
+        * @member {Boolean} viewFormData
+        */
+
+        /**
+        * @member {Boolean} deleteFormData
         */
 
     }]);
 
-    return UserRelationships;
+    return UsersPermissions;
 }();
 
-exports.default = UserRelationships;
+exports.default = UsersPermissions;

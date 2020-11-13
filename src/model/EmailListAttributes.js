@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The EmailListAttributes model module.
 * @module model/EmailListAttributes
-* @version 2.2.1
+* @version 2.2.2
 */
 var EmailListAttributes = function () {
     /**
@@ -42,7 +42,7 @@ var EmailListAttributes = function () {
         _classCallCheck(this, EmailListAttributes);
 
         this['name'] = undefined;
-        this['members'] = undefined;
+        this['emails'] = undefined;
         this['created'] = undefined;
         this['modified'] = undefined;
     }
@@ -65,8 +65,8 @@ var EmailListAttributes = function () {
                 if (data.hasOwnProperty('name')) {
                     obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
                 }
-                if (data.hasOwnProperty('members')) {
-                    obj['members'] = _ApiClient2.default.convertToType(data['members'], ['String']);
+                if (data.hasOwnProperty('emails')) {
+                    obj['emails'] = _ApiClient2.default.convertToType(data['emails'], ['String']);
                 }
                 if (data.hasOwnProperty('created')) {
                     obj['created'] = _ApiClient2.default.convertToType(data['created'], 'Date');
@@ -85,7 +85,7 @@ var EmailListAttributes = function () {
 
         /**
         * Recipient emails in the email list
-        * @member {Array.<String>} members
+        * @member {Array.<String>} emails
         */
 
         /**

@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The WebhooksActivityEntryAttributes model module.
 * @module model/WebhooksActivityEntryAttributes
-* @version 2.2.1
+* @version 2.2.2
 */
 var WebhooksActivityEntryAttributes = function () {
     /**

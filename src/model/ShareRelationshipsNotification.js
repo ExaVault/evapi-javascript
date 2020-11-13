@@ -21,62 +21,61 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _ShareRelationshipsData = require('./ShareRelationshipsData');
+
+var _ShareRelationshipsData2 = _interopRequireDefault(_ShareRelationshipsData);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The Body9 model module.
-* @module model/Body9
-* @version 2.2.1
+* The ShareRelationshipsNotification model module.
+* @module model/ShareRelationshipsNotification
+* @version 2.2.2
 */
-var Body9 = function () {
+var ShareRelationshipsNotification = function () {
     /**
-    * Constructs a new <code>Body9</code>.
-    * @alias module:model/Body9
+    * Constructs a new <code>ShareRelationshipsNotification</code>.
+    * @alias module:model/ShareRelationshipsNotification
     * @class
-    * @param resources {Array.<String>} Resource identifiers of items to delete.
     */
 
-    function Body9(resources) {
-        _classCallCheck(this, Body9);
+    function ShareRelationshipsNotification() {
+        _classCallCheck(this, ShareRelationshipsNotification);
 
-        this['resources'] = undefined;
-
-
-        this['resources'] = resources;
+        this['data'] = undefined;
     }
 
     /**
-    * Constructs a <code>Body9</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>ShareRelationshipsNotification</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/Body9} obj Optional instance to populate.
-    * @return {module:model/Body9} The populated <code>Body9</code> instance.
+    * @param {module:model/ShareRelationshipsNotification} obj Optional instance to populate.
+    * @return {module:model/ShareRelationshipsNotification} The populated <code>ShareRelationshipsNotification</code> instance.
     */
 
 
-    _createClass(Body9, null, [{
+    _createClass(ShareRelationshipsNotification, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new Body9();
+                obj = obj || new ShareRelationshipsNotification();
 
-                if (data.hasOwnProperty('resources')) {
-                    obj['resources'] = _ApiClient2.default.convertToType(data['resources'], ['String']);
+                if (data.hasOwnProperty('data')) {
+                    obj['data'] = _ShareRelationshipsData2.default.constructFromObject(data['data']);
                 }
             }
             return obj;
         }
 
         /**
-        * Resource identifiers of items to delete.
-        * @member {Array.<String>} resources
+        * @member {module:model/ShareRelationshipsData} data
         */
 
     }]);
 
-    return Body9;
+    return ShareRelationshipsNotification;
 }();
 
-exports.default = Body9;
+exports.default = ShareRelationshipsNotification;
