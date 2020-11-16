@@ -25,9 +25,9 @@ var _AccountResponse = require('../model/AccountResponse');
 
 var _AccountResponse2 = _interopRequireDefault(_AccountResponse);
 
-var _UpdateAccountRequestBody = require('../model/UpdateAccountRequestBody');
+var _UpdateAccountBody = require('../model/UpdateAccountBody');
 
-var _UpdateAccountRequestBody2 = _interopRequireDefault(_UpdateAccountRequestBody);
+var _UpdateAccountBody2 = _interopRequireDefault(_UpdateAccountBody);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -36,7 +36,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * Account service.
 * @module api/AccountApi
-* @version 2.2.2
+* @version 2.2.1
 */
 var AccountApi = function () {
 

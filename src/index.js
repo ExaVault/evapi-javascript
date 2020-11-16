@@ -3,8 +3,8 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.UsersApi = exports.SharesApi = exports.ResourcesApi = exports.RecipientsApi = exports.NotificationsApi = exports.FormApi = exports.EmailListsApi = exports.EmailApi = exports.ActivityApi = exports.AccountApi = exports.WebhooksActivityResponse = exports.WebhooksActivityEntryAttributes = exports.WebhooksActivityEntry = exports.UsersPermissions = exports.UserResponse = exports.UserRelationshipsOwnerAccountData = exports.UserRelationshipsOwnerAccount = exports.UserRelationshipsHomeResourceData = exports.UserRelationshipsHomeResource = exports.UserRelationships = exports.UserPermissions = exports.UserCollectionResponse = exports.UserAttributes = exports.User = exports.UpdateUserRequestBody = exports.UpdateShareRequestBody = exports.UpdateReourceByIdRequestBody = exports.UpdateNotificationByIdRequestBody = exports.UpdateFormByIdRequestBody = exports.UpdateEmailListRequestBody = exports.UpdateAccountRequestBody = exports.SharesRecipients = exports.ShareResponse = exports.ShareResourceData = exports.ShareRelationshpsMessage = exports.ShareRelationshipsResource = exports.ShareRelationshipsOwnerData = exports.ShareRelationshipsOwner = exports.ShareRelationshipsNotification = undefined;
-exports.ShareRelationshipsData = exports.ShareRelationships = exports.ShareRecipientsResponse = exports.ShareRecipient = exports.ShareMessageData = exports.ShareMessageAttributes = exports.ShareMessage = exports.ShareCollectionResponse = exports.ShareAttributes = exports.Share = exports.SessionActivityResponse = exports.SessionActivityEntryAttributes = exports.SessionActivityEntry = exports.SendReferralEmailRequestBody = exports.ResourceResponse = exports.ResourceRelationshipsShareData = exports.ResourceRelationshipsShare = exports.ResourceRelationshipsParentResourceData = exports.ResourceRelationshipsParentResource = exports.ResourceRelationshipsNotifications = exports.ResourceRelationshipsDirectFileData = exports.ResourceRelationshipsDirectFile = exports.ResourceRelationshipsData = exports.ResourceRelationships = exports.ResourceMultiResponse = exports.ResourceDelete = exports.ResourceCopyMove = exports.ResourceCollectionResponse = exports.ResourceAttributes = exports.Resource = exports.ResendInvitationsRequestBody = exports.RelationshipData = exports.Quota = exports.PreviewFileResponse = exports.PreviewFileAttributes = exports.PreviewFile = exports.NotificationResponse = exports.NotificationRelationshipsShareData = exports.NotificationRelationshipsShare = exports.NotificationRelationshipsResourceData = exports.NotificationRelationshipsResource = exports.NotificationRelationshipsOwnerUserData = exports.NotificationRelationshipsOwnerUser = exports.NotificationRelationships = exports.NotificationRecipient = exports.NotificationCollectionResponse = exports.NotificationAttributes = exports.Notification = exports.MoveResourcesRequestBody = exports.MasterUserMasterUserData = exports.MasterUserMasterUser = exports.MasterUser = exports.FormsidSettings = exports.FormsidElements = exports.FormResponse = exports.FormRelationshipsShareData = exports.FormRelationshipsShare = exports.FormRelationships = exports.FormFieldUploadAreaSettings = exports.FormFieldUploadArea = exports.FormFieldSettings = exports.FormField = exports.FormEntryResponse = exports.FormEntryField = exports.FormEntryAttributes = exports.FormEntry = exports.FormAttributes = exports.Form = exports.ExtractFilesRequestBody = exports.Error = exports.EmptyResponse = exports.EmailListResponse = exports.EmailListRelationships = exports.EmailListOwnerUser = exports.EmailListCollectionResponse = exports.EmailListAttributes = exports.EmailList = exports.DownloadPollingResponse = exports.DownloadPolling = exports.DeleteResourcesRequestBody = exports.CopyResourcesRequestBody = exports.CompressFilesRequestBody = exports.CallbackSettingsValuesTriggers = exports.CallbackSettingsValues = exports.CallbackSettingsTriggers = exports.CallbackSettings = exports.BrandingSettingsValues = exports.BrandingSettings = exports.Body = exports.AddUserRequestBody = exports.AddShareRequestBody = exports.AddNotificationRequestBody = exports.AddFolderRequestBody = exports.AddEmailListRequestBody = exports.AccountResponse = exports.AccountAttributesAllowedIp = exports.AccountAttributes = exports.AccountAllowedIpRanges = exports.Account = exports.ApiClient = undefined;
+exports.UsersApi = exports.SharesApi = exports.ResourcesApi = exports.RecipientsApi = exports.NotificationsApi = exports.FormApi = exports.EmailListsApi = exports.EmailApi = exports.ActivityApi = exports.AccountApi = exports.WebhooksActivityResponse = exports.WebhooksActivityEntryAttributes = exports.WebhooksActivityEntry = exports.UserResponse = exports.UserRelationshipsOwnerAccountData = exports.UserRelationshipsOwnerAccount = exports.UserRelationshipsHomeResourceData = exports.UserRelationshipsHomeResource = exports.UserRelationships = exports.UserPermissions = exports.UserCollectionResponse = exports.UserAttributes = exports.User = exports.UpdateAccountBody = exports.SharesRecipients = exports.ShareResponse = exports.ShareRelationshipsResources = exports.ShareRelationshipsOwnerData = exports.ShareRelationshipsOwner = exports.ShareRelationshipsNotifications = exports.ShareRelationshipsMessages = exports.ShareRelationshipsData2 = exports.ShareRelationshipsData1 = exports.ShareRelationshipsData = exports.ShareRelationships = exports.ShareRelationship = exports.ShareRecipientsResponse = exports.ShareRecipient1 = exports.ShareRecipient = exports.ShareMessageAttributes = exports.ShareMessage = exports.ShareCollectionResponse = exports.ShareAttributes = exports.Share = undefined;
+exports.SessionActivityResponse = exports.SessionActivityEntryAttributes = exports.SessionActivityEntry = exports.ResourceResponse = exports.ResourceRelationshipsShareData = exports.ResourceRelationshipsShare = exports.ResourceRelationshipsParentResourceData = exports.ResourceRelationshipsParentResource = exports.ResourceRelationshipsNotifications = exports.ResourceRelationshipsDirectFileData = exports.ResourceRelationshipsDirectFile = exports.ResourceRelationshipsData = exports.ResourceRelationships = exports.ResourceMultiResponse = exports.ResourceDelete = exports.ResourceCopyMove = exports.ResourceCollectionResponse = exports.ResourceAttributes = exports.Resource = exports.RelationshipData = exports.Quota = exports.PreviewFileResponse = exports.PreviewFileAttributes = exports.PreviewFile = exports.NotificationResponse = exports.NotificationRelationshipsShareData = exports.NotificationRelationshipsShare = exports.NotificationRelationshipsResourceData = exports.NotificationRelationshipsResource = exports.NotificationRelationshipsOwnerUserData = exports.NotificationRelationshipsOwnerUser = exports.NotificationRelationships = exports.NotificationRecipient = exports.NotificationCollectionResponse = exports.NotificationAttributes = exports.Notification = exports.MasterUserMasterUserData = exports.MasterUserMasterUser = exports.MasterUser = exports.FormsidSettings = exports.FormsidElements = exports.FormResponse = exports.FormRelationshipsShareData = exports.FormRelationshipsShare = exports.FormRelationships = exports.FormFieldUploadAreaSettings = exports.FormFieldUploadArea = exports.FormFieldSettings = exports.FormField = exports.FormEntryResponse = exports.FormEntryField = exports.FormEntryAttributes = exports.FormEntry = exports.FormAttributes = exports.Form = exports.Error403Errors = exports.Error403 = exports.Error401Errors = exports.Error401 = exports.Error = exports.EmptyResponse = exports.EmailListResponse = exports.EmailListRelationships = exports.EmailListOwnerUser = exports.EmailListCollectionResponse = exports.EmailListAttributes = exports.EmailList = exports.DownloadPollingResponse = exports.DownloadPolling = exports.CallbackSettingsTriggers = exports.CallbackSettings1Triggers = exports.CallbackSettings1 = exports.CallbackSettings = exports.BrandingSettings1 = exports.BrandingSettings = exports.Body9 = exports.Body8 = exports.Body7 = exports.Body6 = exports.Body5 = exports.Body4 = exports.Body3 = exports.Body2 = exports.Body18 = exports.Body17 = exports.Body16 = exports.Body15 = exports.Body14 = exports.Body13 = exports.Body12 = exports.Body11 = exports.Body10 = exports.Body1 = exports.Body = exports.AccountResponse = exports.AccountAttributesAllowedIp = exports.AccountAttributes = exports.AccountAllowedIpRanges = exports.Account = exports.ApiClient = undefined;
 
 var _ApiClient = require('./ApiClient');
 
@@ -30,65 +30,105 @@ var _AccountResponse = require('./model/AccountResponse');
 
 var _AccountResponse2 = _interopRequireDefault(_AccountResponse);
 
-var _AddEmailListRequestBody = require('./model/AddEmailListRequestBody');
-
-var _AddEmailListRequestBody2 = _interopRequireDefault(_AddEmailListRequestBody);
-
-var _AddFolderRequestBody = require('./model/AddFolderRequestBody');
-
-var _AddFolderRequestBody2 = _interopRequireDefault(_AddFolderRequestBody);
-
-var _AddNotificationRequestBody = require('./model/AddNotificationRequestBody');
-
-var _AddNotificationRequestBody2 = _interopRequireDefault(_AddNotificationRequestBody);
-
-var _AddShareRequestBody = require('./model/AddShareRequestBody');
-
-var _AddShareRequestBody2 = _interopRequireDefault(_AddShareRequestBody);
-
-var _AddUserRequestBody = require('./model/AddUserRequestBody');
-
-var _AddUserRequestBody2 = _interopRequireDefault(_AddUserRequestBody);
-
 var _Body = require('./model/Body');
 
 var _Body2 = _interopRequireDefault(_Body);
+
+var _Body3 = require('./model/Body1');
+
+var _Body4 = _interopRequireDefault(_Body3);
+
+var _Body5 = require('./model/Body10');
+
+var _Body6 = _interopRequireDefault(_Body5);
+
+var _Body7 = require('./model/Body11');
+
+var _Body8 = _interopRequireDefault(_Body7);
+
+var _Body9 = require('./model/Body12');
+
+var _Body10 = _interopRequireDefault(_Body9);
+
+var _Body11 = require('./model/Body13');
+
+var _Body12 = _interopRequireDefault(_Body11);
+
+var _Body13 = require('./model/Body14');
+
+var _Body14 = _interopRequireDefault(_Body13);
+
+var _Body15 = require('./model/Body15');
+
+var _Body16 = _interopRequireDefault(_Body15);
+
+var _Body17 = require('./model/Body16');
+
+var _Body18 = _interopRequireDefault(_Body17);
+
+var _Body19 = require('./model/Body17');
+
+var _Body20 = _interopRequireDefault(_Body19);
+
+var _Body21 = require('./model/Body18');
+
+var _Body22 = _interopRequireDefault(_Body21);
+
+var _Body23 = require('./model/Body2');
+
+var _Body24 = _interopRequireDefault(_Body23);
+
+var _Body25 = require('./model/Body3');
+
+var _Body26 = _interopRequireDefault(_Body25);
+
+var _Body27 = require('./model/Body4');
+
+var _Body28 = _interopRequireDefault(_Body27);
+
+var _Body29 = require('./model/Body5');
+
+var _Body30 = _interopRequireDefault(_Body29);
+
+var _Body31 = require('./model/Body6');
+
+var _Body32 = _interopRequireDefault(_Body31);
+
+var _Body33 = require('./model/Body7');
+
+var _Body34 = _interopRequireDefault(_Body33);
+
+var _Body35 = require('./model/Body8');
+
+var _Body36 = _interopRequireDefault(_Body35);
+
+var _Body37 = require('./model/Body9');
+
+var _Body38 = _interopRequireDefault(_Body37);
 
 var _BrandingSettings = require('./model/BrandingSettings');
 
 var _BrandingSettings2 = _interopRequireDefault(_BrandingSettings);
 
-var _BrandingSettingsValues = require('./model/BrandingSettingsValues');
+var _BrandingSettings3 = require('./model/BrandingSettings1');
 
-var _BrandingSettingsValues2 = _interopRequireDefault(_BrandingSettingsValues);
+var _BrandingSettings4 = _interopRequireDefault(_BrandingSettings3);
 
 var _CallbackSettings = require('./model/CallbackSettings');
 
 var _CallbackSettings2 = _interopRequireDefault(_CallbackSettings);
 
+var _CallbackSettings3 = require('./model/CallbackSettings1');
+
+var _CallbackSettings4 = _interopRequireDefault(_CallbackSettings3);
+
+var _CallbackSettings1Triggers = require('./model/CallbackSettings1Triggers');
+
+var _CallbackSettings1Triggers2 = _interopRequireDefault(_CallbackSettings1Triggers);
+
 var _CallbackSettingsTriggers = require('./model/CallbackSettingsTriggers');
 
 var _CallbackSettingsTriggers2 = _interopRequireDefault(_CallbackSettingsTriggers);
-
-var _CallbackSettingsValues = require('./model/CallbackSettingsValues');
-
-var _CallbackSettingsValues2 = _interopRequireDefault(_CallbackSettingsValues);
-
-var _CallbackSettingsValuesTriggers = require('./model/CallbackSettingsValuesTriggers');
-
-var _CallbackSettingsValuesTriggers2 = _interopRequireDefault(_CallbackSettingsValuesTriggers);
-
-var _CompressFilesRequestBody = require('./model/CompressFilesRequestBody');
-
-var _CompressFilesRequestBody2 = _interopRequireDefault(_CompressFilesRequestBody);
-
-var _CopyResourcesRequestBody = require('./model/CopyResourcesRequestBody');
-
-var _CopyResourcesRequestBody2 = _interopRequireDefault(_CopyResourcesRequestBody);
-
-var _DeleteResourcesRequestBody = require('./model/DeleteResourcesRequestBody');
-
-var _DeleteResourcesRequestBody2 = _interopRequireDefault(_DeleteResourcesRequestBody);
 
 var _DownloadPolling = require('./model/DownloadPolling');
 
@@ -130,9 +170,21 @@ var _Error = require('./model/Error');
 
 var _Error2 = _interopRequireDefault(_Error);
 
-var _ExtractFilesRequestBody = require('./model/ExtractFilesRequestBody');
+var _Error3 = require('./model/Error401');
 
-var _ExtractFilesRequestBody2 = _interopRequireDefault(_ExtractFilesRequestBody);
+var _Error4 = _interopRequireDefault(_Error3);
+
+var _Error401Errors = require('./model/Error401Errors');
+
+var _Error401Errors2 = _interopRequireDefault(_Error401Errors);
+
+var _Error5 = require('./model/Error403');
+
+var _Error6 = _interopRequireDefault(_Error5);
+
+var _Error403Errors = require('./model/Error403Errors');
+
+var _Error403Errors2 = _interopRequireDefault(_Error403Errors);
 
 var _Form = require('./model/Form');
 
@@ -210,10 +262,6 @@ var _MasterUserMasterUserData = require('./model/MasterUserMasterUserData');
 
 var _MasterUserMasterUserData2 = _interopRequireDefault(_MasterUserMasterUserData);
 
-var _MoveResourcesRequestBody = require('./model/MoveResourcesRequestBody');
-
-var _MoveResourcesRequestBody2 = _interopRequireDefault(_MoveResourcesRequestBody);
-
 var _Notification = require('./model/Notification');
 
 var _Notification2 = _interopRequireDefault(_Notification);
@@ -282,10 +330,6 @@ var _RelationshipData = require('./model/RelationshipData');
 
 var _RelationshipData2 = _interopRequireDefault(_RelationshipData);
 
-var _ResendInvitationsRequestBody = require('./model/ResendInvitationsRequestBody');
-
-var _ResendInvitationsRequestBody2 = _interopRequireDefault(_ResendInvitationsRequestBody);
-
 var _Resource = require('./model/Resource');
 
 var _Resource2 = _interopRequireDefault(_Resource);
@@ -350,10 +394,6 @@ var _ResourceResponse = require('./model/ResourceResponse');
 
 var _ResourceResponse2 = _interopRequireDefault(_ResourceResponse);
 
-var _SendReferralEmailRequestBody = require('./model/SendReferralEmailRequestBody');
-
-var _SendReferralEmailRequestBody2 = _interopRequireDefault(_SendReferralEmailRequestBody);
-
 var _SessionActivityEntry = require('./model/SessionActivityEntry');
 
 var _SessionActivityEntry2 = _interopRequireDefault(_SessionActivityEntry);
@@ -386,17 +426,21 @@ var _ShareMessageAttributes = require('./model/ShareMessageAttributes');
 
 var _ShareMessageAttributes2 = _interopRequireDefault(_ShareMessageAttributes);
 
-var _ShareMessageData = require('./model/ShareMessageData');
-
-var _ShareMessageData2 = _interopRequireDefault(_ShareMessageData);
-
 var _ShareRecipient = require('./model/ShareRecipient');
 
 var _ShareRecipient2 = _interopRequireDefault(_ShareRecipient);
 
+var _ShareRecipient3 = require('./model/ShareRecipient1');
+
+var _ShareRecipient4 = _interopRequireDefault(_ShareRecipient3);
+
 var _ShareRecipientsResponse = require('./model/ShareRecipientsResponse');
 
 var _ShareRecipientsResponse2 = _interopRequireDefault(_ShareRecipientsResponse);
+
+var _ShareRelationship = require('./model/ShareRelationship');
+
+var _ShareRelationship2 = _interopRequireDefault(_ShareRelationship);
 
 var _ShareRelationships = require('./model/ShareRelationships');
 
@@ -406,9 +450,21 @@ var _ShareRelationshipsData = require('./model/ShareRelationshipsData');
 
 var _ShareRelationshipsData2 = _interopRequireDefault(_ShareRelationshipsData);
 
-var _ShareRelationshipsNotification = require('./model/ShareRelationshipsNotification');
+var _ShareRelationshipsData3 = require('./model/ShareRelationshipsData1');
 
-var _ShareRelationshipsNotification2 = _interopRequireDefault(_ShareRelationshipsNotification);
+var _ShareRelationshipsData4 = _interopRequireDefault(_ShareRelationshipsData3);
+
+var _ShareRelationshipsData5 = require('./model/ShareRelationshipsData2');
+
+var _ShareRelationshipsData6 = _interopRequireDefault(_ShareRelationshipsData5);
+
+var _ShareRelationshipsMessages = require('./model/ShareRelationshipsMessages');
+
+var _ShareRelationshipsMessages2 = _interopRequireDefault(_ShareRelationshipsMessages);
+
+var _ShareRelationshipsNotifications = require('./model/ShareRelationshipsNotifications');
+
+var _ShareRelationshipsNotifications2 = _interopRequireDefault(_ShareRelationshipsNotifications);
 
 var _ShareRelationshipsOwner = require('./model/ShareRelationshipsOwner');
 
@@ -418,17 +474,9 @@ var _ShareRelationshipsOwnerData = require('./model/ShareRelationshipsOwnerData'
 
 var _ShareRelationshipsOwnerData2 = _interopRequireDefault(_ShareRelationshipsOwnerData);
 
-var _ShareRelationshipsResource = require('./model/ShareRelationshipsResource');
+var _ShareRelationshipsResources = require('./model/ShareRelationshipsResources');
 
-var _ShareRelationshipsResource2 = _interopRequireDefault(_ShareRelationshipsResource);
-
-var _ShareRelationshpsMessage = require('./model/ShareRelationshpsMessage');
-
-var _ShareRelationshpsMessage2 = _interopRequireDefault(_ShareRelationshpsMessage);
-
-var _ShareResourceData = require('./model/ShareResourceData');
-
-var _ShareResourceData2 = _interopRequireDefault(_ShareResourceData);
+var _ShareRelationshipsResources2 = _interopRequireDefault(_ShareRelationshipsResources);
 
 var _ShareResponse = require('./model/ShareResponse');
 
@@ -438,33 +486,9 @@ var _SharesRecipients = require('./model/SharesRecipients');
 
 var _SharesRecipients2 = _interopRequireDefault(_SharesRecipients);
 
-var _UpdateAccountRequestBody = require('./model/UpdateAccountRequestBody');
+var _UpdateAccountBody = require('./model/UpdateAccountBody');
 
-var _UpdateAccountRequestBody2 = _interopRequireDefault(_UpdateAccountRequestBody);
-
-var _UpdateEmailListRequestBody = require('./model/UpdateEmailListRequestBody');
-
-var _UpdateEmailListRequestBody2 = _interopRequireDefault(_UpdateEmailListRequestBody);
-
-var _UpdateFormByIdRequestBody = require('./model/UpdateFormByIdRequestBody');
-
-var _UpdateFormByIdRequestBody2 = _interopRequireDefault(_UpdateFormByIdRequestBody);
-
-var _UpdateNotificationByIdRequestBody = require('./model/UpdateNotificationByIdRequestBody');
-
-var _UpdateNotificationByIdRequestBody2 = _interopRequireDefault(_UpdateNotificationByIdRequestBody);
-
-var _UpdateReourceByIdRequestBody = require('./model/UpdateReourceByIdRequestBody');
-
-var _UpdateReourceByIdRequestBody2 = _interopRequireDefault(_UpdateReourceByIdRequestBody);
-
-var _UpdateShareRequestBody = require('./model/UpdateShareRequestBody');
-
-var _UpdateShareRequestBody2 = _interopRequireDefault(_UpdateShareRequestBody);
-
-var _UpdateUserRequestBody = require('./model/UpdateUserRequestBody');
-
-var _UpdateUserRequestBody2 = _interopRequireDefault(_UpdateUserRequestBody);
+var _UpdateAccountBody2 = _interopRequireDefault(_UpdateAccountBody);
 
 var _User = require('./model/User');
 
@@ -505,10 +529,6 @@ var _UserRelationshipsOwnerAccountData2 = _interopRequireDefault(_UserRelationsh
 var _UserResponse = require('./model/UserResponse');
 
 var _UserResponse2 = _interopRequireDefault(_UserResponse);
-
-var _UsersPermissions = require('./model/UsersPermissions');
-
-var _UsersPermissions2 = _interopRequireDefault(_UsersPermissions);
 
 var _WebhooksActivityEntry = require('./model/WebhooksActivityEntry');
 
@@ -565,14 +585,14 @@ var _UsersApi2 = _interopRequireDefault(_UsersApi);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /**
-* ExaVault API Javascript library.<br>
+* See_our_API_reference_documentation_at_httpswww_exavault_comdeveloperapi_docs.<br>
 * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
 * <p>
 * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
 * <pre>
-* var @ExavaultExavaultApi = require('index'); // See note below*.
-* var xxxSvc = new @ExavaultExavaultApi.XxxApi(); // Allocate the API class we're going to use.
-* var yyyModel = new @ExavaultExavaultApi.Yyy(); // Construct a model instance.
+* var ExaVaultApi = require('index'); // See note below*.
+* var xxxSvc = new ExaVaultApi.XxxApi(); // Allocate the API class we're going to use.
+* var yyyModel = new ExaVaultApi.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -584,8 +604,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 * <p>
 * A non-AMD browser application (discouraged) might do something like this:
 * <pre>
-* var xxxSvc = new @ExavaultExavaultApi.XxxApi(); // Allocate the API class we're going to use.
-* var yyy = new @ExavaultExavaultApi.Yyy(); // Construct a model instance.
+* var xxxSvc = new ExaVaultApi.XxxApi(); // Allocate the API class we're going to use.
+* var yyy = new ExaVaultApi.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -593,29 +613,52 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 * </pre>
 * </p>
 * @module index
-* @version 2.2.2
+* @version 2.2.1
 */
+/**
+ * ExaVault API
+ * See our API reference documentation at https://www.exavault.com/developer/api-docs/
+ *
+ * OpenAPI spec version: 2.0
+ * Contact: support@exavault.com
+ *
+ * NOTE: This class is auto generated by the swagger code generator program.
+ * https://github.com/swagger-api/swagger-codegen.git
+ * Do not edit the class manually.
+ *
+ */
+
 exports.ApiClient = _ApiClient2.default;
 exports.Account = _Account2.default;
 exports.AccountAllowedIpRanges = _AccountAllowedIpRanges2.default;
 exports.AccountAttributes = _AccountAttributes2.default;
 exports.AccountAttributesAllowedIp = _AccountAttributesAllowedIp2.default;
 exports.AccountResponse = _AccountResponse2.default;
-exports.AddEmailListRequestBody = _AddEmailListRequestBody2.default;
-exports.AddFolderRequestBody = _AddFolderRequestBody2.default;
-exports.AddNotificationRequestBody = _AddNotificationRequestBody2.default;
-exports.AddShareRequestBody = _AddShareRequestBody2.default;
-exports.AddUserRequestBody = _AddUserRequestBody2.default;
 exports.Body = _Body2.default;
+exports.Body1 = _Body4.default;
+exports.Body10 = _Body6.default;
+exports.Body11 = _Body8.default;
+exports.Body12 = _Body10.default;
+exports.Body13 = _Body12.default;
+exports.Body14 = _Body14.default;
+exports.Body15 = _Body16.default;
+exports.Body16 = _Body18.default;
+exports.Body17 = _Body20.default;
+exports.Body18 = _Body22.default;
+exports.Body2 = _Body24.default;
+exports.Body3 = _Body26.default;
+exports.Body4 = _Body28.default;
+exports.Body5 = _Body30.default;
+exports.Body6 = _Body32.default;
+exports.Body7 = _Body34.default;
+exports.Body8 = _Body36.default;
+exports.Body9 = _Body38.default;
 exports.BrandingSettings = _BrandingSettings2.default;
-exports.BrandingSettingsValues = _BrandingSettingsValues2.default;
+exports.BrandingSettings1 = _BrandingSettings4.default;
 exports.CallbackSettings = _CallbackSettings2.default;
+exports.CallbackSettings1 = _CallbackSettings4.default;
+exports.CallbackSettings1Triggers = _CallbackSettings1Triggers2.default;
 exports.CallbackSettingsTriggers = _CallbackSettingsTriggers2.default;
-exports.CallbackSettingsValues = _CallbackSettingsValues2.default;
-exports.CallbackSettingsValuesTriggers = _CallbackSettingsValuesTriggers2.default;
-exports.CompressFilesRequestBody = _CompressFilesRequestBody2.default;
-exports.CopyResourcesRequestBody = _CopyResourcesRequestBody2.default;
-exports.DeleteResourcesRequestBody = _DeleteResourcesRequestBody2.default;
 exports.DownloadPolling = _DownloadPolling2.default;
 exports.DownloadPollingResponse = _DownloadPollingResponse2.default;
 exports.EmailList = _EmailList2.default;
@@ -626,7 +669,10 @@ exports.EmailListRelationships = _EmailListRelationships2.default;
 exports.EmailListResponse = _EmailListResponse2.default;
 exports.EmptyResponse = _EmptyResponse2.default;
 exports.Error = _Error2.default;
-exports.ExtractFilesRequestBody = _ExtractFilesRequestBody2.default;
+exports.Error401 = _Error4.default;
+exports.Error401Errors = _Error401Errors2.default;
+exports.Error403 = _Error6.default;
+exports.Error403Errors = _Error403Errors2.default;
 exports.Form = _Form2.default;
 exports.FormAttributes = _FormAttributes2.default;
 exports.FormEntry = _FormEntry2.default;
@@ -646,7 +692,6 @@ exports.FormsidSettings = _FormsidSettings2.default;
 exports.MasterUser = _MasterUser2.default;
 exports.MasterUserMasterUser = _MasterUserMasterUser2.default;
 exports.MasterUserMasterUserData = _MasterUserMasterUserData2.default;
-exports.MoveResourcesRequestBody = _MoveResourcesRequestBody2.default;
 exports.Notification = _Notification2.default;
 exports.NotificationAttributes = _NotificationAttributes2.default;
 exports.NotificationCollectionResponse = _NotificationCollectionResponse2.default;
@@ -664,7 +709,6 @@ exports.PreviewFileAttributes = _PreviewFileAttributes2.default;
 exports.PreviewFileResponse = _PreviewFileResponse2.default;
 exports.Quota = _Quota2.default;
 exports.RelationshipData = _RelationshipData2.default;
-exports.ResendInvitationsRequestBody = _ResendInvitationsRequestBody2.default;
 exports.Resource = _Resource2.default;
 exports.ResourceAttributes = _ResourceAttributes2.default;
 exports.ResourceCollectionResponse = _ResourceCollectionResponse2.default;
@@ -681,7 +725,6 @@ exports.ResourceRelationshipsParentResourceData = _ResourceRelationshipsParentRe
 exports.ResourceRelationshipsShare = _ResourceRelationshipsShare2.default;
 exports.ResourceRelationshipsShareData = _ResourceRelationshipsShareData2.default;
 exports.ResourceResponse = _ResourceResponse2.default;
-exports.SendReferralEmailRequestBody = _SendReferralEmailRequestBody2.default;
 exports.SessionActivityEntry = _SessionActivityEntry2.default;
 exports.SessionActivityEntryAttributes = _SessionActivityEntryAttributes2.default;
 exports.SessionActivityResponse = _SessionActivityResponse2.default;
@@ -690,26 +733,22 @@ exports.ShareAttributes = _ShareAttributes2.default;
 exports.ShareCollectionResponse = _ShareCollectionResponse2.default;
 exports.ShareMessage = _ShareMessage2.default;
 exports.ShareMessageAttributes = _ShareMessageAttributes2.default;
-exports.ShareMessageData = _ShareMessageData2.default;
 exports.ShareRecipient = _ShareRecipient2.default;
+exports.ShareRecipient1 = _ShareRecipient4.default;
 exports.ShareRecipientsResponse = _ShareRecipientsResponse2.default;
+exports.ShareRelationship = _ShareRelationship2.default;
 exports.ShareRelationships = _ShareRelationships2.default;
 exports.ShareRelationshipsData = _ShareRelationshipsData2.default;
-exports.ShareRelationshipsNotification = _ShareRelationshipsNotification2.default;
+exports.ShareRelationshipsData1 = _ShareRelationshipsData4.default;
+exports.ShareRelationshipsData2 = _ShareRelationshipsData6.default;
+exports.ShareRelationshipsMessages = _ShareRelationshipsMessages2.default;
+exports.ShareRelationshipsNotifications = _ShareRelationshipsNotifications2.default;
 exports.ShareRelationshipsOwner = _ShareRelationshipsOwner2.default;
 exports.ShareRelationshipsOwnerData = _ShareRelationshipsOwnerData2.default;
-exports.ShareRelationshipsResource = _ShareRelationshipsResource2.default;
-exports.ShareRelationshpsMessage = _ShareRelationshpsMessage2.default;
-exports.ShareResourceData = _ShareResourceData2.default;
+exports.ShareRelationshipsResources = _ShareRelationshipsResources2.default;
 exports.ShareResponse = _ShareResponse2.default;
 exports.SharesRecipients = _SharesRecipients2.default;
-exports.UpdateAccountRequestBody = _UpdateAccountRequestBody2.default;
-exports.UpdateEmailListRequestBody = _UpdateEmailListRequestBody2.default;
-exports.UpdateFormByIdRequestBody = _UpdateFormByIdRequestBody2.default;
-exports.UpdateNotificationByIdRequestBody = _UpdateNotificationByIdRequestBody2.default;
-exports.UpdateReourceByIdRequestBody = _UpdateReourceByIdRequestBody2.default;
-exports.UpdateShareRequestBody = _UpdateShareRequestBody2.default;
-exports.UpdateUserRequestBody = _UpdateUserRequestBody2.default;
+exports.UpdateAccountBody = _UpdateAccountBody2.default;
 exports.User = _User2.default;
 exports.UserAttributes = _UserAttributes2.default;
 exports.UserCollectionResponse = _UserCollectionResponse2.default;
@@ -720,7 +759,6 @@ exports.UserRelationshipsHomeResourceData = _UserRelationshipsHomeResourceData2.
 exports.UserRelationshipsOwnerAccount = _UserRelationshipsOwnerAccount2.default;
 exports.UserRelationshipsOwnerAccountData = _UserRelationshipsOwnerAccountData2.default;
 exports.UserResponse = _UserResponse2.default;
-exports.UsersPermissions = _UsersPermissions2.default;
 exports.WebhooksActivityEntry = _WebhooksActivityEntry2.default;
 exports.WebhooksActivityEntryAttributes = _WebhooksActivityEntryAttributes2.default;
 exports.WebhooksActivityResponse = _WebhooksActivityResponse2.default;
@@ -733,15 +771,4 @@ exports.NotificationsApi = _NotificationsApi2.default;
 exports.RecipientsApi = _RecipientsApi2.default;
 exports.ResourcesApi = _ResourcesApi2.default;
 exports.SharesApi = _SharesApi2.default;
-exports.UsersApi = _UsersApi2.default; /**
-                                        * ExaVault API
-                                        * See our API reference documentation at https://www.exavault.com/developer/api-docs/
-                                        *
-                                        * OpenAPI spec version: 2.0
-                                        * Contact: support@exavault.com
-                                        *
-                                        * NOTE: This class is auto generated by the swagger code generator program.
-                                        * https://github.com/swagger-api/swagger-codegen.git
-                                        * Do not edit the class manually.
-                                        *
-                                        */
+exports.UsersApi = _UsersApi2.default;

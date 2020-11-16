@@ -32,7 +32,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The UserAttributes model module.
 * @module model/UserAttributes
-* @version 2.2.2
+* @version 2.2.1
 */
 var UserAttributes = function () {
     /**
@@ -71,7 +71,6 @@ var UserAttributes = function () {
         this['timeZone'] = undefined;
         this['onboarding'] = undefined;
         this['firstLogin'] = undefined;
-        this['locked'] = undefined;
 
 
         this['status'] = status;
@@ -146,9 +145,6 @@ var UserAttributes = function () {
                 }
                 if (data.hasOwnProperty('firstLogin')) {
                     obj['firstLogin'] = _ApiClient2.default.convertToType(data['firstLogin'], 'Boolean');
-                }
-                if (data.hasOwnProperty('locked')) {
-                    obj['locked'] = _ApiClient2.default.convertToType(data['locked'], 'Boolean');
                 }
             }
             return obj;
@@ -226,11 +222,6 @@ var UserAttributes = function () {
         /**
         * `true` if the user has logged into the system.
         * @member {Boolean} firstLogin
-        */
-
-        /**
-        * `true` if the user is locked and cannot log in.
-        * @member {Boolean} locked
         */
 
 

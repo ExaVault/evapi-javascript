@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The DownloadPolling model module.
 * @module model/DownloadPolling
-* @version 2.2.2
+* @version 2.2.1
 */
 var DownloadPolling = function () {
     /**
@@ -41,7 +41,7 @@ var DownloadPolling = function () {
     function DownloadPolling() {
         _classCallCheck(this, DownloadPolling);
 
-        this['pollingArchiveName'] = undefined;
+        this['zip'] = undefined;
         this['percent'] = undefined;
     }
 
@@ -60,8 +60,8 @@ var DownloadPolling = function () {
             if (data) {
                 obj = obj || new DownloadPolling();
 
-                if (data.hasOwnProperty('pollingArchiveName')) {
-                    obj['pollingArchiveName'] = _ApiClient2.default.convertToType(data['pollingArchiveName'], 'String');
+                if (data.hasOwnProperty('zip')) {
+                    obj['zip'] = _ApiClient2.default.convertToType(data['zip'], 'String');
                 }
                 if (data.hasOwnProperty('percent')) {
                     obj['percent'] = _ApiClient2.default.convertToType(data['percent'], 'Number');
@@ -72,7 +72,7 @@ var DownloadPolling = function () {
 
         /**
         * Name of the zip file.
-        * @member {String} pollingArchiveName
+        * @member {String} zip
         */
 
         /**

@@ -26,75 +26,52 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The CompressFilesRequestBody model module.
-* @module model/CompressFilesRequestBody
-* @version 2.2.2
+* The Body14 model module.
+* @module model/Body14
+* @version 2.2.1
 */
-var CompressFilesRequestBody = function () {
+var Body14 = function () {
     /**
-    * Constructs a new <code>CompressFilesRequestBody</code>.
-    * @alias module:model/CompressFilesRequestBody
+    * Constructs a new <code>Body14</code>.
+    * @alias module:model/Body14
     * @class
-    * @param resources {Array.<String>} Resource identifiers for file(s)/folder(s) to include in new zip file
     */
 
-    function CompressFilesRequestBody(resources) {
-        _classCallCheck(this, CompressFilesRequestBody);
+    function Body14() {
+        _classCallCheck(this, Body14);
 
-        this['resources'] = undefined;
-        this['parentResource'] = undefined;
-        this['archiveName'] = undefined;
-
-
-        this['resources'] = resources;
+        this['file'] = undefined;
     }
 
     /**
-    * Constructs a <code>CompressFilesRequestBody</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>Body14</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/CompressFilesRequestBody} obj Optional instance to populate.
-    * @return {module:model/CompressFilesRequestBody} The populated <code>CompressFilesRequestBody</code> instance.
+    * @param {module:model/Body14} obj Optional instance to populate.
+    * @return {module:model/Body14} The populated <code>Body14</code> instance.
     */
 
 
-    _createClass(CompressFilesRequestBody, null, [{
+    _createClass(Body14, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new CompressFilesRequestBody();
+                obj = obj || new Body14();
 
-                if (data.hasOwnProperty('resources')) {
-                    obj['resources'] = _ApiClient2.default.convertToType(data['resources'], ['String']);
-                }
-                if (data.hasOwnProperty('parentResource')) {
-                    obj['parentResource'] = _ApiClient2.default.convertToType(data['parentResource'], 'String');
-                }
-                if (data.hasOwnProperty('archiveName')) {
-                    obj['archiveName'] = _ApiClient2.default.convertToType(data['archiveName'], 'String');
+                if (data.hasOwnProperty('file')) {
+                    obj['file'] = _ApiClient2.default.convertToType(data['file'], File);
                 }
             }
             return obj;
         }
 
         /**
-        * Resource identifiers for file(s)/folder(s) to include in new zip file
-        * @member {Array.<String>} resources
-        */
-
-        /**
-        * Full path to folder new archive will be created in. If left blank, \"/\" will be used.
-        * @member {String} parentResource
-        */
-
-        /**
-        * Name of the zip archive to create. If left blank, current date will be used.
-        * @member {String} archiveName
+        * @member {File} file
         */
 
     }]);
 
-    return CompressFilesRequestBody;
+    return Body14;
 }();
 
-exports.default = CompressFilesRequestBody;
+exports.default = Body14;

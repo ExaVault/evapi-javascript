@@ -21,67 +21,69 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _CallbackSettings1Triggers = require('./CallbackSettings1Triggers');
+
+var _CallbackSettings1Triggers2 = _interopRequireDefault(_CallbackSettings1Triggers);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The UpdateEmailListRequestBody model module.
-* @module model/UpdateEmailListRequestBody
-* @version 2.2.2
+* The CallbackSettings1 model module.
+* @module model/CallbackSettings1
+* @version 2.2.1
 */
-var UpdateEmailListRequestBody = function () {
+var CallbackSettings1 = function () {
     /**
-    * Constructs a new <code>UpdateEmailListRequestBody</code>.
-    * @alias module:model/UpdateEmailListRequestBody
+    * Constructs a new <code>CallbackSettings1</code>.
+    * @alias module:model/CallbackSettings1
     * @class
     */
 
-    function UpdateEmailListRequestBody() {
-        _classCallCheck(this, UpdateEmailListRequestBody);
+    function CallbackSettings1() {
+        _classCallCheck(this, CallbackSettings1);
 
-        this['name'] = undefined;
-        this['emails'] = undefined;
+        this['endpointUrl'] = undefined;
+        this['triggers'] = undefined;
     }
 
     /**
-    * Constructs a <code>UpdateEmailListRequestBody</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>CallbackSettings1</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/UpdateEmailListRequestBody} obj Optional instance to populate.
-    * @return {module:model/UpdateEmailListRequestBody} The populated <code>UpdateEmailListRequestBody</code> instance.
+    * @param {module:model/CallbackSettings1} obj Optional instance to populate.
+    * @return {module:model/CallbackSettings1} The populated <code>CallbackSettings1</code> instance.
     */
 
 
-    _createClass(UpdateEmailListRequestBody, null, [{
+    _createClass(CallbackSettings1, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new UpdateEmailListRequestBody();
+                obj = obj || new CallbackSettings1();
 
-                if (data.hasOwnProperty('name')) {
-                    obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
+                if (data.hasOwnProperty('endpointUrl')) {
+                    obj['endpointUrl'] = _ApiClient2.default.convertToType(data['endpointUrl'], 'String');
                 }
-                if (data.hasOwnProperty('emails')) {
-                    obj['emails'] = _ApiClient2.default.convertToType(data['emails'], ['String']);
+                if (data.hasOwnProperty('triggers')) {
+                    obj['triggers'] = _CallbackSettings1Triggers2.default.constructFromObject(data['triggers']);
                 }
             }
             return obj;
         }
 
         /**
-        * Name of the email list.
-        * @member {String} name
+        * @member {String} endpointUrl
         */
 
         /**
-        * Array of email addresses to add to the email list.
-        * @member {Array.<String>} emails
+        * @member {module:model/CallbackSettings1Triggers} triggers
         */
 
     }]);
 
-    return UpdateEmailListRequestBody;
+    return CallbackSettings1;
 }();
 
-exports.default = UpdateEmailListRequestBody;
+exports.default = CallbackSettings1;

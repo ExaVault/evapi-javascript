@@ -26,53 +26,164 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The UpdateReourceByIdRequestBody model module.
-* @module model/UpdateReourceByIdRequestBody
-* @version 2.2.2
+* The Body4 model module.
+* @module model/Body4
+* @version 2.2.1
 */
-var UpdateReourceByIdRequestBody = function () {
+var Body4 = function () {
     /**
-    * Constructs a new <code>UpdateReourceByIdRequestBody</code>.
-    * @alias module:model/UpdateReourceByIdRequestBody
+    * Constructs a new <code>Body4</code>.
+    * @alias module:model/Body4
     * @class
+    * @param type {module:model/Body4.TypeEnum} What kind of notification you're making. Valid choices are:  - **file** to monitor activity for a file resource - **folder** to monitor activity for a folder resource
+    * @param resource {String} Resources for this notification. See details on [how to specify resources](#section/Identifying-Resources) above.
+    * @param action {module:model/Body4.ActionEnum} Type of action be notified about. Notifications will only be fired for the given type of action. Valid choices are **upload**, **download**, **delete** or **all** (upload/download/delete)
+    * @param usernames {Array.<String>} Determines which users' actions should trigger the notification.   Rather than listing  individual users, you can also use 3 special options:  - **notice\\_user\\_all** for activity by any user or share recipient - **notice\\_user\\_all\\_users** for activity only by user accounts - **notice\\_user\\_all\\_recipient** for activity only by share recipients
+    * @param sendEmail {Boolean} Set to true if the user should be notified by email when the notification is triggered.
     */
 
-    function UpdateReourceByIdRequestBody() {
-        _classCallCheck(this, UpdateReourceByIdRequestBody);
+    function Body4(type, resource, action, usernames, sendEmail) {
+        _classCallCheck(this, Body4);
 
-        this['name'] = undefined;
+        this['type'] = undefined;
+        this['resource'] = undefined;
+        this['action'] = undefined;
+        this['usernames'] = undefined;
+        this['sendEmail'] = undefined;
+        this['recipients'] = undefined;
+        this['message'] = undefined;
+
+
+        this['type'] = type;
+        this['resource'] = resource;
+        this['action'] = action;
+        this['usernames'] = usernames;
+        this['sendEmail'] = sendEmail;
     }
 
     /**
-    * Constructs a <code>UpdateReourceByIdRequestBody</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>Body4</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/UpdateReourceByIdRequestBody} obj Optional instance to populate.
-    * @return {module:model/UpdateReourceByIdRequestBody} The populated <code>UpdateReourceByIdRequestBody</code> instance.
+    * @param {module:model/Body4} obj Optional instance to populate.
+    * @return {module:model/Body4} The populated <code>Body4</code> instance.
     */
 
 
-    _createClass(UpdateReourceByIdRequestBody, null, [{
+    _createClass(Body4, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new UpdateReourceByIdRequestBody();
+                obj = obj || new Body4();
 
-                if (data.hasOwnProperty('name')) {
-                    obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
+                if (data.hasOwnProperty('type')) {
+                    obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
+                }
+                if (data.hasOwnProperty('resource')) {
+                    obj['resource'] = _ApiClient2.default.convertToType(data['resource'], 'String');
+                }
+                if (data.hasOwnProperty('action')) {
+                    obj['action'] = _ApiClient2.default.convertToType(data['action'], 'String');
+                }
+                if (data.hasOwnProperty('usernames')) {
+                    obj['usernames'] = _ApiClient2.default.convertToType(data['usernames'], ['String']);
+                }
+                if (data.hasOwnProperty('sendEmail')) {
+                    obj['sendEmail'] = _ApiClient2.default.convertToType(data['sendEmail'], 'Boolean');
+                }
+                if (data.hasOwnProperty('recipients')) {
+                    obj['recipients'] = _ApiClient2.default.convertToType(data['recipients'], ['String']);
+                }
+                if (data.hasOwnProperty('message')) {
+                    obj['message'] = _ApiClient2.default.convertToType(data['message'], 'String');
                 }
             }
             return obj;
         }
 
         /**
-        * The new name for the resource (file or folder).
-        * @member {String} name
+        * What kind of notification you're making. Valid choices are:  - **file** to monitor activity for a file resource - **folder** to monitor activity for a folder resource
+        * @member {module:model/Body4.TypeEnum} type
+        */
+
+        /**
+        * Resources for this notification. See details on [how to specify resources](#section/Identifying-Resources) above.
+        * @member {String} resource
+        */
+
+        /**
+        * Type of action be notified about. Notifications will only be fired for the given type of action. Valid choices are **upload**, **download**, **delete** or **all** (upload/download/delete)
+        * @member {module:model/Body4.ActionEnum} action
+        */
+
+        /**
+        * Determines which users' actions should trigger the notification.   Rather than listing  individual users, you can also use 3 special options:  - **notice\\_user\\_all** for activity by any user or share recipient - **notice\\_user\\_all\\_users** for activity only by user accounts - **notice\\_user\\_all\\_recipient** for activity only by share recipients
+        * @member {Array.<String>} usernames
+        */
+
+        /**
+        * Set to true if the user should be notified by email when the notification is triggered.
+        * @member {Boolean} sendEmail
+        */
+
+        /**
+        * Email addresses to send notification emails to. If not specified, sends to the current user's email address.
+        * @member {Array.<String>} recipients
+        */
+
+        /**
+        * Custom message to include in notification emails.
+        * @member {String} message
+        */
+
+
+        /**
+        * Allowed values for the <code>type</code> property.
+        * @enum {String}
+        * @readonly
+        */
+
+        /**
+        * Allowed values for the <code>action</code> property.
+        * @enum {String}
+        * @readonly
         */
 
     }]);
 
-    return UpdateReourceByIdRequestBody;
+    return Body4;
 }();
 
-exports.default = UpdateReourceByIdRequestBody;
+Body4.TypeEnum = {
+    /**
+     * value: "file"
+     * @const
+     */
+    "file": "file",
+    /**
+     * value: "folder"
+     * @const
+     */
+    "folder": "folder" };
+Body4.ActionEnum = {
+    /**
+     * value: "upload"
+     * @const
+     */
+    "upload": "upload",
+    /**
+     * value: "download"
+     * @const
+     */
+    "download": "download",
+    /**
+     * value: "delete"
+     * @const
+     */
+    "delete": "delete",
+    /**
+     * value: "all"
+     * @const
+     */
+    "all": "all" };
+exports.default = Body4;

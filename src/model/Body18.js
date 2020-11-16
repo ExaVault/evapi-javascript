@@ -26,66 +26,53 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The SendReferralEmailRequestBody model module.
-* @module model/SendReferralEmailRequestBody
-* @version 2.2.2
+* The Body18 model module.
+* @module model/Body18
+* @version 2.2.1
 */
-var SendReferralEmailRequestBody = function () {
+var Body18 = function () {
     /**
-    * Constructs a new <code>SendReferralEmailRequestBody</code>.
-    * @alias module:model/SendReferralEmailRequestBody
+    * Constructs a new <code>Body18</code>.
+    * @alias module:model/Body18
     * @class
-    * @param emails {Array.<String>} 
-    * @param message {String} 
     */
 
-    function SendReferralEmailRequestBody(emails, message) {
-        _classCallCheck(this, SendReferralEmailRequestBody);
+    function Body18() {
+        _classCallCheck(this, Body18);
 
-        this['emails'] = undefined;
-        this['message'] = undefined;
-
-
-        this['emails'] = emails;
-        this['message'] = message;
+        this['recipientId'] = undefined;
     }
 
     /**
-    * Constructs a <code>SendReferralEmailRequestBody</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>Body18</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/SendReferralEmailRequestBody} obj Optional instance to populate.
-    * @return {module:model/SendReferralEmailRequestBody} The populated <code>SendReferralEmailRequestBody</code> instance.
+    * @param {module:model/Body18} obj Optional instance to populate.
+    * @return {module:model/Body18} The populated <code>Body18</code> instance.
     */
 
 
-    _createClass(SendReferralEmailRequestBody, null, [{
+    _createClass(Body18, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new SendReferralEmailRequestBody();
+                obj = obj || new Body18();
 
-                if (data.hasOwnProperty('emails')) {
-                    obj['emails'] = _ApiClient2.default.convertToType(data['emails'], ['String']);
-                }
-                if (data.hasOwnProperty('message')) {
-                    obj['message'] = _ApiClient2.default.convertToType(data['message'], 'String');
+                if (data.hasOwnProperty('recipientId')) {
+                    obj['recipientId'] = _ApiClient2.default.convertToType(data['recipientId'], 'Number');
                 }
             }
             return obj;
         }
 
         /**
-        * @member {Array.<String>} emails
-        */
-
-        /**
-        * @member {String} message
+        * ID number of recipient to send a new invitation to.
+        * @member {Number} recipientId
         */
 
     }]);
 
-    return SendReferralEmailRequestBody;
+    return Body18;
 }();
 
-exports.default = SendReferralEmailRequestBody;
+exports.default = Body18;

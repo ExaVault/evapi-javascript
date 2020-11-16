@@ -32,7 +32,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The ShareResponse model module.
 * @module model/ShareResponse
-* @version 2.2.2
+* @version 2.2.1
 */
 var ShareResponse = function () {
     /**

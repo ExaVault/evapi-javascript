@@ -28,19 +28,26 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The Body model module.
 * @module model/Body
-* @version 2.2.2
+* @version 2.2.1
 */
 var Body = function () {
     /**
     * Constructs a new <code>Body</code>.
     * @alias module:model/Body
     * @class
+    * @param name {String} Name of the email list. 
+    * @param emails {Array.<String>} Array of email addresses to include in the email list. 
     */
 
-    function Body() {
+    function Body(name, emails) {
         _classCallCheck(this, Body);
 
-        this['file'] = undefined;
+        this['name'] = undefined;
+        this['emails'] = undefined;
+
+
+        this['name'] = name;
+        this['emails'] = emails;
     }
 
     /**
@@ -58,15 +65,24 @@ var Body = function () {
             if (data) {
                 obj = obj || new Body();
 
-                if (data.hasOwnProperty('file')) {
-                    obj['file'] = _ApiClient2.default.convertToType(data['file'], File);
+                if (data.hasOwnProperty('name')) {
+                    obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
+                }
+                if (data.hasOwnProperty('emails')) {
+                    obj['emails'] = _ApiClient2.default.convertToType(data['emails'], ['String']);
                 }
             }
             return obj;
         }
 
         /**
-        * @member {File} file
+        * Name of the email list. 
+        * @member {String} name
+        */
+
+        /**
+        * Array of email addresses to include in the email list. 
+        * @member {Array.<String>} emails
         */
 
     }]);

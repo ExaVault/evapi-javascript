@@ -21,28 +21,31 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _UsersPermissions = require('./UsersPermissions');
-
-var _UsersPermissions2 = _interopRequireDefault(_UsersPermissions);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The UpdateUserRequestBody model module.
-* @module model/UpdateUserRequestBody
-* @version 2.2.2
+* The Body5 model module.
+* @module model/Body5
+* @version 2.2.1
 */
-var UpdateUserRequestBody = function () {
+var Body5 = function () {
     /**
-    * Constructs a new <code>UpdateUserRequestBody</code>.
-    * @alias module:model/UpdateUserRequestBody
+    * Constructs a new <code>Body5</code>.
+    * @alias module:model/Body5
     * @class
+    * @param username {String} Username of the user to create. This should follow standard username conventions - spaces are not allowed, etc. We do allow email addresses as usernames.  **Note** Usernames must be unique across all ExaVault accounts.
+    * @param homeResource {String} Resource identifier for the user's home folder. See details on [how to specify resources](#section/Identifying-Resources) above.  The user will be locked to this directory and unable to move 'up' in the account. If the folder does not exist in the account, it will be created when the user is created.   This setting is ignored for users with the `role` **admin**.
+    * @param email {String} Email address for the user
+    * @param password {String} Password for the user
+    * @param role {module:model/Body5.RoleEnum} The type of user to create. Note that admin users cannot have a `homeResource` other than '/', and will have full permissions, but you must provide at least \"download,upload,list,delete\" in the `permissions` parameter.
+    * @param permissions {String} A CSV string of [user permissions](/docs/account/04-users/00-introduction#managing-user-roles-and-permissions). For example: **upload,download,list**. Note that users will be unable to see any files in the account unless you include **list** permission.   Valid permissions are **list**, **download**, **upload**, **modify**, **delete**, **changePassword**, **share**, **notification**, **viewFormData**, **deleteFormData** 
+    * @param timeZone {String} Time zone, used for accurate time display within the application. See <a href='https://php.net/manual/en/timezones.php' target='blank'>this page</a> for allowed values. 
     */
 
-    function UpdateUserRequestBody() {
-        _classCallCheck(this, UpdateUserRequestBody);
+    function Body5(username, homeResource, email, password, role, permissions, timeZone) {
+        _classCallCheck(this, Body5);
 
         this['username'] = undefined;
         this['nickname'] = undefined;
@@ -54,24 +57,33 @@ var UpdateUserRequestBody = function () {
         this['timeZone'] = undefined;
         this['expiration'] = undefined;
         this['locked'] = undefined;
+        this['welcomeEmail'] = undefined;
         this['onboarding'] = undefined;
-        this['currentUserPassword'] = undefined;
+
+
+        this['username'] = username;
+        this['homeResource'] = homeResource;
+        this['email'] = email;
+        this['password'] = password;
+        this['role'] = role;
+        this['permissions'] = permissions;
+        this['timeZone'] = timeZone;
     }
 
     /**
-    * Constructs a <code>UpdateUserRequestBody</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>Body5</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/UpdateUserRequestBody} obj Optional instance to populate.
-    * @return {module:model/UpdateUserRequestBody} The populated <code>UpdateUserRequestBody</code> instance.
+    * @param {module:model/Body5} obj Optional instance to populate.
+    * @return {module:model/Body5} The populated <code>Body5</code> instance.
     */
 
 
-    _createClass(UpdateUserRequestBody, null, [{
+    _createClass(Body5, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new UpdateUserRequestBody();
+                obj = obj || new Body5();
 
                 if (data.hasOwnProperty('username')) {
                     obj['username'] = _ApiClient2.default.convertToType(data['username'], 'String');
@@ -92,7 +104,7 @@ var UpdateUserRequestBody = function () {
                     obj['role'] = _ApiClient2.default.convertToType(data['role'], 'String');
                 }
                 if (data.hasOwnProperty('permissions')) {
-                    obj['permissions'] = _UsersPermissions2.default.constructFromObject(data['permissions']);
+                    obj['permissions'] = _ApiClient2.default.convertToType(data['permissions'], 'String');
                 }
                 if (data.hasOwnProperty('timeZone')) {
                     obj['timeZone'] = _ApiClient2.default.convertToType(data['timeZone'], 'String');
@@ -103,18 +115,18 @@ var UpdateUserRequestBody = function () {
                 if (data.hasOwnProperty('locked')) {
                     obj['locked'] = _ApiClient2.default.convertToType(data['locked'], 'Boolean');
                 }
+                if (data.hasOwnProperty('welcomeEmail')) {
+                    obj['welcomeEmail'] = _ApiClient2.default.convertToType(data['welcomeEmail'], 'Boolean');
+                }
                 if (data.hasOwnProperty('onboarding')) {
                     obj['onboarding'] = _ApiClient2.default.convertToType(data['onboarding'], 'Boolean');
-                }
-                if (data.hasOwnProperty('currentUserPassword')) {
-                    obj['currentUserPassword'] = _ApiClient2.default.convertToType(data['currentUserPassword'], 'String');
                 }
             }
             return obj;
         }
 
         /**
-        * New username for the user. This should follow standard username conventions - spaces are not allowed, etc. We do allow email addresses as usernames.  **Note** Usernames must be unique across all ExaVault accounts.
+        * Username of the user to create. This should follow standard username conventions - spaces are not allowed, etc. We do allow email addresses as usernames.  **Note** Usernames must be unique across all ExaVault accounts.
         * @member {String} username
         */
 
@@ -124,7 +136,7 @@ var UpdateUserRequestBody = function () {
         */
 
         /**
-        * Resource identifier for the user's home folder. See details on [how to specify resources](#section/Identifying-Resources) above.  The user will be locked to this directory and unable to move 'up' in the account. If the folder does not exist in the account, it will be created when the user logs in.  This setting is ignored for users with the `role` **admin**.
+        * Resource identifier for the user's home folder. See details on [how to specify resources](#section/Identifying-Resources) above.  The user will be locked to this directory and unable to move 'up' in the account. If the folder does not exist in the account, it will be created when the user is created.   This setting is ignored for users with the `role` **admin**.
         * @member {String} homeResource
         */
 
@@ -134,17 +146,18 @@ var UpdateUserRequestBody = function () {
         */
 
         /**
-        * New password for the user
+        * Password for the user
         * @member {String} password
         */
 
         /**
-        * The type of user (**admin** or **user**). Note that admin users cannot have a `homeResource` other than '/', and will have full permissions, but you must provide at least \"download,upload,list,delete\" in the `permissions` parameter.
-        * @member {module:model/UpdateUserRequestBody.RoleEnum} role
+        * The type of user to create. Note that admin users cannot have a `homeResource` other than '/', and will have full permissions, but you must provide at least \"download,upload,list,delete\" in the `permissions` parameter.
+        * @member {module:model/Body5.RoleEnum} role
         */
 
         /**
-        * @member {module:model/UsersPermissions} permissions
+        * A CSV string of [user permissions](/docs/account/04-users/00-introduction#managing-user-roles-and-permissions). For example: **upload,download,list**. Note that users will be unable to see any files in the account unless you include **list** permission.   Valid permissions are **list**, **download**, **upload**, **modify**, **delete**, **changePassword**, **share**, **notification**, **viewFormData**, **deleteFormData** 
+        * @member {String} permissions
         */
 
         /**
@@ -153,23 +166,23 @@ var UpdateUserRequestBody = function () {
         */
 
         /**
-        * Optional timestamp when the user should expire.
+        * Optional timestamp when the user should expire, formatted in date-time.
         * @member {String} expiration
         */
 
         /**
-        * If true, the user will be prevented from logging in
+        * If true, the user will not be able to log in
         * @member {Boolean} locked
+        */
+
+        /**
+        * If **true**, send this new user a welcome email upon creation. The content of the welcome email can be configured with the [PATCH /accounts](#operation/updateAccount) method.
+        * @member {Boolean} welcomeEmail
         */
 
         /**
         * Set this to **true** to enable extra help popups in the web file manager for this user.
         * @member {Boolean} onboarding
-        */
-
-        /**
-        * The password of the currently authenticated user. Required when updating any user’s email, username or password.
-        * @member {String} currentUserPassword
         */
 
 
@@ -181,10 +194,10 @@ var UpdateUserRequestBody = function () {
 
     }]);
 
-    return UpdateUserRequestBody;
+    return Body5;
 }();
 
-UpdateUserRequestBody.RoleEnum = {
+Body5.RoleEnum = {
     /**
      * value: "user"
      * @const
@@ -195,4 +208,4 @@ UpdateUserRequestBody.RoleEnum = {
      * @const
      */
     "admin": "admin" };
-exports.default = UpdateUserRequestBody;
+exports.default = Body5;

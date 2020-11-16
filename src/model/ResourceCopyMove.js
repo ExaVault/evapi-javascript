@@ -32,7 +32,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The ResourceCopyMove model module.
 * @module model/ResourceCopyMove
-* @version 2.2.2
+* @version 2.2.1
 */
 var ResourceCopyMove = function () {
     /**

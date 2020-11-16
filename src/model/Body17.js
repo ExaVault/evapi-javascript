@@ -21,176 +21,188 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _AccountAllowedIpRanges = require('./AccountAllowedIpRanges');
+var _SharesRecipients = require('./SharesRecipients');
 
-var _AccountAllowedIpRanges2 = _interopRequireDefault(_AccountAllowedIpRanges);
-
-var _BrandingSettingsValues = require('./BrandingSettingsValues');
-
-var _BrandingSettingsValues2 = _interopRequireDefault(_BrandingSettingsValues);
-
-var _CallbackSettingsValues = require('./CallbackSettingsValues');
-
-var _CallbackSettingsValues2 = _interopRequireDefault(_CallbackSettingsValues);
+var _SharesRecipients2 = _interopRequireDefault(_SharesRecipients);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The UpdateAccountRequestBody model module.
-* @module model/UpdateAccountRequestBody
-* @version 2.2.2
+* The Body17 model module.
+* @module model/Body17
+* @version 2.2.1
 */
-var UpdateAccountRequestBody = function () {
+var Body17 = function () {
     /**
-    * Constructs a new <code>UpdateAccountRequestBody</code>.
-    * @alias module:model/UpdateAccountRequestBody
+    * Constructs a new <code>Body17</code>.
+    * @alias module:model/Body17
     * @class
     */
 
-    function UpdateAccountRequestBody() {
-        _classCallCheck(this, UpdateAccountRequestBody);
+    function Body17() {
+        _classCallCheck(this, Body17);
 
-        this['quotaNoticeEnabled'] = undefined;
-        this['quotaNoticeThreshold'] = undefined;
-        this['secureOnly'] = undefined;
-        this['complexPasswords'] = undefined;
-        this['showReferralLinks'] = undefined;
-        this['externalDomain'] = undefined;
-        this['emailContent'] = undefined;
-        this['emailSubject'] = undefined;
-        this['allowedIpRanges'] = undefined;
-        this['callbackSettings'] = undefined;
-        this['brandingSettings'] = undefined;
-        this['accountOnboarding'] = undefined;
-        this['customSignature'] = undefined;
+        this['name'] = undefined;
+        this['resources'] = undefined;
+        this['accessMode'] = undefined;
+        this['embed'] = undefined;
+        this['recipients'] = undefined;
+        this['expiration'] = undefined;
+        this['hasNotification'] = undefined;
+        this['isPublic'] = undefined;
+        this['message'] = undefined;
+        this['notificationEmails'] = undefined;
+        this['password'] = undefined;
+        this['requireEmail'] = undefined;
+        this['subject'] = undefined;
+        this['fileDropCreateFolders'] = undefined;
+        this['status'] = undefined;
     }
 
     /**
-    * Constructs a <code>UpdateAccountRequestBody</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>Body17</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/UpdateAccountRequestBody} obj Optional instance to populate.
-    * @return {module:model/UpdateAccountRequestBody} The populated <code>UpdateAccountRequestBody</code> instance.
+    * @param {module:model/Body17} obj Optional instance to populate.
+    * @return {module:model/Body17} The populated <code>Body17</code> instance.
     */
 
 
-    _createClass(UpdateAccountRequestBody, null, [{
+    _createClass(Body17, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new UpdateAccountRequestBody();
+                obj = obj || new Body17();
 
-                if (data.hasOwnProperty('quotaNoticeEnabled')) {
-                    obj['quotaNoticeEnabled'] = _ApiClient2.default.convertToType(data['quotaNoticeEnabled'], 'Boolean');
+                if (data.hasOwnProperty('name')) {
+                    obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
                 }
-                if (data.hasOwnProperty('quotaNoticeThreshold')) {
-                    obj['quotaNoticeThreshold'] = _ApiClient2.default.convertToType(data['quotaNoticeThreshold'], 'Number');
+                if (data.hasOwnProperty('resources')) {
+                    obj['resources'] = _ApiClient2.default.convertToType(data['resources'], ['String']);
                 }
-                if (data.hasOwnProperty('secureOnly')) {
-                    obj['secureOnly'] = _ApiClient2.default.convertToType(data['secureOnly'], 'Boolean');
+                if (data.hasOwnProperty('accessMode')) {
+                    obj['accessMode'] = _ApiClient2.default.convertToType(data['accessMode'], ['String']);
                 }
-                if (data.hasOwnProperty('complexPasswords')) {
-                    obj['complexPasswords'] = _ApiClient2.default.convertToType(data['complexPasswords'], 'Boolean');
+                if (data.hasOwnProperty('embed')) {
+                    obj['embed'] = _ApiClient2.default.convertToType(data['embed'], 'Boolean');
                 }
-                if (data.hasOwnProperty('showReferralLinks')) {
-                    obj['showReferralLinks'] = _ApiClient2.default.convertToType(data['showReferralLinks'], 'Boolean');
+                if (data.hasOwnProperty('recipients')) {
+                    obj['recipients'] = _ApiClient2.default.convertToType(data['recipients'], [_SharesRecipients2.default]);
                 }
-                if (data.hasOwnProperty('externalDomain')) {
-                    obj['externalDomain'] = _ApiClient2.default.convertToType(data['externalDomain'], 'String');
+                if (data.hasOwnProperty('expiration')) {
+                    obj['expiration'] = _ApiClient2.default.convertToType(data['expiration'], 'Date');
                 }
-                if (data.hasOwnProperty('emailContent')) {
-                    obj['emailContent'] = _ApiClient2.default.convertToType(data['emailContent'], 'String');
+                if (data.hasOwnProperty('hasNotification')) {
+                    obj['hasNotification'] = _ApiClient2.default.convertToType(data['hasNotification'], 'Boolean');
                 }
-                if (data.hasOwnProperty('emailSubject')) {
-                    obj['emailSubject'] = _ApiClient2.default.convertToType(data['emailSubject'], 'String');
+                if (data.hasOwnProperty('isPublic')) {
+                    obj['isPublic'] = _ApiClient2.default.convertToType(data['isPublic'], 'Boolean');
                 }
-                if (data.hasOwnProperty('allowedIpRanges')) {
-                    obj['allowedIpRanges'] = _ApiClient2.default.convertToType(data['allowedIpRanges'], [_AccountAllowedIpRanges2.default]);
+                if (data.hasOwnProperty('message')) {
+                    obj['message'] = _ApiClient2.default.convertToType(data['message'], 'String');
                 }
-                if (data.hasOwnProperty('callbackSettings')) {
-                    obj['callbackSettings'] = _CallbackSettingsValues2.default.constructFromObject(data['callbackSettings']);
+                if (data.hasOwnProperty('notificationEmails')) {
+                    obj['notificationEmails'] = _ApiClient2.default.convertToType(data['notificationEmails'], ['String']);
                 }
-                if (data.hasOwnProperty('brandingSettings')) {
-                    obj['brandingSettings'] = _BrandingSettingsValues2.default.constructFromObject(data['brandingSettings']);
+                if (data.hasOwnProperty('password')) {
+                    obj['password'] = _ApiClient2.default.convertToType(data['password'], 'String');
                 }
-                if (data.hasOwnProperty('accountOnboarding')) {
-                    obj['accountOnboarding'] = _ApiClient2.default.convertToType(data['accountOnboarding'], 'Boolean');
+                if (data.hasOwnProperty('requireEmail')) {
+                    obj['requireEmail'] = _ApiClient2.default.convertToType(data['requireEmail'], 'Boolean');
                 }
-                if (data.hasOwnProperty('customSignature')) {
-                    obj['customSignature'] = _ApiClient2.default.convertToType(data['customSignature'], 'String');
+                if (data.hasOwnProperty('subject')) {
+                    obj['subject'] = _ApiClient2.default.convertToType(data['subject'], 'String');
+                }
+                if (data.hasOwnProperty('fileDropCreateFolders')) {
+                    obj['fileDropCreateFolders'] = _ApiClient2.default.convertToType(data['fileDropCreateFolders'], 'Boolean');
+                }
+                if (data.hasOwnProperty('status')) {
+                    obj['status'] = _ApiClient2.default.convertToType(data['status'], 'Number');
                 }
             }
             return obj;
         }
 
         /**
-        * Whether the system should email the account owner when usage exceeds quotaNoticeThreshold value
-        * @member {Boolean} quotaNoticeEnabled
+        * Name of the share.
+        * @member {String} name
         */
 
         /**
-        * Percent of account usage to trigger quota notices for.
-        * @member {Number} quotaNoticeThreshold
+        * Array of resources for this share. See details on [how to specify resources](#section/Identifying-Resources) above.  **shared_folder** and **receive** shares must have only one `resource`, which is a directory that does not have a current share attached.  **send** shares may have multiple `resource` parameters.   **NOTE**: Sending this parameter will **REPLACE** the existing resources with the resources included in this request.
+        * @member {Array.<String>} resources
         */
 
         /**
-        * Whether unencrypted FTP connections should be denied for the account.
-        * @member {Boolean} secureOnly
+        * What visitors who view this share can do. Valid options include **download**, **upload**, **delete**, **modify**
+        * @member {Array.<String>} accessMode
         */
 
         /**
-        * Whether to require complex passwords for all passwords.
-        * @member {Boolean} complexPasswords
+        * Whether the share can be embedded in another web page.
+        * @member {Boolean} embed
         */
 
         /**
-        * Whether to display links for others to sign up on share views and invitation emails
-        * @member {Boolean} showReferralLinks
+        * People you want to invite to the share.   **Note**: unless you also set the `subject` and `message` for the new share, invitation emails will not be sent to these recipients.  **Note**: Recipients in this list will **REPLACE** the recipients already assigned to this share. 
+        * @member {Array.<module:model/SharesRecipients>} recipients
         */
 
         /**
-        * Custom address used for web file manager. Not available for all account types.
-        * @member {String} externalDomain
+        * New expiration date and time for the share
+        * @member {Date} expiration
         */
 
         /**
-        * Content of welcome email template.
-        * @member {String} emailContent
+        * Whether delivery receipts should be sent for this share.
+        * @member {Boolean} hasNotification
         */
 
         /**
-        * Subject line for welcome emails
-        * @member {String} emailSubject
+        * Whether people can visit the share without following a link from an invitation email
+        * @member {Boolean} isPublic
         */
 
         /**
-        * IP Address Ranges for restricting account access
-        * @member {Array.<module:model/AccountAllowedIpRanges>} allowedIpRanges
+        * Message content to use for emails inviting recipients to the share. Ignored if you have not also provided `recipients` and a `subject`
+        * @member {String} message
         */
 
         /**
-        * @member {module:model/CallbackSettingsValues} callbackSettings
+        * List of email addresses to send delivery receipts to. Ignored if `hasNotification` is false. 
+        * @member {Array.<String>} notificationEmails
         */
 
         /**
-        * @member {module:model/BrandingSettingsValues} brandingSettings
+        * New password for the share. To leave the password unchanged, do not send this parameter.
+        * @member {String} password
         */
 
         /**
-        * Whether extra help popups can be enabled for users in the web file manager.
-        * @member {Boolean} accountOnboarding
+        * Whether visitors to the share will be required to enter their email in order to access the share.
+        * @member {Boolean} requireEmail
         */
 
         /**
-        * Signature to be automatically added to the bottom of emails generated by the account.
-        * @member {String} customSignature
+        * Subject to use on emails inviting recipients to the share. Ignored if you have not also provided `recipients` and a `message`
+        * @member {String} subject
+        */
+
+        /**
+        * Whether uploads to a receive folder should be automatically placed into subfolders. See our [receive folder documentation](/docs/account/05-file-sharing/05-form-builder#advanced-form-settings)
+        * @member {Boolean} fileDropCreateFolders
+        */
+
+        /**
+        * New status for the share. You can set an active share to inactive by setting the status to **0**
+        * @member {Number} status
         */
 
     }]);
 
-    return UpdateAccountRequestBody;
+    return Body17;
 }();
 
-exports.default = UpdateAccountRequestBody;
+exports.default = Body17;

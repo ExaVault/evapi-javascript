@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The UserPermissions model module.
 * @module model/UserPermissions
-* @version 2.2.2
+* @version 2.2.1
 */
 var UserPermissions = function () {
     /**

@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The Error model module.
 * @module model/Error
-* @version 2.2.2
+* @version 2.2.1
 */
 var Error = function () {
     /**

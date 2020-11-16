@@ -21,194 +21,76 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _UsersPermissions = require('./UsersPermissions');
-
-var _UsersPermissions2 = _interopRequireDefault(_UsersPermissions);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The AddUserRequestBody model module.
-* @module model/AddUserRequestBody
-* @version 2.2.2
+* The BrandingSettings1 model module.
+* @module model/BrandingSettings1
+* @version 2.2.1
 */
-var AddUserRequestBody = function () {
+var BrandingSettings1 = function () {
     /**
-    * Constructs a new <code>AddUserRequestBody</code>.
-    * @alias module:model/AddUserRequestBody
+    * Constructs a new <code>BrandingSettings1</code>.
+    * @alias module:model/BrandingSettings1
     * @class
-    * @param username {String} Username of the user to create. This should follow standard username conventions - spaces are not allowed, etc. We do allow email addresses as usernames.  **Note** Usernames must be unique across all ExaVault accounts.
-    * @param homeResource {String} Resource identifier for the user's home folder. See details on [how to specify resources](#section/Identifying-Resources) above.  The user will be locked to this directory and unable to move 'up' in the account. If the folder does not exist in the account, it will be created when the user is created.   This setting is ignored for users with the `role` **admin**.
-    * @param email {String} Email address for the user
-    * @param password {String} Password for the user
-    * @param role {module:model/AddUserRequestBody.RoleEnum} The type of user to create. Note that admin users cannot have a `homeResource` other than '/', and will have full permissions, but you must provide at least \"download,upload,list,delete\" in the `permissions` parameter.
-    * @param permissions {module:model/UsersPermissions} 
-    * @param timeZone {String} Time zone, used for accurate time display within the application. See <a href='https://php.net/manual/en/timezones.php' target='blank'>this page</a> for allowed values. 
     */
 
-    function AddUserRequestBody(username, homeResource, email, password, role, permissions, timeZone) {
-        _classCallCheck(this, AddUserRequestBody);
+    function BrandingSettings1() {
+        _classCallCheck(this, BrandingSettings1);
 
-        this['username'] = undefined;
-        this['nickname'] = undefined;
-        this['homeResource'] = undefined;
-        this['email'] = undefined;
-        this['password'] = undefined;
-        this['role'] = undefined;
-        this['permissions'] = undefined;
-        this['timeZone'] = undefined;
-        this['expiration'] = undefined;
-        this['locked'] = undefined;
-        this['welcomeEmail'] = undefined;
-        this['onboarding'] = undefined;
-
-
-        this['username'] = username;
-        this['homeResource'] = homeResource;
-        this['email'] = email;
-        this['password'] = password;
-        this['role'] = role;
-        this['permissions'] = permissions;
-        this['timeZone'] = timeZone;
+        this['companyName'] = undefined;
+        this['customEmail'] = undefined;
+        this['theme'] = undefined;
     }
 
     /**
-    * Constructs a <code>AddUserRequestBody</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>BrandingSettings1</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/AddUserRequestBody} obj Optional instance to populate.
-    * @return {module:model/AddUserRequestBody} The populated <code>AddUserRequestBody</code> instance.
+    * @param {module:model/BrandingSettings1} obj Optional instance to populate.
+    * @return {module:model/BrandingSettings1} The populated <code>BrandingSettings1</code> instance.
     */
 
 
-    _createClass(AddUserRequestBody, null, [{
+    _createClass(BrandingSettings1, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new AddUserRequestBody();
+                obj = obj || new BrandingSettings1();
 
-                if (data.hasOwnProperty('username')) {
-                    obj['username'] = _ApiClient2.default.convertToType(data['username'], 'String');
+                if (data.hasOwnProperty('companyName')) {
+                    obj['companyName'] = _ApiClient2.default.convertToType(data['companyName'], 'String');
                 }
-                if (data.hasOwnProperty('nickname')) {
-                    obj['nickname'] = _ApiClient2.default.convertToType(data['nickname'], 'String');
+                if (data.hasOwnProperty('customEmail')) {
+                    obj['customEmail'] = _ApiClient2.default.convertToType(data['customEmail'], 'String');
                 }
-                if (data.hasOwnProperty('homeResource')) {
-                    obj['homeResource'] = _ApiClient2.default.convertToType(data['homeResource'], 'String');
-                }
-                if (data.hasOwnProperty('email')) {
-                    obj['email'] = _ApiClient2.default.convertToType(data['email'], 'String');
-                }
-                if (data.hasOwnProperty('password')) {
-                    obj['password'] = _ApiClient2.default.convertToType(data['password'], 'String');
-                }
-                if (data.hasOwnProperty('role')) {
-                    obj['role'] = _ApiClient2.default.convertToType(data['role'], 'String');
-                }
-                if (data.hasOwnProperty('permissions')) {
-                    obj['permissions'] = _UsersPermissions2.default.constructFromObject(data['permissions']);
-                }
-                if (data.hasOwnProperty('timeZone')) {
-                    obj['timeZone'] = _ApiClient2.default.convertToType(data['timeZone'], 'String');
-                }
-                if (data.hasOwnProperty('expiration')) {
-                    obj['expiration'] = _ApiClient2.default.convertToType(data['expiration'], 'String');
-                }
-                if (data.hasOwnProperty('locked')) {
-                    obj['locked'] = _ApiClient2.default.convertToType(data['locked'], 'Boolean');
-                }
-                if (data.hasOwnProperty('welcomeEmail')) {
-                    obj['welcomeEmail'] = _ApiClient2.default.convertToType(data['welcomeEmail'], 'Boolean');
-                }
-                if (data.hasOwnProperty('onboarding')) {
-                    obj['onboarding'] = _ApiClient2.default.convertToType(data['onboarding'], 'Boolean');
+                if (data.hasOwnProperty('theme')) {
+                    obj['theme'] = _ApiClient2.default.convertToType(data['theme'], 'String');
                 }
             }
             return obj;
         }
 
         /**
-        * Username of the user to create. This should follow standard username conventions - spaces are not allowed, etc. We do allow email addresses as usernames.  **Note** Usernames must be unique across all ExaVault accounts.
-        * @member {String} username
+        * Custom company name to include in copyright and title bar.
+        * @member {String} companyName
         */
 
         /**
-        * An optional nickname (e.g. 'David from Sales').
-        * @member {String} nickname
+        * Address to use as sender of email messages generated by ExaVault
+        * @member {String} customEmail
         */
 
         /**
-        * Resource identifier for the user's home folder. See details on [how to specify resources](#section/Identifying-Resources) above.  The user will be locked to this directory and unable to move 'up' in the account. If the folder does not exist in the account, it will be created when the user is created.   This setting is ignored for users with the `role` **admin**.
-        * @member {String} homeResource
-        */
-
-        /**
-        * Email address for the user
-        * @member {String} email
-        */
-
-        /**
-        * Password for the user
-        * @member {String} password
-        */
-
-        /**
-        * The type of user to create. Note that admin users cannot have a `homeResource` other than '/', and will have full permissions, but you must provide at least \"download,upload,list,delete\" in the `permissions` parameter.
-        * @member {module:model/AddUserRequestBody.RoleEnum} role
-        */
-
-        /**
-        * @member {module:model/UsersPermissions} permissions
-        */
-
-        /**
-        * Time zone, used for accurate time display within the application. See <a href='https://php.net/manual/en/timezones.php' target='blank'>this page</a> for allowed values. 
-        * @member {String} timeZone
-        */
-
-        /**
-        * Optional timestamp when the user should expire, formatted in date-time.
-        * @member {String} expiration
-        */
-
-        /**
-        * If true, the user will not be able to log in
-        * @member {Boolean} locked
-        */
-
-        /**
-        * If **true**, send this new user a welcome email upon creation. The content of the welcome email can be configured with the [PATCH /accounts](#operation/updateAccount) method.
-        * @member {Boolean} welcomeEmail
-        */
-
-        /**
-        * Set this to **true** to enable extra help popups in the web file manager for this user.
-        * @member {Boolean} onboarding
-        */
-
-
-        /**
-        * Allowed values for the <code>role</code> property.
-        * @enum {String}
-        * @readonly
+        * Color scheme for web file manager. Valid options are **default**, **light** and **dark**
+        * @member {String} theme
         */
 
     }]);
 
-    return AddUserRequestBody;
+    return BrandingSettings1;
 }();
 
-AddUserRequestBody.RoleEnum = {
-    /**
-     * value: "user"
-     * @const
-     */
-    "user": "user",
-    /**
-     * value: "admin"
-     * @const
-     */
-    "admin": "admin" };
-exports.default = AddUserRequestBody;
+exports.default = BrandingSettings1;

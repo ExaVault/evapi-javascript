@@ -21,21 +21,21 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _ShareRelationshipsNotification = require('./ShareRelationshipsNotification');
+var _ShareRelationshipsMessages = require('./ShareRelationshipsMessages');
 
-var _ShareRelationshipsNotification2 = _interopRequireDefault(_ShareRelationshipsNotification);
+var _ShareRelationshipsMessages2 = _interopRequireDefault(_ShareRelationshipsMessages);
+
+var _ShareRelationshipsNotifications = require('./ShareRelationshipsNotifications');
+
+var _ShareRelationshipsNotifications2 = _interopRequireDefault(_ShareRelationshipsNotifications);
 
 var _ShareRelationshipsOwner = require('./ShareRelationshipsOwner');
 
 var _ShareRelationshipsOwner2 = _interopRequireDefault(_ShareRelationshipsOwner);
 
-var _ShareRelationshipsResource = require('./ShareRelationshipsResource');
+var _ShareRelationshipsResources = require('./ShareRelationshipsResources');
 
-var _ShareRelationshipsResource2 = _interopRequireDefault(_ShareRelationshipsResource);
-
-var _ShareRelationshpsMessage = require('./ShareRelationshpsMessage');
-
-var _ShareRelationshpsMessage2 = _interopRequireDefault(_ShareRelationshpsMessage);
+var _ShareRelationshipsResources2 = _interopRequireDefault(_ShareRelationshipsResources);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -44,7 +44,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The ShareRelationships model module.
 * @module model/ShareRelationships
-* @version 2.2.2
+* @version 2.2.1
 */
 var ShareRelationships = function () {
     /**
@@ -79,16 +79,16 @@ var ShareRelationships = function () {
                 obj = obj || new ShareRelationships();
 
                 if (data.hasOwnProperty('messages')) {
-                    obj['messages'] = _ApiClient2.default.convertToType(data['messages'], [_ShareRelationshpsMessage2.default]);
+                    obj['messages'] = _ApiClient2.default.convertToType(data['messages'], [_ShareRelationshipsMessages2.default]);
                 }
                 if (data.hasOwnProperty('owner')) {
                     obj['owner'] = _ShareRelationshipsOwner2.default.constructFromObject(data['owner']);
                 }
                 if (data.hasOwnProperty('resources')) {
-                    obj['resources'] = _ApiClient2.default.convertToType(data['resources'], [_ShareRelationshipsResource2.default]);
+                    obj['resources'] = _ApiClient2.default.convertToType(data['resources'], [_ShareRelationshipsResources2.default]);
                 }
                 if (data.hasOwnProperty('notifications')) {
-                    obj['notifications'] = _ApiClient2.default.convertToType(data['notifications'], [_ShareRelationshipsNotification2.default]);
+                    obj['notifications'] = _ApiClient2.default.convertToType(data['notifications'], [_ShareRelationshipsNotifications2.default]);
                 }
             }
             return obj;
@@ -96,7 +96,7 @@ var ShareRelationships = function () {
 
         /**
         * null
-        * @member {Array.<module:model/ShareRelationshpsMessage>} messages
+        * @member {Array.<module:model/ShareRelationshipsMessages>} messages
         */
 
         /**
@@ -104,12 +104,12 @@ var ShareRelationships = function () {
         */
 
         /**
-        * @member {Array.<module:model/ShareRelationshipsResource>} resources
+        * @member {Array.<module:model/ShareRelationshipsResources>} resources
         */
 
         /**
         * null
-        * @member {Array.<module:model/ShareRelationshipsNotification>} notifications
+        * @member {Array.<module:model/ShareRelationshipsNotifications>} notifications
         */
 
     }]);

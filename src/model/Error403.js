@@ -21,73 +21,73 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _Error403Errors = require('./Error403Errors');
+
+var _Error403Errors2 = _interopRequireDefault(_Error403Errors);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The MoveResourcesRequestBody model module.
-* @module model/MoveResourcesRequestBody
-* @version 2.2.2
+* The Error403 model module.
+* @module model/Error403
+* @version 2.2.1
 */
-var MoveResourcesRequestBody = function () {
+var Error403 = function () {
     /**
-    * Constructs a new <code>MoveResourcesRequestBody</code>.
-    * @alias module:model/MoveResourcesRequestBody
+    * Constructs a new <code>Error403</code>.
+    * @alias module:model/Error403
     * @class
-    * @param resources {Array.<String>} Array containing file/folder paths to move.
-    * @param parentResource {String} Remote destination path to move files/folders to.
+    * @param responseStatus {Number} 
     */
 
-    function MoveResourcesRequestBody(resources, parentResource) {
-        _classCallCheck(this, MoveResourcesRequestBody);
+    function Error403(responseStatus) {
+        _classCallCheck(this, Error403);
 
-        this['resources'] = undefined;
-        this['parentResource'] = undefined;
+        this['responseStatus'] = undefined;
+        this['errors'] = undefined;
 
 
-        this['resources'] = resources;
-        this['parentResource'] = parentResource;
+        this['responseStatus'] = responseStatus;
     }
 
     /**
-    * Constructs a <code>MoveResourcesRequestBody</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>Error403</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/MoveResourcesRequestBody} obj Optional instance to populate.
-    * @return {module:model/MoveResourcesRequestBody} The populated <code>MoveResourcesRequestBody</code> instance.
+    * @param {module:model/Error403} obj Optional instance to populate.
+    * @return {module:model/Error403} The populated <code>Error403</code> instance.
     */
 
 
-    _createClass(MoveResourcesRequestBody, null, [{
+    _createClass(Error403, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new MoveResourcesRequestBody();
+                obj = obj || new Error403();
 
-                if (data.hasOwnProperty('resources')) {
-                    obj['resources'] = _ApiClient2.default.convertToType(data['resources'], ['String']);
+                if (data.hasOwnProperty('responseStatus')) {
+                    obj['responseStatus'] = _ApiClient2.default.convertToType(data['responseStatus'], 'Number');
                 }
-                if (data.hasOwnProperty('parentResource')) {
-                    obj['parentResource'] = _ApiClient2.default.convertToType(data['parentResource'], 'String');
+                if (data.hasOwnProperty('errors')) {
+                    obj['errors'] = _ApiClient2.default.convertToType(data['errors'], [_Error403Errors2.default]);
                 }
             }
             return obj;
         }
 
         /**
-        * Array containing file/folder paths to move.
-        * @member {Array.<String>} resources
+        * @member {Number} responseStatus
         */
 
         /**
-        * Remote destination path to move files/folders to.
-        * @member {String} parentResource
+        * @member {Array.<module:model/Error403Errors>} errors
         */
 
     }]);
 
-    return MoveResourcesRequestBody;
+    return Error403;
 }();
 
-exports.default = MoveResourcesRequestBody;
+exports.default = Error403;

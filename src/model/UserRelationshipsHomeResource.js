@@ -32,7 +32,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The UserRelationshipsHomeResource model module.
 * @module model/UserRelationshipsHomeResource
-* @version 2.2.2
+* @version 2.2.1
 */
 var UserRelationshipsHomeResource = function () {
     /**

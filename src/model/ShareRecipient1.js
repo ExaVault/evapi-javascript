@@ -21,61 +21,139 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _ShareMessageData = require('./ShareMessageData');
-
-var _ShareMessageData2 = _interopRequireDefault(_ShareMessageData);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The ShareRelationshpsMessage model module.
-* @module model/ShareRelationshpsMessage
-* @version 2.2.2
+* The ShareRecipient1 model module.
+* @module model/ShareRecipient1
+* @version 2.2.1
 */
-var ShareRelationshpsMessage = function () {
+var ShareRecipient1 = function () {
     /**
-    * Constructs a new <code>ShareRelationshpsMessage</code>.
-    * @alias module:model/ShareRelationshpsMessage
+    * Constructs a new <code>ShareRecipient1</code>.
+    * @alias module:model/ShareRecipient1
     * @class
     */
 
-    function ShareRelationshpsMessage() {
-        _classCallCheck(this, ShareRelationshpsMessage);
+    function ShareRecipient1() {
+        _classCallCheck(this, ShareRecipient1);
 
-        this['data'] = undefined;
+        this['id'] = undefined;
+        this['shareId'] = undefined;
+        this['type'] = undefined;
+        this['hash'] = undefined;
+        this['email'] = undefined;
+        this['sent'] = undefined;
+        this['received'] = undefined;
+        this['created'] = undefined;
     }
 
     /**
-    * Constructs a <code>ShareRelationshpsMessage</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>ShareRecipient1</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/ShareRelationshpsMessage} obj Optional instance to populate.
-    * @return {module:model/ShareRelationshpsMessage} The populated <code>ShareRelationshpsMessage</code> instance.
+    * @param {module:model/ShareRecipient1} obj Optional instance to populate.
+    * @return {module:model/ShareRecipient1} The populated <code>ShareRecipient1</code> instance.
     */
 
 
-    _createClass(ShareRelationshpsMessage, null, [{
+    _createClass(ShareRecipient1, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new ShareRelationshpsMessage();
+                obj = obj || new ShareRecipient1();
 
-                if (data.hasOwnProperty('data')) {
-                    obj['data'] = _ShareMessageData2.default.constructFromObject(data['data']);
+                if (data.hasOwnProperty('id')) {
+                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'Number');
+                }
+                if (data.hasOwnProperty('shareId')) {
+                    obj['shareId'] = _ApiClient2.default.convertToType(data['shareId'], 'String');
+                }
+                if (data.hasOwnProperty('type')) {
+                    obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
+                }
+                if (data.hasOwnProperty('hash')) {
+                    obj['hash'] = _ApiClient2.default.convertToType(data['hash'], 'String');
+                }
+                if (data.hasOwnProperty('email')) {
+                    obj['email'] = _ApiClient2.default.convertToType(data['email'], 'String');
+                }
+                if (data.hasOwnProperty('sent')) {
+                    obj['sent'] = _ApiClient2.default.convertToType(data['sent'], 'Boolean');
+                }
+                if (data.hasOwnProperty('received')) {
+                    obj['received'] = _ApiClient2.default.convertToType(data['received'], 'Boolean');
+                }
+                if (data.hasOwnProperty('created')) {
+                    obj['created'] = _ApiClient2.default.convertToType(data['created'], 'Date');
                 }
             }
             return obj;
         }
 
         /**
-        * @member {module:model/ShareMessageData} data
+        * ID of the recipient.
+        * @member {Number} id
+        */
+
+        /**
+        * ID of the share that the recipoient belongs to.
+        * @member {String} shareId
+        */
+
+        /**
+        * Type of the recipient.
+        * @member {module:model/ShareRecipient1.TypeEnum} type
+        */
+
+        /**
+        * Share hash.
+        * @member {String} hash
+        */
+
+        /**
+        * Recipient email address.
+        * @member {String} email
+        */
+
+        /**
+        * Set to true if invite email was sent; false otherwise.
+        * @member {Boolean} sent
+        */
+
+        /**
+        * Set to true if recipient has accessed the share. Note this is set to true when the recipient clicks the link to access the share; not when they download a file.
+        * @member {Boolean} received
+        */
+
+        /**
+        * Timestamp of adding recipient to the share.
+        * @member {Date} created
+        */
+
+
+        /**
+        * Allowed values for the <code>type</code> property.
+        * @enum {String}
+        * @readonly
         */
 
     }]);
 
-    return ShareRelationshpsMessage;
+    return ShareRecipient1;
 }();
 
-exports.default = ShareRelationshpsMessage;
+ShareRecipient1.TypeEnum = {
+    /**
+     * value: "owner"
+     * @const
+     */
+    "owner": "owner",
+    /**
+     * value: "direct"
+     * @const
+     */
+    "direct": "direct" };
+exports.default = ShareRecipient1;

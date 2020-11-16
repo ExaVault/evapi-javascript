@@ -21,61 +21,76 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _ShareResourceData = require('./ShareResourceData');
-
-var _ShareResourceData2 = _interopRequireDefault(_ShareResourceData);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The ShareRelationshipsResource model module.
-* @module model/ShareRelationshipsResource
-* @version 2.2.2
+* The Body8 model module.
+* @module model/Body8
+* @version 2.2.1
 */
-var ShareRelationshipsResource = function () {
+var Body8 = function () {
     /**
-    * Constructs a new <code>ShareRelationshipsResource</code>.
-    * @alias module:model/ShareRelationshipsResource
+    * Constructs a new <code>Body8</code>.
+    * @alias module:model/Body8
     * @class
     */
 
-    function ShareRelationshipsResource() {
-        _classCallCheck(this, ShareRelationshipsResource);
+    function Body8() {
+        _classCallCheck(this, Body8);
 
-        this['data'] = undefined;
+        this['path'] = undefined;
+        this['folderName'] = undefined;
+        this['parentResource'] = undefined;
     }
 
     /**
-    * Constructs a <code>ShareRelationshipsResource</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>Body8</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/ShareRelationshipsResource} obj Optional instance to populate.
-    * @return {module:model/ShareRelationshipsResource} The populated <code>ShareRelationshipsResource</code> instance.
+    * @param {module:model/Body8} obj Optional instance to populate.
+    * @return {module:model/Body8} The populated <code>Body8</code> instance.
     */
 
 
-    _createClass(ShareRelationshipsResource, null, [{
+    _createClass(Body8, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new ShareRelationshipsResource();
+                obj = obj || new Body8();
 
-                if (data.hasOwnProperty('data')) {
-                    obj['data'] = _ShareResourceData2.default.constructFromObject(data['data']);
+                if (data.hasOwnProperty('path')) {
+                    obj['path'] = _ApiClient2.default.convertToType(data['path'], 'String');
+                }
+                if (data.hasOwnProperty('folderName')) {
+                    obj['folderName'] = _ApiClient2.default.convertToType(data['folderName'], 'String');
+                }
+                if (data.hasOwnProperty('parentResource')) {
+                    obj['parentResource'] = _ApiClient2.default.convertToType(data['parentResource'], 'String');
                 }
             }
             return obj;
         }
 
         /**
-        * @member {module:model/ShareResourceData} data
+        * Path to the newly created folder including new ame
+        * @member {String} path
+        */
+
+        /**
+        * Name of the folder to create. Required if **path** is not used
+        * @member {String} folderName
+        */
+
+        /**
+        * Resource identifier where to create a folder. Required if **path** is not used
+        * @member {String} parentResource
         */
 
     }]);
 
-    return ShareRelationshipsResource;
+    return Body8;
 }();
 
-exports.default = ShareRelationshipsResource;
+exports.default = Body8;

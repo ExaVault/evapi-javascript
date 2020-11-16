@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The AccountAttributesAllowedIp model module.
 * @module model/AccountAttributesAllowedIp
-* @version 2.2.2
+* @version 2.2.1
 */
 var AccountAttributesAllowedIp = function () {
     /**

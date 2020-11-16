@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The NotificationRelationshipsShareData model module.
 * @module model/NotificationRelationshipsShareData
-* @version 2.2.2
+* @version 2.2.1
 */
 var NotificationRelationshipsShareData = function () {
     /**

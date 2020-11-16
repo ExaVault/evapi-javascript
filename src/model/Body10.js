@@ -26,44 +26,43 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The CopyResourcesRequestBody model module.
-* @module model/CopyResourcesRequestBody
-* @version 2.2.2
+* The Body10 model module.
+* @module model/Body10
+* @version 2.2.1
 */
-var CopyResourcesRequestBody = function () {
+var Body10 = function () {
     /**
-    * Constructs a new <code>CopyResourcesRequestBody</code>.
-    * @alias module:model/CopyResourcesRequestBody
+    * Constructs a new <code>Body10</code>.
+    * @alias module:model/Body10
     * @class
-    * @param resources {Array.<String>} Resource identifier(s) of items to be copied to a new location
-    * @param parentResource {String} Resource identifier for folder where items will be copied to.
+    * @param resources {Array.<String>} Resource identifiers for file(s)/folder(s) to include in new zip file
     */
 
-    function CopyResourcesRequestBody(resources, parentResource) {
-        _classCallCheck(this, CopyResourcesRequestBody);
+    function Body10(resources) {
+        _classCallCheck(this, Body10);
 
         this['resources'] = undefined;
         this['parentResource'] = undefined;
+        this['archiveName'] = undefined;
 
 
         this['resources'] = resources;
-        this['parentResource'] = parentResource;
     }
 
     /**
-    * Constructs a <code>CopyResourcesRequestBody</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>Body10</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/CopyResourcesRequestBody} obj Optional instance to populate.
-    * @return {module:model/CopyResourcesRequestBody} The populated <code>CopyResourcesRequestBody</code> instance.
+    * @param {module:model/Body10} obj Optional instance to populate.
+    * @return {module:model/Body10} The populated <code>Body10</code> instance.
     */
 
 
-    _createClass(CopyResourcesRequestBody, null, [{
+    _createClass(Body10, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new CopyResourcesRequestBody();
+                obj = obj || new Body10();
 
                 if (data.hasOwnProperty('resources')) {
                     obj['resources'] = _ApiClient2.default.convertToType(data['resources'], ['String']);
@@ -71,23 +70,31 @@ var CopyResourcesRequestBody = function () {
                 if (data.hasOwnProperty('parentResource')) {
                     obj['parentResource'] = _ApiClient2.default.convertToType(data['parentResource'], 'String');
                 }
+                if (data.hasOwnProperty('archiveName')) {
+                    obj['archiveName'] = _ApiClient2.default.convertToType(data['archiveName'], 'String');
+                }
             }
             return obj;
         }
 
         /**
-        * Resource identifier(s) of items to be copied to a new location
+        * Resource identifiers for file(s)/folder(s) to include in new zip file
         * @member {Array.<String>} resources
         */
 
         /**
-        * Resource identifier for folder where items will be copied to.
+        * Full path to folder new archive will be created in. If left blank, \"/\" will be used.
         * @member {String} parentResource
+        */
+
+        /**
+        * Name of the zip archive to create. If left blank, current date will be used.
+        * @member {String} archiveName
         */
 
     }]);
 
-    return CopyResourcesRequestBody;
+    return Body10;
 }();
 
-exports.default = CopyResourcesRequestBody;
+exports.default = Body10;

@@ -30,22 +30,22 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The AddShareRequestBody model module.
-* @module model/AddShareRequestBody
-* @version 2.2.2
+* The Body16 model module.
+* @module model/Body16
+* @version 2.2.1
 */
-var AddShareRequestBody = function () {
+var Body16 = function () {
     /**
-    * Constructs a new <code>AddShareRequestBody</code>.
-    * @alias module:model/AddShareRequestBody
+    * Constructs a new <code>Body16</code>.
+    * @alias module:model/Body16
     * @class
-    * @param type {module:model/AddShareRequestBody.TypeEnum} The type of share to create. See above for a description of each.
+    * @param type {module:model/Body16.TypeEnum} The type of share to create. See above for a description of each.
     * @param name {String} A name for the share. This will be visible on the page that recipients visit. 
-    * @param accessMode {Array.<module:model/AddShareRequestBody.AccessModeEnum>} Array of permissions that describes what people can do when they visit the share. Valid options are `upload` `download` `modify` and `delete`  Not all permissions work with all shares - **receive** shares must always have the permission to **upload** and never provide a method for visitors to **download**.  If you are creating a share of type **send** and plan to upload files from your own computer before completing the send with [POST /shares/complete-send/{id}](#operation/completeDirectSend), use the access mode **upload**
+    * @param accessMode {Array.<String>} Array of permissions that describes what people can do when they visit the share. Valid options are `upload` `download` `modify` and `delete`  Not all permissions work with all shares - **receive** shares must always have the permission to **upload** and never provide a method for visitors to **download**.  If you are creating a share of type **send** and plan to upload files from your own computer before completing the send with [POST /shares/complete-send/{id}](#operation/completeDirectSend), use the access mode **upload**
     */
 
-    function AddShareRequestBody(type, name, accessMode) {
-        _classCallCheck(this, AddShareRequestBody);
+    function Body16(type, name, accessMode) {
+        _classCallCheck(this, Body16);
 
         this['type'] = undefined;
         this['name'] = undefined;
@@ -60,7 +60,7 @@ var AddShareRequestBody = function () {
         this['notificationEmails'] = undefined;
         this['password'] = undefined;
         this['requireEmail'] = undefined;
-        this['messageSubject'] = undefined;
+        this['subject'] = undefined;
         this['fileDropCreateFolders'] = undefined;
         this['sendingLocalFiles'] = undefined;
 
@@ -71,19 +71,19 @@ var AddShareRequestBody = function () {
     }
 
     /**
-    * Constructs a <code>AddShareRequestBody</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>Body16</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/AddShareRequestBody} obj Optional instance to populate.
-    * @return {module:model/AddShareRequestBody} The populated <code>AddShareRequestBody</code> instance.
+    * @param {module:model/Body16} obj Optional instance to populate.
+    * @return {module:model/Body16} The populated <code>Body16</code> instance.
     */
 
 
-    _createClass(AddShareRequestBody, null, [{
+    _createClass(Body16, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new AddShareRequestBody();
+                obj = obj || new Body16();
 
                 if (data.hasOwnProperty('type')) {
                     obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
@@ -124,8 +124,8 @@ var AddShareRequestBody = function () {
                 if (data.hasOwnProperty('requireEmail')) {
                     obj['requireEmail'] = _ApiClient2.default.convertToType(data['requireEmail'], 'Boolean');
                 }
-                if (data.hasOwnProperty('messageSubject')) {
-                    obj['messageSubject'] = _ApiClient2.default.convertToType(data['messageSubject'], 'String');
+                if (data.hasOwnProperty('subject')) {
+                    obj['subject'] = _ApiClient2.default.convertToType(data['subject'], 'String');
                 }
                 if (data.hasOwnProperty('fileDropCreateFolders')) {
                     obj['fileDropCreateFolders'] = _ApiClient2.default.convertToType(data['fileDropCreateFolders'], 'Boolean');
@@ -139,7 +139,7 @@ var AddShareRequestBody = function () {
 
         /**
         * The type of share to create. See above for a description of each.
-        * @member {module:model/AddShareRequestBody.TypeEnum} type
+        * @member {module:model/Body16.TypeEnum} type
         */
 
         /**
@@ -154,7 +154,7 @@ var AddShareRequestBody = function () {
 
         /**
         * Array of permissions that describes what people can do when they visit the share. Valid options are `upload` `download` `modify` and `delete`  Not all permissions work with all shares - **receive** shares must always have the permission to **upload** and never provide a method for visitors to **download**.  If you are creating a share of type **send** and plan to upload files from your own computer before completing the send with [POST /shares/complete-send/{id}](#operation/completeDirectSend), use the access mode **upload**
-        * @member {Array.<module:model/AddShareRequestBody.AccessModeEnum>} accessMode
+        * @member {Array.<String>} accessMode
         */
 
         /**
@@ -163,7 +163,7 @@ var AddShareRequestBody = function () {
         */
 
         /**
-        * People you want to invite to the share. **Note**: unless you also set the `messageSubject` and `messageBody` for the new share, invitation emails will not be sent to these recipients.
+        * People you want to invite to the share. **Note**: unless you also set the `subject` and `message` for the new share, invitation emails will not be sent to these recipients.
         * @member {Array.<module:model/SharesRecipients>} recipients
         */
 
@@ -204,7 +204,7 @@ var AddShareRequestBody = function () {
 
         /**
         * Subject to use on emails inviting recipients to the share. Ignored if you have not also provided `recipients` and a `message`
-        * @member {String} messageSubject
+        * @member {String} subject
         */
 
         /**
@@ -224,18 +224,12 @@ var AddShareRequestBody = function () {
         * @readonly
         */
 
-        /**
-        * Allowed values for the <code>accessMode</code> property.
-        * @enum {String}
-        * @readonly
-        */
-
     }]);
 
-    return AddShareRequestBody;
+    return Body16;
 }();
 
-AddShareRequestBody.TypeEnum = {
+Body16.TypeEnum = {
     /**
      * value: "shared_folder"
      * @const
@@ -251,25 +245,4 @@ AddShareRequestBody.TypeEnum = {
      * @const
      */
     "send": "send" };
-AddShareRequestBody.AccessModeEnum = {
-    /**
-     * value: "upload"
-     * @const
-     */
-    "upload": "upload",
-    /**
-     * value: "download"
-     * @const
-     */
-    "download": "download",
-    /**
-     * value: "delete"
-     * @const
-     */
-    "delete": "delete",
-    /**
-     * value: "modify"
-     * @const
-     */
-    "modify": "modify" };
-exports.default = AddShareRequestBody;
+exports.default = Body16;

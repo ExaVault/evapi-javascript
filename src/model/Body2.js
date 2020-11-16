@@ -21,76 +21,97 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _FormsidElements = require('./FormsidElements');
+
+var _FormsidElements2 = _interopRequireDefault(_FormsidElements);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The AddFolderRequestBody model module.
-* @module model/AddFolderRequestBody
-* @version 2.2.2
+* The Body2 model module.
+* @module model/Body2
+* @version 2.2.1
 */
-var AddFolderRequestBody = function () {
+var Body2 = function () {
     /**
-    * Constructs a new <code>AddFolderRequestBody</code>.
-    * @alias module:model/AddFolderRequestBody
+    * Constructs a new <code>Body2</code>.
+    * CSS Styles of the form.
+    * @alias module:model/Body2
     * @class
     */
 
-    function AddFolderRequestBody() {
-        _classCallCheck(this, AddFolderRequestBody);
+    function Body2() {
+        _classCallCheck(this, Body2);
 
-        this['path'] = undefined;
-        this['name'] = undefined;
-        this['parentResource'] = undefined;
+        this['formDescription'] = undefined;
+        this['submitButtonText'] = undefined;
+        this['successMessage'] = undefined;
+        this['elements'] = undefined;
+        this['cssStyles'] = undefined;
     }
 
     /**
-    * Constructs a <code>AddFolderRequestBody</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>Body2</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/AddFolderRequestBody} obj Optional instance to populate.
-    * @return {module:model/AddFolderRequestBody} The populated <code>AddFolderRequestBody</code> instance.
+    * @param {module:model/Body2} obj Optional instance to populate.
+    * @return {module:model/Body2} The populated <code>Body2</code> instance.
     */
 
 
-    _createClass(AddFolderRequestBody, null, [{
+    _createClass(Body2, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new AddFolderRequestBody();
+                obj = obj || new Body2();
 
-                if (data.hasOwnProperty('path')) {
-                    obj['path'] = _ApiClient2.default.convertToType(data['path'], 'String');
+                if (data.hasOwnProperty('formDescription')) {
+                    obj['formDescription'] = _ApiClient2.default.convertToType(data['formDescription'], 'String');
                 }
-                if (data.hasOwnProperty('name')) {
-                    obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
+                if (data.hasOwnProperty('submitButtonText')) {
+                    obj['submitButtonText'] = _ApiClient2.default.convertToType(data['submitButtonText'], 'String');
                 }
-                if (data.hasOwnProperty('parentResource')) {
-                    obj['parentResource'] = _ApiClient2.default.convertToType(data['parentResource'], 'String');
+                if (data.hasOwnProperty('successMessage')) {
+                    obj['successMessage'] = _ApiClient2.default.convertToType(data['successMessage'], 'String');
+                }
+                if (data.hasOwnProperty('elements')) {
+                    obj['elements'] = _ApiClient2.default.convertToType(data['elements'], [_FormsidElements2.default]);
+                }
+                if (data.hasOwnProperty('cssStyles')) {
+                    obj['cssStyles'] = _ApiClient2.default.convertToType(data['cssStyles'], 'String');
                 }
             }
             return obj;
         }
 
         /**
-        * Path to the newly created folder including new ame
-        * @member {String} path
+        * Set a description for the form that will be visible to recipients. 
+        * @member {String} formDescription
         */
 
         /**
-        * Name of the folder to create. Required if **path** is not used
-        * @member {String} name
+        * Text to be displayed on the submission button.
+        * @member {String} submitButtonText
         */
 
         /**
-        * Resource identifier where to create a folder. Required if **path** is not used
-        * @member {String} parentResource
+        * Text to be displayed when a recipient has submitted the form. 
+        * @member {String} successMessage
+        */
+
+        /**
+        * @member {Array.<module:model/FormsidElements>} elements
+        */
+
+        /**
+        * @member {String} cssStyles
         */
 
     }]);
 
-    return AddFolderRequestBody;
+    return Body2;
 }();
 
-exports.default = AddFolderRequestBody;
+exports.default = Body2;

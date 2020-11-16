@@ -26,53 +26,68 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The ResendInvitationsRequestBody model module.
-* @module model/ResendInvitationsRequestBody
-* @version 2.2.2
+* The Error403Errors model module.
+* @module model/Error403Errors
+* @version 2.2.1
 */
-var ResendInvitationsRequestBody = function () {
+var Error403Errors = function () {
     /**
-    * Constructs a new <code>ResendInvitationsRequestBody</code>.
-    * @alias module:model/ResendInvitationsRequestBody
+    * Constructs a new <code>Error403Errors</code>.
+    * @alias module:model/Error403Errors
     * @class
+    * @param code {String} Error code
+    * @param detail {String} Additional Detail
     */
 
-    function ResendInvitationsRequestBody() {
-        _classCallCheck(this, ResendInvitationsRequestBody);
+    function Error403Errors(code, detail) {
+        _classCallCheck(this, Error403Errors);
 
-        this['recipientId'] = undefined;
+        this['code'] = undefined;
+        this['detail'] = undefined;
+
+
+        this['code'] = code;
+        this['detail'] = detail;
     }
 
     /**
-    * Constructs a <code>ResendInvitationsRequestBody</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>Error403Errors</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/ResendInvitationsRequestBody} obj Optional instance to populate.
-    * @return {module:model/ResendInvitationsRequestBody} The populated <code>ResendInvitationsRequestBody</code> instance.
+    * @param {module:model/Error403Errors} obj Optional instance to populate.
+    * @return {module:model/Error403Errors} The populated <code>Error403Errors</code> instance.
     */
 
 
-    _createClass(ResendInvitationsRequestBody, null, [{
+    _createClass(Error403Errors, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new ResendInvitationsRequestBody();
+                obj = obj || new Error403Errors();
 
-                if (data.hasOwnProperty('recipientId')) {
-                    obj['recipientId'] = _ApiClient2.default.convertToType(data['recipientId'], 'Number');
+                if (data.hasOwnProperty('code')) {
+                    obj['code'] = _ApiClient2.default.convertToType(data['code'], 'String');
+                }
+                if (data.hasOwnProperty('detail')) {
+                    obj['detail'] = _ApiClient2.default.convertToType(data['detail'], 'String');
                 }
             }
             return obj;
         }
 
         /**
-        * ID number of recipient to send a new invitation to.
-        * @member {Number} recipientId
+        * Error code
+        * @member {String} code
+        */
+
+        /**
+        * Additional Detail
+        * @member {String} detail
         */
 
     }]);
 
-    return ResendInvitationsRequestBody;
+    return Error403Errors;
 }();
 
-exports.default = ResendInvitationsRequestBody;
+exports.default = Error403Errors;

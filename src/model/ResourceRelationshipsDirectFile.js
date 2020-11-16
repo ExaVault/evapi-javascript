@@ -32,7 +32,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The ResourceRelationshipsDirectFile model module.
 * @module model/ResourceRelationshipsDirectFile
-* @version 2.2.2
+* @version 2.2.1
 */
 var ResourceRelationshipsDirectFile = function () {
     /**

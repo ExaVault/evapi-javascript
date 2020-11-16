@@ -21,69 +21,73 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _CallbackSettingsValuesTriggers = require('./CallbackSettingsValuesTriggers');
-
-var _CallbackSettingsValuesTriggers2 = _interopRequireDefault(_CallbackSettingsValuesTriggers);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The CallbackSettingsValues model module.
-* @module model/CallbackSettingsValues
-* @version 2.2.2
+* The Body11 model module.
+* @module model/Body11
+* @version 2.2.1
 */
-var CallbackSettingsValues = function () {
+var Body11 = function () {
     /**
-    * Constructs a new <code>CallbackSettingsValues</code>.
-    * @alias module:model/CallbackSettingsValues
+    * Constructs a new <code>Body11</code>.
+    * @alias module:model/Body11
     * @class
+    * @param resource {String} Resource identifier of zip archive to be extracted.
+    * @param parentResource {String} Resource identifier for folder files should be extracted to.
     */
 
-    function CallbackSettingsValues() {
-        _classCallCheck(this, CallbackSettingsValues);
+    function Body11(resource, parentResource) {
+        _classCallCheck(this, Body11);
 
-        this['endpointUrl'] = undefined;
-        this['triggers'] = undefined;
+        this['resource'] = undefined;
+        this['parentResource'] = undefined;
+
+
+        this['resource'] = resource;
+        this['parentResource'] = parentResource;
     }
 
     /**
-    * Constructs a <code>CallbackSettingsValues</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>Body11</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/CallbackSettingsValues} obj Optional instance to populate.
-    * @return {module:model/CallbackSettingsValues} The populated <code>CallbackSettingsValues</code> instance.
+    * @param {module:model/Body11} obj Optional instance to populate.
+    * @return {module:model/Body11} The populated <code>Body11</code> instance.
     */
 
 
-    _createClass(CallbackSettingsValues, null, [{
+    _createClass(Body11, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new CallbackSettingsValues();
+                obj = obj || new Body11();
 
-                if (data.hasOwnProperty('endpointUrl')) {
-                    obj['endpointUrl'] = _ApiClient2.default.convertToType(data['endpointUrl'], 'String');
+                if (data.hasOwnProperty('resource')) {
+                    obj['resource'] = _ApiClient2.default.convertToType(data['resource'], 'String');
                 }
-                if (data.hasOwnProperty('triggers')) {
-                    obj['triggers'] = _CallbackSettingsValuesTriggers2.default.constructFromObject(data['triggers']);
+                if (data.hasOwnProperty('parentResource')) {
+                    obj['parentResource'] = _ApiClient2.default.convertToType(data['parentResource'], 'String');
                 }
             }
             return obj;
         }
 
         /**
-        * @member {String} endpointUrl
+        * Resource identifier of zip archive to be extracted.
+        * @member {String} resource
         */
 
         /**
-        * @member {module:model/CallbackSettingsValuesTriggers} triggers
+        * Resource identifier for folder files should be extracted to.
+        * @member {String} parentResource
         */
 
     }]);
 
-    return CallbackSettingsValues;
+    return Body11;
 }();
 
-exports.default = CallbackSettingsValues;
+exports.default = Body11;
