@@ -56,7 +56,7 @@ var AddShareRequestBody = function () {
         this['expiration'] = undefined;
         this['hasNotification'] = undefined;
         this['isPublic'] = undefined;
-        this['message'] = undefined;
+        this['messageBody'] = undefined;
         this['notificationEmails'] = undefined;
         this['password'] = undefined;
         this['requireEmail'] = undefined;
@@ -112,8 +112,8 @@ var AddShareRequestBody = function () {
                 if (data.hasOwnProperty('isPublic')) {
                     obj['isPublic'] = _ApiClient2.default.convertToType(data['isPublic'], 'Boolean');
                 }
-                if (data.hasOwnProperty('message')) {
-                    obj['message'] = _ApiClient2.default.convertToType(data['message'], 'String');
+                if (data.hasOwnProperty('messageBody')) {
+                    obj['messageBody'] = _ApiClient2.default.convertToType(data['messageBody'], 'String');
                 }
                 if (data.hasOwnProperty('notificationEmails')) {
                     obj['notificationEmails'] = _ApiClient2.default.convertToType(data['notificationEmails'], ['String']);
@@ -183,8 +183,8 @@ var AddShareRequestBody = function () {
         */
 
         /**
-        * The message to be included in email invitations for your recipients. Ignored if you have not also provided `recipients` and `subject`
-        * @member {String} message
+        * The message to be included in email invitations for your recipients. Ignored if you have not also provided `recipients` and `messageSubject`
+        * @member {String} messageBody
         */
 
         /**
@@ -203,7 +203,7 @@ var AddShareRequestBody = function () {
         */
 
         /**
-        * Subject to use on emails inviting recipients to the share. Ignored if you have not also provided `recipients` and a `message`
+        * Subject to use on emails inviting recipients to the share. Ignored if you have not also provided `recipients` and a `messageBody`
         * @member {String} messageSubject
         */
 

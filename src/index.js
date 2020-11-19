@@ -3,8 +3,8 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.UsersApi = exports.SharesApi = exports.ResourcesApi = exports.RecipientsApi = exports.NotificationsApi = exports.FormApi = exports.EmailListsApi = exports.EmailApi = exports.ActivityApi = exports.AccountApi = exports.WebhooksActivityResponse = exports.WebhooksActivityEntryAttributes = exports.WebhooksActivityEntry = exports.UsersPermissions = exports.UserResponse = exports.UserRelationshipsOwnerAccountData = exports.UserRelationshipsOwnerAccount = exports.UserRelationshipsHomeResourceData = exports.UserRelationshipsHomeResource = exports.UserRelationships = exports.UserPermissions = exports.UserCollectionResponse = exports.UserAttributes = exports.User = exports.UpdateUserRequestBody = exports.UpdateShareRequestBody = exports.UpdateReourceByIdRequestBody = exports.UpdateNotificationByIdRequestBody = exports.UpdateFormByIdRequestBody = exports.UpdateEmailListRequestBody = exports.UpdateAccountRequestBody = exports.SharesRecipients = exports.ShareResponse = exports.ShareResourceData = exports.ShareRelationshpsMessage = exports.ShareRelationshipsResource = exports.ShareRelationshipsOwnerData = exports.ShareRelationshipsOwner = exports.ShareRelationshipsNotification = undefined;
-exports.ShareRelationshipsData = exports.ShareRelationships = exports.ShareRecipientsResponse = exports.ShareRecipient = exports.ShareMessageData = exports.ShareMessageAttributes = exports.ShareMessage = exports.ShareCollectionResponse = exports.ShareAttributes = exports.Share = exports.SessionActivityResponse = exports.SessionActivityEntryAttributes = exports.SessionActivityEntry = exports.SendReferralEmailRequestBody = exports.ResourceResponse = exports.ResourceRelationshipsShareData = exports.ResourceRelationshipsShare = exports.ResourceRelationshipsParentResourceData = exports.ResourceRelationshipsParentResource = exports.ResourceRelationshipsNotifications = exports.ResourceRelationshipsDirectFileData = exports.ResourceRelationshipsDirectFile = exports.ResourceRelationshipsData = exports.ResourceRelationships = exports.ResourceMultiResponse = exports.ResourceDelete = exports.ResourceCopyMove = exports.ResourceCollectionResponse = exports.ResourceAttributes = exports.Resource = exports.ResendInvitationsRequestBody = exports.RelationshipData = exports.Quota = exports.PreviewFileResponse = exports.PreviewFileAttributes = exports.PreviewFile = exports.NotificationResponse = exports.NotificationRelationshipsShareData = exports.NotificationRelationshipsShare = exports.NotificationRelationshipsResourceData = exports.NotificationRelationshipsResource = exports.NotificationRelationshipsOwnerUserData = exports.NotificationRelationshipsOwnerUser = exports.NotificationRelationships = exports.NotificationRecipient = exports.NotificationCollectionResponse = exports.NotificationAttributes = exports.Notification = exports.MoveResourcesRequestBody = exports.MasterUserMasterUserData = exports.MasterUserMasterUser = exports.MasterUser = exports.FormsidSettings = exports.FormsidElements = exports.FormResponse = exports.FormRelationshipsShareData = exports.FormRelationshipsShare = exports.FormRelationships = exports.FormFieldUploadAreaSettings = exports.FormFieldUploadArea = exports.FormFieldSettings = exports.FormField = exports.FormEntryResponse = exports.FormEntryField = exports.FormEntryAttributes = exports.FormEntry = exports.FormAttributes = exports.Form = exports.ExtractFilesRequestBody = exports.Error = exports.EmptyResponse = exports.EmailListResponse = exports.EmailListRelationships = exports.EmailListOwnerUser = exports.EmailListCollectionResponse = exports.EmailListAttributes = exports.EmailList = exports.DownloadPollingResponse = exports.DownloadPolling = exports.DeleteResourcesRequestBody = exports.CopyResourcesRequestBody = exports.CompressFilesRequestBody = exports.CallbackSettingsValuesTriggers = exports.CallbackSettingsValues = exports.CallbackSettingsTriggers = exports.CallbackSettings = exports.BrandingSettingsValues = exports.BrandingSettings = exports.Body = exports.AddUserRequestBody = exports.AddShareRequestBody = exports.AddNotificationRequestBody = exports.AddFolderRequestBody = exports.AddEmailListRequestBody = exports.AccountResponse = exports.AccountAttributesAllowedIp = exports.AccountAttributes = exports.AccountAllowedIpRanges = exports.Account = exports.ApiClient = undefined;
+exports.UsersApi = exports.SharesApi = exports.ResourcesApi = exports.RecipientsApi = exports.NotificationsApi = exports.FormApi = exports.EmailListsApi = exports.EmailApi = exports.ActivityApi = exports.AccountApi = exports.WebhooksActivityResponse = exports.WebhooksActivityEntryAttributes = exports.WebhooksActivityEntry = exports.UsersPermissions = exports.UserResponse = exports.UserRelationshipsOwnerAccountData = exports.UserRelationshipsOwnerAccount = exports.UserRelationshipsHomeResourceData = exports.UserRelationshipsHomeResource = exports.UserRelationships = exports.UserPermissions = exports.UserCollectionResponse = exports.UserAttributes = exports.User = exports.UpdateUserRequestBody = exports.UpdateShareRequestBody = exports.UpdateReourceByIdRequestBody = exports.UpdateNotificationByIdRequestBody = exports.UpdateFormByIdRequestBody = exports.UpdateEmailListRequestBody = exports.UpdateAccountRequestBody = exports.SharesRecipients = exports.ShareResponse = exports.ShareResourceData = exports.ShareRelationshpsMessage = exports.ShareRelationshipsResource = exports.ShareRelationshipsOwnerData = exports.ShareRelationshipsOwner = undefined;
+exports.ShareRelationshipsNotification = exports.ShareRelationshipsData = exports.ShareRelationships = exports.ShareRecipientsResponse = exports.ShareRecipient = exports.ShareMessageData = exports.ShareMessageAttributes = exports.ShareMessage = exports.ShareCollectionResponse = exports.ShareAttributes = exports.Share = exports.SessionActivityResponse = exports.SessionActivityEntryAttributes = exports.SessionActivityEntry = exports.SendReferralEmailRequestBody = exports.ResourceResponse = exports.ResourceRelationshipsShareData = exports.ResourceRelationshipsShare = exports.ResourceRelationshipsParentResourceData = exports.ResourceRelationshipsParentResource = exports.ResourceRelationshipsNotifications = exports.ResourceRelationshipsDirectFileData = exports.ResourceRelationshipsDirectFile = exports.ResourceRelationshipsData = exports.ResourceRelationships = exports.ResourceMultiResponse = exports.ResourceDelete = exports.ResourceCopyMove = exports.ResourceCollectionResponse = exports.ResourceAttributes = exports.Resource = exports.ResendInvitationsRequestBody = exports.RelationshipData = exports.Quota = exports.PreviewFileResponse = exports.PreviewFileAttributes = exports.PreviewFile = exports.NotificationResponse = exports.NotificationRelationshipsShareData = exports.NotificationRelationshipsShare = exports.NotificationRelationshipsResourceData = exports.NotificationRelationshipsResource = exports.NotificationRelationshipsOwnerUserData = exports.NotificationRelationshipsOwnerUser = exports.NotificationRelationships = exports.NotificationRecipient = exports.NotificationCollectionResponse = exports.NotificationAttributes = exports.Notification = exports.MoveResourcesRequestBody = exports.MasterUserMasterUserData = exports.MasterUserMasterUser = exports.MasterUser = exports.FormsidSettings = exports.FormsidElements = exports.FormResponse = exports.FormRelationshipsShareData = exports.FormRelationshipsShare = exports.FormRelationships = exports.FormFieldUploadAreaSettings = exports.FormFieldUploadArea = exports.FormFieldSettings = exports.FormField = exports.FormEntryResponse = exports.FormEntryField = exports.FormEntryAttributes = exports.FormEntry = exports.FormAttributes = exports.Form = exports.ExtractFilesRequestBody = exports.Error = exports.EmptyResponse = exports.EmailListResponse = exports.EmailListRelationships = exports.EmailListOwnerUser = exports.EmailListCollectionResponse = exports.EmailListAttributes = exports.EmailList = exports.DownloadPollingResponse = exports.DownloadPolling = exports.DeleteResourcesRequestBody = exports.CopyResourcesRequestBody = exports.CompressFilesRequestBody = exports.CallbackSettingsValuesTriggers = exports.CallbackSettingsValues = exports.CallbackSettingsTriggers = exports.CallbackSettings = exports.BrandingSettingsValues = exports.BrandingSettings = exports.AddUserRequestBody = exports.AddShareRequestBody = exports.AddNotificationRequestBody = exports.AddFolderRequestBody = exports.AddEmailListRequestBody = exports.AccountResponse = exports.AccountAttributesAllowedIp = exports.AccountAttributes = exports.AccountAllowedIpRanges = exports.Account = exports.ApiClient = undefined;
 
 var _ApiClient = require('./ApiClient');
 
@@ -49,10 +49,6 @@ var _AddShareRequestBody2 = _interopRequireDefault(_AddShareRequestBody);
 var _AddUserRequestBody = require('./model/AddUserRequestBody');
 
 var _AddUserRequestBody2 = _interopRequireDefault(_AddUserRequestBody);
-
-var _Body = require('./model/Body');
-
-var _Body2 = _interopRequireDefault(_Body);
 
 var _BrandingSettings = require('./model/BrandingSettings');
 
@@ -595,6 +591,19 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 * @module index
 * @version 2.2.2
 */
+/**
+ * ExaVault API
+ * See our API reference documentation at https://www.exavault.com/developer/api-docs/
+ *
+ * OpenAPI spec version: 2.0
+ * Contact: support@exavault.com
+ *
+ * NOTE: This class is auto generated by the swagger code generator program.
+ * https://github.com/swagger-api/swagger-codegen.git
+ * Do not edit the class manually.
+ *
+ */
+
 exports.ApiClient = _ApiClient2.default;
 exports.Account = _Account2.default;
 exports.AccountAllowedIpRanges = _AccountAllowedIpRanges2.default;
@@ -606,7 +615,6 @@ exports.AddFolderRequestBody = _AddFolderRequestBody2.default;
 exports.AddNotificationRequestBody = _AddNotificationRequestBody2.default;
 exports.AddShareRequestBody = _AddShareRequestBody2.default;
 exports.AddUserRequestBody = _AddUserRequestBody2.default;
-exports.Body = _Body2.default;
 exports.BrandingSettings = _BrandingSettings2.default;
 exports.BrandingSettingsValues = _BrandingSettingsValues2.default;
 exports.CallbackSettings = _CallbackSettings2.default;
@@ -733,15 +741,4 @@ exports.NotificationsApi = _NotificationsApi2.default;
 exports.RecipientsApi = _RecipientsApi2.default;
 exports.ResourcesApi = _ResourcesApi2.default;
 exports.SharesApi = _SharesApi2.default;
-exports.UsersApi = _UsersApi2.default; /**
-                                        * ExaVault API
-                                        * See our API reference documentation at https://www.exavault.com/developer/api-docs/
-                                        *
-                                        * OpenAPI spec version: 2.0
-                                        * Contact: support@exavault.com
-                                        *
-                                        * NOTE: This class is auto generated by the swagger code generator program.
-                                        * https://github.com/swagger-api/swagger-codegen.git
-                                        * Do not edit the class manually.
-                                        *
-                                        */
+exports.UsersApi = _UsersApi2.default;

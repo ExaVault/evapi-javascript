@@ -75,7 +75,7 @@ var UpdateEmailListRequestBody = function () {
         */
 
         /**
-        * Array of email addresses to add to the email list.
+        * Email addresses that replace existing list.
         * @member {Array.<String>} emails
         */
 
