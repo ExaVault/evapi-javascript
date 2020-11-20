@@ -21,6 +21,10 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _AccessMode = require('./AccessMode');
+
+var _AccessMode2 = _interopRequireDefault(_AccessMode);
+
 var _SharesRecipients = require('./SharesRecipients');
 
 var _SharesRecipients2 = _interopRequireDefault(_SharesRecipients);
@@ -41,10 +45,9 @@ var AddShareRequestBody = function () {
     * @class
     * @param type {module:model/AddShareRequestBody.TypeEnum} The type of share to create. See above for a description of each.
     * @param name {String} A name for the share. This will be visible on the page that recipients visit. 
-    * @param accessMode {Array.<module:model/AddShareRequestBody.AccessModeEnum>} Array of permissions that describes what people can do when they visit the share. Valid options are `upload` `download` `modify` and `delete`  Not all permissions work with all shares - **receive** shares must always have the permission to **upload** and never provide a method for visitors to **download**.  If you are creating a share of type **send** and plan to upload files from your own computer before completing the send with [POST /shares/complete-send/{id}](#operation/completeDirectSend), use the access mode **upload**
     */
 
-    function AddShareRequestBody(type, name, accessMode) {
+    function AddShareRequestBody(type, name) {
         _classCallCheck(this, AddShareRequestBody);
 
         this['type'] = undefined;
@@ -67,7 +70,6 @@ var AddShareRequestBody = function () {
 
         this['type'] = type;
         this['name'] = name;
-        this['accessMode'] = accessMode;
     }
 
     /**
@@ -95,7 +97,7 @@ var AddShareRequestBody = function () {
                     obj['resources'] = _ApiClient2.default.convertToType(data['resources'], ['String']);
                 }
                 if (data.hasOwnProperty('accessMode')) {
-                    obj['accessMode'] = _ApiClient2.default.convertToType(data['accessMode'], ['String']);
+                    obj['accessMode'] = _AccessMode2.default.constructFromObject(data['accessMode']);
                 }
                 if (data.hasOwnProperty('embed')) {
                     obj['embed'] = _ApiClient2.default.convertToType(data['embed'], 'Boolean');
@@ -153,8 +155,7 @@ var AddShareRequestBody = function () {
         */
 
         /**
-        * Array of permissions that describes what people can do when they visit the share. Valid options are `upload` `download` `modify` and `delete`  Not all permissions work with all shares - **receive** shares must always have the permission to **upload** and never provide a method for visitors to **download**.  If you are creating a share of type **send** and plan to upload files from your own computer before completing the send with [POST /shares/complete-send/{id}](#operation/completeDirectSend), use the access mode **upload**
-        * @member {Array.<module:model/AddShareRequestBody.AccessModeEnum>} accessMode
+        * @member {module:model/AccessMode} accessMode
         */
 
         /**
@@ -224,12 +225,6 @@ var AddShareRequestBody = function () {
         * @readonly
         */
 
-        /**
-        * Allowed values for the <code>accessMode</code> property.
-        * @enum {String}
-        * @readonly
-        */
-
     }]);
 
     return AddShareRequestBody;
@@ -251,25 +246,4 @@ AddShareRequestBody.TypeEnum = {
      * @const
      */
     "send": "send" };
-AddShareRequestBody.AccessModeEnum = {
-    /**
-     * value: "upload"
-     * @const
-     */
-    "upload": "upload",
-    /**
-     * value: "download"
-     * @const
-     */
-    "download": "download",
-    /**
-     * value: "delete"
-     * @const
-     */
-    "delete": "delete",
-    /**
-     * value: "modify"
-     * @const
-     */
-    "modify": "modify" };
 exports.default = AddShareRequestBody;

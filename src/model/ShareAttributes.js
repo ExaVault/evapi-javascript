@@ -21,6 +21,10 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _AccessMode = require('./AccessMode');
+
+var _AccessMode2 = _interopRequireDefault(_AccessMode);
+
 var _ShareMessage = require('./ShareMessage');
 
 var _ShareMessage2 = _interopRequireDefault(_ShareMessage);
@@ -100,7 +104,7 @@ var ShareAttributes = function () {
                     obj['public'] = _ApiClient2.default.convertToType(data['public'], 'Boolean');
                 }
                 if (data.hasOwnProperty('accessMode')) {
-                    obj['accessMode'] = _ApiClient2.default.convertToType(data['accessMode'], ['String']);
+                    obj['accessMode'] = _AccessMode2.default.constructFromObject(data['accessMode']);
                 }
                 if (data.hasOwnProperty('accessDescription')) {
                     obj['accessDescription'] = _ApiClient2.default.convertToType(data['accessDescription'], 'String');
@@ -182,8 +186,7 @@ var ShareAttributes = function () {
         */
 
         /**
-        * Access rights for the share.
-        * @member {Array.<module:model/ShareAttributes.AccessModeEnum>} accessMode
+        * @member {module:model/AccessMode} accessMode
         */
 
         /**
@@ -288,12 +291,6 @@ var ShareAttributes = function () {
 
 
         /**
-        * Allowed values for the <code>accessMode</code> property.
-        * @enum {String}
-        * @readonly
-        */
-
-        /**
         * Allowed values for the <code>type</code> property.
         * @enum {String}
         * @readonly
@@ -316,27 +313,6 @@ var ShareAttributes = function () {
     return ShareAttributes;
 }();
 
-ShareAttributes.AccessModeEnum = {
-    /**
-     * value: "download"
-     * @const
-     */
-    "download": "download",
-    /**
-     * value: "upload"
-     * @const
-     */
-    "upload": "upload",
-    /**
-     * value: "modify"
-     * @const
-     */
-    "modify": "modify",
-    /**
-     * value: "delete"
-     * @const
-     */
-    "delete": "delete" };
 ShareAttributes.TypeEnum = {
     /**
      * value: "shared_folder"
