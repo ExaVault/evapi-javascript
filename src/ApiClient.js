@@ -33,7 +33,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
 * @module ApiClient
-* @version 2.2.1
+* @version 2.2.2
 */
 
 /**
@@ -47,15 +47,12 @@ var ApiClient = function () {
     function ApiClient() {
         _classCallCheck(this, ApiClient);
 
-        var config = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-        this.accountname = config.accountname || 'accountname';
-
         /**
          * The base URL against which to resolve every API call's (relative) path.
          * @type {String}
          * @default https://accountname.exavault.com/api/v2
          */
-        this.basePath = ("https://" + this.accountname + ".exavault.com/api/v2").replace(/\/+$/, '');
+        this.basePath = 'https://accountname.exavault.com/api/v2'.replace(/\/+$/, '');
 
         /**
          * The authentication methods to be included for all API calls.

@@ -21,9 +21,9 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _Body = require('../model/Body18');
+var _ResendInvitationsRequestBody = require('../model/ResendInvitationsRequestBody');
 
-var _Body2 = _interopRequireDefault(_Body);
+var _ResendInvitationsRequestBody2 = _interopRequireDefault(_ResendInvitationsRequestBody);
 
 var _ShareRecipientsResponse = require('../model/ShareRecipientsResponse');
 
@@ -36,7 +36,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * Recipients service.
 * @module api/RecipientsApi
-* @version 2.2.1
+* @version 2.2.2
 */
 var RecipientsApi = function () {
 

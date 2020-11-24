@@ -21,13 +21,13 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _Body = require('../model/Body15');
-
-var _Body2 = _interopRequireDefault(_Body);
-
 var _EmptyResponse = require('../model/EmptyResponse');
 
 var _EmptyResponse2 = _interopRequireDefault(_EmptyResponse);
+
+var _SendReferralEmailRequestBody = require('../model/SendReferralEmailRequestBody');
+
+var _SendReferralEmailRequestBody2 = _interopRequireDefault(_SendReferralEmailRequestBody);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -36,7 +36,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * Email service.
 * @module api/EmailApi
-* @version 2.2.1
+* @version 2.2.2
 */
 var EmailApi = function () {
 

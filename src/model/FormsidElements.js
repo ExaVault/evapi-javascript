@@ -32,7 +32,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The FormsidElements model module.
 * @module model/FormsidElements
-* @version 2.2.1
+* @version 2.2.2
 */
 var FormsidElements = function () {
     /**
@@ -96,7 +96,7 @@ var FormsidElements = function () {
         */
 
         /**
-        * The order the fields will be displayed to the receipient. Starts at 0. 
+        * The order the fields will be displayed to the recipient. Starts at 0. 
         * @member {Number} order
         */
 

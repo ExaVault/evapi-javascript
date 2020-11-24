@@ -26,21 +26,21 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The Body11 model module.
-* @module model/Body11
-* @version 2.2.1
+* The ExtractFilesRequestBody model module.
+* @module model/ExtractFilesRequestBody
+* @version 2.2.2
 */
-var Body11 = function () {
+var ExtractFilesRequestBody = function () {
     /**
-    * Constructs a new <code>Body11</code>.
-    * @alias module:model/Body11
+    * Constructs a new <code>ExtractFilesRequestBody</code>.
+    * @alias module:model/ExtractFilesRequestBody
     * @class
     * @param resource {String} Resource identifier of zip archive to be extracted.
     * @param parentResource {String} Resource identifier for folder files should be extracted to.
     */
 
-    function Body11(resource, parentResource) {
-        _classCallCheck(this, Body11);
+    function ExtractFilesRequestBody(resource, parentResource) {
+        _classCallCheck(this, ExtractFilesRequestBody);
 
         this['resource'] = undefined;
         this['parentResource'] = undefined;
@@ -51,19 +51,19 @@ var Body11 = function () {
     }
 
     /**
-    * Constructs a <code>Body11</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>ExtractFilesRequestBody</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/Body11} obj Optional instance to populate.
-    * @return {module:model/Body11} The populated <code>Body11</code> instance.
+    * @param {module:model/ExtractFilesRequestBody} obj Optional instance to populate.
+    * @return {module:model/ExtractFilesRequestBody} The populated <code>ExtractFilesRequestBody</code> instance.
     */
 
 
-    _createClass(Body11, null, [{
+    _createClass(ExtractFilesRequestBody, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new Body11();
+                obj = obj || new ExtractFilesRequestBody();
 
                 if (data.hasOwnProperty('resource')) {
                     obj['resource'] = _ApiClient2.default.convertToType(data['resource'], 'String');
@@ -87,7 +87,7 @@ var Body11 = function () {
 
     }]);
 
-    return Body11;
+    return ExtractFilesRequestBody;
 }();
 
-exports.default = Body11;
+exports.default = ExtractFilesRequestBody;

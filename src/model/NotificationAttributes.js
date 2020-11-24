@@ -32,7 +32,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The NotificationAttributes model module.
 * @module model/NotificationAttributes
-* @version 2.2.1
+* @version 2.2.2
 */
 var NotificationAttributes = function () {
     /**
@@ -128,7 +128,7 @@ var NotificationAttributes = function () {
         */
 
         /**
-        * Type of the resoucre the notification is attached to. 
+        * Type of the resource the notification is attached to. 
         * @member {module:model/NotificationAttributes.TypeEnum} type
         */
 

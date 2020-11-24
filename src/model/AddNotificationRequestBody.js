@@ -21,188 +21,169 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _SharesRecipients = require('./SharesRecipients');
-
-var _SharesRecipients2 = _interopRequireDefault(_SharesRecipients);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The Body17 model module.
-* @module model/Body17
-* @version 2.2.1
+* The AddNotificationRequestBody model module.
+* @module model/AddNotificationRequestBody
+* @version 2.2.2
 */
-var Body17 = function () {
+var AddNotificationRequestBody = function () {
     /**
-    * Constructs a new <code>Body17</code>.
-    * @alias module:model/Body17
+    * Constructs a new <code>AddNotificationRequestBody</code>.
+    * @alias module:model/AddNotificationRequestBody
     * @class
+    * @param type {module:model/AddNotificationRequestBody.TypeEnum} What kind of notification you're making. Valid choices are:  - **file** to monitor activity for a file resource - **folder** to monitor activity for a folder resource
+    * @param resource {String} Resources for this notification. See details on [how to specify resources](#section/Identifying-Resources) above.
+    * @param action {module:model/AddNotificationRequestBody.ActionEnum} Type of action be notified about. Notifications will only be fired for the given type of action. Valid choices are **upload**, **download**, **delete** or **all** (upload/download/delete)
+    * @param usernames {Array.<String>} Determines which users' actions should trigger the notification.   Rather than listing  individual users, you can also use 3 special options:  - **notice\\_user\\_all** for activity by any user or share recipient - **notice\\_user\\_all\\_users** for activity only by user accounts - **notice\\_user\\_all\\_recipient** for activity only by share recipients
+    * @param sendEmail {Boolean} Set to true if the user should be notified by email when the notification is triggered.
     */
 
-    function Body17() {
-        _classCallCheck(this, Body17);
+    function AddNotificationRequestBody(type, resource, action, usernames, sendEmail) {
+        _classCallCheck(this, AddNotificationRequestBody);
 
-        this['name'] = undefined;
-        this['resources'] = undefined;
-        this['accessMode'] = undefined;
-        this['embed'] = undefined;
+        this['type'] = undefined;
+        this['resource'] = undefined;
+        this['action'] = undefined;
+        this['usernames'] = undefined;
+        this['sendEmail'] = undefined;
         this['recipients'] = undefined;
-        this['expiration'] = undefined;
-        this['hasNotification'] = undefined;
-        this['isPublic'] = undefined;
         this['message'] = undefined;
-        this['notificationEmails'] = undefined;
-        this['password'] = undefined;
-        this['requireEmail'] = undefined;
-        this['subject'] = undefined;
-        this['fileDropCreateFolders'] = undefined;
-        this['status'] = undefined;
+
+
+        this['type'] = type;
+        this['resource'] = resource;
+        this['action'] = action;
+        this['usernames'] = usernames;
+        this['sendEmail'] = sendEmail;
     }
 
     /**
-    * Constructs a <code>Body17</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>AddNotificationRequestBody</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/Body17} obj Optional instance to populate.
-    * @return {module:model/Body17} The populated <code>Body17</code> instance.
+    * @param {module:model/AddNotificationRequestBody} obj Optional instance to populate.
+    * @return {module:model/AddNotificationRequestBody} The populated <code>AddNotificationRequestBody</code> instance.
     */
 
 
-    _createClass(Body17, null, [{
+    _createClass(AddNotificationRequestBody, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new Body17();
+                obj = obj || new AddNotificationRequestBody();
 
-                if (data.hasOwnProperty('name')) {
-                    obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
+                if (data.hasOwnProperty('type')) {
+                    obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
                 }
-                if (data.hasOwnProperty('resources')) {
-                    obj['resources'] = _ApiClient2.default.convertToType(data['resources'], ['String']);
+                if (data.hasOwnProperty('resource')) {
+                    obj['resource'] = _ApiClient2.default.convertToType(data['resource'], 'String');
                 }
-                if (data.hasOwnProperty('accessMode')) {
-                    obj['accessMode'] = _ApiClient2.default.convertToType(data['accessMode'], ['String']);
+                if (data.hasOwnProperty('action')) {
+                    obj['action'] = _ApiClient2.default.convertToType(data['action'], 'String');
                 }
-                if (data.hasOwnProperty('embed')) {
-                    obj['embed'] = _ApiClient2.default.convertToType(data['embed'], 'Boolean');
+                if (data.hasOwnProperty('usernames')) {
+                    obj['usernames'] = _ApiClient2.default.convertToType(data['usernames'], ['String']);
+                }
+                if (data.hasOwnProperty('sendEmail')) {
+                    obj['sendEmail'] = _ApiClient2.default.convertToType(data['sendEmail'], 'Boolean');
                 }
                 if (data.hasOwnProperty('recipients')) {
-                    obj['recipients'] = _ApiClient2.default.convertToType(data['recipients'], [_SharesRecipients2.default]);
-                }
-                if (data.hasOwnProperty('expiration')) {
-                    obj['expiration'] = _ApiClient2.default.convertToType(data['expiration'], 'Date');
-                }
-                if (data.hasOwnProperty('hasNotification')) {
-                    obj['hasNotification'] = _ApiClient2.default.convertToType(data['hasNotification'], 'Boolean');
-                }
-                if (data.hasOwnProperty('isPublic')) {
-                    obj['isPublic'] = _ApiClient2.default.convertToType(data['isPublic'], 'Boolean');
+                    obj['recipients'] = _ApiClient2.default.convertToType(data['recipients'], ['String']);
                 }
                 if (data.hasOwnProperty('message')) {
                     obj['message'] = _ApiClient2.default.convertToType(data['message'], 'String');
-                }
-                if (data.hasOwnProperty('notificationEmails')) {
-                    obj['notificationEmails'] = _ApiClient2.default.convertToType(data['notificationEmails'], ['String']);
-                }
-                if (data.hasOwnProperty('password')) {
-                    obj['password'] = _ApiClient2.default.convertToType(data['password'], 'String');
-                }
-                if (data.hasOwnProperty('requireEmail')) {
-                    obj['requireEmail'] = _ApiClient2.default.convertToType(data['requireEmail'], 'Boolean');
-                }
-                if (data.hasOwnProperty('subject')) {
-                    obj['subject'] = _ApiClient2.default.convertToType(data['subject'], 'String');
-                }
-                if (data.hasOwnProperty('fileDropCreateFolders')) {
-                    obj['fileDropCreateFolders'] = _ApiClient2.default.convertToType(data['fileDropCreateFolders'], 'Boolean');
-                }
-                if (data.hasOwnProperty('status')) {
-                    obj['status'] = _ApiClient2.default.convertToType(data['status'], 'Number');
                 }
             }
             return obj;
         }
 
         /**
-        * Name of the share.
-        * @member {String} name
+        * What kind of notification you're making. Valid choices are:  - **file** to monitor activity for a file resource - **folder** to monitor activity for a folder resource
+        * @member {module:model/AddNotificationRequestBody.TypeEnum} type
         */
 
         /**
-        * Array of resources for this share. See details on [how to specify resources](#section/Identifying-Resources) above.  **shared_folder** and **receive** shares must have only one `resource`, which is a directory that does not have a current share attached.  **send** shares may have multiple `resource` parameters.   **NOTE**: Sending this parameter will **REPLACE** the existing resources with the resources included in this request.
-        * @member {Array.<String>} resources
+        * Resources for this notification. See details on [how to specify resources](#section/Identifying-Resources) above.
+        * @member {String} resource
         */
 
         /**
-        * What visitors who view this share can do. Valid options include **download**, **upload**, **delete**, **modify**
-        * @member {Array.<String>} accessMode
+        * Type of action be notified about. Notifications will only be fired for the given type of action. Valid choices are **upload**, **download**, **delete** or **all** (upload/download/delete)
+        * @member {module:model/AddNotificationRequestBody.ActionEnum} action
         */
 
         /**
-        * Whether the share can be embedded in another web page.
-        * @member {Boolean} embed
+        * Determines which users' actions should trigger the notification.   Rather than listing  individual users, you can also use 3 special options:  - **notice\\_user\\_all** for activity by any user or share recipient - **notice\\_user\\_all\\_users** for activity only by user accounts - **notice\\_user\\_all\\_recipient** for activity only by share recipients
+        * @member {Array.<String>} usernames
         */
 
         /**
-        * People you want to invite to the share.   **Note**: unless you also set the `subject` and `message` for the new share, invitation emails will not be sent to these recipients.  **Note**: Recipients in this list will **REPLACE** the recipients already assigned to this share. 
-        * @member {Array.<module:model/SharesRecipients>} recipients
+        * Set to true if the user should be notified by email when the notification is triggered.
+        * @member {Boolean} sendEmail
         */
 
         /**
-        * New expiration date and time for the share
-        * @member {Date} expiration
+        * Email addresses to send notification emails to. If not specified, sends to the current user's email address.
+        * @member {Array.<String>} recipients
         */
 
         /**
-        * Whether delivery receipts should be sent for this share.
-        * @member {Boolean} hasNotification
-        */
-
-        /**
-        * Whether people can visit the share without following a link from an invitation email
-        * @member {Boolean} isPublic
-        */
-
-        /**
-        * Message content to use for emails inviting recipients to the share. Ignored if you have not also provided `recipients` and a `subject`
+        * Custom message to include in notification emails.
         * @member {String} message
         */
 
+
         /**
-        * List of email addresses to send delivery receipts to. Ignored if `hasNotification` is false. 
-        * @member {Array.<String>} notificationEmails
+        * Allowed values for the <code>type</code> property.
+        * @enum {String}
+        * @readonly
         */
 
         /**
-        * New password for the share. To leave the password unchanged, do not send this parameter.
-        * @member {String} password
-        */
-
-        /**
-        * Whether visitors to the share will be required to enter their email in order to access the share.
-        * @member {Boolean} requireEmail
-        */
-
-        /**
-        * Subject to use on emails inviting recipients to the share. Ignored if you have not also provided `recipients` and a `message`
-        * @member {String} subject
-        */
-
-        /**
-        * Whether uploads to a receive folder should be automatically placed into subfolders. See our [receive folder documentation](/docs/account/05-file-sharing/05-form-builder#advanced-form-settings)
-        * @member {Boolean} fileDropCreateFolders
-        */
-
-        /**
-        * New status for the share. You can set an active share to inactive by setting the status to **0**
-        * @member {Number} status
+        * Allowed values for the <code>action</code> property.
+        * @enum {String}
+        * @readonly
         */
 
     }]);
 
-    return Body17;
+    return AddNotificationRequestBody;
 }();
 
-exports.default = Body17;
+AddNotificationRequestBody.TypeEnum = {
+    /**
+     * value: "file"
+     * @const
+     */
+    "file": "file",
+    /**
+     * value: "folder"
+     * @const
+     */
+    "folder": "folder" };
+AddNotificationRequestBody.ActionEnum = {
+    /**
+     * value: "upload"
+     * @const
+     */
+    "upload": "upload",
+    /**
+     * value: "download"
+     * @const
+     */
+    "download": "download",
+    /**
+     * value: "delete"
+     * @const
+     */
+    "delete": "delete",
+    /**
+     * value: "all"
+     * @const
+     */
+    "all": "all" };
+exports.default = AddNotificationRequestBody;

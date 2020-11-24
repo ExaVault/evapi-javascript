@@ -21,13 +21,9 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _Body = require('../model/Body');
+var _AddEmailListRequestBody = require('../model/AddEmailListRequestBody');
 
-var _Body2 = _interopRequireDefault(_Body);
-
-var _Body3 = require('../model/Body1');
-
-var _Body4 = _interopRequireDefault(_Body3);
+var _AddEmailListRequestBody2 = _interopRequireDefault(_AddEmailListRequestBody);
 
 var _EmailListCollectionResponse = require('../model/EmailListCollectionResponse');
 
@@ -41,6 +37,10 @@ var _EmptyResponse = require('../model/EmptyResponse');
 
 var _EmptyResponse2 = _interopRequireDefault(_EmptyResponse);
 
+var _UpdateEmailListRequestBody = require('../model/UpdateEmailListRequestBody');
+
+var _UpdateEmailListRequestBody2 = _interopRequireDefault(_UpdateEmailListRequestBody);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -48,7 +48,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * EmailLists service.
 * @module api/EmailListsApi
-* @version 2.2.1
+* @version 2.2.2
 */
 var EmailListsApi = function () {
 
@@ -113,7 +113,7 @@ var EmailListsApi = function () {
 
     /**
      * Delete an email group with given id
-     * Permanently delete an email group. This action is not reversable. We recommend making a user confirm this action before sending the API call. 
+     * Permanently delete an email group. This action is not reversible. We recommend making a user confirm this action before sending the API call. 
      * @param {module:api/EmailListsApi~deleteEmailListByIdCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/EmptyResponse}
      */
@@ -150,7 +150,7 @@ var EmailListsApi = function () {
 
     /**
      * Get individual email group
-     * Retrieve all the details of a specifc email list including it&#x27;s name, when it was created and all the email addresses that belong to the group.
+     * Retrieve all the details of a specific email list including it&#x27;s name, when it was created and all the email addresses that belong to the group.
      * @param {Object} opts Optional parameters
      * @param {module:api/EmailListsApi~getEmailListByIdCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/EmailListResponse}
@@ -191,6 +191,7 @@ var EmailListsApi = function () {
 
     /**
      * Get all email groups
+     * List all email groups for authenticated user
      * @param {Object} opts Optional parameters
      * @param {module:api/EmailListsApi~getEmailListsCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/EmailListCollectionResponse}

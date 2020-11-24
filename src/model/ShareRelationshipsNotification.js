@@ -21,73 +21,61 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _ShareRelationshipsData = require('./ShareRelationshipsData');
+
+var _ShareRelationshipsData2 = _interopRequireDefault(_ShareRelationshipsData);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The Body model module.
-* @module model/Body
-* @version 2.2.1
+* The ShareRelationshipsNotification model module.
+* @module model/ShareRelationshipsNotification
+* @version 2.2.2
 */
-var Body = function () {
+var ShareRelationshipsNotification = function () {
     /**
-    * Constructs a new <code>Body</code>.
-    * @alias module:model/Body
+    * Constructs a new <code>ShareRelationshipsNotification</code>.
+    * @alias module:model/ShareRelationshipsNotification
     * @class
-    * @param name {String} Name of the email list. 
-    * @param emails {Array.<String>} Array of email addresses to include in the email list. 
     */
 
-    function Body(name, emails) {
-        _classCallCheck(this, Body);
+    function ShareRelationshipsNotification() {
+        _classCallCheck(this, ShareRelationshipsNotification);
 
-        this['name'] = undefined;
-        this['emails'] = undefined;
-
-
-        this['name'] = name;
-        this['emails'] = emails;
+        this['data'] = undefined;
     }
 
     /**
-    * Constructs a <code>Body</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>ShareRelationshipsNotification</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/Body} obj Optional instance to populate.
-    * @return {module:model/Body} The populated <code>Body</code> instance.
+    * @param {module:model/ShareRelationshipsNotification} obj Optional instance to populate.
+    * @return {module:model/ShareRelationshipsNotification} The populated <code>ShareRelationshipsNotification</code> instance.
     */
 
 
-    _createClass(Body, null, [{
+    _createClass(ShareRelationshipsNotification, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new Body();
+                obj = obj || new ShareRelationshipsNotification();
 
-                if (data.hasOwnProperty('name')) {
-                    obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
-                }
-                if (data.hasOwnProperty('emails')) {
-                    obj['emails'] = _ApiClient2.default.convertToType(data['emails'], ['String']);
+                if (data.hasOwnProperty('data')) {
+                    obj['data'] = _ShareRelationshipsData2.default.constructFromObject(data['data']);
                 }
             }
             return obj;
         }
 
         /**
-        * Name of the email list. 
-        * @member {String} name
-        */
-
-        /**
-        * Array of email addresses to include in the email list. 
-        * @member {Array.<String>} emails
+        * @member {module:model/ShareRelationshipsData} data
         */
 
     }]);
 
-    return Body;
+    return ShareRelationshipsNotification;
 }();
 
-exports.default = Body;
+exports.default = ShareRelationshipsNotification;

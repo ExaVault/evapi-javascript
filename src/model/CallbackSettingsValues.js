@@ -21,57 +21,69 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _CallbackSettingsValuesTriggers = require('./CallbackSettingsValuesTriggers');
+
+var _CallbackSettingsValuesTriggers2 = _interopRequireDefault(_CallbackSettingsValuesTriggers);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The Body14 model module.
-* @module model/Body14
-* @version 2.2.1
+* The CallbackSettingsValues model module.
+* @module model/CallbackSettingsValues
+* @version 2.2.2
 */
-var Body14 = function () {
+var CallbackSettingsValues = function () {
     /**
-    * Constructs a new <code>Body14</code>.
-    * @alias module:model/Body14
+    * Constructs a new <code>CallbackSettingsValues</code>.
+    * @alias module:model/CallbackSettingsValues
     * @class
     */
 
-    function Body14() {
-        _classCallCheck(this, Body14);
+    function CallbackSettingsValues() {
+        _classCallCheck(this, CallbackSettingsValues);
 
-        this['file'] = undefined;
+        this['endpointUrl'] = undefined;
+        this['triggers'] = undefined;
     }
 
     /**
-    * Constructs a <code>Body14</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>CallbackSettingsValues</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/Body14} obj Optional instance to populate.
-    * @return {module:model/Body14} The populated <code>Body14</code> instance.
+    * @param {module:model/CallbackSettingsValues} obj Optional instance to populate.
+    * @return {module:model/CallbackSettingsValues} The populated <code>CallbackSettingsValues</code> instance.
     */
 
 
-    _createClass(Body14, null, [{
+    _createClass(CallbackSettingsValues, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new Body14();
+                obj = obj || new CallbackSettingsValues();
 
-                if (data.hasOwnProperty('file')) {
-                    obj['file'] = _ApiClient2.default.convertToType(data['file'], File);
+                if (data.hasOwnProperty('endpointUrl')) {
+                    obj['endpointUrl'] = _ApiClient2.default.convertToType(data['endpointUrl'], 'String');
+                }
+                if (data.hasOwnProperty('triggers')) {
+                    obj['triggers'] = _CallbackSettingsValuesTriggers2.default.constructFromObject(data['triggers']);
                 }
             }
             return obj;
         }
 
         /**
-        * @member {File} file
+        * @member {String} endpointUrl
+        */
+
+        /**
+        * @member {module:model/CallbackSettingsValuesTriggers} triggers
         */
 
     }]);
 
-    return Body14;
+    return CallbackSettingsValues;
 }();
 
-exports.default = Body14;
+exports.default = CallbackSettingsValues;

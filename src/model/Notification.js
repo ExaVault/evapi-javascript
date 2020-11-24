@@ -36,7 +36,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The Notification model module.
 * @module model/Notification
-* @version 2.2.1
+* @version 2.2.2
 */
 var Notification = function () {
     /**

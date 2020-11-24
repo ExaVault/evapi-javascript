@@ -26,40 +26,40 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The Body7 model module.
-* @module model/Body7
-* @version 2.2.1
+* The UpdateResourceByIdRequestBody model module.
+* @module model/UpdateResourceByIdRequestBody
+* @version 2.2.2
 */
-var Body7 = function () {
+var UpdateResourceByIdRequestBody = function () {
     /**
-    * Constructs a new <code>Body7</code>.
-    * @alias module:model/Body7
+    * Constructs a new <code>UpdateResourceByIdRequestBody</code>.
+    * @alias module:model/UpdateResourceByIdRequestBody
     * @class
     */
 
-    function Body7() {
-        _classCallCheck(this, Body7);
+    function UpdateResourceByIdRequestBody() {
+        _classCallCheck(this, UpdateResourceByIdRequestBody);
 
-        this['newName'] = undefined;
+        this['name'] = undefined;
     }
 
     /**
-    * Constructs a <code>Body7</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>UpdateResourceByIdRequestBody</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/Body7} obj Optional instance to populate.
-    * @return {module:model/Body7} The populated <code>Body7</code> instance.
+    * @param {module:model/UpdateResourceByIdRequestBody} obj Optional instance to populate.
+    * @return {module:model/UpdateResourceByIdRequestBody} The populated <code>UpdateResourceByIdRequestBody</code> instance.
     */
 
 
-    _createClass(Body7, null, [{
+    _createClass(UpdateResourceByIdRequestBody, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new Body7();
+                obj = obj || new UpdateResourceByIdRequestBody();
 
-                if (data.hasOwnProperty('newName')) {
-                    obj['newName'] = _ApiClient2.default.convertToType(data['newName'], 'String');
+                if (data.hasOwnProperty('name')) {
+                    obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
                 }
             }
             return obj;
@@ -67,12 +67,12 @@ var Body7 = function () {
 
         /**
         * The new name for the resource (file or folder).
-        * @member {String} newName
+        * @member {String} name
         */
 
     }]);
 
-    return Body7;
+    return UpdateResourceByIdRequestBody;
 }();
 
-exports.default = Body7;
+exports.default = UpdateResourceByIdRequestBody;

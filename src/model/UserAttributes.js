@@ -32,7 +32,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The UserAttributes model module.
 * @module model/UserAttributes
-* @version 2.2.1
+* @version 2.2.2
 */
 var UserAttributes = function () {
     /**
@@ -46,17 +46,17 @@ var UserAttributes = function () {
     * @param accountName {String} Name of the account this user belongs to.
     * @param username {String} Username of the user.
     * @param nickname {String} Nickname of the user.
-    * @param homeDir {String} Path to the user's home folder.
     * @param permissions {module:model/UserPermissions} 
     * @param role {module:model/UserAttributes.RoleEnum} User's access level
     * @param timeZone {String} User's timezone. See <a href='https://php.net/manual/en/timezones.php' target='blank'>this page</a> for allowed values.
     * @param onboarding {Boolean} Whether the onboarding help system is enabled for this user. `true` means that additional help popups are displayed in the web application for this user.
     */
 
-    function UserAttributes(status, created, modified, accountName, username, nickname, homeDir, permissions, role, timeZone, onboarding) {
+    function UserAttributes(status, created, modified, accountName, username, nickname, permissions, role, timeZone, onboarding) {
         _classCallCheck(this, UserAttributes);
 
         this['status'] = undefined;
+        this['locked'] = undefined;
         this['expiration'] = undefined;
         this['created'] = undefined;
         this['modified'] = undefined;
@@ -65,7 +65,7 @@ var UserAttributes = function () {
         this['username'] = undefined;
         this['nickname'] = undefined;
         this['email'] = undefined;
-        this['homeDir'] = undefined;
+        this['homePath'] = undefined;
         this['permissions'] = undefined;
         this['role'] = undefined;
         this['timeZone'] = undefined;
@@ -79,7 +79,6 @@ var UserAttributes = function () {
         this['accountName'] = accountName;
         this['username'] = username;
         this['nickname'] = nickname;
-        this['homeDir'] = homeDir;
         this['permissions'] = permissions;
         this['role'] = role;
         this['timeZone'] = timeZone;
@@ -103,6 +102,9 @@ var UserAttributes = function () {
 
                 if (data.hasOwnProperty('status')) {
                     obj['status'] = _ApiClient2.default.convertToType(data['status'], 'Number');
+                }
+                if (data.hasOwnProperty('locked')) {
+                    obj['locked'] = _ApiClient2.default.convertToType(data['locked'], 'Boolean');
                 }
                 if (data.hasOwnProperty('expiration')) {
                     obj['expiration'] = _ApiClient2.default.convertToType(data['expiration'], 'String');
@@ -128,8 +130,8 @@ var UserAttributes = function () {
                 if (data.hasOwnProperty('email')) {
                     obj['email'] = _ApiClient2.default.convertToType(data['email'], 'String');
                 }
-                if (data.hasOwnProperty('homeDir')) {
-                    obj['homeDir'] = _ApiClient2.default.convertToType(data['homeDir'], 'String');
+                if (data.hasOwnProperty('homePath')) {
+                    obj['homePath'] = _ApiClient2.default.convertToType(data['homePath'], 'String');
                 }
                 if (data.hasOwnProperty('permissions')) {
                     obj['permissions'] = _UserPermissions2.default.constructFromObject(data['permissions']);
@@ -153,6 +155,11 @@ var UserAttributes = function () {
         /**
         * Indicates user activity status. `0` means the user is locked and cannot log in. `1` means the user is active and can log in.
         * @member {module:model/UserAttributes.StatusEnum} status
+        */
+
+        /**
+        * `true` if the user is locked and cannot log in.
+        * @member {Boolean} locked
         */
 
         /**
@@ -197,7 +204,7 @@ var UserAttributes = function () {
 
         /**
         * Path to the user's home folder.
-        * @member {String} homeDir
+        * @member {String} homePath
         */
 
         /**

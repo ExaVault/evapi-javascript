@@ -21,73 +21,61 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _ShareMessageData = require('./ShareMessageData');
+
+var _ShareMessageData2 = _interopRequireDefault(_ShareMessageData);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The Body13 model module.
-* @module model/Body13
-* @version 2.2.1
+* The ShareRelationshipsMessage model module.
+* @module model/ShareRelationshipsMessage
+* @version 2.2.2
 */
-var Body13 = function () {
+var ShareRelationshipsMessage = function () {
     /**
-    * Constructs a new <code>Body13</code>.
-    * @alias module:model/Body13
+    * Constructs a new <code>ShareRelationshipsMessage</code>.
+    * @alias module:model/ShareRelationshipsMessage
     * @class
-    * @param resources {Array.<String>} Array containing file/folder paths to move.
-    * @param parentResource {String} Remote destination path to move files/folders to.
     */
 
-    function Body13(resources, parentResource) {
-        _classCallCheck(this, Body13);
+    function ShareRelationshipsMessage() {
+        _classCallCheck(this, ShareRelationshipsMessage);
 
-        this['resources'] = undefined;
-        this['parentResource'] = undefined;
-
-
-        this['resources'] = resources;
-        this['parentResource'] = parentResource;
+        this['data'] = undefined;
     }
 
     /**
-    * Constructs a <code>Body13</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>ShareRelationshipsMessage</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/Body13} obj Optional instance to populate.
-    * @return {module:model/Body13} The populated <code>Body13</code> instance.
+    * @param {module:model/ShareRelationshipsMessage} obj Optional instance to populate.
+    * @return {module:model/ShareRelationshipsMessage} The populated <code>ShareRelationshipsMessage</code> instance.
     */
 
 
-    _createClass(Body13, null, [{
+    _createClass(ShareRelationshipsMessage, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new Body13();
+                obj = obj || new ShareRelationshipsMessage();
 
-                if (data.hasOwnProperty('resources')) {
-                    obj['resources'] = _ApiClient2.default.convertToType(data['resources'], ['String']);
-                }
-                if (data.hasOwnProperty('parentResource')) {
-                    obj['parentResource'] = _ApiClient2.default.convertToType(data['parentResource'], 'String');
+                if (data.hasOwnProperty('data')) {
+                    obj['data'] = _ShareMessageData2.default.constructFromObject(data['data']);
                 }
             }
             return obj;
         }
 
         /**
-        * Array containing file/folder paths to move.
-        * @member {Array.<String>} resources
-        */
-
-        /**
-        * Remote destination path to move files/folders to.
-        * @member {String} parentResource
+        * @member {module:model/ShareMessageData} data
         */
 
     }]);
 
-    return Body13;
+    return ShareRelationshipsMessage;
 }();
 
-exports.default = Body13;
+exports.default = ShareRelationshipsMessage;

@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The FormRelationshipsShareData model module.
 * @module model/FormRelationshipsShareData
-* @version 2.2.1
+* @version 2.2.2
 */
 var FormRelationshipsShareData = function () {
     /**

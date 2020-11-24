@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The ShareRelationshipsData model module.
 * @module model/ShareRelationshipsData
-* @version 2.2.1
+* @version 2.2.2
 */
 var ShareRelationshipsData = function () {
     /**
@@ -70,12 +70,12 @@ var ShareRelationshipsData = function () {
         }
 
         /**
-        * Type is message. 
+        * Type is notification. 
         * @member {module:model/ShareRelationshipsData.TypeEnum} type
         */
 
         /**
-        * ID of the message.
+        * ID of the notification. 
         * @member {Number} id
         */
 
@@ -93,8 +93,8 @@ var ShareRelationshipsData = function () {
 
 ShareRelationshipsData.TypeEnum = {
     /**
-     * value: "message"
+     * value: "notification"
      * @const
      */
-    "message": "message" };
+    "notification": "notification" };
 exports.default = ShareRelationshipsData;

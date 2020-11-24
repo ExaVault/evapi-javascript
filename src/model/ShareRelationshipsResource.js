@@ -21,73 +21,61 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _ShareResourceData = require('./ShareResourceData');
+
+var _ShareResourceData2 = _interopRequireDefault(_ShareResourceData);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The Error401Errors model module.
-* @module model/Error401Errors
-* @version 2.2.1
+* The ShareRelationshipsResource model module.
+* @module model/ShareRelationshipsResource
+* @version 2.2.2
 */
-var Error401Errors = function () {
+var ShareRelationshipsResource = function () {
     /**
-    * Constructs a new <code>Error401Errors</code>.
-    * @alias module:model/Error401Errors
+    * Constructs a new <code>ShareRelationshipsResource</code>.
+    * @alias module:model/ShareRelationshipsResource
     * @class
-    * @param code {String} Error Code
-    * @param detail {String} Additional Details
     */
 
-    function Error401Errors(code, detail) {
-        _classCallCheck(this, Error401Errors);
+    function ShareRelationshipsResource() {
+        _classCallCheck(this, ShareRelationshipsResource);
 
-        this['code'] = undefined;
-        this['detail'] = undefined;
-
-
-        this['code'] = code;
-        this['detail'] = detail;
+        this['data'] = undefined;
     }
 
     /**
-    * Constructs a <code>Error401Errors</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>ShareRelationshipsResource</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/Error401Errors} obj Optional instance to populate.
-    * @return {module:model/Error401Errors} The populated <code>Error401Errors</code> instance.
+    * @param {module:model/ShareRelationshipsResource} obj Optional instance to populate.
+    * @return {module:model/ShareRelationshipsResource} The populated <code>ShareRelationshipsResource</code> instance.
     */
 
 
-    _createClass(Error401Errors, null, [{
+    _createClass(ShareRelationshipsResource, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new Error401Errors();
+                obj = obj || new ShareRelationshipsResource();
 
-                if (data.hasOwnProperty('code')) {
-                    obj['code'] = _ApiClient2.default.convertToType(data['code'], 'String');
-                }
-                if (data.hasOwnProperty('detail')) {
-                    obj['detail'] = _ApiClient2.default.convertToType(data['detail'], 'String');
+                if (data.hasOwnProperty('data')) {
+                    obj['data'] = _ShareResourceData2.default.constructFromObject(data['data']);
                 }
             }
             return obj;
         }
 
         /**
-        * Error Code
-        * @member {String} code
-        */
-
-        /**
-        * Additional Details
-        * @member {String} detail
+        * @member {module:model/ShareResourceData} data
         */
 
     }]);
 
-    return Error401Errors;
+    return ShareRelationshipsResource;
 }();
 
-exports.default = Error401Errors;
+exports.default = ShareRelationshipsResource;

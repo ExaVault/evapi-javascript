@@ -21,69 +21,130 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _CallbackSettings1Triggers = require('./CallbackSettings1Triggers');
-
-var _CallbackSettings1Triggers2 = _interopRequireDefault(_CallbackSettings1Triggers);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The CallbackSettings1 model module.
-* @module model/CallbackSettings1
-* @version 2.2.1
+* The UsersPermissions model module.
+* @module model/UsersPermissions
+* @version 2.2.2
 */
-var CallbackSettings1 = function () {
+var UsersPermissions = function () {
     /**
-    * Constructs a new <code>CallbackSettings1</code>.
-    * @alias module:model/CallbackSettings1
+    * Constructs a new <code>UsersPermissions</code>.
+    * An object containing name/value pairs for each permission. Any permission that is not passed will be set to &#x60;false&#x60; by default. Note that users will be unable to see any files in the account unless you include &#x60;list&#x60; permission.
+    * @alias module:model/UsersPermissions
     * @class
     */
 
-    function CallbackSettings1() {
-        _classCallCheck(this, CallbackSettings1);
+    function UsersPermissions() {
+        _classCallCheck(this, UsersPermissions);
 
-        this['endpointUrl'] = undefined;
-        this['triggers'] = undefined;
+        this['list'] = undefined;
+        this['download'] = undefined;
+        this['upload'] = undefined;
+        this['modify'] = undefined;
+        this['delete'] = undefined;
+        this['changePassword'] = undefined;
+        this['share'] = undefined;
+        this['notification'] = undefined;
+        this['viewFormData'] = undefined;
+        this['deleteFormData'] = undefined;
     }
 
     /**
-    * Constructs a <code>CallbackSettings1</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>UsersPermissions</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/CallbackSettings1} obj Optional instance to populate.
-    * @return {module:model/CallbackSettings1} The populated <code>CallbackSettings1</code> instance.
+    * @param {module:model/UsersPermissions} obj Optional instance to populate.
+    * @return {module:model/UsersPermissions} The populated <code>UsersPermissions</code> instance.
     */
 
 
-    _createClass(CallbackSettings1, null, [{
+    _createClass(UsersPermissions, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new CallbackSettings1();
+                obj = obj || new UsersPermissions();
 
-                if (data.hasOwnProperty('endpointUrl')) {
-                    obj['endpointUrl'] = _ApiClient2.default.convertToType(data['endpointUrl'], 'String');
+                if (data.hasOwnProperty('list')) {
+                    obj['list'] = _ApiClient2.default.convertToType(data['list'], 'Boolean');
                 }
-                if (data.hasOwnProperty('triggers')) {
-                    obj['triggers'] = _CallbackSettings1Triggers2.default.constructFromObject(data['triggers']);
+                if (data.hasOwnProperty('download')) {
+                    obj['download'] = _ApiClient2.default.convertToType(data['download'], 'Boolean');
+                }
+                if (data.hasOwnProperty('upload')) {
+                    obj['upload'] = _ApiClient2.default.convertToType(data['upload'], 'Boolean');
+                }
+                if (data.hasOwnProperty('modify')) {
+                    obj['modify'] = _ApiClient2.default.convertToType(data['modify'], 'Boolean');
+                }
+                if (data.hasOwnProperty('delete')) {
+                    obj['delete'] = _ApiClient2.default.convertToType(data['delete'], 'Boolean');
+                }
+                if (data.hasOwnProperty('changePassword')) {
+                    obj['changePassword'] = _ApiClient2.default.convertToType(data['changePassword'], 'Boolean');
+                }
+                if (data.hasOwnProperty('share')) {
+                    obj['share'] = _ApiClient2.default.convertToType(data['share'], 'Boolean');
+                }
+                if (data.hasOwnProperty('notification')) {
+                    obj['notification'] = _ApiClient2.default.convertToType(data['notification'], 'Boolean');
+                }
+                if (data.hasOwnProperty('viewFormData')) {
+                    obj['viewFormData'] = _ApiClient2.default.convertToType(data['viewFormData'], 'Boolean');
+                }
+                if (data.hasOwnProperty('deleteFormData')) {
+                    obj['deleteFormData'] = _ApiClient2.default.convertToType(data['deleteFormData'], 'Boolean');
                 }
             }
             return obj;
         }
 
         /**
-        * @member {String} endpointUrl
+        * @member {Boolean} list
         */
 
         /**
-        * @member {module:model/CallbackSettings1Triggers} triggers
+        * @member {Boolean} download
+        */
+
+        /**
+        * @member {Boolean} upload
+        */
+
+        /**
+        * @member {Boolean} modify
+        */
+
+        /**
+        * @member {Boolean} delete
+        */
+
+        /**
+        * @member {Boolean} changePassword
+        */
+
+        /**
+        * @member {Boolean} share
+        */
+
+        /**
+        * @member {Boolean} notification
+        */
+
+        /**
+        * @member {Boolean} viewFormData
+        */
+
+        /**
+        * @member {Boolean} deleteFormData
         */
 
     }]);
 
-    return CallbackSettings1;
+    return UsersPermissions;
 }();
 
-exports.default = CallbackSettings1;
+exports.default = UsersPermissions;

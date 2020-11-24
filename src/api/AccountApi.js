@@ -25,9 +25,9 @@ var _AccountResponse = require('../model/AccountResponse');
 
 var _AccountResponse2 = _interopRequireDefault(_AccountResponse);
 
-var _UpdateAccountBody = require('../model/UpdateAccountBody');
+var _UpdateAccountRequestBody = require('../model/UpdateAccountRequestBody');
 
-var _UpdateAccountBody2 = _interopRequireDefault(_UpdateAccountBody);
+var _UpdateAccountRequestBody2 = _interopRequireDefault(_UpdateAccountRequestBody);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -36,7 +36,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * Account service.
 * @module api/AccountApi
-* @version 2.2.1
+* @version 2.2.2
 */
 var AccountApi = function () {
 
@@ -63,7 +63,7 @@ var AccountApi = function () {
 
   /**
    * Get account settings
-   * Get setttings for your account, such as current space usage, webhooks settings, welcome email content and IP address restrictions.
+   * Get settings for your account, such as current space usage, webhooks settings, welcome email content and IP address restrictions.
    * @param {Object} opts Optional parameters
    * @param {module:api/AccountApi~getAccountCallback} callback The callback function, accepting three arguments: error, data, response
    * data is of type: {@link module:model/AccountResponse}

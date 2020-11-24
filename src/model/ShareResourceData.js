@@ -21,74 +21,80 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _Error401Errors = require('./Error401Errors');
-
-var _Error401Errors2 = _interopRequireDefault(_Error401Errors);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The Error401 model module.
-* @module model/Error401
-* @version 2.2.1
+* The ShareResourceData model module.
+* @module model/ShareResourceData
+* @version 2.2.2
 */
-var Error401 = function () {
+var ShareResourceData = function () {
     /**
-    * Constructs a new <code>Error401</code>.
-    * @alias module:model/Error401
+    * Constructs a new <code>ShareResourceData</code>.
+    * @alias module:model/ShareResourceData
     * @class
-    * @param responseStatus {Number} HTTP Status Code
     */
 
-    function Error401(responseStatus) {
-        _classCallCheck(this, Error401);
+    function ShareResourceData() {
+        _classCallCheck(this, ShareResourceData);
 
-        this['responseStatus'] = undefined;
-        this['errors'] = undefined;
-
-
-        this['responseStatus'] = responseStatus;
+        this['type'] = undefined;
+        this['id'] = undefined;
     }
 
     /**
-    * Constructs a <code>Error401</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>ShareResourceData</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/Error401} obj Optional instance to populate.
-    * @return {module:model/Error401} The populated <code>Error401</code> instance.
+    * @param {module:model/ShareResourceData} obj Optional instance to populate.
+    * @return {module:model/ShareResourceData} The populated <code>ShareResourceData</code> instance.
     */
 
 
-    _createClass(Error401, null, [{
+    _createClass(ShareResourceData, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new Error401();
+                obj = obj || new ShareResourceData();
 
-                if (data.hasOwnProperty('responseStatus')) {
-                    obj['responseStatus'] = _ApiClient2.default.convertToType(data['responseStatus'], 'Number');
+                if (data.hasOwnProperty('type')) {
+                    obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
                 }
-                if (data.hasOwnProperty('errors')) {
-                    obj['errors'] = _ApiClient2.default.convertToType(data['errors'], [_Error401Errors2.default]);
+                if (data.hasOwnProperty('id')) {
+                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'Number');
                 }
             }
             return obj;
         }
 
         /**
-        * HTTP Status Code
-        * @member {Number} responseStatus
+        * Type is resource. 
+        * @member {module:model/ShareResourceData.TypeEnum} type
         */
 
         /**
-        * @member {Array.<module:model/Error401Errors>} errors
+        * ID of the shared resource.
+        * @member {Number} id
+        */
+
+
+        /**
+        * Allowed values for the <code>type</code> property.
+        * @enum {String}
+        * @readonly
         */
 
     }]);
 
-    return Error401;
+    return ShareResourceData;
 }();
 
-exports.default = Error401;
+ShareResourceData.TypeEnum = {
+    /**
+     * value: "resource"
+     * @const
+     */
+    "resource": "resource" };
+exports.default = ShareResourceData;

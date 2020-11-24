@@ -32,7 +32,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The FormRelationships model module.
 * @module model/FormRelationships
-* @version 2.2.1
+* @version 2.2.2
 */
 var FormRelationships = function () {
     /**

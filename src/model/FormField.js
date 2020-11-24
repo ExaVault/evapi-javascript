@@ -32,7 +32,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The FormField model module.
 * @module model/FormField
-* @version 2.2.1
+* @version 2.2.2
 */
 var FormField = function () {
     /**

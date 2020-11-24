@@ -32,12 +32,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The ResourceCopyMove model module.
 * @module model/ResourceCopyMove
-* @version 2.2.1
+* @version 2.2.2
 */
 var ResourceCopyMove = function () {
     /**
     * Constructs a new <code>ResourceCopyMove</code>.
-    * All properties of the resource delete object
+    * Resource which was successfully copied or moved.
     * @alias module:model/ResourceCopyMove
     * @class
     */
@@ -79,7 +79,7 @@ var ResourceCopyMove = function () {
         */
 
         /**
-        * Meta object containing non-standard meta-information about operation.
+        * Meta object containing non-standard meta-information about the operation.
         * @member {Object} meta
         */
 

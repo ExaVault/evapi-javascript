@@ -26,134 +26,68 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The ShareRecipient1 model module.
-* @module model/ShareRecipient1
-* @version 2.2.1
+* The CopyResourcesRequestBody model module.
+* @module model/CopyResourcesRequestBody
+* @version 2.2.2
 */
-var ShareRecipient1 = function () {
+var CopyResourcesRequestBody = function () {
     /**
-    * Constructs a new <code>ShareRecipient1</code>.
-    * @alias module:model/ShareRecipient1
+    * Constructs a new <code>CopyResourcesRequestBody</code>.
+    * @alias module:model/CopyResourcesRequestBody
     * @class
+    * @param resources {Array.<String>} Resource identifier(s) of items to be copied to a new location
+    * @param parentResource {String} Resource identifier for folder where items will be copied to.
     */
 
-    function ShareRecipient1() {
-        _classCallCheck(this, ShareRecipient1);
+    function CopyResourcesRequestBody(resources, parentResource) {
+        _classCallCheck(this, CopyResourcesRequestBody);
 
-        this['id'] = undefined;
-        this['shareId'] = undefined;
-        this['type'] = undefined;
-        this['hash'] = undefined;
-        this['email'] = undefined;
-        this['sent'] = undefined;
-        this['received'] = undefined;
-        this['created'] = undefined;
+        this['resources'] = undefined;
+        this['parentResource'] = undefined;
+
+
+        this['resources'] = resources;
+        this['parentResource'] = parentResource;
     }
 
     /**
-    * Constructs a <code>ShareRecipient1</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>CopyResourcesRequestBody</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/ShareRecipient1} obj Optional instance to populate.
-    * @return {module:model/ShareRecipient1} The populated <code>ShareRecipient1</code> instance.
+    * @param {module:model/CopyResourcesRequestBody} obj Optional instance to populate.
+    * @return {module:model/CopyResourcesRequestBody} The populated <code>CopyResourcesRequestBody</code> instance.
     */
 
 
-    _createClass(ShareRecipient1, null, [{
+    _createClass(CopyResourcesRequestBody, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new ShareRecipient1();
+                obj = obj || new CopyResourcesRequestBody();
 
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'Number');
+                if (data.hasOwnProperty('resources')) {
+                    obj['resources'] = _ApiClient2.default.convertToType(data['resources'], ['String']);
                 }
-                if (data.hasOwnProperty('shareId')) {
-                    obj['shareId'] = _ApiClient2.default.convertToType(data['shareId'], 'String');
-                }
-                if (data.hasOwnProperty('type')) {
-                    obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
-                }
-                if (data.hasOwnProperty('hash')) {
-                    obj['hash'] = _ApiClient2.default.convertToType(data['hash'], 'String');
-                }
-                if (data.hasOwnProperty('email')) {
-                    obj['email'] = _ApiClient2.default.convertToType(data['email'], 'String');
-                }
-                if (data.hasOwnProperty('sent')) {
-                    obj['sent'] = _ApiClient2.default.convertToType(data['sent'], 'Boolean');
-                }
-                if (data.hasOwnProperty('received')) {
-                    obj['received'] = _ApiClient2.default.convertToType(data['received'], 'Boolean');
-                }
-                if (data.hasOwnProperty('created')) {
-                    obj['created'] = _ApiClient2.default.convertToType(data['created'], 'Date');
+                if (data.hasOwnProperty('parentResource')) {
+                    obj['parentResource'] = _ApiClient2.default.convertToType(data['parentResource'], 'String');
                 }
             }
             return obj;
         }
 
         /**
-        * ID of the recipient.
-        * @member {Number} id
+        * Resource identifier(s) of items to be copied to a new location
+        * @member {Array.<String>} resources
         */
 
         /**
-        * ID of the share that the recipoient belongs to.
-        * @member {String} shareId
-        */
-
-        /**
-        * Type of the recipient.
-        * @member {module:model/ShareRecipient1.TypeEnum} type
-        */
-
-        /**
-        * Share hash.
-        * @member {String} hash
-        */
-
-        /**
-        * Recipient email address.
-        * @member {String} email
-        */
-
-        /**
-        * Set to true if invite email was sent; false otherwise.
-        * @member {Boolean} sent
-        */
-
-        /**
-        * Set to true if recipient has accessed the share. Note this is set to true when the recipient clicks the link to access the share; not when they download a file.
-        * @member {Boolean} received
-        */
-
-        /**
-        * Timestamp of adding recipient to the share.
-        * @member {Date} created
-        */
-
-
-        /**
-        * Allowed values for the <code>type</code> property.
-        * @enum {String}
-        * @readonly
+        * Resource identifier for folder where items will be copied to.
+        * @member {String} parentResource
         */
 
     }]);
 
-    return ShareRecipient1;
+    return CopyResourcesRequestBody;
 }();
 
-ShareRecipient1.TypeEnum = {
-    /**
-     * value: "owner"
-     * @const
-     */
-    "owner": "owner",
-    /**
-     * value: "direct"
-     * @const
-     */
-    "direct": "direct" };
-exports.default = ShareRecipient1;
+exports.default = CopyResourcesRequestBody;

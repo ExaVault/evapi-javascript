@@ -26,71 +26,62 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The Body8 model module.
-* @module model/Body8
-* @version 2.2.1
+* The UpdateEmailListRequestBody model module.
+* @module model/UpdateEmailListRequestBody
+* @version 2.2.2
 */
-var Body8 = function () {
+var UpdateEmailListRequestBody = function () {
     /**
-    * Constructs a new <code>Body8</code>.
-    * @alias module:model/Body8
+    * Constructs a new <code>UpdateEmailListRequestBody</code>.
+    * @alias module:model/UpdateEmailListRequestBody
     * @class
     */
 
-    function Body8() {
-        _classCallCheck(this, Body8);
+    function UpdateEmailListRequestBody() {
+        _classCallCheck(this, UpdateEmailListRequestBody);
 
-        this['path'] = undefined;
-        this['folderName'] = undefined;
-        this['parentResource'] = undefined;
+        this['name'] = undefined;
+        this['emails'] = undefined;
     }
 
     /**
-    * Constructs a <code>Body8</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>UpdateEmailListRequestBody</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/Body8} obj Optional instance to populate.
-    * @return {module:model/Body8} The populated <code>Body8</code> instance.
+    * @param {module:model/UpdateEmailListRequestBody} obj Optional instance to populate.
+    * @return {module:model/UpdateEmailListRequestBody} The populated <code>UpdateEmailListRequestBody</code> instance.
     */
 
 
-    _createClass(Body8, null, [{
+    _createClass(UpdateEmailListRequestBody, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new Body8();
+                obj = obj || new UpdateEmailListRequestBody();
 
-                if (data.hasOwnProperty('path')) {
-                    obj['path'] = _ApiClient2.default.convertToType(data['path'], 'String');
+                if (data.hasOwnProperty('name')) {
+                    obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
                 }
-                if (data.hasOwnProperty('folderName')) {
-                    obj['folderName'] = _ApiClient2.default.convertToType(data['folderName'], 'String');
-                }
-                if (data.hasOwnProperty('parentResource')) {
-                    obj['parentResource'] = _ApiClient2.default.convertToType(data['parentResource'], 'String');
+                if (data.hasOwnProperty('emails')) {
+                    obj['emails'] = _ApiClient2.default.convertToType(data['emails'], ['String']);
                 }
             }
             return obj;
         }
 
         /**
-        * Path to the newly created folder including new ame
-        * @member {String} path
+        * Name of the email list.
+        * @member {String} name
         */
 
         /**
-        * Name of the folder to create. Required if **path** is not used
-        * @member {String} folderName
-        */
-
-        /**
-        * Resource identifier where to create a folder. Required if **path** is not used
-        * @member {String} parentResource
+        * Email addresses that replace existing list.
+        * @member {Array.<String>} emails
         */
 
     }]);
 
-    return Body8;
+    return UpdateEmailListRequestBody;
 }();
 
-exports.default = Body8;
+exports.default = UpdateEmailListRequestBody;

@@ -26,68 +26,81 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The Body12 model module.
-* @module model/Body12
-* @version 2.2.1
+* The AccessMode model module.
+* @module model/AccessMode
+* @version 2.2.2
 */
-var Body12 = function () {
+var AccessMode = function () {
     /**
-    * Constructs a new <code>Body12</code>.
-    * @alias module:model/Body12
+    * Constructs a new <code>AccessMode</code>.
+    * An object defining what a not-logged-in visitor can do with the share contents
+    * @alias module:model/AccessMode
     * @class
-    * @param resources {Array.<String>} Resource identifier(s) of items to be copied to a new location
-    * @param parentResource {String} Resource identifier for folder where items will be copied to.
     */
 
-    function Body12(resources, parentResource) {
-        _classCallCheck(this, Body12);
+    function AccessMode() {
+        _classCallCheck(this, AccessMode);
 
-        this['resources'] = undefined;
-        this['parentResource'] = undefined;
-
-
-        this['resources'] = resources;
-        this['parentResource'] = parentResource;
+        this['download'] = undefined;
+        this['upload'] = undefined;
+        this['modify'] = undefined;
+        this['delete'] = undefined;
     }
 
     /**
-    * Constructs a <code>Body12</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>AccessMode</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/Body12} obj Optional instance to populate.
-    * @return {module:model/Body12} The populated <code>Body12</code> instance.
+    * @param {module:model/AccessMode} obj Optional instance to populate.
+    * @return {module:model/AccessMode} The populated <code>AccessMode</code> instance.
     */
 
 
-    _createClass(Body12, null, [{
+    _createClass(AccessMode, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new Body12();
+                obj = obj || new AccessMode();
 
-                if (data.hasOwnProperty('resources')) {
-                    obj['resources'] = _ApiClient2.default.convertToType(data['resources'], ['String']);
+                if (data.hasOwnProperty('download')) {
+                    obj['download'] = _ApiClient2.default.convertToType(data['download'], 'Boolean');
                 }
-                if (data.hasOwnProperty('parentResource')) {
-                    obj['parentResource'] = _ApiClient2.default.convertToType(data['parentResource'], 'String');
+                if (data.hasOwnProperty('upload')) {
+                    obj['upload'] = _ApiClient2.default.convertToType(data['upload'], 'Boolean');
+                }
+                if (data.hasOwnProperty('modify')) {
+                    obj['modify'] = _ApiClient2.default.convertToType(data['modify'], 'Boolean');
+                }
+                if (data.hasOwnProperty('delete')) {
+                    obj['delete'] = _ApiClient2.default.convertToType(data['delete'], 'Boolean');
                 }
             }
             return obj;
         }
 
         /**
-        * Resource identifier(s) of items to be copied to a new location
-        * @member {Array.<String>} resources
+        * Whether share allows visitors to download
+        * @member {Boolean} download
         */
 
         /**
-        * Resource identifier for folder where items will be copied to.
-        * @member {String} parentResource
+        * Whether share allows visitors to upload
+        * @member {Boolean} upload
+        */
+
+        /**
+        * Whether share allows visitors to rename or move contents.
+        * @member {Boolean} modify
+        */
+
+        /**
+        * Whether share allows visitors to delete contents
+        * @member {Boolean} delete
         */
 
     }]);
 
-    return Body12;
+    return AccessMode;
 }();
 
-exports.default = Body12;
+exports.default = AccessMode;

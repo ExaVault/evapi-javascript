@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The ResourceRelationshipsShareData model module.
 * @module model/ResourceRelationshipsShareData
-* @version 2.2.1
+* @version 2.2.2
 */
 var ResourceRelationshipsShareData = function () {
     /**

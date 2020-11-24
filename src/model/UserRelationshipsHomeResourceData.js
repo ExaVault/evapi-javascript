@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The UserRelationshipsHomeResourceData model module.
 * @module model/UserRelationshipsHomeResourceData
-* @version 2.2.1
+* @version 2.2.2
 */
 var UserRelationshipsHomeResourceData = function () {
     /**

@@ -21,169 +21,176 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _AccountAllowedIpRanges = require('./AccountAllowedIpRanges');
+
+var _AccountAllowedIpRanges2 = _interopRequireDefault(_AccountAllowedIpRanges);
+
+var _BrandingSettingsValues = require('./BrandingSettingsValues');
+
+var _BrandingSettingsValues2 = _interopRequireDefault(_BrandingSettingsValues);
+
+var _CallbackSettingsValues = require('./CallbackSettingsValues');
+
+var _CallbackSettingsValues2 = _interopRequireDefault(_CallbackSettingsValues);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The Body4 model module.
-* @module model/Body4
-* @version 2.2.1
+* The UpdateAccountRequestBody model module.
+* @module model/UpdateAccountRequestBody
+* @version 2.2.2
 */
-var Body4 = function () {
+var UpdateAccountRequestBody = function () {
     /**
-    * Constructs a new <code>Body4</code>.
-    * @alias module:model/Body4
+    * Constructs a new <code>UpdateAccountRequestBody</code>.
+    * @alias module:model/UpdateAccountRequestBody
     * @class
-    * @param type {module:model/Body4.TypeEnum} What kind of notification you're making. Valid choices are:  - **file** to monitor activity for a file resource - **folder** to monitor activity for a folder resource
-    * @param resource {String} Resources for this notification. See details on [how to specify resources](#section/Identifying-Resources) above.
-    * @param action {module:model/Body4.ActionEnum} Type of action be notified about. Notifications will only be fired for the given type of action. Valid choices are **upload**, **download**, **delete** or **all** (upload/download/delete)
-    * @param usernames {Array.<String>} Determines which users' actions should trigger the notification.   Rather than listing  individual users, you can also use 3 special options:  - **notice\\_user\\_all** for activity by any user or share recipient - **notice\\_user\\_all\\_users** for activity only by user accounts - **notice\\_user\\_all\\_recipient** for activity only by share recipients
-    * @param sendEmail {Boolean} Set to true if the user should be notified by email when the notification is triggered.
     */
 
-    function Body4(type, resource, action, usernames, sendEmail) {
-        _classCallCheck(this, Body4);
+    function UpdateAccountRequestBody() {
+        _classCallCheck(this, UpdateAccountRequestBody);
 
-        this['type'] = undefined;
-        this['resource'] = undefined;
-        this['action'] = undefined;
-        this['usernames'] = undefined;
-        this['sendEmail'] = undefined;
-        this['recipients'] = undefined;
-        this['message'] = undefined;
-
-
-        this['type'] = type;
-        this['resource'] = resource;
-        this['action'] = action;
-        this['usernames'] = usernames;
-        this['sendEmail'] = sendEmail;
+        this['quotaNoticeEnabled'] = undefined;
+        this['quotaNoticeThreshold'] = undefined;
+        this['secureOnly'] = undefined;
+        this['complexPasswords'] = undefined;
+        this['showReferralLinks'] = undefined;
+        this['externalDomain'] = undefined;
+        this['emailContent'] = undefined;
+        this['emailSubject'] = undefined;
+        this['allowedIpRanges'] = undefined;
+        this['callbackSettings'] = undefined;
+        this['brandingSettings'] = undefined;
+        this['accountOnboarding'] = undefined;
+        this['customSignature'] = undefined;
     }
 
     /**
-    * Constructs a <code>Body4</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>UpdateAccountRequestBody</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/Body4} obj Optional instance to populate.
-    * @return {module:model/Body4} The populated <code>Body4</code> instance.
+    * @param {module:model/UpdateAccountRequestBody} obj Optional instance to populate.
+    * @return {module:model/UpdateAccountRequestBody} The populated <code>UpdateAccountRequestBody</code> instance.
     */
 
 
-    _createClass(Body4, null, [{
+    _createClass(UpdateAccountRequestBody, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new Body4();
+                obj = obj || new UpdateAccountRequestBody();
 
-                if (data.hasOwnProperty('type')) {
-                    obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
+                if (data.hasOwnProperty('quotaNoticeEnabled')) {
+                    obj['quotaNoticeEnabled'] = _ApiClient2.default.convertToType(data['quotaNoticeEnabled'], 'Boolean');
                 }
-                if (data.hasOwnProperty('resource')) {
-                    obj['resource'] = _ApiClient2.default.convertToType(data['resource'], 'String');
+                if (data.hasOwnProperty('quotaNoticeThreshold')) {
+                    obj['quotaNoticeThreshold'] = _ApiClient2.default.convertToType(data['quotaNoticeThreshold'], 'Number');
                 }
-                if (data.hasOwnProperty('action')) {
-                    obj['action'] = _ApiClient2.default.convertToType(data['action'], 'String');
+                if (data.hasOwnProperty('secureOnly')) {
+                    obj['secureOnly'] = _ApiClient2.default.convertToType(data['secureOnly'], 'Boolean');
                 }
-                if (data.hasOwnProperty('usernames')) {
-                    obj['usernames'] = _ApiClient2.default.convertToType(data['usernames'], ['String']);
+                if (data.hasOwnProperty('complexPasswords')) {
+                    obj['complexPasswords'] = _ApiClient2.default.convertToType(data['complexPasswords'], 'Boolean');
                 }
-                if (data.hasOwnProperty('sendEmail')) {
-                    obj['sendEmail'] = _ApiClient2.default.convertToType(data['sendEmail'], 'Boolean');
+                if (data.hasOwnProperty('showReferralLinks')) {
+                    obj['showReferralLinks'] = _ApiClient2.default.convertToType(data['showReferralLinks'], 'Boolean');
                 }
-                if (data.hasOwnProperty('recipients')) {
-                    obj['recipients'] = _ApiClient2.default.convertToType(data['recipients'], ['String']);
+                if (data.hasOwnProperty('externalDomain')) {
+                    obj['externalDomain'] = _ApiClient2.default.convertToType(data['externalDomain'], 'String');
                 }
-                if (data.hasOwnProperty('message')) {
-                    obj['message'] = _ApiClient2.default.convertToType(data['message'], 'String');
+                if (data.hasOwnProperty('emailContent')) {
+                    obj['emailContent'] = _ApiClient2.default.convertToType(data['emailContent'], 'String');
+                }
+                if (data.hasOwnProperty('emailSubject')) {
+                    obj['emailSubject'] = _ApiClient2.default.convertToType(data['emailSubject'], 'String');
+                }
+                if (data.hasOwnProperty('allowedIpRanges')) {
+                    obj['allowedIpRanges'] = _ApiClient2.default.convertToType(data['allowedIpRanges'], [_AccountAllowedIpRanges2.default]);
+                }
+                if (data.hasOwnProperty('callbackSettings')) {
+                    obj['callbackSettings'] = _CallbackSettingsValues2.default.constructFromObject(data['callbackSettings']);
+                }
+                if (data.hasOwnProperty('brandingSettings')) {
+                    obj['brandingSettings'] = _BrandingSettingsValues2.default.constructFromObject(data['brandingSettings']);
+                }
+                if (data.hasOwnProperty('accountOnboarding')) {
+                    obj['accountOnboarding'] = _ApiClient2.default.convertToType(data['accountOnboarding'], 'Boolean');
+                }
+                if (data.hasOwnProperty('customSignature')) {
+                    obj['customSignature'] = _ApiClient2.default.convertToType(data['customSignature'], 'String');
                 }
             }
             return obj;
         }
 
         /**
-        * What kind of notification you're making. Valid choices are:  - **file** to monitor activity for a file resource - **folder** to monitor activity for a folder resource
-        * @member {module:model/Body4.TypeEnum} type
+        * Whether the system should email the account owner when usage exceeds quotaNoticeThreshold value
+        * @member {Boolean} quotaNoticeEnabled
         */
 
         /**
-        * Resources for this notification. See details on [how to specify resources](#section/Identifying-Resources) above.
-        * @member {String} resource
+        * Percent of account usage to trigger quota notices for.
+        * @member {Number} quotaNoticeThreshold
         */
 
         /**
-        * Type of action be notified about. Notifications will only be fired for the given type of action. Valid choices are **upload**, **download**, **delete** or **all** (upload/download/delete)
-        * @member {module:model/Body4.ActionEnum} action
+        * Whether unencrypted FTP connections should be denied for the account.
+        * @member {Boolean} secureOnly
         */
 
         /**
-        * Determines which users' actions should trigger the notification.   Rather than listing  individual users, you can also use 3 special options:  - **notice\\_user\\_all** for activity by any user or share recipient - **notice\\_user\\_all\\_users** for activity only by user accounts - **notice\\_user\\_all\\_recipient** for activity only by share recipients
-        * @member {Array.<String>} usernames
+        * Whether to require complex passwords for all passwords.
+        * @member {Boolean} complexPasswords
         */
 
         /**
-        * Set to true if the user should be notified by email when the notification is triggered.
-        * @member {Boolean} sendEmail
+        * Whether to display links for others to sign up on share views and invitation emails
+        * @member {Boolean} showReferralLinks
         */
 
         /**
-        * Email addresses to send notification emails to. If not specified, sends to the current user's email address.
-        * @member {Array.<String>} recipients
+        * Custom address used for web file manager. Not available for all account types.
+        * @member {String} externalDomain
         */
 
         /**
-        * Custom message to include in notification emails.
-        * @member {String} message
-        */
-
-
-        /**
-        * Allowed values for the <code>type</code> property.
-        * @enum {String}
-        * @readonly
+        * Content of welcome email template.
+        * @member {String} emailContent
         */
 
         /**
-        * Allowed values for the <code>action</code> property.
-        * @enum {String}
-        * @readonly
+        * Subject line for welcome emails
+        * @member {String} emailSubject
+        */
+
+        /**
+        * IP Address Ranges for restricting account access
+        * @member {Array.<module:model/AccountAllowedIpRanges>} allowedIpRanges
+        */
+
+        /**
+        * @member {module:model/CallbackSettingsValues} callbackSettings
+        */
+
+        /**
+        * @member {module:model/BrandingSettingsValues} brandingSettings
+        */
+
+        /**
+        * Whether extra help popups can be enabled for users in the web file manager.
+        * @member {Boolean} accountOnboarding
+        */
+
+        /**
+        * Signature to be automatically added to the bottom of emails generated by the account.
+        * @member {String} customSignature
         */
 
     }]);
 
-    return Body4;
+    return UpdateAccountRequestBody;
 }();
 
-Body4.TypeEnum = {
-    /**
-     * value: "file"
-     * @const
-     */
-    "file": "file",
-    /**
-     * value: "folder"
-     * @const
-     */
-    "folder": "folder" };
-Body4.ActionEnum = {
-    /**
-     * value: "upload"
-     * @const
-     */
-    "upload": "upload",
-    /**
-     * value: "download"
-     * @const
-     */
-    "download": "download",
-    /**
-     * value: "delete"
-     * @const
-     */
-    "delete": "delete",
-    /**
-     * value: "all"
-     * @const
-     */
-    "all": "all" };
-exports.default = Body4;
+exports.default = UpdateAccountRequestBody;

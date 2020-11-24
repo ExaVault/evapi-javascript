@@ -21,11 +21,15 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _AccessMode = require('./AccessMode');
+
+var _AccessMode2 = _interopRequireDefault(_AccessMode);
+
 var _ShareMessage = require('./ShareMessage');
 
 var _ShareMessage2 = _interopRequireDefault(_ShareMessage);
 
-var _ShareRecipient = require('./ShareRecipient1');
+var _ShareRecipient = require('./ShareRecipient');
 
 var _ShareRecipient2 = _interopRequireDefault(_ShareRecipient);
 
@@ -36,7 +40,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The ShareAttributes model module.
 * @module model/ShareAttributes
-* @version 2.2.1
+* @version 2.2.2
 */
 var ShareAttributes = function () {
     /**
@@ -100,7 +104,7 @@ var ShareAttributes = function () {
                     obj['public'] = _ApiClient2.default.convertToType(data['public'], 'Boolean');
                 }
                 if (data.hasOwnProperty('accessMode')) {
-                    obj['accessMode'] = _ApiClient2.default.convertToType(data['accessMode'], 'String');
+                    obj['accessMode'] = _AccessMode2.default.constructFromObject(data['accessMode']);
                 }
                 if (data.hasOwnProperty('accessDescription')) {
                     obj['accessDescription'] = _ApiClient2.default.convertToType(data['accessDescription'], 'String');
@@ -182,8 +186,7 @@ var ShareAttributes = function () {
         */
 
         /**
-        * Access rights for the share.
-        * @member {module:model/ShareAttributes.AccessModeEnum} accessMode
+        * @member {module:model/AccessMode} accessMode
         */
 
         /**
@@ -243,7 +246,7 @@ var ShareAttributes = function () {
 
         /**
         * Array of recipients.
-        * @member {Array.<module:model/ShareRecipient1>} recipients
+        * @member {Array.<module:model/ShareRecipient>} recipients
         */
 
         /**
@@ -277,7 +280,7 @@ var ShareAttributes = function () {
         */
 
         /**
-        * Checks recipient received status and returns whether it's been recevied (`complete`,) partial recevied (`incomplete`,) or not recevied yet (`pending`.)
+        * Checks recipient received status and returns whether it's been received (`complete`,) partial received (`incomplete`,) or not received yet (`pending`.)
         * @member {module:model/ShareAttributes.TrackingStatusEnum} trackingStatus
         */
 
@@ -286,12 +289,6 @@ var ShareAttributes = function () {
         * @member {Number} formId
         */
 
-
-        /**
-        * Allowed values for the <code>accessMode</code> property.
-        * @enum {String}
-        * @readonly
-        */
 
         /**
         * Allowed values for the <code>type</code> property.
@@ -316,27 +313,6 @@ var ShareAttributes = function () {
     return ShareAttributes;
 }();
 
-ShareAttributes.AccessModeEnum = {
-    /**
-     * value: "upload"
-     * @const
-     */
-    "upload": "upload",
-    /**
-     * value: "download"
-     * @const
-     */
-    "download": "download",
-    /**
-     * value: "download_upload"
-     * @const
-     */
-    "download_upload": "download_upload",
-    /**
-     * value: "download_upload_modify_delete"
-     * @const
-     */
-    "download_upload_modify_delete": "download_upload_modify_delete" };
 ShareAttributes.TypeEnum = {
     /**
      * value: "shared_folder"

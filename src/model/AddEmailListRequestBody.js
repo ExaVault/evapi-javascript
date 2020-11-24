@@ -21,176 +21,73 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _AccountAllowedIpRanges = require('./AccountAllowedIpRanges');
-
-var _AccountAllowedIpRanges2 = _interopRequireDefault(_AccountAllowedIpRanges);
-
-var _BrandingSettings = require('./BrandingSettings1');
-
-var _BrandingSettings2 = _interopRequireDefault(_BrandingSettings);
-
-var _CallbackSettings = require('./CallbackSettings1');
-
-var _CallbackSettings2 = _interopRequireDefault(_CallbackSettings);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The UpdateAccountBody model module.
-* @module model/UpdateAccountBody
-* @version 2.2.1
+* The AddEmailListRequestBody model module.
+* @module model/AddEmailListRequestBody
+* @version 2.2.2
 */
-var UpdateAccountBody = function () {
+var AddEmailListRequestBody = function () {
     /**
-    * Constructs a new <code>UpdateAccountBody</code>.
-    * @alias module:model/UpdateAccountBody
+    * Constructs a new <code>AddEmailListRequestBody</code>.
+    * @alias module:model/AddEmailListRequestBody
     * @class
+    * @param name {String} Name of the email list. 
+    * @param emails {Array.<String>} Array of email addresses to include in the email list. 
     */
 
-    function UpdateAccountBody() {
-        _classCallCheck(this, UpdateAccountBody);
+    function AddEmailListRequestBody(name, emails) {
+        _classCallCheck(this, AddEmailListRequestBody);
 
-        this['quotaNoticeEnabled'] = undefined;
-        this['quotaNoticeThreshold'] = undefined;
-        this['secureOnly'] = undefined;
-        this['complexPasswords'] = undefined;
-        this['showReferralLinks'] = undefined;
-        this['externalDomain'] = undefined;
-        this['emailContent'] = undefined;
-        this['emailSubject'] = undefined;
-        this['allowedIpRanges'] = undefined;
-        this['callbackSettings'] = undefined;
-        this['brandingSettings'] = undefined;
-        this['accountOnboarding'] = undefined;
-        this['customSignature'] = undefined;
+        this['name'] = undefined;
+        this['emails'] = undefined;
+
+
+        this['name'] = name;
+        this['emails'] = emails;
     }
 
     /**
-    * Constructs a <code>UpdateAccountBody</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>AddEmailListRequestBody</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/UpdateAccountBody} obj Optional instance to populate.
-    * @return {module:model/UpdateAccountBody} The populated <code>UpdateAccountBody</code> instance.
+    * @param {module:model/AddEmailListRequestBody} obj Optional instance to populate.
+    * @return {module:model/AddEmailListRequestBody} The populated <code>AddEmailListRequestBody</code> instance.
     */
 
 
-    _createClass(UpdateAccountBody, null, [{
+    _createClass(AddEmailListRequestBody, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new UpdateAccountBody();
+                obj = obj || new AddEmailListRequestBody();
 
-                if (data.hasOwnProperty('quotaNoticeEnabled')) {
-                    obj['quotaNoticeEnabled'] = _ApiClient2.default.convertToType(data['quotaNoticeEnabled'], 'Boolean');
+                if (data.hasOwnProperty('name')) {
+                    obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
                 }
-                if (data.hasOwnProperty('quotaNoticeThreshold')) {
-                    obj['quotaNoticeThreshold'] = _ApiClient2.default.convertToType(data['quotaNoticeThreshold'], 'Number');
-                }
-                if (data.hasOwnProperty('secureOnly')) {
-                    obj['secureOnly'] = _ApiClient2.default.convertToType(data['secureOnly'], 'Boolean');
-                }
-                if (data.hasOwnProperty('complexPasswords')) {
-                    obj['complexPasswords'] = _ApiClient2.default.convertToType(data['complexPasswords'], 'Boolean');
-                }
-                if (data.hasOwnProperty('showReferralLinks')) {
-                    obj['showReferralLinks'] = _ApiClient2.default.convertToType(data['showReferralLinks'], 'Boolean');
-                }
-                if (data.hasOwnProperty('externalDomain')) {
-                    obj['externalDomain'] = _ApiClient2.default.convertToType(data['externalDomain'], 'String');
-                }
-                if (data.hasOwnProperty('emailContent')) {
-                    obj['emailContent'] = _ApiClient2.default.convertToType(data['emailContent'], 'String');
-                }
-                if (data.hasOwnProperty('emailSubject')) {
-                    obj['emailSubject'] = _ApiClient2.default.convertToType(data['emailSubject'], 'String');
-                }
-                if (data.hasOwnProperty('allowedIpRanges')) {
-                    obj['allowedIpRanges'] = _ApiClient2.default.convertToType(data['allowedIpRanges'], [_AccountAllowedIpRanges2.default]);
-                }
-                if (data.hasOwnProperty('callbackSettings')) {
-                    obj['callbackSettings'] = _CallbackSettings2.default.constructFromObject(data['callbackSettings']);
-                }
-                if (data.hasOwnProperty('brandingSettings')) {
-                    obj['brandingSettings'] = _BrandingSettings2.default.constructFromObject(data['brandingSettings']);
-                }
-                if (data.hasOwnProperty('accountOnboarding')) {
-                    obj['accountOnboarding'] = _ApiClient2.default.convertToType(data['accountOnboarding'], 'Boolean');
-                }
-                if (data.hasOwnProperty('customSignature')) {
-                    obj['customSignature'] = _ApiClient2.default.convertToType(data['customSignature'], 'String');
+                if (data.hasOwnProperty('emails')) {
+                    obj['emails'] = _ApiClient2.default.convertToType(data['emails'], ['String']);
                 }
             }
             return obj;
         }
 
         /**
-        * Whether the system should email the account owner when usage exceeds quotaNoticeThreshold value
-        * @member {Boolean} quotaNoticeEnabled
+        * Name of the email list. 
+        * @member {String} name
         */
 
         /**
-        * Percent of account usage to trigger quota notices for.
-        * @member {Number} quotaNoticeThreshold
-        */
-
-        /**
-        * Whether unencrypted FTP connections should be denied for the account.
-        * @member {Boolean} secureOnly
-        */
-
-        /**
-        * Whether to require complex passwords for all passwords.
-        * @member {Boolean} complexPasswords
-        */
-
-        /**
-        * Whether to display links for others to sign up on share views and invitation emails
-        * @member {Boolean} showReferralLinks
-        */
-
-        /**
-        * Custom address used for web file manager. Not available for all account types.
-        * @member {String} externalDomain
-        */
-
-        /**
-        * Content of welcome email template.
-        * @member {String} emailContent
-        */
-
-        /**
-        * Subject line for welcome emails
-        * @member {String} emailSubject
-        */
-
-        /**
-        * IP Address Ranges for restricting account access
-        * @member {Array.<module:model/AccountAllowedIpRanges>} allowedIpRanges
-        */
-
-        /**
-        * @member {module:model/CallbackSettings1} callbackSettings
-        */
-
-        /**
-        * @member {module:model/BrandingSettings1} brandingSettings
-        */
-
-        /**
-        * Whether extra help popups can be enabled for users in the web file manager.
-        * @member {Boolean} accountOnboarding
-        */
-
-        /**
-        * Signature to be automatically added to the bottom of emails generated by the account.
-        * @member {String} customSignature
+        * Array of email addresses to include in the email list. 
+        * @member {Array.<String>} emails
         */
 
     }]);
 
-    return UpdateAccountBody;
+    return AddEmailListRequestBody;
 }();
 
-exports.default = UpdateAccountBody;
+exports.default = AddEmailListRequestBody;

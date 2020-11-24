@@ -26,62 +26,68 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The Body1 model module.
-* @module model/Body1
-* @version 2.2.1
+* The MoveResourcesRequestBody model module.
+* @module model/MoveResourcesRequestBody
+* @version 2.2.2
 */
-var Body1 = function () {
+var MoveResourcesRequestBody = function () {
     /**
-    * Constructs a new <code>Body1</code>.
-    * @alias module:model/Body1
+    * Constructs a new <code>MoveResourcesRequestBody</code>.
+    * @alias module:model/MoveResourcesRequestBody
     * @class
+    * @param resources {Array.<String>} Array containing file/folder paths to move.
+    * @param parentResource {String} Remote destination path to move files/folders to.
     */
 
-    function Body1() {
-        _classCallCheck(this, Body1);
+    function MoveResourcesRequestBody(resources, parentResource) {
+        _classCallCheck(this, MoveResourcesRequestBody);
 
-        this['name'] = undefined;
-        this['emails'] = undefined;
+        this['resources'] = undefined;
+        this['parentResource'] = undefined;
+
+
+        this['resources'] = resources;
+        this['parentResource'] = parentResource;
     }
 
     /**
-    * Constructs a <code>Body1</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>MoveResourcesRequestBody</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/Body1} obj Optional instance to populate.
-    * @return {module:model/Body1} The populated <code>Body1</code> instance.
+    * @param {module:model/MoveResourcesRequestBody} obj Optional instance to populate.
+    * @return {module:model/MoveResourcesRequestBody} The populated <code>MoveResourcesRequestBody</code> instance.
     */
 
 
-    _createClass(Body1, null, [{
+    _createClass(MoveResourcesRequestBody, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new Body1();
+                obj = obj || new MoveResourcesRequestBody();
 
-                if (data.hasOwnProperty('name')) {
-                    obj['name'] = _ApiClient2.default.convertToType(data['name'], 'String');
+                if (data.hasOwnProperty('resources')) {
+                    obj['resources'] = _ApiClient2.default.convertToType(data['resources'], ['String']);
                 }
-                if (data.hasOwnProperty('emails')) {
-                    obj['emails'] = _ApiClient2.default.convertToType(data['emails'], ['String']);
+                if (data.hasOwnProperty('parentResource')) {
+                    obj['parentResource'] = _ApiClient2.default.convertToType(data['parentResource'], 'String');
                 }
             }
             return obj;
         }
 
         /**
-        * Name of the email list.
-        * @member {String} name
+        * Array containing file/folder paths to move.
+        * @member {Array.<String>} resources
         */
 
         /**
-        * Array of email addresses to add to the email list.
-        * @member {Array.<String>} emails
+        * Remote destination path to move files/folders to.
+        * @member {String} parentResource
         */
 
     }]);
 
-    return Body1;
+    return MoveResourcesRequestBody;
 }();
 
-exports.default = Body1;
+exports.default = MoveResourcesRequestBody;

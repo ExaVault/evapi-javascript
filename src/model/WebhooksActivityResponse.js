@@ -32,7 +32,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The WebhooksActivityResponse model module.
 * @module model/WebhooksActivityResponse
-* @version 2.2.1
+* @version 2.2.2
 */
 var WebhooksActivityResponse = function () {
     /**

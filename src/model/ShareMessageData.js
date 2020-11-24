@@ -26,38 +26,38 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The ShareRelationshipsData2 model module.
-* @module model/ShareRelationshipsData2
-* @version 2.2.1
+* The ShareMessageData model module.
+* @module model/ShareMessageData
+* @version 2.2.2
 */
-var ShareRelationshipsData2 = function () {
+var ShareMessageData = function () {
     /**
-    * Constructs a new <code>ShareRelationshipsData2</code>.
-    * @alias module:model/ShareRelationshipsData2
+    * Constructs a new <code>ShareMessageData</code>.
+    * @alias module:model/ShareMessageData
     * @class
     */
 
-    function ShareRelationshipsData2() {
-        _classCallCheck(this, ShareRelationshipsData2);
+    function ShareMessageData() {
+        _classCallCheck(this, ShareMessageData);
 
         this['type'] = undefined;
         this['id'] = undefined;
     }
 
     /**
-    * Constructs a <code>ShareRelationshipsData2</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>ShareMessageData</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/ShareRelationshipsData2} obj Optional instance to populate.
-    * @return {module:model/ShareRelationshipsData2} The populated <code>ShareRelationshipsData2</code> instance.
+    * @param {module:model/ShareMessageData} obj Optional instance to populate.
+    * @return {module:model/ShareMessageData} The populated <code>ShareMessageData</code> instance.
     */
 
 
-    _createClass(ShareRelationshipsData2, null, [{
+    _createClass(ShareMessageData, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new ShareRelationshipsData2();
+                obj = obj || new ShareMessageData();
 
                 if (data.hasOwnProperty('type')) {
                     obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
@@ -70,12 +70,12 @@ var ShareRelationshipsData2 = function () {
         }
 
         /**
-        * Type is notification. 
-        * @member {module:model/ShareRelationshipsData2.TypeEnum} type
+        * Type is message. 
+        * @member {module:model/ShareMessageData.TypeEnum} type
         */
 
         /**
-        * ID of the notification. 
+        * ID of the message.
         * @member {Number} id
         */
 
@@ -88,13 +88,13 @@ var ShareRelationshipsData2 = function () {
 
     }]);
 
-    return ShareRelationshipsData2;
+    return ShareMessageData;
 }();
 
-ShareRelationshipsData2.TypeEnum = {
+ShareMessageData.TypeEnum = {
     /**
-     * value: "notification"
+     * value: "message"
      * @const
      */
-    "notification": "notification" };
-exports.default = ShareRelationshipsData2;
+    "message": "message" };
+exports.default = ShareMessageData;

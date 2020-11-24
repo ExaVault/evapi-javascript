@@ -26,170 +26,245 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The Body6 model module.
-* @module model/Body6
-* @version 2.2.1
+* The CallbackSettingsValuesTriggers model module.
+* @module model/CallbackSettingsValuesTriggers
+* @version 2.2.2
 */
-var Body6 = function () {
+var CallbackSettingsValuesTriggers = function () {
     /**
-    * Constructs a new <code>Body6</code>.
-    * @alias module:model/Body6
+    * Constructs a new <code>CallbackSettingsValuesTriggers</code>.
+    * Whether a webhook should be sent for various operations.
+    * @alias module:model/CallbackSettingsValuesTriggers
     * @class
     */
 
-    function Body6() {
-        _classCallCheck(this, Body6);
+    function CallbackSettingsValuesTriggers() {
+        _classCallCheck(this, CallbackSettingsValuesTriggers);
 
-        this['username'] = undefined;
-        this['nickname'] = undefined;
-        this['homeResource'] = undefined;
-        this['email'] = undefined;
-        this['password'] = undefined;
-        this['role'] = undefined;
-        this['permissions'] = undefined;
-        this['timeZone'] = undefined;
-        this['expiration'] = undefined;
-        this['locked'] = undefined;
-        this['onboarding'] = undefined;
-        this['currentUserPassword'] = undefined;
+        this['download'] = undefined;
+        this['upload'] = undefined;
+        this['delete'] = undefined;
+        this['createFolder'] = undefined;
+        this['rename'] = undefined;
+        this['move'] = undefined;
+        this['copy'] = undefined;
+        this['compress'] = undefined;
+        this['extract'] = undefined;
+        this['shareFolder'] = undefined;
+        this['sendFiles'] = undefined;
+        this['receiveFiles'] = undefined;
+        this['updateShare'] = undefined;
+        this['updateReceive'] = undefined;
+        this['deleteSend'] = undefined;
+        this['deleteReceive'] = undefined;
+        this['deleteShare'] = undefined;
+        this['createNotification'] = undefined;
+        this['updateNotification'] = undefined;
+        this['deleteNotification'] = undefined;
+        this['createUser'] = undefined;
+        this['updateUser'] = undefined;
+        this['deleteUser'] = undefined;
+        this['userConnect'] = undefined;
+        this['userDisconnect'] = undefined;
     }
 
     /**
-    * Constructs a <code>Body6</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>CallbackSettingsValuesTriggers</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/Body6} obj Optional instance to populate.
-    * @return {module:model/Body6} The populated <code>Body6</code> instance.
+    * @param {module:model/CallbackSettingsValuesTriggers} obj Optional instance to populate.
+    * @return {module:model/CallbackSettingsValuesTriggers} The populated <code>CallbackSettingsValuesTriggers</code> instance.
     */
 
 
-    _createClass(Body6, null, [{
+    _createClass(CallbackSettingsValuesTriggers, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new Body6();
+                obj = obj || new CallbackSettingsValuesTriggers();
 
-                if (data.hasOwnProperty('username')) {
-                    obj['username'] = _ApiClient2.default.convertToType(data['username'], 'String');
+                if (data.hasOwnProperty('download')) {
+                    obj['download'] = _ApiClient2.default.convertToType(data['download'], 'Boolean');
                 }
-                if (data.hasOwnProperty('nickname')) {
-                    obj['nickname'] = _ApiClient2.default.convertToType(data['nickname'], 'String');
+                if (data.hasOwnProperty('upload')) {
+                    obj['upload'] = _ApiClient2.default.convertToType(data['upload'], 'Boolean');
                 }
-                if (data.hasOwnProperty('homeResource')) {
-                    obj['homeResource'] = _ApiClient2.default.convertToType(data['homeResource'], 'String');
+                if (data.hasOwnProperty('delete')) {
+                    obj['delete'] = _ApiClient2.default.convertToType(data['delete'], 'Boolean');
                 }
-                if (data.hasOwnProperty('email')) {
-                    obj['email'] = _ApiClient2.default.convertToType(data['email'], 'String');
+                if (data.hasOwnProperty('createFolder')) {
+                    obj['createFolder'] = _ApiClient2.default.convertToType(data['createFolder'], 'Boolean');
                 }
-                if (data.hasOwnProperty('password')) {
-                    obj['password'] = _ApiClient2.default.convertToType(data['password'], 'String');
+                if (data.hasOwnProperty('rename')) {
+                    obj['rename'] = _ApiClient2.default.convertToType(data['rename'], 'Boolean');
                 }
-                if (data.hasOwnProperty('role')) {
-                    obj['role'] = _ApiClient2.default.convertToType(data['role'], 'String');
+                if (data.hasOwnProperty('move')) {
+                    obj['move'] = _ApiClient2.default.convertToType(data['move'], 'Boolean');
                 }
-                if (data.hasOwnProperty('permissions')) {
-                    obj['permissions'] = _ApiClient2.default.convertToType(data['permissions'], 'String');
+                if (data.hasOwnProperty('copy')) {
+                    obj['copy'] = _ApiClient2.default.convertToType(data['copy'], 'Boolean');
                 }
-                if (data.hasOwnProperty('timeZone')) {
-                    obj['timeZone'] = _ApiClient2.default.convertToType(data['timeZone'], 'String');
+                if (data.hasOwnProperty('compress')) {
+                    obj['compress'] = _ApiClient2.default.convertToType(data['compress'], 'Boolean');
                 }
-                if (data.hasOwnProperty('expiration')) {
-                    obj['expiration'] = _ApiClient2.default.convertToType(data['expiration'], 'String');
+                if (data.hasOwnProperty('extract')) {
+                    obj['extract'] = _ApiClient2.default.convertToType(data['extract'], 'Boolean');
                 }
-                if (data.hasOwnProperty('locked')) {
-                    obj['locked'] = _ApiClient2.default.convertToType(data['locked'], 'Boolean');
+                if (data.hasOwnProperty('shareFolder')) {
+                    obj['shareFolder'] = _ApiClient2.default.convertToType(data['shareFolder'], 'Boolean');
                 }
-                if (data.hasOwnProperty('onboarding')) {
-                    obj['onboarding'] = _ApiClient2.default.convertToType(data['onboarding'], 'Boolean');
+                if (data.hasOwnProperty('sendFiles')) {
+                    obj['sendFiles'] = _ApiClient2.default.convertToType(data['sendFiles'], 'Boolean');
                 }
-                if (data.hasOwnProperty('currentUserPassword')) {
-                    obj['currentUserPassword'] = _ApiClient2.default.convertToType(data['currentUserPassword'], 'String');
+                if (data.hasOwnProperty('receiveFiles')) {
+                    obj['receiveFiles'] = _ApiClient2.default.convertToType(data['receiveFiles'], 'Boolean');
+                }
+                if (data.hasOwnProperty('updateShare')) {
+                    obj['updateShare'] = _ApiClient2.default.convertToType(data['updateShare'], 'Boolean');
+                }
+                if (data.hasOwnProperty('updateReceive')) {
+                    obj['updateReceive'] = _ApiClient2.default.convertToType(data['updateReceive'], 'Boolean');
+                }
+                if (data.hasOwnProperty('deleteSend')) {
+                    obj['deleteSend'] = _ApiClient2.default.convertToType(data['deleteSend'], 'Boolean');
+                }
+                if (data.hasOwnProperty('deleteReceive')) {
+                    obj['deleteReceive'] = _ApiClient2.default.convertToType(data['deleteReceive'], 'Boolean');
+                }
+                if (data.hasOwnProperty('deleteShare')) {
+                    obj['deleteShare'] = _ApiClient2.default.convertToType(data['deleteShare'], 'Boolean');
+                }
+                if (data.hasOwnProperty('createNotification')) {
+                    obj['createNotification'] = _ApiClient2.default.convertToType(data['createNotification'], 'Boolean');
+                }
+                if (data.hasOwnProperty('updateNotification')) {
+                    obj['updateNotification'] = _ApiClient2.default.convertToType(data['updateNotification'], 'Boolean');
+                }
+                if (data.hasOwnProperty('deleteNotification')) {
+                    obj['deleteNotification'] = _ApiClient2.default.convertToType(data['deleteNotification'], 'Boolean');
+                }
+                if (data.hasOwnProperty('createUser')) {
+                    obj['createUser'] = _ApiClient2.default.convertToType(data['createUser'], 'Boolean');
+                }
+                if (data.hasOwnProperty('updateUser')) {
+                    obj['updateUser'] = _ApiClient2.default.convertToType(data['updateUser'], 'Boolean');
+                }
+                if (data.hasOwnProperty('deleteUser')) {
+                    obj['deleteUser'] = _ApiClient2.default.convertToType(data['deleteUser'], 'Boolean');
+                }
+                if (data.hasOwnProperty('userConnect')) {
+                    obj['userConnect'] = _ApiClient2.default.convertToType(data['userConnect'], 'Boolean');
+                }
+                if (data.hasOwnProperty('userDisconnect')) {
+                    obj['userDisconnect'] = _ApiClient2.default.convertToType(data['userDisconnect'], 'Boolean');
                 }
             }
             return obj;
         }
 
         /**
-        * New username for the user. This should follow standard username conventions - spaces are not allowed, etc. We do allow email addresses as usernames.  **Note** Usernames must be unique across all ExaVault accounts.
-        * @member {String} username
+        * @member {Boolean} download
         */
 
         /**
-        * An optional nickname (e.g. 'David from Sales').
-        * @member {String} nickname
+        * @member {Boolean} upload
         */
 
         /**
-        * Resource identifier for the user's home folder. See details on [how to specify resources](#section/Identifying-Resources) above.  The user will be locked to this directory and unable to move 'up' in the account. If the folder does not exist in the account, it will be created when the user logs in.  This setting is ignored for users with the `role` **admin**.
-        * @member {String} homeResource
+        * @member {Boolean} delete
         */
 
         /**
-        * Email address for the user
-        * @member {String} email
+        * @member {Boolean} createFolder
         */
 
         /**
-        * New password for the user
-        * @member {String} password
+        * @member {Boolean} rename
         */
 
         /**
-        * The type of user (**admin** or **user**). Note that admin users cannot have a `homeResource` other than '/', and will have full permissions, but you must provide at least \"download,upload,list,delete\" in the `permissions` parameter.
-        * @member {module:model/Body6.RoleEnum} role
+        * @member {Boolean} move
         */
 
         /**
-        * A CSV string of [user permissions](/docs/account/04-users/00-introduction#managing-user-roles-and-permissions). For example: **upload,download,list**. Note that users will be unable to see any files in the account unless you include **list** permission.   Valid permissions are **list**, **download**, **upload**, **modify**, **delete**, **changePassword**, **share**, **notification**, **viewFormData**, **deleteFormData** 
-        * @member {String} permissions
+        * @member {Boolean} copy
         */
 
         /**
-        * Time zone, used for accurate time display within the application. See <a href='https://php.net/manual/en/timezones.php' target='blank'>this page</a> for allowed values. 
-        * @member {String} timeZone
+        * @member {Boolean} compress
         */
 
         /**
-        * Optional timestamp when the user should expire.
-        * @member {String} expiration
+        * @member {Boolean} extract
         */
 
         /**
-        * If true, the user will be prevented from logging in
-        * @member {Boolean} locked
+        * @member {Boolean} shareFolder
         */
 
         /**
-        * Set this to **true** to enable extra help popups in the web file manager for this user.
-        * @member {Boolean} onboarding
+        * @member {Boolean} sendFiles
         */
 
         /**
-        * The password of the currently authenticated user. Required when updating any user’s email, username or password.
-        * @member {String} currentUserPassword
+        * @member {Boolean} receiveFiles
         */
 
+        /**
+        * @member {Boolean} updateShare
+        */
 
         /**
-        * Allowed values for the <code>role</code> property.
-        * @enum {String}
-        * @readonly
+        * @member {Boolean} updateReceive
+        */
+
+        /**
+        * @member {Boolean} deleteSend
+        */
+
+        /**
+        * @member {Boolean} deleteReceive
+        */
+
+        /**
+        * @member {Boolean} deleteShare
+        */
+
+        /**
+        * @member {Boolean} createNotification
+        */
+
+        /**
+        * @member {Boolean} updateNotification
+        */
+
+        /**
+        * @member {Boolean} deleteNotification
+        */
+
+        /**
+        * @member {Boolean} createUser
+        */
+
+        /**
+        * @member {Boolean} updateUser
+        */
+
+        /**
+        * @member {Boolean} deleteUser
+        */
+
+        /**
+        * @member {Boolean} userConnect
+        */
+
+        /**
+        * @member {Boolean} userDisconnect
         */
 
     }]);
 
-    return Body6;
+    return CallbackSettingsValuesTriggers;
 }();
 
-Body6.RoleEnum = {
-    /**
-     * value: "user"
-     * @const
-     */
-    "user": "user",
-    /**
-     * value: "admin"
-     * @const
-     */
-    "admin": "admin" };
-exports.default = Body6;
+exports.default = CallbackSettingsValuesTriggers;

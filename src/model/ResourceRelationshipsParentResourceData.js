@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The ResourceRelationshipsParentResourceData model module.
 * @module model/ResourceRelationshipsParentResourceData
-* @version 2.2.1
+* @version 2.2.2
 */
 var ResourceRelationshipsParentResourceData = function () {
     /**
