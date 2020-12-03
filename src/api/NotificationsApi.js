@@ -48,7 +48,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * Notifications service.
 * @module api/NotificationsApi
-* @version 2.2.2
+* @version 2.2.3
 */
 var NotificationsApi = function () {
 

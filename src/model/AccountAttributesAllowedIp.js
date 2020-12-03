@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The AccountAttributesAllowedIp model module.
 * @module model/AccountAttributesAllowedIp
-* @version 2.2.2
+* @version 2.2.3
 */
 var AccountAttributesAllowedIp = function () {
     /**
@@ -40,8 +40,8 @@ var AccountAttributesAllowedIp = function () {
     function AccountAttributesAllowedIp() {
         _classCallCheck(this, AccountAttributesAllowedIp);
 
-        this['ip_start'] = undefined;
-        this['ip_end'] = undefined;
+        this['ipStart'] = undefined;
+        this['ipEnd'] = undefined;
     }
 
     /**
@@ -59,22 +59,22 @@ var AccountAttributesAllowedIp = function () {
             if (data) {
                 obj = obj || new AccountAttributesAllowedIp();
 
-                if (data.hasOwnProperty('ip_start')) {
-                    obj['ip_start'] = _ApiClient2.default.convertToType(data['ip_start'], 'String');
+                if (data.hasOwnProperty('ipStart')) {
+                    obj['ipStart'] = _ApiClient2.default.convertToType(data['ipStart'], 'String');
                 }
-                if (data.hasOwnProperty('ip_end')) {
-                    obj['ip_end'] = _ApiClient2.default.convertToType(data['ip_end'], 'String');
+                if (data.hasOwnProperty('ipEnd')) {
+                    obj['ipEnd'] = _ApiClient2.default.convertToType(data['ipEnd'], 'String');
                 }
             }
             return obj;
         }
 
         /**
-        * @member {String} ip_start
+        * @member {String} ipStart
         */
 
         /**
-        * @member {String} ip_end
+        * @member {String} ipEnd
         */
 
     }]);

@@ -37,10 +37,6 @@ var _DeleteResourcesRequestBody = require('../model/DeleteResourcesRequestBody')
 
 var _DeleteResourcesRequestBody2 = _interopRequireDefault(_DeleteResourcesRequestBody);
 
-var _DownloadPollingResponse = require('../model/DownloadPollingResponse');
-
-var _DownloadPollingResponse2 = _interopRequireDefault(_DownloadPollingResponse);
-
 var _EmptyResponse = require('../model/EmptyResponse');
 
 var _EmptyResponse2 = _interopRequireDefault(_EmptyResponse);
@@ -84,7 +80,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * Resources service.
 * @module api/ResourcesApi
-* @version 2.2.2
+* @version 2.2.3
 */
 var ResourcesApi = function () {
 
@@ -297,7 +293,7 @@ var ResourcesApi = function () {
 
     /**
      * Download a file
-     * Downloads a file. If more than one path is supplied, the files will be zipped before downloading with the downloadArchiveName parameter if supplied. 
+     * Downloads a file from the server. Whenever more than one file is being downloaded, the file are first zipped into  a single file before the download starts, and the resulting zip file is named to match the &#x60;downloadArchiveName&#x60; parameter.  **NOTE**: Downloading many files at once  may result in a long delay before the API will return a response. You may need to override default timeout values in your API client, or download files individually.
      * @param {Object} opts Optional parameters
      * @param {module:api/ResourcesApi~downloadCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link File}
@@ -312,9 +308,7 @@ var ResourcesApi = function () {
       var pathParams = {};
       var queryParams = {
         'resources[]': this.apiClient.buildCollectionParam(resources, 'multi'),
-        'downloadArchiveName': opts['downloadArchiveName'],
-        'polling': opts['polling'],
-        'pollingArchiveName': opts['pollingArchiveName']
+        'downloadArchiveName': opts['downloadArchiveName']
       };
       var headerParams = {
         'ev-api-key': evApiKey,
@@ -324,9 +318,9 @@ var ResourcesApi = function () {
 
       var authNames = [];
       var contentTypes = [];
-      var accepts = ['application/octet-stream', 'application/zip', 'application/json'];
       /* EV-CUSTOM - The returnType must be 'String' for downloads to work properly */
       var returnType = 'String';
+      var accepts = ['application/octet-stream', 'application/zip'];
 
       return this.apiClient.callApi('/resources/download', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }
@@ -546,7 +540,7 @@ var ResourcesApi = function () {
 
     /**
      * Get a list of all resources
-     * Returns a list of files and folders in the account. Use the &#x60;resource&#x60; query parameter to indicate the folder you wish to search in (which can be /).   **Searching for Files and Folders**  Using the &#x60;name&#x60; parameter triggers search mode, which will search the entire directory structure under the provided &#x60;resource&#x60; for files or folders with names matching the provided &#x60;name&#x60;. This supports wildcard matching such as:  - \\*Report\\* would find any files or folders with \&quot;Report\&quot; in the name. - Data\\_202?-09-30.xlsx would match items such as \&quot;Data\\_2020-09-30.xlsx\&quot;, \&quot;DATA\\_2021-09-30.xlsx\&quot;, \&quot;data\\_2022-09-30.xlsx\&quot; etc. - sales\\* would find any files or folders starting with the word \&quot;Sales\&quot; - \\*.csv would locate any files ending in \&quot;.csv\&quot; - \\* matches everything within the directory tree starting at your given &#x60;resource&#x60;  The search is not case-sensitive. Searching for Clients\\* or clients\\* or CLIENTS\\*, etc. will provide identical results  You cannot use the &#x60;type&#x60; parameter if you are using the &#x60;name&#x60; parameter to run a search.
+     * Returns a list of files and folders in the account. Use the &#x60;resource&#x60; query parameter to indicate the folder you wish to search in (which can be /).   **Searching for Files and Folders**  Using the &#x60;name&#x60; parameter triggers search mode, which will search the entire directory structure under the provided &#x60;resource&#x60; for files or folders with names matching the provided &#x60;name&#x60;. This supports wildcard matching such as:  - \\*Report\\* would find any files or folders with \&quot;Report\&quot; in the name. - Data\\_202?-09-30.xlsx would match items such as \&quot;Data\\_2020-09-30.xlsx\&quot;, \&quot;DATA\\_2021-09-30.xlsx\&quot;, \&quot;data\\_2022-09-30.xlsx\&quot; etc. - sales\\* would find any files or folders starting with the word \&quot;Sales\&quot; - \\*.csv would locate any files ending in \&quot;.csv\&quot; - \\* matches everything within the directory tree starting at your given &#x60;resource&#x60;  The search is not case-sensitive. Searching for Clients\\* or clients\\* or CLIENTS\\*, etc. will provide identical results  If you are using the &#x60;name&#x60; parameter to run a search, the &#x60;type&#x60; parameter will be ignored by the server.
      * @param {Object} opts Optional parameters
      * @param {module:api/ResourcesApi~listResourcesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:model/ResourceCollectionResponse}

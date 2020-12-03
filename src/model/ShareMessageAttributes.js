@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The ShareMessageAttributes model module.
 * @module model/ShareMessageAttributes
-* @version 2.2.2
+* @version 2.2.3
 */
 var ShareMessageAttributes = function () {
     /**

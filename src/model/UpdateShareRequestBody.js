@@ -36,7 +36,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The UpdateShareRequestBody model module.
 * @module model/UpdateShareRequestBody
-* @version 2.2.2
+* @version 2.2.3
 */
 var UpdateShareRequestBody = function () {
     /**

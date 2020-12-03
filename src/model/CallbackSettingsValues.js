@@ -32,7 +32,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The CallbackSettingsValues model module.
 * @module model/CallbackSettingsValues
-* @version 2.2.2
+* @version 2.2.3
 */
 var CallbackSettingsValues = function () {
     /**

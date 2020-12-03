@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The ExtractFilesRequestBody model module.
 * @module model/ExtractFilesRequestBody
-* @version 2.2.2
+* @version 2.2.3
 */
 var ExtractFilesRequestBody = function () {
     /**

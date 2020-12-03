@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The MoveResourcesRequestBody model module.
 * @module model/MoveResourcesRequestBody
-* @version 2.2.2
+* @version 2.2.3
 */
 var MoveResourcesRequestBody = function () {
     /**
@@ -36,7 +36,7 @@ var MoveResourcesRequestBody = function () {
     * @alias module:model/MoveResourcesRequestBody
     * @class
     * @param resources {Array.<String>} Array containing file/folder paths to move.
-    * @param parentResource {String} Remote destination path to move files/folders to.
+    * @param parentResource {String} Resource identifier of folder to move files/folders to.
     */
 
     function MoveResourcesRequestBody(resources, parentResource) {
@@ -81,7 +81,7 @@ var MoveResourcesRequestBody = function () {
         */
 
         /**
-        * Remote destination path to move files/folders to.
+        * Resource identifier of folder to move files/folders to.
         * @member {String} parentResource
         */
 
