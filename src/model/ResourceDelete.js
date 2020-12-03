@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The ResourceDelete model module.
 * @module model/ResourceDelete
-* @version 2.2.2
+* @version 2.2.3
 */
 var ResourceDelete = function () {
     /**

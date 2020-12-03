@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The FormsidSettings model module.
 * @module model/FormsidSettings
-* @version 2.2.2
+* @version 2.2.3
 */
 var FormsidSettings = function () {
     /**

@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The CompressFilesRequestBody model module.
 * @module model/CompressFilesRequestBody
-* @version 2.2.2
+* @version 2.2.3
 */
 var CompressFilesRequestBody = function () {
     /**
@@ -83,7 +83,7 @@ var CompressFilesRequestBody = function () {
         */
 
         /**
-        * Full path to folder new archive will be created in. If left blank, \"/\" will be used.
+        * Resource identifier of the folder where zip archive should be created.
         * @member {String} parentResource
         */
 

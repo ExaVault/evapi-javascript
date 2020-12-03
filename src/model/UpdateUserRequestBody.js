@@ -32,7 +32,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The UpdateUserRequestBody model module.
 * @module model/UpdateUserRequestBody
-* @version 2.2.2
+* @version 2.2.3
 */
 var UpdateUserRequestBody = function () {
     /**

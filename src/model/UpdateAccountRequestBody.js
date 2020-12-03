@@ -40,7 +40,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The UpdateAccountRequestBody model module.
 * @module model/UpdateAccountRequestBody
-* @version 2.2.2
+* @version 2.2.3
 */
 var UpdateAccountRequestBody = function () {
     /**

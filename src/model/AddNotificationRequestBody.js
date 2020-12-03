@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The AddNotificationRequestBody model module.
 * @module model/AddNotificationRequestBody
-* @version 2.2.2
+* @version 2.2.3
 */
 var AddNotificationRequestBody = function () {
     /**

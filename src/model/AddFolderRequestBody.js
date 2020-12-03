@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The AddFolderRequestBody model module.
 * @module model/AddFolderRequestBody
-* @version 2.2.2
+* @version 2.2.3
 */
 var AddFolderRequestBody = function () {
     /**
@@ -74,7 +74,7 @@ var AddFolderRequestBody = function () {
         }
 
         /**
-        * Path to the newly created folder including new ame
+        * Fully-qualified path to the new folder including folder's name
         * @member {String} path
         */
 
