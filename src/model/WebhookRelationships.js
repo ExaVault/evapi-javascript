@@ -21,88 +21,73 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _CallbackSettingsTriggers = require('./CallbackSettingsTriggers');
+var _WebhookRelationshipsOwnerAccount = require('./WebhookRelationshipsOwnerAccount');
 
-var _CallbackSettingsTriggers2 = _interopRequireDefault(_CallbackSettingsTriggers);
+var _WebhookRelationshipsOwnerAccount2 = _interopRequireDefault(_WebhookRelationshipsOwnerAccount);
+
+var _WebhookRelationshipsResource = require('./WebhookRelationshipsResource');
+
+var _WebhookRelationshipsResource2 = _interopRequireDefault(_WebhookRelationshipsResource);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The CallbackSettings model module.
-* @module model/CallbackSettings
-* @version 2.2.3
+* The WebhookRelationships model module.
+* @module model/WebhookRelationships
+* @version 2.2.4
 */
-var CallbackSettings = function () {
+var WebhookRelationships = function () {
     /**
-    * Constructs a new <code>CallbackSettings</code>.
-    * @alias module:model/CallbackSettings
+    * Constructs a new <code>WebhookRelationships</code>.
+    * @alias module:model/WebhookRelationships
     * @class
     */
 
-    function CallbackSettings() {
-        _classCallCheck(this, CallbackSettings);
+    function WebhookRelationships() {
+        _classCallCheck(this, WebhookRelationships);
 
-        this['accountId'] = undefined;
-        this['endpointUrl'] = undefined;
-        this['token'] = undefined;
-        this['triggers'] = undefined;
+        this['ownerAccount'] = undefined;
+        this['resource'] = undefined;
     }
 
     /**
-    * Constructs a <code>CallbackSettings</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>WebhookRelationships</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/CallbackSettings} obj Optional instance to populate.
-    * @return {module:model/CallbackSettings} The populated <code>CallbackSettings</code> instance.
+    * @param {module:model/WebhookRelationships} obj Optional instance to populate.
+    * @return {module:model/WebhookRelationships} The populated <code>WebhookRelationships</code> instance.
     */
 
 
-    _createClass(CallbackSettings, null, [{
+    _createClass(WebhookRelationships, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new CallbackSettings();
+                obj = obj || new WebhookRelationships();
 
-                if (data.hasOwnProperty('accountId')) {
-                    obj['accountId'] = _ApiClient2.default.convertToType(data['accountId'], 'String');
+                if (data.hasOwnProperty('ownerAccount')) {
+                    obj['ownerAccount'] = _WebhookRelationshipsOwnerAccount2.default.constructFromObject(data['ownerAccount']);
                 }
-                if (data.hasOwnProperty('endpointUrl')) {
-                    obj['endpointUrl'] = _ApiClient2.default.convertToType(data['endpointUrl'], 'String');
-                }
-                if (data.hasOwnProperty('token')) {
-                    obj['token'] = _ApiClient2.default.convertToType(data['token'], 'String');
-                }
-                if (data.hasOwnProperty('triggers')) {
-                    obj['triggers'] = _CallbackSettingsTriggers2.default.constructFromObject(data['triggers']);
+                if (data.hasOwnProperty('resource')) {
+                    obj['resource'] = _WebhookRelationshipsResource2.default.constructFromObject(data['resource']);
                 }
             }
             return obj;
         }
 
         /**
-        * ID of the account these settings belongs to.
-        * @member {String} accountId
+        * @member {module:model/WebhookRelationshipsOwnerAccount} ownerAccount
         */
 
         /**
-        * Where callback settings object sent to.
-        * @member {String} endpointUrl
-        */
-
-        /**
-        * Verification token for the request authentication.
-        * @member {String} token
-        */
-
-        /**
-        * @member {module:model/CallbackSettingsTriggers} triggers
+        * @member {module:model/WebhookRelationshipsResource} resource
         */
 
     }]);
 
-    return CallbackSettings;
+    return WebhookRelationships;
 }();
 
-exports.default = CallbackSettings;
+exports.default = WebhookRelationships;

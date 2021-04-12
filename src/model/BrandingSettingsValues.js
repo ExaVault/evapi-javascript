@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The BrandingSettingsValues model module.
 * @module model/BrandingSettingsValues
-* @version 2.2.3
+* @version 2.2.4
 */
 var BrandingSettingsValues = function () {
     /**

@@ -21,9 +21,9 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _UsersPermissions = require('./UsersPermissions');
+var _UserPermissions = require('./UserPermissions');
 
-var _UsersPermissions2 = _interopRequireDefault(_UsersPermissions);
+var _UserPermissions2 = _interopRequireDefault(_UserPermissions);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -32,7 +32,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The UpdateUserRequestBody model module.
 * @module model/UpdateUserRequestBody
-* @version 2.2.3
+* @version 2.2.4
 */
 var UpdateUserRequestBody = function () {
     /**
@@ -55,7 +55,6 @@ var UpdateUserRequestBody = function () {
         this['expiration'] = undefined;
         this['locked'] = undefined;
         this['onboarding'] = undefined;
-        this['currentUserPassword'] = undefined;
     }
 
     /**
@@ -92,7 +91,7 @@ var UpdateUserRequestBody = function () {
                     obj['role'] = _ApiClient2.default.convertToType(data['role'], 'String');
                 }
                 if (data.hasOwnProperty('permissions')) {
-                    obj['permissions'] = _UsersPermissions2.default.constructFromObject(data['permissions']);
+                    obj['permissions'] = _UserPermissions2.default.constructFromObject(data['permissions']);
                 }
                 if (data.hasOwnProperty('timeZone')) {
                     obj['timeZone'] = _ApiClient2.default.convertToType(data['timeZone'], 'String');
@@ -105,9 +104,6 @@ var UpdateUserRequestBody = function () {
                 }
                 if (data.hasOwnProperty('onboarding')) {
                     obj['onboarding'] = _ApiClient2.default.convertToType(data['onboarding'], 'Boolean');
-                }
-                if (data.hasOwnProperty('currentUserPassword')) {
-                    obj['currentUserPassword'] = _ApiClient2.default.convertToType(data['currentUserPassword'], 'String');
                 }
             }
             return obj;
@@ -144,7 +140,7 @@ var UpdateUserRequestBody = function () {
         */
 
         /**
-        * @member {module:model/UsersPermissions} permissions
+        * @member {module:model/UserPermissions} permissions
         */
 
         /**
@@ -165,11 +161,6 @@ var UpdateUserRequestBody = function () {
         /**
         * Set this to **true** to enable extra help popups in the web file manager for this user.
         * @member {Boolean} onboarding
-        */
-
-        /**
-        * The password of the currently authenticated user. Required when updating any user’s email, username or password.
-        * @member {String} currentUserPassword
         */
 
 

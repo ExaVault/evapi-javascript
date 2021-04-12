@@ -44,7 +44,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The ResourceRelationships model module.
 * @module model/ResourceRelationships
-* @version 2.2.3
+* @version 2.2.4
 */
 var ResourceRelationships = function () {
     /**

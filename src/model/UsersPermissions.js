@@ -28,12 +28,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The UsersPermissions model module.
 * @module model/UsersPermissions
-* @version 2.2.3
+* @version 2.2.4
 */
 var UsersPermissions = function () {
     /**
     * Constructs a new <code>UsersPermissions</code>.
-    * An object containing name/value pairs for each permission. Any permission that is not passed will be set to &#x60;false&#x60; by default. Note that users will be unable to see any files in the account unless you include &#x60;list&#x60; permission.
+    * An object containing name/value pairs for each permission. Any permission that is not passed will be set to &#x60;false&#x60; by default. Note that users will be unable to see any files in the account unless you include &#x60;list&#x60; permission. When creating a user with the &#x60;role&#x60; **admin**, you should set all of the permissions to &#x60;true&#x60;
     * @alias module:model/UsersPermissions
     * @class
     */

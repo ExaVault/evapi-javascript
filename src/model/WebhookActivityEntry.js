@@ -21,89 +21,86 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _WebhooksActivityEntry = require('./WebhooksActivityEntry');
-
-var _WebhooksActivityEntry2 = _interopRequireDefault(_WebhooksActivityEntry);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The WebhooksActivityResponse model module.
-* @module model/WebhooksActivityResponse
-* @version 2.2.3
+* The WebhookActivityEntry model module.
+* @module model/WebhookActivityEntry
+* @version 2.2.4
 */
-var WebhooksActivityResponse = function () {
+var WebhookActivityEntry = function () {
     /**
-    * Constructs a new <code>WebhooksActivityResponse</code>.
-    * Session activity list response
-    * @alias module:model/WebhooksActivityResponse
+    * Constructs a new <code>WebhookActivityEntry</code>.
+    * @alias module:model/WebhookActivityEntry
     * @class
     */
 
-    function WebhooksActivityResponse() {
-        _classCallCheck(this, WebhooksActivityResponse);
+    function WebhookActivityEntry() {
+        _classCallCheck(this, WebhookActivityEntry);
 
-        this['responseStatus'] = undefined;
-        this['totalResults'] = undefined;
-        this['returnedResults'] = undefined;
-        this['data'] = undefined;
+        this['id'] = undefined;
+        this['type'] = undefined;
+        this['attributes'] = undefined;
     }
 
     /**
-    * Constructs a <code>WebhooksActivityResponse</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>WebhookActivityEntry</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/WebhooksActivityResponse} obj Optional instance to populate.
-    * @return {module:model/WebhooksActivityResponse} The populated <code>WebhooksActivityResponse</code> instance.
+    * @param {module:model/WebhookActivityEntry} obj Optional instance to populate.
+    * @return {module:model/WebhookActivityEntry} The populated <code>WebhookActivityEntry</code> instance.
     */
 
 
-    _createClass(WebhooksActivityResponse, null, [{
+    _createClass(WebhookActivityEntry, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new WebhooksActivityResponse();
+                obj = obj || new WebhookActivityEntry();
 
-                if (data.hasOwnProperty('responseStatus')) {
-                    obj['responseStatus'] = _ApiClient2.default.convertToType(data['responseStatus'], 'Number');
+                if (data.hasOwnProperty('id')) {
+                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'Number');
                 }
-                if (data.hasOwnProperty('totalResults')) {
-                    obj['totalResults'] = _ApiClient2.default.convertToType(data['totalResults'], 'Number');
+                if (data.hasOwnProperty('type')) {
+                    obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
                 }
-                if (data.hasOwnProperty('returnedResults')) {
-                    obj['returnedResults'] = _ApiClient2.default.convertToType(data['returnedResults'], 'Number');
-                }
-                if (data.hasOwnProperty('data')) {
-                    obj['data'] = _ApiClient2.default.convertToType(data['data'], [_WebhooksActivityEntry2.default]);
+                if (data.hasOwnProperty('attributes')) {
+                    obj['attributes'] = _ApiClient2.default.convertToType(data['attributes'], Object);
                 }
             }
             return obj;
         }
 
         /**
-        * Http status code of the response.
-        * @member {Number} responseStatus
+        * @member {Number} id
         */
 
         /**
-        * Total results found.
-        * @member {Number} totalResults
+        * @member {module:model/WebhookActivityEntry.TypeEnum} type
         */
 
         /**
-        * Number of results returned. 
-        * @member {Number} returnedResults
+        * @member {Object} attributes
         */
 
+
         /**
-        * @member {Array.<module:model/WebhooksActivityEntry>} data
+        * Allowed values for the <code>type</code> property.
+        * @enum {String}
+        * @readonly
         */
 
     }]);
 
-    return WebhooksActivityResponse;
+    return WebhookActivityEntry;
 }();
 
-exports.default = WebhooksActivityResponse;
+WebhookActivityEntry.TypeEnum = {
+    /**
+     * value: "webhookActivity"
+     * @const
+     */
+    "webhookActivity": "webhookActivity" };
+exports.default = WebhookActivityEntry;

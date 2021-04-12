@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The UserRelationshipsOwnerAccountData model module.
 * @module model/UserRelationshipsOwnerAccountData
-* @version 2.2.3
+* @version 2.2.4
 */
 var UserRelationshipsOwnerAccountData = function () {
     /**

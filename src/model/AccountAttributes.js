@@ -29,9 +29,9 @@ var _BrandingSettings = require('./BrandingSettings');
 
 var _BrandingSettings2 = _interopRequireDefault(_BrandingSettings);
 
-var _CallbackSettings = require('./CallbackSettings');
+var _PlanDetails = require('./PlanDetails');
 
-var _CallbackSettings2 = _interopRequireDefault(_CallbackSettings);
+var _PlanDetails2 = _interopRequireDefault(_PlanDetails);
 
 var _Quota = require('./Quota');
 
@@ -44,7 +44,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The AccountAttributes model module.
 * @module model/AccountAttributes
-* @version 2.2.3
+* @version 2.2.4
 */
 var AccountAttributes = function () {
     /**
@@ -57,7 +57,6 @@ var AccountAttributes = function () {
         _classCallCheck(this, AccountAttributes);
 
         this['accountName'] = undefined;
-        this['username'] = undefined;
         this['maxUsers'] = undefined;
         this['userCount'] = undefined;
         this['status'] = undefined;
@@ -69,8 +68,8 @@ var AccountAttributes = function () {
         this['showReferralLinks'] = undefined;
         this['externalDomains'] = undefined;
         this['allowedIp'] = undefined;
-        this['callbackSettings'] = undefined;
         this['brandingSettings'] = undefined;
+        this['planDetails'] = undefined;
         this['clientId'] = undefined;
         this['welcomeEmailContent'] = undefined;
         this['welcomeEmailSubject'] = undefined;
@@ -97,9 +96,6 @@ var AccountAttributes = function () {
 
                 if (data.hasOwnProperty('accountName')) {
                     obj['accountName'] = _ApiClient2.default.convertToType(data['accountName'], 'String');
-                }
-                if (data.hasOwnProperty('username')) {
-                    obj['username'] = _ApiClient2.default.convertToType(data['username'], 'String');
                 }
                 if (data.hasOwnProperty('maxUsers')) {
                     obj['maxUsers'] = _ApiClient2.default.convertToType(data['maxUsers'], 'Number');
@@ -134,11 +130,11 @@ var AccountAttributes = function () {
                 if (data.hasOwnProperty('allowedIp')) {
                     obj['allowedIp'] = _ApiClient2.default.convertToType(data['allowedIp'], [_AccountAttributesAllowedIp2.default]);
                 }
-                if (data.hasOwnProperty('callbackSettings')) {
-                    obj['callbackSettings'] = _CallbackSettings2.default.constructFromObject(data['callbackSettings']);
-                }
                 if (data.hasOwnProperty('brandingSettings')) {
                     obj['brandingSettings'] = _BrandingSettings2.default.constructFromObject(data['brandingSettings']);
+                }
+                if (data.hasOwnProperty('planDetails')) {
+                    obj['planDetails'] = _PlanDetails2.default.constructFromObject(data['planDetails']);
                 }
                 if (data.hasOwnProperty('clientId')) {
                     obj['clientId'] = _ApiClient2.default.convertToType(data['clientId'], 'Number');
@@ -168,11 +164,6 @@ var AccountAttributes = function () {
         /**
         * Name of the account
         * @member {String} accountName
-        */
-
-        /**
-        * Name of account's master user
-        * @member {String} username
         */
 
         /**
@@ -230,11 +221,11 @@ var AccountAttributes = function () {
         */
 
         /**
-        * @member {module:model/CallbackSettings} callbackSettings
+        * @member {module:model/BrandingSettings} brandingSettings
         */
 
         /**
-        * @member {module:model/BrandingSettings} brandingSettings
+        * @member {module:model/PlanDetails} planDetails
         */
 
         /**

@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The AccessMode model module.
 * @module model/AccessMode
-* @version 2.2.3
+* @version 2.2.4
 */
 var AccessMode = function () {
     /**

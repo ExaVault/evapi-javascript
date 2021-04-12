@@ -33,7 +33,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 /**
 * @module ApiClient
-* @version 2.2.3
+* @version 2.2.4
 */
 
 /**

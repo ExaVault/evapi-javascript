@@ -48,7 +48,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * Users service.
 * @module api/UsersApi
-* @version 2.2.3
+* @version 2.2.4
 */
 var UsersApi = function () {
 
@@ -206,11 +206,11 @@ var UsersApi = function () {
       var pathParams = {};
       var queryParams = {
         'username': opts['username'],
+        'homeResource': opts['homeResource'],
         'nickname': opts['nickname'],
         'email': opts['email'],
         'role': opts['role'],
         'status': opts['status'],
-        'homeDir': opts['homeDir'],
         'search': opts['search'],
         'offset': opts['offset'],
         'sort': opts['sort'],

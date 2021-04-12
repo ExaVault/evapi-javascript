@@ -32,7 +32,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The AddUserRequestBody model module.
 * @module model/AddUserRequestBody
-* @version 2.2.3
+* @version 2.2.4
 */
 var AddUserRequestBody = function () {
     /**
@@ -40,10 +40,10 @@ var AddUserRequestBody = function () {
     * @alias module:model/AddUserRequestBody
     * @class
     * @param username {String} Username of the user to create. This should follow standard username conventions - spaces are not allowed, etc. We do allow email addresses as usernames.  **Note** Usernames must be unique across all ExaVault accounts.
-    * @param homeResource {String} Resource identifier for the user's home folder. See details on [how to specify resources](#section/Identifying-Resources) above.  The user will be locked to this directory and unable to move 'up' in the account. If the folder does not exist in the account, it will be created when the user is created.   This setting is ignored for users with the `role` **admin**.
+    * @param homeResource {String} Resource identifier for the user's home folder. See details on [how to specify resources](#section/Identifying-Resources) above.  The user will be locked to this directory and unable to move 'up' in the account. If the folder does not exist in the account, it will be created when the user is created.   Users with the `role` **admin** should have their homeResource set to '/'
     * @param email {String} Email address for the user
     * @param password {String} Password for the user
-    * @param role {module:model/AddUserRequestBody.RoleEnum} The type of user to create. Note that admin users cannot have a `homeResource` other than '/', and will have full permissions, but you must provide at least \"download,upload,list,delete\" in the `permissions` parameter.
+    * @param role {module:model/AddUserRequestBody.RoleEnum} The type of user to create, either **user** or **admin**.
     * @param permissions {module:model/UsersPermissions} 
     * @param timeZone {String} Time zone, used for accurate time display within the application. See <a href='https://php.net/manual/en/timezones.php' target='blank'>this page</a> for allowed values. 
     */
@@ -140,7 +140,7 @@ var AddUserRequestBody = function () {
         */
 
         /**
-        * Resource identifier for the user's home folder. See details on [how to specify resources](#section/Identifying-Resources) above.  The user will be locked to this directory and unable to move 'up' in the account. If the folder does not exist in the account, it will be created when the user is created.   This setting is ignored for users with the `role` **admin**.
+        * Resource identifier for the user's home folder. See details on [how to specify resources](#section/Identifying-Resources) above.  The user will be locked to this directory and unable to move 'up' in the account. If the folder does not exist in the account, it will be created when the user is created.   Users with the `role` **admin** should have their homeResource set to '/'
         * @member {String} homeResource
         */
 
@@ -155,7 +155,7 @@ var AddUserRequestBody = function () {
         */
 
         /**
-        * The type of user to create. Note that admin users cannot have a `homeResource` other than '/', and will have full permissions, but you must provide at least \"download,upload,list,delete\" in the `permissions` parameter.
+        * The type of user to create, either **user** or **admin**.
         * @member {module:model/AddUserRequestBody.RoleEnum} role
         */
 

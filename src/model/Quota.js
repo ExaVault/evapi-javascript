@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The Quota model module.
 * @module model/Quota
-* @version 2.2.3
+* @version 2.2.4
 */
 var Quota = function () {
     /**
@@ -44,6 +44,11 @@ var Quota = function () {
         this['diskUsed'] = undefined;
         this['noticeEnabled'] = undefined;
         this['noticeThreshold'] = undefined;
+        this['bandwidthLimit'] = undefined;
+        this['bandwidthUsed'] = undefined;
+        this['transactionsLimit'] = undefined;
+        this['transactionsNoticeEnabled'] = undefined;
+        this['transactionsNoticeThreshold'] = undefined;
     }
 
     /**
@@ -73,6 +78,21 @@ var Quota = function () {
                 if (data.hasOwnProperty('noticeThreshold')) {
                     obj['noticeThreshold'] = _ApiClient2.default.convertToType(data['noticeThreshold'], 'Number');
                 }
+                if (data.hasOwnProperty('bandwidthLimit')) {
+                    obj['bandwidthLimit'] = _ApiClient2.default.convertToType(data['bandwidthLimit'], 'Number');
+                }
+                if (data.hasOwnProperty('bandwidthUsed')) {
+                    obj['bandwidthUsed'] = _ApiClient2.default.convertToType(data['bandwidthUsed'], 'Number');
+                }
+                if (data.hasOwnProperty('transactionsLimit')) {
+                    obj['transactionsLimit'] = _ApiClient2.default.convertToType(data['transactionsLimit'], 'Number');
+                }
+                if (data.hasOwnProperty('transactionsNoticeEnabled')) {
+                    obj['transactionsNoticeEnabled'] = _ApiClient2.default.convertToType(data['transactionsNoticeEnabled'], 'Boolean');
+                }
+                if (data.hasOwnProperty('transactionsNoticeThreshold')) {
+                    obj['transactionsNoticeThreshold'] = _ApiClient2.default.convertToType(data['transactionsNoticeThreshold'], 'Number');
+                }
             }
             return obj;
         }
@@ -95,6 +115,31 @@ var Quota = function () {
         /**
         * Treshold that triggers a quota notification. This represents the \"percent full\" your account must be before the quota notification is generated.
         * @member {Number} noticeThreshold
+        */
+
+        /**
+        * Total number of bytes that can be transferred per month.
+        * @member {Number} bandwidthLimit
+        */
+
+        /**
+        * Number of bytes transferred this month.
+        * @member {Number} bandwidthUsed
+        */
+
+        /**
+        * Total number of transactions allowed in a 24-hour period.
+        * @member {Number} transactionsLimit
+        */
+
+        /**
+        * Whether an email should be sent to the account owner up to once per day if transaction usage exceeds `transactionsNoticeThreshold` value.
+        * @member {Boolean} transactionsNoticeEnabled
+        */
+
+        /**
+        * Percent of daily transactions limit that will trigger an email if activity exceeds it.
+        * @member {Number} transactionsNoticeThreshold
         */
 
     }]);

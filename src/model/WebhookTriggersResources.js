@@ -21,69 +21,130 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _CallbackSettingsValuesTriggers = require('./CallbackSettingsValuesTriggers');
-
-var _CallbackSettingsValuesTriggers2 = _interopRequireDefault(_CallbackSettingsValuesTriggers);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The CallbackSettingsValues model module.
-* @module model/CallbackSettingsValues
-* @version 2.2.3
+* The WebhookTriggersResources model module.
+* @module model/WebhookTriggersResources
+* @version 2.2.4
 */
-var CallbackSettingsValues = function () {
+var WebhookTriggersResources = function () {
     /**
-    * Constructs a new <code>CallbackSettingsValues</code>.
-    * @alias module:model/CallbackSettingsValues
+    * Constructs a new <code>WebhookTriggersResources</code>.
+    * @alias module:model/WebhookTriggersResources
     * @class
     */
 
-    function CallbackSettingsValues() {
-        _classCallCheck(this, CallbackSettingsValues);
+    function WebhookTriggersResources() {
+        _classCallCheck(this, WebhookTriggersResources);
 
-        this['endpointUrl'] = undefined;
-        this['triggers'] = undefined;
+        this['upload'] = undefined;
+        this['download'] = undefined;
+        this['delete'] = undefined;
+        this['rename'] = undefined;
+        this['copy'] = undefined;
+        this['move'] = undefined;
+        this['compress'] = undefined;
+        this['extract'] = undefined;
+        this['createFolder'] = undefined;
     }
 
     /**
-    * Constructs a <code>CallbackSettingsValues</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>WebhookTriggersResources</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/CallbackSettingsValues} obj Optional instance to populate.
-    * @return {module:model/CallbackSettingsValues} The populated <code>CallbackSettingsValues</code> instance.
+    * @param {module:model/WebhookTriggersResources} obj Optional instance to populate.
+    * @return {module:model/WebhookTriggersResources} The populated <code>WebhookTriggersResources</code> instance.
     */
 
 
-    _createClass(CallbackSettingsValues, null, [{
+    _createClass(WebhookTriggersResources, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new CallbackSettingsValues();
+                obj = obj || new WebhookTriggersResources();
 
-                if (data.hasOwnProperty('endpointUrl')) {
-                    obj['endpointUrl'] = _ApiClient2.default.convertToType(data['endpointUrl'], 'String');
+                if (data.hasOwnProperty('upload')) {
+                    obj['upload'] = _ApiClient2.default.convertToType(data['upload'], 'Boolean');
                 }
-                if (data.hasOwnProperty('triggers')) {
-                    obj['triggers'] = _CallbackSettingsValuesTriggers2.default.constructFromObject(data['triggers']);
+                if (data.hasOwnProperty('download')) {
+                    obj['download'] = _ApiClient2.default.convertToType(data['download'], 'Boolean');
+                }
+                if (data.hasOwnProperty('delete')) {
+                    obj['delete'] = _ApiClient2.default.convertToType(data['delete'], 'Boolean');
+                }
+                if (data.hasOwnProperty('rename')) {
+                    obj['rename'] = _ApiClient2.default.convertToType(data['rename'], 'Boolean');
+                }
+                if (data.hasOwnProperty('copy')) {
+                    obj['copy'] = _ApiClient2.default.convertToType(data['copy'], 'Boolean');
+                }
+                if (data.hasOwnProperty('move')) {
+                    obj['move'] = _ApiClient2.default.convertToType(data['move'], 'Boolean');
+                }
+                if (data.hasOwnProperty('compress')) {
+                    obj['compress'] = _ApiClient2.default.convertToType(data['compress'], 'Boolean');
+                }
+                if (data.hasOwnProperty('extract')) {
+                    obj['extract'] = _ApiClient2.default.convertToType(data['extract'], 'Boolean');
+                }
+                if (data.hasOwnProperty('createFolder')) {
+                    obj['createFolder'] = _ApiClient2.default.convertToType(data['createFolder'], 'Boolean');
                 }
             }
             return obj;
         }
 
         /**
-        * @member {String} endpointUrl
+        * Send webhook messages when resources are uploaded.
+        * @member {Boolean} upload
         */
 
         /**
-        * @member {module:model/CallbackSettingsValuesTriggers} triggers
+        * Send webhook messages when resources are downloaded.
+        * @member {Boolean} download
+        */
+
+        /**
+        * Send webhook messages when resources are deleted
+        * @member {Boolean} delete
+        */
+
+        /**
+        * Send webhook messages when resources are renamed.
+        * @member {Boolean} rename
+        */
+
+        /**
+        * Send webhook messages when resources are copied.
+        * @member {Boolean} copy
+        */
+
+        /**
+        * Send webhook messages when resources are moved.
+        * @member {Boolean} move
+        */
+
+        /**
+        * Send webhook messages when resources are compressed into an archive.
+        * @member {Boolean} compress
+        */
+
+        /**
+        * Send webhook messages when resources are extracted from an archive.
+        * @member {Boolean} extract
+        */
+
+        /**
+        * Send webhook messages when a new folder is created.
+        * @member {Boolean} createFolder
         */
 
     }]);
 
-    return CallbackSettingsValues;
+    return WebhookTriggersResources;
 }();
 
-exports.default = CallbackSettingsValues;
+exports.default = WebhookTriggersResources;

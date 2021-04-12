@@ -36,7 +36,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * Recipients service.
 * @module api/RecipientsApi
-* @version 2.2.3
+* @version 2.2.4
 */
 var RecipientsApi = function () {
 

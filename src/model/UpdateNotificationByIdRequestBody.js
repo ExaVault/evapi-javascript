@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The UpdateNotificationByIdRequestBody model module.
 * @module model/UpdateNotificationByIdRequestBody
-* @version 2.2.3
+* @version 2.2.4
 */
 var UpdateNotificationByIdRequestBody = function () {
     /**
@@ -87,7 +87,7 @@ var UpdateNotificationByIdRequestBody = function () {
         */
 
         /**
-        * Determines which users' actions should trigger the notification.   Rather than listing  individual users, you can also use 3 special options:  - **notice\\_user\\_all** for activity by any user or share recipient - **notice\\_user\\_all\\_users** for activity only by user accounts - **notice\\_user\\_all\\_recipient** for activity only by share recipients
+        * Determines which users' actions should trigger the notification.   Rather than listing  individual users, you can also use 3 special options:  - **notice\\_user\\_all** for activity by any user or share recipient - **notice\\_user\\_all\\_users** for activity only by user accounts - **notice\\_user\\_all\\_recipients** for activity only by share recipients
         * @member {Array.<String>} usernames
         */
 

@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The BrandingSettings model module.
 * @module model/BrandingSettings
-* @version 2.2.3
+* @version 2.2.4
 */
 var BrandingSettings = function () {
     /**
@@ -45,6 +45,9 @@ var BrandingSettings = function () {
         this['logo'] = undefined;
         this['logoExt'] = undefined;
         this['theme'] = undefined;
+        this['verifiedDomain'] = undefined;
+        this['verifiedDomainId'] = undefined;
+        this['verifiedDomainValid'] = undefined;
     }
 
     /**
@@ -77,6 +80,15 @@ var BrandingSettings = function () {
                 if (data.hasOwnProperty('theme')) {
                     obj['theme'] = _ApiClient2.default.convertToType(data['theme'], 'String');
                 }
+                if (data.hasOwnProperty('verifiedDomain')) {
+                    obj['verifiedDomain'] = _ApiClient2.default.convertToType(data['verifiedDomain'], 'String');
+                }
+                if (data.hasOwnProperty('verifiedDomainId')) {
+                    obj['verifiedDomainId'] = _ApiClient2.default.convertToType(data['verifiedDomainId'], 'String');
+                }
+                if (data.hasOwnProperty('verifiedDomainValid')) {
+                    obj['verifiedDomainValid'] = _ApiClient2.default.convertToType(data['verifiedDomainValid'], 'Boolean');
+                }
             }
             return obj;
         }
@@ -104,6 +116,18 @@ var BrandingSettings = function () {
         /**
         * null
         * @member {String} theme
+        */
+
+        /**
+        * @member {String} verifiedDomain
+        */
+
+        /**
+        * @member {String} verifiedDomainId
+        */
+
+        /**
+        * @member {Boolean} verifiedDomainValid
         */
 
     }]);

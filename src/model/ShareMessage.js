@@ -21,10 +21,6 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _ShareMessageAttributes = require('./ShareMessageAttributes');
-
-var _ShareMessageAttributes2 = _interopRequireDefault(_ShareMessageAttributes);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -32,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The ShareMessage model module.
 * @module model/ShareMessage
-* @version 2.2.3
+* @version 2.2.4
 */
 var ShareMessage = function () {
     /**
@@ -45,8 +41,12 @@ var ShareMessage = function () {
         _classCallCheck(this, ShareMessage);
 
         this['id'] = undefined;
-        this['type'] = undefined;
-        this['attributes'] = undefined;
+        this['userId'] = undefined;
+        this['shareId'] = undefined;
+        this['subject'] = undefined;
+        this['body'] = undefined;
+        this['created'] = undefined;
+        this['modified'] = undefined;
     }
 
     /**
@@ -67,11 +67,23 @@ var ShareMessage = function () {
                 if (data.hasOwnProperty('id')) {
                     obj['id'] = _ApiClient2.default.convertToType(data['id'], 'Number');
                 }
-                if (data.hasOwnProperty('type')) {
-                    obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
+                if (data.hasOwnProperty('userId')) {
+                    obj['userId'] = _ApiClient2.default.convertToType(data['userId'], 'Number');
                 }
-                if (data.hasOwnProperty('attributes')) {
-                    obj['attributes'] = _ShareMessageAttributes2.default.constructFromObject(data['attributes']);
+                if (data.hasOwnProperty('shareId')) {
+                    obj['shareId'] = _ApiClient2.default.convertToType(data['shareId'], 'Number');
+                }
+                if (data.hasOwnProperty('subject')) {
+                    obj['subject'] = _ApiClient2.default.convertToType(data['subject'], 'String');
+                }
+                if (data.hasOwnProperty('body')) {
+                    obj['body'] = _ApiClient2.default.convertToType(data['body'], 'String');
+                }
+                if (data.hasOwnProperty('created')) {
+                    obj['created'] = _ApiClient2.default.convertToType(data['created'], 'Date');
+                }
+                if (data.hasOwnProperty('modified')) {
+                    obj['modified'] = _ApiClient2.default.convertToType(data['modified'], 'Date');
                 }
             }
             return obj;
@@ -83,19 +95,33 @@ var ShareMessage = function () {
         */
 
         /**
-        * Resource type
-        * @member {module:model/ShareMessage.TypeEnum} type
+        * User ID who generated share invite
+        * @member {Number} userId
         */
 
         /**
-        * @member {module:model/ShareMessageAttributes} attributes
+        * ID of associated share
+        * @member {Number} shareId
         */
 
+        /**
+        * Share invitation message subject.
+        * @member {String} subject
+        */
 
         /**
-        * Allowed values for the <code>type</code> property.
-        * @enum {String}
-        * @readonly
+        * Share invitation message text.
+        * @member {String} body
+        */
+
+        /**
+        * Timestamp of message creation.
+        * @member {Date} created
+        */
+
+        /**
+        * Timestamp of message modification.
+        * @member {Date} modified
         */
 
     }]);
@@ -103,10 +129,4 @@ var ShareMessage = function () {
     return ShareMessage;
 }();
 
-ShareMessage.TypeEnum = {
-    /**
-     * value: "message"
-     * @const
-     */
-    "message": "message" };
 exports.default = ShareMessage;

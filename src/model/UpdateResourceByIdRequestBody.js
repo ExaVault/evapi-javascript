@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The UpdateResourceByIdRequestBody model module.
 * @module model/UpdateResourceByIdRequestBody
-* @version 2.2.3
+* @version 2.2.4
 */
 var UpdateResourceByIdRequestBody = function () {
     /**

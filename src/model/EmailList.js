@@ -36,7 +36,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The EmailList model module.
 * @module model/EmailList
-* @version 2.2.3
+* @version 2.2.4
 */
 var EmailList = function () {
     /**
@@ -92,7 +92,7 @@ var EmailList = function () {
         */
 
         /**
-        * Type of record. \"EmailList\"
+        * Type of record. \"emailList\"
         * @member {String} type
         */
 

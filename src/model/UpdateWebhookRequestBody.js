@@ -21,105 +21,106 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _WebhookTriggers = require('./WebhookTriggers');
+
+var _WebhookTriggers2 = _interopRequireDefault(_WebhookTriggers);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The WebhooksActivityEntryAttributes model module.
-* @module model/WebhooksActivityEntryAttributes
-* @version 2.2.3
+* The UpdateWebhookRequestBody model module.
+* @module model/UpdateWebhookRequestBody
+* @version 2.2.4
 */
-var WebhooksActivityEntryAttributes = function () {
+var UpdateWebhookRequestBody = function () {
     /**
-    * Constructs a new <code>WebhooksActivityEntryAttributes</code>.
-    * @alias module:model/WebhooksActivityEntryAttributes
+    * Constructs a new <code>UpdateWebhookRequestBody</code>.
+    * @alias module:model/UpdateWebhookRequestBody
     * @class
     */
 
-    function WebhooksActivityEntryAttributes() {
-        _classCallCheck(this, WebhooksActivityEntryAttributes);
+    function UpdateWebhookRequestBody() {
+        _classCallCheck(this, UpdateWebhookRequestBody);
 
-        this['attempt'] = undefined;
-        this['created'] = undefined;
         this['endpointUrl'] = undefined;
-        this['event'] = undefined;
-        this['response'] = undefined;
-        this['responseSize'] = undefined;
-        this['status'] = undefined;
+        this['triggers'] = undefined;
+        this['resource'] = undefined;
+        this['responseVersion'] = undefined;
     }
 
     /**
-    * Constructs a <code>WebhooksActivityEntryAttributes</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>UpdateWebhookRequestBody</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/WebhooksActivityEntryAttributes} obj Optional instance to populate.
-    * @return {module:model/WebhooksActivityEntryAttributes} The populated <code>WebhooksActivityEntryAttributes</code> instance.
+    * @param {module:model/UpdateWebhookRequestBody} obj Optional instance to populate.
+    * @return {module:model/UpdateWebhookRequestBody} The populated <code>UpdateWebhookRequestBody</code> instance.
     */
 
 
-    _createClass(WebhooksActivityEntryAttributes, null, [{
+    _createClass(UpdateWebhookRequestBody, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new WebhooksActivityEntryAttributes();
+                obj = obj || new UpdateWebhookRequestBody();
 
-                if (data.hasOwnProperty('attempt')) {
-                    obj['attempt'] = _ApiClient2.default.convertToType(data['attempt'], 'Number');
-                }
-                if (data.hasOwnProperty('created')) {
-                    obj['created'] = _ApiClient2.default.convertToType(data['created'], 'String');
-                }
                 if (data.hasOwnProperty('endpointUrl')) {
                     obj['endpointUrl'] = _ApiClient2.default.convertToType(data['endpointUrl'], 'String');
                 }
-                if (data.hasOwnProperty('event')) {
-                    obj['event'] = _ApiClient2.default.convertToType(data['event'], 'String');
+                if (data.hasOwnProperty('triggers')) {
+                    obj['triggers'] = _WebhookTriggers2.default.constructFromObject(data['triggers']);
                 }
-                if (data.hasOwnProperty('response')) {
-                    obj['response'] = _ApiClient2.default.convertToType(data['response'], 'String');
+                if (data.hasOwnProperty('resource')) {
+                    obj['resource'] = _ApiClient2.default.convertToType(data['resource'], 'String');
                 }
-                if (data.hasOwnProperty('responseSize')) {
-                    obj['responseSize'] = _ApiClient2.default.convertToType(data['responseSize'], 'Number');
-                }
-                if (data.hasOwnProperty('status')) {
-                    obj['status'] = _ApiClient2.default.convertToType(data['status'], 'Number');
+                if (data.hasOwnProperty('responseVersion')) {
+                    obj['responseVersion'] = _ApiClient2.default.convertToType(data['responseVersion'], 'String');
                 }
             }
             return obj;
         }
 
         /**
-        * @member {Number} attempt
-        */
-
-        /**
-        * @member {String} created
-        */
-
-        /**
+        * New endpoint URL to use for the webhook configuration
         * @member {String} endpointUrl
         */
 
         /**
-        * @member {String} event
+        * @member {module:model/WebhookTriggers} triggers
         */
 
         /**
-        * @member {String} response
+        * Resource identifier of the top folder watched by this webhook.
+        * @member {String} resource
         */
 
         /**
-        * @member {Number} responseSize
+        * Version of the webhooks message to send to the endpoint
+        * @member {module:model/UpdateWebhookRequestBody.ResponseVersionEnum} responseVersion
         */
 
+
         /**
-        * @member {Number} status
+        * Allowed values for the <code>responseVersion</code> property.
+        * @enum {String}
+        * @readonly
         */
 
     }]);
 
-    return WebhooksActivityEntryAttributes;
+    return UpdateWebhookRequestBody;
 }();
 
-exports.default = WebhooksActivityEntryAttributes;
+UpdateWebhookRequestBody.ResponseVersionEnum = {
+    /**
+     * value: "v2"
+     * @const
+     */
+    "v2": "v2",
+    /**
+     * value: "v1"
+     * @const
+     */
+    "v1": "v1" };
+exports.default = UpdateWebhookRequestBody;

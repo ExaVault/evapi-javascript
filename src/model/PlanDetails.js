@@ -21,274 +21,165 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _PlanDetailsWebhookOptions = require('./PlanDetailsWebhookOptions');
+
+var _PlanDetailsWebhookOptions2 = _interopRequireDefault(_PlanDetailsWebhookOptions);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The CallbackSettingsTriggers model module.
-* @module model/CallbackSettingsTriggers
-* @version 2.2.3
+* The PlanDetails model module.
+* @module model/PlanDetails
+* @version 2.2.4
 */
-var CallbackSettingsTriggers = function () {
+var PlanDetails = function () {
     /**
-    * Constructs a new <code>CallbackSettingsTriggers</code>.
-    * @alias module:model/CallbackSettingsTriggers
+    * Constructs a new <code>PlanDetails</code>.
+    * @alias module:model/PlanDetails
     * @class
     */
 
-    function CallbackSettingsTriggers() {
-        _classCallCheck(this, CallbackSettingsTriggers);
+    function PlanDetails() {
+        _classCallCheck(this, PlanDetails);
 
-        this['upload'] = undefined;
-        this['download'] = undefined;
-        this['delete'] = undefined;
-        this['createFolder'] = undefined;
-        this['rename'] = undefined;
-        this['move'] = undefined;
-        this['copy'] = undefined;
-        this['compress'] = undefined;
-        this['extract'] = undefined;
-        this['shareFolder'] = undefined;
-        this['sendFiles'] = undefined;
-        this['receiveFiles'] = undefined;
-        this['updateShare'] = undefined;
-        this['updateReceive'] = undefined;
-        this['deleteSend'] = undefined;
-        this['deleteReceive'] = undefined;
-        this['deleteShare'] = undefined;
-        this['createNotification'] = undefined;
-        this['updateNotification'] = undefined;
-        this['deleteNotification'] = undefined;
-        this['createUser'] = undefined;
-        this['updateUser'] = undefined;
-        this['deleteUser'] = undefined;
-        this['userConnect'] = undefined;
-        this['userDisconnect'] = undefined;
+        this['storageAddOn'] = undefined;
+        this['ipWhitelist'] = undefined;
+        this['userExpiration'] = undefined;
+        this['userImport'] = undefined;
+        this['customDomain'] = undefined;
+        this['customName'] = undefined;
+        this['colorSchema'] = undefined;
+        this['apiKeys'] = undefined;
+        this['apiTokens'] = undefined;
+        this['sshKeys'] = undefined;
+        this['directLinks'] = undefined;
+        this['sharingOptions'] = undefined;
+        this['webhookOptions'] = undefined;
+        this['unlimitedUsers'] = undefined;
     }
 
     /**
-    * Constructs a <code>CallbackSettingsTriggers</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>PlanDetails</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/CallbackSettingsTriggers} obj Optional instance to populate.
-    * @return {module:model/CallbackSettingsTriggers} The populated <code>CallbackSettingsTriggers</code> instance.
+    * @param {module:model/PlanDetails} obj Optional instance to populate.
+    * @return {module:model/PlanDetails} The populated <code>PlanDetails</code> instance.
     */
 
 
-    _createClass(CallbackSettingsTriggers, null, [{
+    _createClass(PlanDetails, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new CallbackSettingsTriggers();
+                obj = obj || new PlanDetails();
 
-                if (data.hasOwnProperty('upload')) {
-                    obj['upload'] = _ApiClient2.default.convertToType(data['upload'], 'Boolean');
+                if (data.hasOwnProperty('storageAddOn')) {
+                    obj['storageAddOn'] = _ApiClient2.default.convertToType(data['storageAddOn'], 'Number');
                 }
-                if (data.hasOwnProperty('download')) {
-                    obj['download'] = _ApiClient2.default.convertToType(data['download'], 'Boolean');
+                if (data.hasOwnProperty('ipWhitelist')) {
+                    obj['ipWhitelist'] = _ApiClient2.default.convertToType(data['ipWhitelist'], 'Boolean');
                 }
-                if (data.hasOwnProperty('delete')) {
-                    obj['delete'] = _ApiClient2.default.convertToType(data['delete'], 'Boolean');
+                if (data.hasOwnProperty('userExpiration')) {
+                    obj['userExpiration'] = _ApiClient2.default.convertToType(data['userExpiration'], 'Boolean');
                 }
-                if (data.hasOwnProperty('createFolder')) {
-                    obj['createFolder'] = _ApiClient2.default.convertToType(data['createFolder'], 'Boolean');
+                if (data.hasOwnProperty('userImport')) {
+                    obj['userImport'] = _ApiClient2.default.convertToType(data['userImport'], 'Boolean');
                 }
-                if (data.hasOwnProperty('rename')) {
-                    obj['rename'] = _ApiClient2.default.convertToType(data['rename'], 'Boolean');
+                if (data.hasOwnProperty('customDomain')) {
+                    obj['customDomain'] = _ApiClient2.default.convertToType(data['customDomain'], 'Boolean');
                 }
-                if (data.hasOwnProperty('move')) {
-                    obj['move'] = _ApiClient2.default.convertToType(data['move'], 'Boolean');
+                if (data.hasOwnProperty('customName')) {
+                    obj['customName'] = _ApiClient2.default.convertToType(data['customName'], 'Boolean');
                 }
-                if (data.hasOwnProperty('copy')) {
-                    obj['copy'] = _ApiClient2.default.convertToType(data['copy'], 'Boolean');
+                if (data.hasOwnProperty('colorSchema')) {
+                    obj['colorSchema'] = _ApiClient2.default.convertToType(data['colorSchema'], 'Boolean');
                 }
-                if (data.hasOwnProperty('compress')) {
-                    obj['compress'] = _ApiClient2.default.convertToType(data['compress'], 'Boolean');
+                if (data.hasOwnProperty('apiKeys')) {
+                    obj['apiKeys'] = _ApiClient2.default.convertToType(data['apiKeys'], 'Number');
                 }
-                if (data.hasOwnProperty('extract')) {
-                    obj['extract'] = _ApiClient2.default.convertToType(data['extract'], 'Boolean');
+                if (data.hasOwnProperty('apiTokens')) {
+                    obj['apiTokens'] = _ApiClient2.default.convertToType(data['apiTokens'], 'Number');
                 }
-                if (data.hasOwnProperty('shareFolder')) {
-                    obj['shareFolder'] = _ApiClient2.default.convertToType(data['shareFolder'], 'Boolean');
+                if (data.hasOwnProperty('sshKeys')) {
+                    obj['sshKeys'] = _ApiClient2.default.convertToType(data['sshKeys'], 'Number');
                 }
-                if (data.hasOwnProperty('sendFiles')) {
-                    obj['sendFiles'] = _ApiClient2.default.convertToType(data['sendFiles'], 'Boolean');
+                if (data.hasOwnProperty('directLinks')) {
+                    obj['directLinks'] = _ApiClient2.default.convertToType(data['directLinks'], 'Boolean');
                 }
-                if (data.hasOwnProperty('receiveFiles')) {
-                    obj['receiveFiles'] = _ApiClient2.default.convertToType(data['receiveFiles'], 'Boolean');
+                if (data.hasOwnProperty('sharingOptions')) {
+                    obj['sharingOptions'] = _ApiClient2.default.convertToType(data['sharingOptions'], ['String']);
                 }
-                if (data.hasOwnProperty('updateShare')) {
-                    obj['updateShare'] = _ApiClient2.default.convertToType(data['updateShare'], 'Boolean');
+                if (data.hasOwnProperty('webhookOptions')) {
+                    obj['webhookOptions'] = _PlanDetailsWebhookOptions2.default.constructFromObject(data['webhookOptions']);
                 }
-                if (data.hasOwnProperty('updateReceive')) {
-                    obj['updateReceive'] = _ApiClient2.default.convertToType(data['updateReceive'], 'Boolean');
-                }
-                if (data.hasOwnProperty('deleteSend')) {
-                    obj['deleteSend'] = _ApiClient2.default.convertToType(data['deleteSend'], 'Boolean');
-                }
-                if (data.hasOwnProperty('deleteReceive')) {
-                    obj['deleteReceive'] = _ApiClient2.default.convertToType(data['deleteReceive'], 'Boolean');
-                }
-                if (data.hasOwnProperty('deleteShare')) {
-                    obj['deleteShare'] = _ApiClient2.default.convertToType(data['deleteShare'], 'Boolean');
-                }
-                if (data.hasOwnProperty('createNotification')) {
-                    obj['createNotification'] = _ApiClient2.default.convertToType(data['createNotification'], 'Boolean');
-                }
-                if (data.hasOwnProperty('updateNotification')) {
-                    obj['updateNotification'] = _ApiClient2.default.convertToType(data['updateNotification'], 'Boolean');
-                }
-                if (data.hasOwnProperty('deleteNotification')) {
-                    obj['deleteNotification'] = _ApiClient2.default.convertToType(data['deleteNotification'], 'Boolean');
-                }
-                if (data.hasOwnProperty('createUser')) {
-                    obj['createUser'] = _ApiClient2.default.convertToType(data['createUser'], 'Boolean');
-                }
-                if (data.hasOwnProperty('updateUser')) {
-                    obj['updateUser'] = _ApiClient2.default.convertToType(data['updateUser'], 'Boolean');
-                }
-                if (data.hasOwnProperty('deleteUser')) {
-                    obj['deleteUser'] = _ApiClient2.default.convertToType(data['deleteUser'], 'Boolean');
-                }
-                if (data.hasOwnProperty('userConnect')) {
-                    obj['userConnect'] = _ApiClient2.default.convertToType(data['userConnect'], 'Boolean');
-                }
-                if (data.hasOwnProperty('userDisconnect')) {
-                    obj['userDisconnect'] = _ApiClient2.default.convertToType(data['userDisconnect'], 'Boolean');
+                if (data.hasOwnProperty('unlimitedUsers')) {
+                    obj['unlimitedUsers'] = _ApiClient2.default.convertToType(data['unlimitedUsers'], 'Boolean');
                 }
             }
             return obj;
         }
 
         /**
-        * Trigger callback on upload.
-        * @member {Boolean} upload
+        * @member {Number} storageAddOn
         */
 
         /**
-        * Trigger callback on download.
-        * @member {Boolean} download
+        * @member {Boolean} ipWhitelist
         */
 
         /**
-        * Trigger callback on delete.
-        * @member {Boolean} delete
+        * @member {Boolean} userExpiration
         */
 
         /**
-        * Trigger callback on fodler create.
-        * @member {Boolean} createFolder
+        * @member {Boolean} userImport
         */
 
         /**
-        * Trigger callback on rename.
-        * @member {Boolean} rename
+        * @member {Boolean} customDomain
         */
 
         /**
-        * Trigger callback on move.
-        * @member {Boolean} move
+        * @member {Boolean} customName
         */
 
         /**
-        * Trigger callback on copy.
-        * @member {Boolean} copy
+        * @member {Boolean} colorSchema
         */
 
         /**
-        * Trigger callback on compress.
-        * @member {Boolean} compress
+        * @member {Number} apiKeys
         */
 
         /**
-        * Trigger callback on extract.
-        * @member {Boolean} extract
+        * @member {Number} apiTokens
         */
 
         /**
-        * Trigger callback on share folder create.
-        * @member {Boolean} shareFolder
+        * @member {Number} sshKeys
         */
 
         /**
-        * Trigger callback on send files.
-        * @member {Boolean} sendFiles
+        * @member {Boolean} directLinks
         */
 
         /**
-        * Trigger callback on receive folder create.
-        * @member {Boolean} receiveFiles
+        * @member {Array.<String>} sharingOptions
         */
 
         /**
-        * Trigger callback on share folder update.
-        * @member {Boolean} updateShare
+        * @member {module:model/PlanDetailsWebhookOptions} webhookOptions
         */
 
         /**
-        * Trigger callback on receive folder update.
-        * @member {Boolean} updateReceive
-        */
-
-        /**
-        * Trigger callback on send files delete.
-        * @member {Boolean} deleteSend
-        */
-
-        /**
-        * Trigger callback on receive folder delete.
-        * @member {Boolean} deleteReceive
-        */
-
-        /**
-        * Trigger callback on share folder delete.
-        * @member {Boolean} deleteShare
-        */
-
-        /**
-        * Trigger callback on notification create.
-        * @member {Boolean} createNotification
-        */
-
-        /**
-        * Trigger callback on notification update.
-        * @member {Boolean} updateNotification
-        */
-
-        /**
-        * Trigger callback on notification delete.
-        * @member {Boolean} deleteNotification
-        */
-
-        /**
-        * Trigger callback on user create.
-        * @member {Boolean} createUser
-        */
-
-        /**
-        * Trigger callback on user update.
-        * @member {Boolean} updateUser
-        */
-
-        /**
-        * Trigger callback on user delete.
-        * @member {Boolean} deleteUser
-        */
-
-        /**
-        * Trigger callback on user connect.
-        * @member {Boolean} userConnect
-        */
-
-        /**
-        * Trigger callback on user disconnect.
-        * @member {Boolean} userDisconnect
+        * @member {Boolean} unlimitedUsers
         */
 
     }]);
 
-    return CallbackSettingsTriggers;
+    return PlanDetails;
 }();
 
-exports.default = CallbackSettingsTriggers;
+exports.default = PlanDetails;

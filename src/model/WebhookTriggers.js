@@ -21,90 +21,73 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
-var _WebhooksActivityEntryAttributes = require('./WebhooksActivityEntryAttributes');
+var _WebhookTriggersResources = require('./WebhookTriggersResources');
 
-var _WebhooksActivityEntryAttributes2 = _interopRequireDefault(_WebhooksActivityEntryAttributes);
+var _WebhookTriggersResources2 = _interopRequireDefault(_WebhookTriggersResources);
+
+var _WebhookTriggersShares = require('./WebhookTriggersShares');
+
+var _WebhookTriggersShares2 = _interopRequireDefault(_WebhookTriggersShares);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The WebhooksActivityEntry model module.
-* @module model/WebhooksActivityEntry
-* @version 2.2.3
+* The WebhookTriggers model module.
+* @module model/WebhookTriggers
+* @version 2.2.4
 */
-var WebhooksActivityEntry = function () {
+var WebhookTriggers = function () {
     /**
-    * Constructs a new <code>WebhooksActivityEntry</code>.
-    * @alias module:model/WebhooksActivityEntry
+    * Constructs a new <code>WebhookTriggers</code>.
+    * @alias module:model/WebhookTriggers
     * @class
     */
 
-    function WebhooksActivityEntry() {
-        _classCallCheck(this, WebhooksActivityEntry);
+    function WebhookTriggers() {
+        _classCallCheck(this, WebhookTriggers);
 
-        this['id'] = undefined;
-        this['type'] = undefined;
-        this['attributes'] = undefined;
+        this['resources'] = undefined;
+        this['shares'] = undefined;
     }
 
     /**
-    * Constructs a <code>WebhooksActivityEntry</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>WebhookTriggers</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/WebhooksActivityEntry} obj Optional instance to populate.
-    * @return {module:model/WebhooksActivityEntry} The populated <code>WebhooksActivityEntry</code> instance.
+    * @param {module:model/WebhookTriggers} obj Optional instance to populate.
+    * @return {module:model/WebhookTriggers} The populated <code>WebhookTriggers</code> instance.
     */
 
 
-    _createClass(WebhooksActivityEntry, null, [{
+    _createClass(WebhookTriggers, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new WebhooksActivityEntry();
+                obj = obj || new WebhookTriggers();
 
-                if (data.hasOwnProperty('id')) {
-                    obj['id'] = _ApiClient2.default.convertToType(data['id'], 'Number');
+                if (data.hasOwnProperty('resources')) {
+                    obj['resources'] = _WebhookTriggersResources2.default.constructFromObject(data['resources']);
                 }
-                if (data.hasOwnProperty('type')) {
-                    obj['type'] = _ApiClient2.default.convertToType(data['type'], 'String');
-                }
-                if (data.hasOwnProperty('attributes')) {
-                    obj['attributes'] = _WebhooksActivityEntryAttributes2.default.constructFromObject(data['attributes']);
+                if (data.hasOwnProperty('shares')) {
+                    obj['shares'] = _WebhookTriggersShares2.default.constructFromObject(data['shares']);
                 }
             }
             return obj;
         }
 
         /**
-        * @member {Number} id
+        * @member {module:model/WebhookTriggersResources} resources
         */
 
         /**
-        * @member {module:model/WebhooksActivityEntry.TypeEnum} type
-        */
-
-        /**
-        * @member {module:model/WebhooksActivityEntryAttributes} attributes
-        */
-
-
-        /**
-        * Allowed values for the <code>type</code> property.
-        * @enum {String}
-        * @readonly
+        * @member {module:model/WebhookTriggersShares} shares
         */
 
     }]);
 
-    return WebhooksActivityEntry;
+    return WebhookTriggers;
 }();
 
-WebhooksActivityEntry.TypeEnum = {
-    /**
-     * value: "webhookActivity"
-     * @const
-     */
-    "webhookActivity": "webhookActivity" };
-exports.default = WebhooksActivityEntry;
+exports.default = WebhookTriggers;

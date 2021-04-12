@@ -26,80 +26,68 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The ShareMessageAttributes model module.
-* @module model/ShareMessageAttributes
-* @version 2.2.3
+* The PlanDetailsWebhookOptions model module.
+* @module model/PlanDetailsWebhookOptions
+* @version 2.2.4
 */
-var ShareMessageAttributes = function () {
+var PlanDetailsWebhookOptions = function () {
     /**
-    * Constructs a new <code>ShareMessageAttributes</code>.
-    * @alias module:model/ShareMessageAttributes
+    * Constructs a new <code>PlanDetailsWebhookOptions</code>.
+    * @alias module:model/PlanDetailsWebhookOptions
     * @class
     */
 
-    function ShareMessageAttributes() {
-        _classCallCheck(this, ShareMessageAttributes);
+    function PlanDetailsWebhookOptions() {
+        _classCallCheck(this, PlanDetailsWebhookOptions);
 
-        this['subject'] = undefined;
-        this['body'] = undefined;
-        this['created'] = undefined;
-        this['modified'] = undefined;
+        this['restrictionTypes'] = undefined;
+        this['amount'] = undefined;
+        this['includeTriggers'] = undefined;
     }
 
     /**
-    * Constructs a <code>ShareMessageAttributes</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>PlanDetailsWebhookOptions</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/ShareMessageAttributes} obj Optional instance to populate.
-    * @return {module:model/ShareMessageAttributes} The populated <code>ShareMessageAttributes</code> instance.
+    * @param {module:model/PlanDetailsWebhookOptions} obj Optional instance to populate.
+    * @return {module:model/PlanDetailsWebhookOptions} The populated <code>PlanDetailsWebhookOptions</code> instance.
     */
 
 
-    _createClass(ShareMessageAttributes, null, [{
+    _createClass(PlanDetailsWebhookOptions, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new ShareMessageAttributes();
+                obj = obj || new PlanDetailsWebhookOptions();
 
-                if (data.hasOwnProperty('subject')) {
-                    obj['subject'] = _ApiClient2.default.convertToType(data['subject'], 'String');
+                if (data.hasOwnProperty('restrictionTypes')) {
+                    obj['restrictionTypes'] = _ApiClient2.default.convertToType(data['restrictionTypes'], ['String']);
                 }
-                if (data.hasOwnProperty('body')) {
-                    obj['body'] = _ApiClient2.default.convertToType(data['body'], 'String');
+                if (data.hasOwnProperty('amount')) {
+                    obj['amount'] = _ApiClient2.default.convertToType(data['amount'], 'Number');
                 }
-                if (data.hasOwnProperty('created')) {
-                    obj['created'] = _ApiClient2.default.convertToType(data['created'], 'Date');
-                }
-                if (data.hasOwnProperty('modified')) {
-                    obj['modified'] = _ApiClient2.default.convertToType(data['modified'], 'Date');
+                if (data.hasOwnProperty('includeTriggers')) {
+                    obj['includeTriggers'] = _ApiClient2.default.convertToType(data['includeTriggers'], 'String');
                 }
             }
             return obj;
         }
 
         /**
-        * Message subject.
-        * @member {String} subject
+        * @member {Array.<String>} restrictionTypes
         */
 
         /**
-        * Message text.
-        * @member {String} body
+        * @member {Number} amount
         */
 
         /**
-        * Timestamp of message creation.
-        * @member {Date} created
-        */
-
-        /**
-        * Timestamp of message modification.
-        * @member {Date} modified
+        * @member {String} includeTriggers
         */
 
     }]);
 
-    return ShareMessageAttributes;
+    return PlanDetailsWebhookOptions;
 }();
 
-exports.default = ShareMessageAttributes;
+exports.default = PlanDetailsWebhookOptions;

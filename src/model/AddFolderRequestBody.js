@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The AddFolderRequestBody model module.
 * @module model/AddFolderRequestBody
-* @version 2.2.3
+* @version 2.2.4
 */
 var AddFolderRequestBody = function () {
     /**

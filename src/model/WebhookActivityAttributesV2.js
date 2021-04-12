@@ -21,250 +21,245 @@ var _ApiClient = require('../ApiClient');
 
 var _ApiClient2 = _interopRequireDefault(_ApiClient);
 
+var _WebhookV2Details = require('./WebhookV2Details');
+
+var _WebhookV2Details2 = _interopRequireDefault(_WebhookV2Details);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 /**
-* The CallbackSettingsValuesTriggers model module.
-* @module model/CallbackSettingsValuesTriggers
-* @version 2.2.3
+* The WebhookActivityAttributesV2 model module.
+* @module model/WebhookActivityAttributesV2
+* @version 2.2.4
 */
-var CallbackSettingsValuesTriggers = function () {
+var WebhookActivityAttributesV2 = function () {
     /**
-    * Constructs a new <code>CallbackSettingsValuesTriggers</code>.
-    * Whether a webhook should be sent for various operations.
-    * @alias module:model/CallbackSettingsValuesTriggers
+    * Constructs a new <code>WebhookActivityAttributesV2</code>.
+    * @alias module:model/WebhookActivityAttributesV2
     * @class
     */
 
-    function CallbackSettingsValuesTriggers() {
-        _classCallCheck(this, CallbackSettingsValuesTriggers);
+    function WebhookActivityAttributesV2() {
+        _classCallCheck(this, WebhookActivityAttributesV2);
 
-        this['download'] = undefined;
-        this['upload'] = undefined;
-        this['delete'] = undefined;
-        this['createFolder'] = undefined;
-        this['rename'] = undefined;
-        this['move'] = undefined;
-        this['copy'] = undefined;
-        this['compress'] = undefined;
-        this['extract'] = undefined;
-        this['shareFolder'] = undefined;
-        this['sendFiles'] = undefined;
-        this['receiveFiles'] = undefined;
-        this['updateShare'] = undefined;
-        this['updateReceive'] = undefined;
-        this['deleteSend'] = undefined;
-        this['deleteReceive'] = undefined;
-        this['deleteShare'] = undefined;
-        this['createNotification'] = undefined;
-        this['updateNotification'] = undefined;
-        this['deleteNotification'] = undefined;
-        this['createUser'] = undefined;
-        this['updateUser'] = undefined;
-        this['deleteUser'] = undefined;
-        this['userConnect'] = undefined;
-        this['userDisconnect'] = undefined;
+        this['webhookId'] = undefined;
+        this['webhookFormat'] = undefined;
+        this['attemptId'] = undefined;
+        this['accountId'] = undefined;
+        this['resend'] = undefined;
+        this['endpointUrl'] = undefined;
+        this['event'] = undefined;
+        this['status'] = undefined;
+        this['ipAddress'] = undefined;
+        this['response'] = undefined;
+        this['details'] = undefined;
+        this['webhookPath'] = undefined;
+        this['resourcePath'] = undefined;
+        this['username'] = undefined;
+        this['created'] = undefined;
     }
 
     /**
-    * Constructs a <code>CallbackSettingsValuesTriggers</code> from a plain JavaScript object, optionally creating a new instance.
+    * Constructs a <code>WebhookActivityAttributesV2</code> from a plain JavaScript object, optionally creating a new instance.
     * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
     * @param {Object} data The plain JavaScript object bearing properties of interest.
-    * @param {module:model/CallbackSettingsValuesTriggers} obj Optional instance to populate.
-    * @return {module:model/CallbackSettingsValuesTriggers} The populated <code>CallbackSettingsValuesTriggers</code> instance.
+    * @param {module:model/WebhookActivityAttributesV2} obj Optional instance to populate.
+    * @return {module:model/WebhookActivityAttributesV2} The populated <code>WebhookActivityAttributesV2</code> instance.
     */
 
 
-    _createClass(CallbackSettingsValuesTriggers, null, [{
+    _createClass(WebhookActivityAttributesV2, null, [{
         key: 'constructFromObject',
         value: function constructFromObject(data, obj) {
             if (data) {
-                obj = obj || new CallbackSettingsValuesTriggers();
+                obj = obj || new WebhookActivityAttributesV2();
 
-                if (data.hasOwnProperty('download')) {
-                    obj['download'] = _ApiClient2.default.convertToType(data['download'], 'Boolean');
+                if (data.hasOwnProperty('webhookId')) {
+                    obj['webhookId'] = _ApiClient2.default.convertToType(data['webhookId'], 'Number');
                 }
-                if (data.hasOwnProperty('upload')) {
-                    obj['upload'] = _ApiClient2.default.convertToType(data['upload'], 'Boolean');
+                if (data.hasOwnProperty('webhookFormat')) {
+                    obj['webhookFormat'] = _ApiClient2.default.convertToType(data['webhookFormat'], 'String');
                 }
-                if (data.hasOwnProperty('delete')) {
-                    obj['delete'] = _ApiClient2.default.convertToType(data['delete'], 'Boolean');
+                if (data.hasOwnProperty('attemptId')) {
+                    obj['attemptId'] = _ApiClient2.default.convertToType(data['attemptId'], 'String');
                 }
-                if (data.hasOwnProperty('createFolder')) {
-                    obj['createFolder'] = _ApiClient2.default.convertToType(data['createFolder'], 'Boolean');
+                if (data.hasOwnProperty('accountId')) {
+                    obj['accountId'] = _ApiClient2.default.convertToType(data['accountId'], 'String');
                 }
-                if (data.hasOwnProperty('rename')) {
-                    obj['rename'] = _ApiClient2.default.convertToType(data['rename'], 'Boolean');
+                if (data.hasOwnProperty('resend')) {
+                    obj['resend'] = _ApiClient2.default.convertToType(data['resend'], 'Boolean');
                 }
-                if (data.hasOwnProperty('move')) {
-                    obj['move'] = _ApiClient2.default.convertToType(data['move'], 'Boolean');
+                if (data.hasOwnProperty('endpointUrl')) {
+                    obj['endpointUrl'] = _ApiClient2.default.convertToType(data['endpointUrl'], 'String');
                 }
-                if (data.hasOwnProperty('copy')) {
-                    obj['copy'] = _ApiClient2.default.convertToType(data['copy'], 'Boolean');
+                if (data.hasOwnProperty('event')) {
+                    obj['event'] = _ApiClient2.default.convertToType(data['event'], 'String');
                 }
-                if (data.hasOwnProperty('compress')) {
-                    obj['compress'] = _ApiClient2.default.convertToType(data['compress'], 'Boolean');
+                if (data.hasOwnProperty('status')) {
+                    obj['status'] = _ApiClient2.default.convertToType(data['status'], 'Number');
                 }
-                if (data.hasOwnProperty('extract')) {
-                    obj['extract'] = _ApiClient2.default.convertToType(data['extract'], 'Boolean');
+                if (data.hasOwnProperty('ipAddress')) {
+                    obj['ipAddress'] = _ApiClient2.default.convertToType(data['ipAddress'], 'String');
                 }
-                if (data.hasOwnProperty('shareFolder')) {
-                    obj['shareFolder'] = _ApiClient2.default.convertToType(data['shareFolder'], 'Boolean');
+                if (data.hasOwnProperty('response')) {
+                    obj['response'] = _ApiClient2.default.convertToType(data['response'], 'String');
                 }
-                if (data.hasOwnProperty('sendFiles')) {
-                    obj['sendFiles'] = _ApiClient2.default.convertToType(data['sendFiles'], 'Boolean');
+                if (data.hasOwnProperty('details')) {
+                    obj['details'] = _WebhookV2Details2.default.constructFromObject(data['details']);
                 }
-                if (data.hasOwnProperty('receiveFiles')) {
-                    obj['receiveFiles'] = _ApiClient2.default.convertToType(data['receiveFiles'], 'Boolean');
+                if (data.hasOwnProperty('webhookPath')) {
+                    obj['webhookPath'] = _ApiClient2.default.convertToType(data['webhookPath'], 'String');
                 }
-                if (data.hasOwnProperty('updateShare')) {
-                    obj['updateShare'] = _ApiClient2.default.convertToType(data['updateShare'], 'Boolean');
+                if (data.hasOwnProperty('resourcePath')) {
+                    obj['resourcePath'] = _ApiClient2.default.convertToType(data['resourcePath'], 'String');
                 }
-                if (data.hasOwnProperty('updateReceive')) {
-                    obj['updateReceive'] = _ApiClient2.default.convertToType(data['updateReceive'], 'Boolean');
+                if (data.hasOwnProperty('username')) {
+                    obj['username'] = _ApiClient2.default.convertToType(data['username'], 'String');
                 }
-                if (data.hasOwnProperty('deleteSend')) {
-                    obj['deleteSend'] = _ApiClient2.default.convertToType(data['deleteSend'], 'Boolean');
-                }
-                if (data.hasOwnProperty('deleteReceive')) {
-                    obj['deleteReceive'] = _ApiClient2.default.convertToType(data['deleteReceive'], 'Boolean');
-                }
-                if (data.hasOwnProperty('deleteShare')) {
-                    obj['deleteShare'] = _ApiClient2.default.convertToType(data['deleteShare'], 'Boolean');
-                }
-                if (data.hasOwnProperty('createNotification')) {
-                    obj['createNotification'] = _ApiClient2.default.convertToType(data['createNotification'], 'Boolean');
-                }
-                if (data.hasOwnProperty('updateNotification')) {
-                    obj['updateNotification'] = _ApiClient2.default.convertToType(data['updateNotification'], 'Boolean');
-                }
-                if (data.hasOwnProperty('deleteNotification')) {
-                    obj['deleteNotification'] = _ApiClient2.default.convertToType(data['deleteNotification'], 'Boolean');
-                }
-                if (data.hasOwnProperty('createUser')) {
-                    obj['createUser'] = _ApiClient2.default.convertToType(data['createUser'], 'Boolean');
-                }
-                if (data.hasOwnProperty('updateUser')) {
-                    obj['updateUser'] = _ApiClient2.default.convertToType(data['updateUser'], 'Boolean');
-                }
-                if (data.hasOwnProperty('deleteUser')) {
-                    obj['deleteUser'] = _ApiClient2.default.convertToType(data['deleteUser'], 'Boolean');
-                }
-                if (data.hasOwnProperty('userConnect')) {
-                    obj['userConnect'] = _ApiClient2.default.convertToType(data['userConnect'], 'Boolean');
-                }
-                if (data.hasOwnProperty('userDisconnect')) {
-                    obj['userDisconnect'] = _ApiClient2.default.convertToType(data['userDisconnect'], 'Boolean');
+                if (data.hasOwnProperty('created')) {
+                    obj['created'] = _ApiClient2.default.convertToType(data['created'], 'String');
                 }
             }
             return obj;
         }
 
         /**
-        * @member {Boolean} download
+        * Unique ID of webhook configuration
+        * @member {Number} webhookId
         */
 
         /**
-        * @member {Boolean} upload
+        * What version of webhook message is being sent `v2`
+        * @member {String} webhookFormat
         */
 
         /**
-        * @member {Boolean} delete
+        * Event - retry identifier
+        * @member {String} attemptId
         */
 
         /**
-        * @member {Boolean} createFolder
+        * Unique ID of account
+        * @member {String} accountId
         */
 
         /**
-        * @member {Boolean} rename
+        * Whether this attempt was a re-send of a previous attempt
+        * @member {Boolean} resend
         */
 
         /**
-        * @member {Boolean} move
+        * The URL the message was sent to
+        * @member {String} endpointUrl
         */
 
         /**
-        * @member {Boolean} copy
+        * Event type
+        * @member {module:model/WebhookActivityAttributesV2.EventEnum} event
         */
 
         /**
-        * @member {Boolean} compress
+        * HTTP Status Code returned by webhook listener
+        * @member {Number} status
         */
 
         /**
-        * @member {Boolean} extract
+        * IP Address of related activity
+        * @member {String} ipAddress
         */
 
         /**
-        * @member {Boolean} shareFolder
+        * Body of web response returned by webhook listener
+        * @member {String} response
         */
 
         /**
-        * @member {Boolean} sendFiles
+        * @member {module:model/WebhookV2Details} details
         */
 
         /**
-        * @member {Boolean} receiveFiles
+        * Path that webhook is watching
+        * @member {String} webhookPath
         */
 
         /**
-        * @member {Boolean} updateShare
+        * Path of resource that matched webhook
+        * @member {String} resourcePath
         */
 
         /**
-        * @member {Boolean} updateReceive
+        * Username of related activity
+        * @member {String} username
         */
 
         /**
-        * @member {Boolean} deleteSend
+        * Date and time of webhook message being generated by system
+        * @member {String} created
         */
 
-        /**
-        * @member {Boolean} deleteReceive
-        */
 
         /**
-        * @member {Boolean} deleteShare
-        */
-
-        /**
-        * @member {Boolean} createNotification
-        */
-
-        /**
-        * @member {Boolean} updateNotification
-        */
-
-        /**
-        * @member {Boolean} deleteNotification
-        */
-
-        /**
-        * @member {Boolean} createUser
-        */
-
-        /**
-        * @member {Boolean} updateUser
-        */
-
-        /**
-        * @member {Boolean} deleteUser
-        */
-
-        /**
-        * @member {Boolean} userConnect
-        */
-
-        /**
-        * @member {Boolean} userDisconnect
+        * Allowed values for the <code>event</code> property.
+        * @enum {String}
+        * @readonly
         */
 
     }]);
 
-    return CallbackSettingsValuesTriggers;
+    return WebhookActivityAttributesV2;
 }();
 
-exports.default = CallbackSettingsValuesTriggers;
+WebhookActivityAttributesV2.EventEnum = {
+    /**
+     * value: "resources.upload"
+     * @const
+     */
+    "resources.upload": "resources.upload",
+    /**
+     * value: "resources.download"
+     * @const
+     */
+    "resources.download": "resources.download",
+    /**
+     * value: "resources.delete"
+     * @const
+     */
+    "resources.delete": "resources.delete",
+    /**
+     * value: "resources.rename"
+     * @const
+     */
+    "resources.rename": "resources.rename",
+    /**
+     * value: "resources.copy"
+     * @const
+     */
+    "resources.copy": "resources.copy",
+    /**
+     * value: "resources.move"
+     * @const
+     */
+    "resources.move": "resources.move",
+    /**
+     * value: "resources.compress"
+     * @const
+     */
+    "resources.compress": "resources.compress",
+    /**
+     * value: "resources.extract"
+     * @const
+     */
+    "resources.extract": "resources.extract",
+    /**
+     * value: "resources.createFolder"
+     * @const
+     */
+    "resources.createFolder": "resources.createFolder",
+    /**
+     * value: "shares.formSubmit"
+     * @const
+     */
+    "shares.formSubmit": "shares.formSubmit" };
+exports.default = WebhookActivityAttributesV2;

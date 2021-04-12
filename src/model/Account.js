@@ -36,7 +36,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The Account model module.
 * @module model/Account
-* @version 2.2.3
+* @version 2.2.4
 */
 var Account = function () {
     /**
