@@ -61,7 +61,7 @@ const evAccountUrl = "https://your_account_name.exavault.com/api/v2";
 // Create api object instance with account url configuration
 // Note that we must provide an accountname to the API
 const apiClient =   new ExaVaultApi.ApiClient();
-apiClient.baseUrl = evAccountUrl;
+apiClient.basePath = evAccountUrl;
 
 const api = new ExaVaultApi.AccountApi(apiClient);
 
