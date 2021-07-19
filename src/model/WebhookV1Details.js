@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The WebhookV1Details model module.
 * @module model/WebhookV1Details
-* @version 2.2.4
+* @version 2.2.5
 */
 var WebhookV1Details = function () {
     /**

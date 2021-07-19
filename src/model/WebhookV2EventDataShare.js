@@ -40,7 +40,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The WebhookV2EventDataShare model module.
 * @module model/WebhookV2EventDataShare
-* @version 2.2.4
+* @version 2.2.5
 */
 var WebhookV2EventDataShare = function () {
     /**

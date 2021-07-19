@@ -80,7 +80,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * Resources service.
 * @module api/ResourcesApi
-* @version 2.2.4
+* @version 2.2.5
 */
 var ResourcesApi = function () {
 
@@ -318,8 +318,9 @@ var ResourcesApi = function () {
 
       var authNames = [];
       var contentTypes = [];
+      /* EV-CUSTOM - The returnType must be 'String' for downloads to work properly */
+      var returnType = 'String';
       var accepts = ['application/octet-stream', 'application/zip'];
-      var returnType = File;
 
       return this.apiClient.callApi('/resources/download', 'GET', pathParams, queryParams, headerParams, formParams, postBody, authNames, contentTypes, accepts, returnType, callback);
     }

@@ -40,7 +40,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The ShareAttributes model module.
 * @module model/ShareAttributes
-* @version 2.2.4
+* @version 2.2.5
 */
 var ShareAttributes = function () {
     /**

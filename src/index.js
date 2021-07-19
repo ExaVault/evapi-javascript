@@ -697,7 +697,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 * </pre>
 * </p>
 * @module index
-* @version 2.2.4
+* @version 2.2.5
 */
 exports.ApiClient = _ApiClient2.default;
 exports.AccessMode = _AccessMode2.default;

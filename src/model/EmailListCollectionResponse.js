@@ -36,7 +36,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The EmailListCollectionResponse model module.
 * @module model/EmailListCollectionResponse
-* @version 2.2.4
+* @version 2.2.5
 */
 var EmailListCollectionResponse = function () {
     /**

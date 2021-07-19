@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The CopyResourcesRequestBody model module.
 * @module model/CopyResourcesRequestBody
-* @version 2.2.4
+* @version 2.2.5
 */
 var CopyResourcesRequestBody = function () {
     /**

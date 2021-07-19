@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The SSHKeyRelationshipsOwnerUserData model module.
 * @module model/SSHKeyRelationshipsOwnerUserData
-* @version 2.2.4
+* @version 2.2.5
 */
 var SSHKeyRelationshipsOwnerUserData = function () {
     /**

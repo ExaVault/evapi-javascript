@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The AddSSHKeyRequestBody model module.
 * @module model/AddSSHKeyRequestBody
-* @version 2.2.4
+* @version 2.2.5
 */
 var AddSSHKeyRequestBody = function () {
     /**

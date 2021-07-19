@@ -40,7 +40,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * SSHKeys service.
 * @module api/SSHKeysApi
-* @version 2.2.4
+* @version 2.2.5
 */
 var SSHKeysApi = function () {
 
