@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The SessionActivityEntryAttributes model module.
 * @module model/SessionActivityEntryAttributes
-* @version 2.2.4
+* @version 2.2.5
 */
 var SessionActivityEntryAttributes = function () {
     /**

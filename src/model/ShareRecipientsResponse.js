@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The ShareRecipientsResponse model module.
 * @module model/ShareRecipientsResponse
-* @version 2.2.4
+* @version 2.2.5
 */
 var ShareRecipientsResponse = function () {
     /**

@@ -32,7 +32,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The AddWebhookRequestBody model module.
 * @module model/AddWebhookRequestBody
-* @version 2.2.4
+* @version 2.2.5
 */
 var AddWebhookRequestBody = function () {
     /**

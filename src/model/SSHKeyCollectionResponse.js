@@ -36,7 +36,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The SSHKeyCollectionResponse model module.
 * @module model/SSHKeyCollectionResponse
-* @version 2.2.4
+* @version 2.2.5
 */
 var SSHKeyCollectionResponse = function () {
     /**

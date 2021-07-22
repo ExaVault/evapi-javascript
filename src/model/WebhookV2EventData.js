@@ -36,7 +36,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The WebhookV2EventData model module.
 * @module model/WebhookV2EventData
-* @version 2.2.4
+* @version 2.2.5
 */
 var WebhookV2EventData = function () {
     /**

@@ -32,7 +32,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The SessionActivityResponse model module.
 * @module model/SessionActivityResponse
-* @version 2.2.4
+* @version 2.2.5
 */
 var SessionActivityResponse = function () {
     /**

@@ -32,7 +32,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The MasterUser model module.
 * @module model/MasterUser
-* @version 2.2.4
+* @version 2.2.5
 */
 var MasterUser = function () {
     /**

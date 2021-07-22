@@ -28,7 +28,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 /**
 * The SSHKeyAttributes model module.
 * @module model/SSHKeyAttributes
-* @version 2.2.4
+* @version 2.2.5
 */
 var SSHKeyAttributes = function () {
     /**
